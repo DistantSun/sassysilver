@@ -98,10 +98,10 @@ a {
 
 .headerbar {
   color: #FFFFFF;
-  background-color: #12A3EB;
-  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
+  background-color: $col_headerbar;
+/*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
-  background-repeat: repeat-x;
+  background-repeat: repeat-x; */
 }
 
 .forumbg {
@@ -119,7 +119,7 @@ a {
 }
 
 .navbar {
-  background-color: #CADCEB;
+  background-color: $col_navbar;
 }
 
 .panel {
