@@ -1,0 +1,15 @@
+/*  --------------------------------------------------------------------
+ *  Central configuration file - DO NOT CHANGE !
+ *  Copy the code you want to change and paste it into custom_configurations.scss
+ *  and do your edits there.
+ *  -------------------------------------------------------------------- */
+
+//  Colours - general colour scheme. Do NOT change!
+
+$col_scheme:                                0 !default; // Board colour scheme; 0 = prodsilver standard, 1 = red, 2 = green, 3 = black
+
+// Colour mapping for colour schemes
+$col_body:  map_get((0: #f5f7fa, 1: #360300, 2: #002515, 3: #1b1a1a), $col_scheme);
+$col_category: map_get((0:#0076b1, 1: #6B0500, 2: #00492A, 3: #151818), $col_scheme);
+$col_navbar: map_get((0: #cadceb, 1: #FFCBC9, 2: #B9D9CC, 3: #C6C6C6), $col_scheme);
+$col_headerbar: map_get((0: #00669c, 1: #470206, 2: #0D2901, 3: #121212), $col_scheme);
