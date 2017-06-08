@@ -18,7 +18,7 @@ h2 {
 
 h3 {
   border-bottom-color: #CCCCCC;
-  color: #115098;
+  color: $col_links;
 }
 
 hr {
@@ -32,7 +32,7 @@ Colours and backgrounds for links.css
 -------------------------------------------------------------- */
 
 a {
-  color: #105289;
+  color: $col_links;
   &:hover {
     color: #D31141;
   }
@@ -390,13 +390,13 @@ li.header {
 .content {
   color: #333333;
   h2 {
-    color: #115098;
+    color: $col_links;
     border-bottom-color: #CCCCCC;
   }
 }
 
 .panel h2 {
-  color: #115098;
+  color: $col_links;
   border-bottom-color: #CCCCCC;
 }
 
