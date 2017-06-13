@@ -6,7 +6,8 @@
 
 // Dimensions
 
-$width_wrap:                                1152px !default; // Board width
+$width_wrap:                                1152px !default;            // Board width
+$width_headerbar_separate:                  $width_wrap + 8px !default;       // Width of the headerbar if set to diplay separately
 
 
 
@@ -29,4 +30,4 @@ $col_forums:                                tint($col_base, 85%) !default;      
 
 // Font colours
 
-$col_links:                                 darken($col_base, 1%) !default;                                                     // Links
+$col_links:                                 shade($col_base, 1%) !default;                                                     // Links
