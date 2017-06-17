@@ -10,6 +10,13 @@
     padding: 5px 10px;
 }
 
+.wrap-menue {
+    display: block;
+    width: $width_menuebar;
+    margin: 2px auto 10px;
+}
+
 .headerbar-separate {
     background-color: shade($col_base, 25%);
 }
+
