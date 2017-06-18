@@ -1,5 +1,6 @@
 /*  Additional code, not included in original prosilver */
 
+/* Provides the means to separate the menue part of navbar_header via configfile  */
 .wrap-headerbar {
     display: block;
     margin: 10px auto;
@@ -10,6 +11,24 @@
     padding: 5px 10px;
 }
 
+.wrap-menue {
+    display: block;
+    width: $width_menuebar;
+    margin: 2px auto 10px;
+}
+
 .headerbar-separate {
     background-color: shade($col_base, 25%);
+}
+
+
+
+/* Sidebar - controlled via configfile */
+.sidebar {
+    display: block;
+    float: right;
+    width: $width-sidebar;
+    min-height: 100px;
+    height: auto;
+    background-color: $col_forums;
 }

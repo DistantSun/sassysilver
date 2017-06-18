@@ -4,10 +4,18 @@
  *  and do your edits there.
  *  -------------------------------------------------------------------- */
 
+// Layout switches
+
+$postprofile_side:                          0 !default;                         // Displays postprofile left or right: 0 = on right side, 1 = on left side
+
+
+
 // Dimensions
 
-$width_wrap:                                1152px !default;            // Board width
-$width_headerbar_separate:                  $width_wrap + 8px !default;       // Width of the headerbar if set to diplay separately
+$width_wrap:                                1152px !default;                    // Board width
+$width_headerbar_separate:                  $width_wrap + 8px !default;         // Width of the headerbar if set to diplay separately
+$width_menuebar:                            $width_wrap + 30px !default;        // Width of menuebar when displayed separately
+$width-sidebar:                             180px !default;                     // Width of sidebar
 
 
 
@@ -20,7 +28,7 @@ $col_scheme:                                0 !default; // Board colour scheme; 
 // Colour mapping for colour schemes
 
 $col_base:                                  map_get((0: #0B2958, 1: #48100c, 2: #0A3422, 3: #1b1a1a), $col_scheme) !default;    // Base colours for colour schemes the following colours will derive fron
-$col_body:                                  $col_base;                                                                          // Body colour
+$col_body:                                  shade($col_base, 3%) !default;                                                      // Body colour
 $col_category:                              shade($col_base, 2%) !default;                                                     // Category/fora header colourv
 $col_navbar:                                tint($col_base, 85%) !default;                                                   // Navbar colour
 $col_headerbar:                             shade($col_base, 3%) !default;                                                     // Headerbar colour
@@ -31,3 +39,35 @@ $col_forums:                                tint($col_base, 85%) !default;      
 // Font colours
 
 $col_links:                                 shade($col_base, 1%) !default;                                                     // Links
+
+
+
+// Mixins
+
+@mixin postprofile_switch {
+    @if $postprofile_side == 0 {
+        border-width: 0 0 0 1px;
+        float: right;
+        & dd, dt {
+            margin-left: 8px;
+        }
+    }
+    
+    @if $postprofile_side == 1 {
+        border-width: 0 1px 0 0;
+        float: left;
+        & dd, dl {
+            margin-right: 8px;
+        }
+    }
+}
+
+@mixin postbody_switch {
+    @if $postprofile_side == 0 {
+        float: left;
+    }
+
+    @if $postprofile_side == 1 {
+        float: right;
+    }
+}
