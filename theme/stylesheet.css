@@ -6,8 +6,6 @@
 	Modified by:		phpBB Limited ( https://www.phpbb.com/ )
     --------------------------------------------------------------
 */
-/*  Functions & Mixins - taken over from bourbon
- *  -------------------------------------------------------------------- */
 /*  Custom configuration file
  *  -------------------------------------------------------------------- */
 /*  --------------------------------------------------------------------
@@ -4152,7 +4150,7 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 html, body {
   color: #536482;
-  background-color: #0B2958;
+  background-color: #0b2855;
 }
 
 h1 {
@@ -5675,8 +5673,23 @@ li.notification-reported strong, li.notification-disapproved strong {
   padding: 5px 10px;
 }
 
+.wrap-menue {
+  display: block;
+  width: 1182px;
+  margin: 2px auto 10px;
+}
+
 .headerbar-separate {
   background-color: #081f42;
+}
+
+.sidebar {
+  display: block;
+  float: right;
+  width: 180px;
+  min-height: 100px;
+  height: auto;
+  background-color: #dadfe6;
 }
 
 /* Responsive Design
