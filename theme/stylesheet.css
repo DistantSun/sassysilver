@@ -13,6 +13,54 @@
  *  Copy the code you want to change and paste it into _custom_configurations.scss
  *  and do your edits there.
  *  -------------------------------------------------------------------- */
+@media (max-width: 325px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 310px !important;
+  }
+}
+
+@media (max-width: 485px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 470px !important;
+  }
+}
+
+@media (max-width: 605px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 590px !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 758px !important;
+  }
+}
+
+@media (max-width: 805px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 790px !important;
+  }
+}
+
+@media (max-width: 1030px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 1014px !important;
+  }
+}
+
+@media (max-width: 1370px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 1356px !important;
+  }
+}
+
+@media (max-width: 1605px) {
+  .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
+    max-width: 1590px !important;
+  }
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -623,7 +671,7 @@ body {
   font-size: 10px;
   line-height: normal;
   margin: 0;
-  padding: 12px 0;
+  padding: 0;
   word-wrap: break-word;
   -webkit-print-color-adjust: exact;
 }
@@ -2367,8 +2415,7 @@ dd.option {
 .postbody {
   padding: 0;
   line-height: 1.48em;
-  width: 76%;
-  float: left;
+  width: 77%;
   position: relative;
 }
 
@@ -2847,15 +2894,12 @@ fieldset.polls dd div {
   margin: 5px 0 10px 0;
   min-height: 80px;
   border: 1px solid transparent;
-  border-width: 0 0 0 1px;
-  width: 22%;
-  float: right;
+  width: 21%;
   display: inline;
 }
 
 .postprofile dd, .postprofile dt {
   line-height: 1.2em;
-  margin-left: 8px;
 }
 
 .postprofile dd {
@@ -4240,7 +4284,7 @@ a:hover {
 
 .headerbar {
   color: #FFFFFF;
-  background-color: #0b2855;
+  background-color: #081f42;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-repeat: repeat-x; */
@@ -5663,26 +5707,32 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 /*  Additional code, not included in original prosilver */
+/* Provides the means to separate the menue part of navbar_header via configfile  */
+#body-wrapper {
+  height: 400px;
+  overflow: visible;
+  position: relative;
+  background-color: #081f42;
+}
+
 .wrap-headerbar {
   display: block;
-  margin: 10px auto;
-  width: 1160px;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 1182px;
   background-color: #081f42;
-  padding: 5px 10px;
 }
 
 .wrap-menue {
-  display: block;
-  width: 1182px;
+  max-width: 1182px;
   margin: 2px auto 10px;
 }
 
 .headerbar-separate {
   background-color: #081f42;
+  padding: 30px 5px 10px;
 }
 
+/* Sidebar - controlled via configfile */
 .sidebar {
   display: block;
   float: right;
@@ -5690,6 +5740,19 @@ li.notification-reported strong, li.notification-disapproved strong {
   min-height: 100px;
   height: auto;
   background-color: #dadfe6;
+}
+
+.postbody {
+  float: left;
+}
+
+.postprofile {
+  border-width: 0 0 0 1px;
+  float: right;
+}
+
+.postprofile dd, .postprofile dt {
+  margin-left: 8px;
 }
 
 /* Responsive Design
@@ -5821,8 +5884,6 @@ li.notification-reported strong, li.notification-disapproved strong {
   ----------------------------------------*/
   .headerbar, .navbar, .forabg, .forumbg, .post, .panel {
     border-radius: 0;
-    margin-left: -5px;
-    margin-right: -5px;
   }
   .cp-main .forabg, .cp-main .forumdb, .cp-main .post, .cp-main .panel {
     border-radius: 7px;
