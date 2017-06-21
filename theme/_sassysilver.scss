@@ -1,24 +1,29 @@
 /*  Additional code, not included in original prosilver */
 
 /* Provides the means to separate the menue part of navbar_header via configfile  */
+
+#body-wrapper {
+    height: 400px;
+    overflow: visible;
+    position: relative;
+    background-color: $col_headerbar;
+}
+
 .wrap-headerbar {
     display: block;
-    margin: 10px auto;
-    width: $width_headerbar_separate;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    background-color: shade($col_base, 25%);;
-    padding: 5px 10px;
+    margin: 0 auto;
+    max-width: $width_headerbar_separate;
+    background-color: $col_headerbar;
 }
 
 .wrap-menue {
-    display: block;
-    width: $width_menuebar;
+    max-width: $width_menuebar;
     margin: 2px auto 10px;
 }
 
 .headerbar-separate {
     background-color: shade($col_base, 25%);
+    padding: 30px 5px 10px;
 }
 
 
@@ -31,4 +36,12 @@
     min-height: 100px;
     height: auto;
     background-color: $col_forums;
+}
+
+.postbody {
+    @include postbody_switch
+}
+
+.postprofile {
+    @include postprofile_switch
 }

@@ -224,9 +224,8 @@ dd {
 .postbody {
   padding: 0;
   line-height: 1.48em;
-  width: 76%;
+  width: $wpb;
   position: relative;
-    @include postbody_switch
   .ignore {
     font-size: 1.1em;
   }
@@ -692,9 +691,8 @@ fieldset.polls {
   margin: 5px 0 10px 0;
   min-height: 80px;
   border: 1px solid transparent;
-  width: 22%;
+  width: $wpp;
   display: inline;
-    @include postprofile_switch
   dd, dt {
     line-height: 1.2em;
   }
