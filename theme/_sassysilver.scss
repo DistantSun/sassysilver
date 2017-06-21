@@ -6,13 +6,14 @@
     height: 400px;
     overflow: visible;
     position: relative;
+    background-color: $col_headerbar;
 }
 
 .wrap-headerbar {
     display: block;
     margin: 0 auto;
     max-width: $width_headerbar_separate;
-    background-color: shade($col_base, 25%);;
+    background-color: $col_headerbar;
 }
 
 .wrap-menue {
@@ -22,7 +23,7 @@
 
 .headerbar-separate {
     background-color: shade($col_base, 25%);
-    padding: 10px 5px;
+    padding: 30px 5px 10px;
 }
 
 
