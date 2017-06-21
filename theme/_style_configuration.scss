@@ -12,12 +12,12 @@ $postprofile_side:                          0 !default;                         
 
 // Dimensions
 
-$width_wrap:                                1152px !default;                    // Board width
-$width_headerbar_separate:                  $width_wrap + 8px !default;         // Width of the headerbar if set to diplay separately
-$width_menuebar:                            $width_wrap + 30px !default;        // Width of menuebar when displayed separately
-$width-sidebar:                             180px !default;                     // Width of sidebar
+$width_wrap:                                1152px !default;                // Board width
+$width_headerbar_separate:                  $width_wrap + 30px !default;     // Width of the headerbar if set to diplay separately
+$width_menuebar:                            $width_wrap + 30px !default;    // Width of menuebar when displayed separately
+$width-sidebar:                             180px !default;                 // Width of sidebar
 
-
+$width-postprofile:                         240px !default;                 // Width of postprofile - please choose carefully
 
 
 //  Colours - general colour scheme. Do NOT change!
@@ -52,7 +52,7 @@ $col_links:                                 shade($col_base, 1%) !default;      
             margin-left: 8px;
         }
     }
-    
+
     @if $postprofile_side == 1 {
         border-width: 0 1px 0 0;
         float: left;
@@ -70,4 +70,28 @@ $col_links:                                 shade($col_base, 1%) !default;      
     @if $postprofile_side == 1 {
         float: right;
     }
+}
+
+// Calculations
+
+// postprofile & postbody
+$wpp: ceil(percentage($width-postprofile / $width_wrap));   // Calculates postprofile width in percentage of wrapper width, rounded up to the next whole number
+$wpb: (100 - $wpp - 2);
+
+// headerbar & menuebar width responsive
+.extra-wrapper-width {
+@each $media_width, $hb_width in (325px, 310px),
+                                    (485px, 470px),
+                                    (605px, 590px),
+                                    (770px, 758px),
+                                    (805px, 790px),
+                                    (1030px, 1014px),
+                                    (1370px, 1356px),
+                                    (1605px, 1590px) {
+    @media (max-width: #{$media_width}) {
+      .wrap-headerbar &, .wrap-menue & {
+        max-width: #{$hb_width} !important;
+      }
+    }
+  }
 }
