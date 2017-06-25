@@ -6,7 +6,8 @@
     height: 400px;
     overflow: visible;
     position: relative;
-    background-color: $col_headerbar;
+    border-bottom: 1px dashed white; // added temporarily to have better visual control
+    /*background-color: $col_headerbar;*/
 }
 
 .wrap-headerbar {
@@ -38,10 +39,50 @@
     background-color: $col_forums;
 }
 
-.postbody {
-    @include postbody_switch
+
+// postprofile & postbody
+
+@media (min-width: 1100px) {
+  .postprofile {
+    width: $width-postprofile;
+  }
+
+  .postbody {
+    width: ($width_wrap - 40px - $width-postprofile) !important;
+  }
 }
 
-.postprofile {
-    @include postprofile_switch
+
+/* -------------------------------------------------
+ * Overrides nescessary due to either
+ * limits of SAAS - or to my lack of knowledge ...
+ * ------------------------------------------------- */
+
+/* Switches postprofile/postbody right<->left */
+@if $define-postprofile-side == 0 {
+    .postprofile {
+        border-width: 0 0 0 1px;
+        float: right;
+           & dd, dt {
+            margin-left: 8px;
+            }
+    }
+
+    .postbody {
+        float: left;
+    }
+}
+
+@if $define-postprofile-side == 1 {
+    .postprofile {
+        border-width: 0 1px 0 0;
+        float: left;
+            & dd, dl {
+            margin-right: 8px;
+            }
+    }
+
+    .postbody {
+        float: right;
+    }
 }
