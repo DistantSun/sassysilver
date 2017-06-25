@@ -224,7 +224,8 @@ dd {
 .postbody {
   padding: 0;
   line-height: 1.48em;
-  width: $wpb;
+  width: 76%;
+  float: left;
   position: relative;
   .ignore {
     font-size: 1.1em;
@@ -691,7 +692,8 @@ fieldset.polls {
   margin: 5px 0 10px 0;
   min-height: 80px;
   border: 1px solid transparent;
-  width: $wpp;
+  width: 22%;
+  float: right;
   display: inline;
   dd, dt {
     line-height: 1.2em;
