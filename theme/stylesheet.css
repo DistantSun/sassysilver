@@ -15,10 +15,10 @@
  *  -------------------------------------------------------------------- */
 @media all and (min-width: 1100px) {
   .postprofile {
-    width: 240px;
+    width: 220px;
   }
   .postbody {
-    width: 892px;
+    width: 912px;
   }
 }
 
@@ -5760,10 +5760,10 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 @media (min-width: 1100px) {
   .postprofile {
-    width: 240px;
+    width: 220px;
   }
   .postbody {
-    width: 872px !important;
+    width: 892px !important;
   }
 }
 
