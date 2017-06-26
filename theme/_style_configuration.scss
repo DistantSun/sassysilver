@@ -28,7 +28,7 @@ $col_scheme:                                0 !default; // Board colour scheme; 
 // Colour mapping for colour schemes
 
 $col_base:                                  map_get((0: #0B2958, 1: #48100c, 2: #0A3422, 3: #1b1a1a), $col_scheme) !default;    // Base colours for colour schemes the following colours will derive fron
-$col_body:                                  shade($col_base, 3%) !default;                                                      // Body colour
+$col_body:                                  tint($col_base, 10%) !default;                                                      // Body colour
 $col_category:                              shade($col_base, 2%) !default;                                                      // Category/fora header colourv
 $col_navbar:                                tint($col_base, 85%) !default;                                                      // Navbar colour
 $col_headerbar:                             shade($col_base, 25%) !default;                                                     // Headerbar background colour

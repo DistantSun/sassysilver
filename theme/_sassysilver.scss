@@ -2,12 +2,9 @@
 
 /* Provides the means to separate the menue part of navbar_header via configfile  */
 
-#body-wrapper {
-    height: 400px;
-    overflow: visible;
-    position: relative;
-    border-bottom: 1px dashed white; // added temporarily to have better visual control
-    /*background-color: $col_headerbar;*/
+html, body {
+    background: $col_headerbar;
+    background: linear-gradient(180deg, shade($col_headerbar, 30%) 10%, $col_body 25%, $col_body 80%, shade($col_headerbar, 30%) 100%);
 }
 
 .wrap-headerbar {
