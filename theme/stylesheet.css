@@ -4209,7 +4209,7 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 html, body {
   color: #536482;
-  background-color: #081f42;
+  background-color: #233e69;
 }
 
 h1 {
@@ -5723,12 +5723,12 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 /*  Additional code, not included in original prosilver */
 /* Provides the means to separate the menue part of navbar_header via configfile  */
-#body-wrapper {
-  height: 400px;
-  overflow: visible;
-  position: relative;
-  border-bottom: 1px dashed white;
-  /*background-color: $col_headerbar;*/
+html, body {
+  background: #081f42;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #06162e), color-stop(25%, #233e69), color-stop(80%, #233e69), to(#06162e));
+  background: -webkit-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
+  background: -o-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
+  background: linear-gradient(180deg, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
 }
 
 .wrap-headerbar {
@@ -6315,4 +6315,3 @@ li.notification-reported strong, li.notification-disapproved strong {
   }
 }
 
-/*# sourceMappingURL=stylesheet.css.map */
