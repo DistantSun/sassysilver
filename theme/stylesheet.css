@@ -73,7 +73,6 @@
 /* ---------------------------------------------------------------
  * Mixins and other stuff exept for functions and calculations
  * --------------------------------------------------------------- */
-/* Switches postprofile/postbody right<->left */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -677,6 +676,7 @@ html {
   font-size: 100%;
   /* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
   height: 101%;
+  background-image: none;
 }
 
 body {
@@ -4209,7 +4209,7 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 html, body {
   color: #536482;
-  background-color: #233e69;
+  background-color: #5a2824;
 }
 
 h1 {
@@ -4222,7 +4222,7 @@ h2 {
 
 h3 {
   border-bottom-color: #CCCCCC;
-  color: #0b2957;
+  color: #47100c;
 }
 
 hr {
@@ -4235,7 +4235,7 @@ hr {
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
 a {
-  color: #0b2957;
+  color: #47100c;
 }
 
 a:hover {
@@ -4299,28 +4299,28 @@ a:hover {
 
 .headerbar {
   color: #FFFFFF;
-  background-color: #081f42;
+  background-color: #360c09;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-repeat: repeat-x; */
 }
 
 .forumbg {
-  background-color: #0b2856;
+  background-color: #47100c;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-repeat: repeat-x; */
 }
 
 .forabg {
-  background-color: #0b2856;
+  background-color: #47100c;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #12A3EB 2px, #0076B1 92px, #0076B1 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #12A3EB 2px, #0076B1 92px, #0076B1 100%);
   background-repeat: repeat-x;*/
 }
 
 .navbar {
-  background-color: #dadfe6;
+  background-color: #e4dbdb;
 }
 
 .panel {
@@ -4521,7 +4521,7 @@ p.post-notice {
 Colours and backgrounds for content.css
 -------------------------------------------------------------- */
 ul.forums {
-  background-color: #dadfe6;
+  background-color: #e4dbdb;
   /* Old browsers */
   /* FF3.6+ */
   /*background-image: -webkit-linear-gradient(top, #D2E0EB 0%, #EEF5F9 100%);*/
@@ -4583,12 +4583,12 @@ li.header dt, li.header dd {
 }
 
 .content h2 {
-  color: #0b2957;
+  color: #47100c;
   border-bottom-color: #CCCCCC;
 }
 
 .panel h2 {
-  color: #0b2957;
+  color: #47100c;
   border-bottom-color: #CCCCCC;
 }
 
@@ -5724,18 +5724,18 @@ li.notification-reported strong, li.notification-disapproved strong {
 /*  Additional code, not included in original prosilver */
 /* Provides the means to separate the menue part of navbar_header via configfile  */
 html, body {
-  background: #081f42;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #06162e), color-stop(25%, #233e69), color-stop(80%, #233e69), to(#06162e));
-  background: -webkit-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
-  background: -o-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
-  background: linear-gradient(180deg, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
+  min-height: 101%;
+  height: auto;
+  background: -webkit-linear-gradient(top, #360c09 250px, #5a2824 60%);
+  background: -o-linear-gradient(top, #360c09 250px, #5a2824 60%);
+  background: linear-gradient(top, #360c09 250px, #5a2824 60%);
 }
 
 .wrap-headerbar {
   display: block;
   margin: 0 auto;
   max-width: 1182px;
-  background-color: #081f42;
+  background-color: #360c09;
 }
 
 .wrap-menue {
@@ -5744,7 +5744,7 @@ html, body {
 }
 
 .headerbar-separate {
-  background-color: #081f42;
+  background-color: #360c09;
   padding: 30px 5px 10px;
 }
 
@@ -5755,7 +5755,7 @@ html, body {
   width: 180px;
   min-height: 100px;
   height: auto;
-  background-color: #dadfe6;
+  background-color: #e4dbdb;
 }
 
 @media (min-width: 1100px) {
