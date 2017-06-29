@@ -4,12 +4,12 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-  color: #536482;
+  color: $col_text_body;
   background-color: $col_body;
 }
 
 h1 {
-  color: #FFFFFF;
+  color: $col_text_white;
 }
 
 h2 {
@@ -22,7 +22,7 @@ h3 {
 }
 
 hr {
-  border-color: #FFFFFF;
+  border-color: $col_border_white;
   border-top-color: #CCCCCC;
 }
 
@@ -41,7 +41,7 @@ a {
 /* Links on gradient backgrounds */
 
 .forumbg .header a, .forabg .header a, th a {
-  color: #FFFFFF;
+  color: $col_text_white;
 }
 
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
@@ -92,12 +92,12 @@ a {
 ---------------------------------------- */
 
 .wrap {
-  background-color: #FFF;
+  background-color: $col_wrap;
   border-color: #E6E9ED;
 }
 
 .headerbar {
-  color: #FFFFFF;
+  color: $col_text_white;
   background-color: $col_headerbar;
 /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
@@ -123,7 +123,7 @@ a {
 }
 
 .panel {
-  background-color: #ECF1F3;
+  background-color: $col_panel;
   color: #28313F;
 }
 
@@ -134,15 +134,15 @@ a {
 }
 
 .bg1, table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
-  background-color: #ECF3F7;
+  background-color: $col_bg;
 }
 
 .bg2, table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
-  background-color: #E1EBF2;
+  background-color: $col_bg2;
 }
 
 .bg3 {
-  background-color: #CADCEB;
+  background-color: $col_bg;
 }
 
 .ucprowbg {
@@ -161,7 +161,7 @@ a {
 ----------------------------------------*/
 
 ul.navlinks {
-  border-top-color: #FFFFFF;
+  border-top-color: $col_border_white;
 }
 
 /* Table styles
@@ -170,7 +170,7 @@ ul.navlinks {
 table {
   &.table1 {
     thead th {
-      color: #FFFFFF;
+      color: $col_text_white;
     }
     tbody tr {
       border-color: #BFC1CF;
@@ -262,11 +262,11 @@ dl.details {
 .jumpbox-cat-link {
   background-color: #0076b1;
   border-top-color: #0076B1;
-  color: #FFFFFF;
+  color: $col_text_white;
   &:hover {
     background-color: #12A3EB;
     border-top-color: #12A3EB;
-    color: #FFFFFF;
+    color: $col_text_white;
   }
 }
 
@@ -342,24 +342,24 @@ ul {
       color: #4C5D77;
     }
     dd {
-      border-left-color: #FFFFFF;
+      border-left-color: $col_border_white;
     }
   }
 }
 
 .rtl ul.topiclist dd {
-  border-right-color: #FFFFFF;
+  border-right-color: $col_border_white;
   border-left-color: transparent;
 }
 
 li.row {
-  border-top-color: #FFFFFF;
+  border-top-color: $col_border_white;
   border-bottom-color: #00608F;
   strong {
     color: #000000;
   }
   &:hover {
-    background-color: #F6F4D0;
+    background-color: $col_forums_hov;
     dd {
       border-left-color: #CCCCCC;
     }
@@ -373,7 +373,7 @@ li.row {
 
 li.header {
   dt, dd {
-    color: #FFFFFF;
+    color: $col_text_white;
   }
 }
 
@@ -426,7 +426,7 @@ dl.faq dt {
 /* Quote block */
 
 blockquote {
-  background-color: #EBEADD;
+  background-color: $col_quote_in_out;
   background-image: url("./images/quote.gif");
   border-color: #DBDBCE;
 }
@@ -437,11 +437,12 @@ blockquote {
 
 blockquote blockquote {
   /* Nested quotes */
-  background-color: #EFEED9;
-  blockquote {
+  background-color: $col_quote_center;
+}
+
+blockquote blockquote blockquote {
     /* Nested quotes */
-    background-color: #EBEADD;
-  }
+    background-color: $col_quote_in_out;
 }
 
 /* Code block */
@@ -458,7 +459,7 @@ blockquote blockquote {
 }
 
 .syntaxbg {
-  color: #FFFFFF;
+  color: $col_text_white;
 }
 
 .syntaxcomment {
@@ -544,7 +545,7 @@ fieldset.polls {
     }
   }
   dd div {
-    color: #FFFFFF;
+    color: $col_text_white;
   }
 }
 
@@ -609,7 +610,7 @@ fieldset.polls {
 
 .postprofile {
   color: #666666;
-  border-color: #FFFFFF;
+  border-color: $col_border_white;
 }
 
 .pm .postprofile {
@@ -712,19 +713,19 @@ Colours and backgrounds for buttons.css
     &.active span {
       background: #4692BF;
       border-color: #4692BF;
-      color: #FFFFFF;
+      color: $col_text_white;
     }
     a:hover {
       background: #368AD2;
       border-color: #368AD2;
       filter: none;
-      color: #FFFFFF;
+      color: $col_text_white;
       text-shadow: none;
       .icon {
         background: #368AD2;
         border-color: #368AD2;
         filter: none;
-        color: #FFFFFF;
+        color: $col_text_white;
         text-shadow: none;
       }
     }
@@ -733,7 +734,7 @@ Colours and backgrounds for buttons.css
     background: #368AD2;
     border-color: #368AD2;
     filter: none;
-    color: #FFFFFF;
+    color: $col_text_white;
     text-shadow: none;
   }
 }
@@ -742,7 +743,7 @@ Colours and backgrounds for buttons.css
   background: #368AD2;
   border-color: #368AD2;
   filter: none;
-  color: #FFFFFF;
+  color: $col_text_white;
   text-shadow: none;
 }
 
@@ -1048,33 +1049,33 @@ ul.cplist {
 
 .tabs {
   .tab > a {
-    background: #BACCD9;
-    color: #536482;
+    background: $col_ucp_menue;
+    color: $col_text_body;
     &:hover {
-      background: #DDEDFB;
+      background: $col_ucp_menue_a_h;
       color: #D31141;
     }
   }
   .activetab > a {
-    background-color: #CADCEB;
+    background-color: $col_ucp_menue_a_h;
     /* Old browsers */
     /* FF3.6+ */
-    background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-    background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+    background-image: -webkit-linear-gradient(top, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
+    background-image: linear-gradient(to bottom, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
     /* IE6-9 */
-    border-color: #CADCEB;
+    border-color: $col_ucp_menue_a_h;
     box-shadow: 0 1px 1px #F2F9FF inset;
     color: #333333;
     &:hover {
-      background-color: #CADCEB;
+      background-color: $col_ucp_menue_a_h;
       /* Old browsers */
       /* FF3.6+ */
-      background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-      background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+      background-image: -webkit-linear-gradient(top, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
+      background-image: linear-gradient(to bottom, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
       /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
       /* IE6-9 */
       border-color: #CADCEB;
       box-shadow: 0 1px 1px #F2F9FF inset;
@@ -1120,13 +1121,13 @@ ul.cplist {
 
 .navigation a {
   color: #333;
-  background: #CADCEB;
+  background: $col_ucp_menue_left;
   /* Old browsers */
   /* FF3.6+ */
-  background: -webkit-linear-gradient(left, #B4C4D1 50%, #CADCEB 100%);
-  background: linear-gradient(to right, #B4C4D1 50%, #CADCEB 100%);
+  background: -webkit-linear-gradient(left, $col_ucp_menue_left 0%, $col_ucp_menue_left-low 100%);
+  background: linear-gradient(to right, $col_ucp_menue_left 0%, $col_ucp_menue_left-low 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B4C4D1', endColorstr='#CADCEB',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_left', endColorstr='$col_ucp_menue_left-low',GradientType=1 );
   /* IE6-9 */
 }
 
@@ -1148,7 +1149,7 @@ ul.cplist {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   }
   .active-subsection a {
-    background: #F9F9F9;
+    background: $col_ucp_menue_left;
     color: #D31141;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     &:hover {
@@ -1529,5 +1530,43 @@ li {
 
 .badge {
   background-color: #D31141;
-  color: #ffffff;
+  color: $col_text_white;
 }
+
+/* font icon */
+.fa-gears::before, .fa-cogs::before {
+	color: #e36363;
+}
+
+.fa-legal::before, .fa-gavel::before {
+	color: #6f89c7;
+}
+
+.fa-file::before {
+	color: #eab751;
+}
+
+.fa-info::before {
+	color: #71a6c5;
+}
+
+.fa-remove::before, .fa-close::before, .fa-times::before {
+	color: #ac1919;
+}
+
+.fa-exclamation::before {
+	color: #eb2c2c;
+}
+
+.fa-pencil::before {
+	color: #555555;
+}
+
+.fa-quote-left::before {
+	color: #555555;
+}
+
+.fa-warning::before, .fa-exclamation-triangle::before {
+    color: #baab31;
+}
+
