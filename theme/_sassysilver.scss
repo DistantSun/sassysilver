@@ -3,8 +3,9 @@
 /* Provides the means to separate the menue part of navbar_header via configfile  */
 
 html, body {
-    background: $col_headerbar;
-    background: linear-gradient(180deg, shade($col_headerbar, 30%) 10%, $col_body 25%, $col_body 80%, shade($col_headerbar, 30%) 100%);
+  min-height: 101%;
+  height: auto;
+  background: linear-gradient(top, $col_headerbar 250px, $col_body 60%);
 }
 
 .wrap-headerbar {
