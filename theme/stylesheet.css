@@ -73,7 +73,6 @@
 /* ---------------------------------------------------------------
  * Mixins and other stuff exept for functions and calculations
  * --------------------------------------------------------------- */
-/* Switches postprofile/postbody right<->left */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -677,6 +676,7 @@ html {
   font-size: 100%;
   /* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
   height: 101%;
+  background-image: none;
 }
 
 body {
@@ -4213,7 +4213,7 @@ html, body {
 }
 
 h1 {
-  color: white;
+  color: #FFFFFF;
 }
 
 h2 {
@@ -4293,7 +4293,7 @@ a:hover {
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
 .wrap {
-  background-color: #FFF;
+  background-color: #949BA3;
   border-color: #E6E9ED;
 }
 
@@ -4567,7 +4567,7 @@ li.row:hover dd {
 }
 
 li.header dt, li.header dd {
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Post body styles
@@ -5721,14 +5721,51 @@ li.notification-reported strong, li.notification-disapproved strong {
   color: #ffffff;
 }
 
+/* font icon */
+.fa-gears::before, .fa-cogs::before {
+  color: #e36363;
+}
+
+.fa-legal::before, .fa-gavel::before {
+  color: #6f89c7;
+}
+
+.fa-file::before {
+  color: #eab751;
+}
+
+.fa-info::before {
+  color: #71a6c5;
+}
+
+.fa-remove::before, .fa-close::before, .fa-times::before {
+  color: #ac1919;
+}
+
+.fa-exclamation::before {
+  color: #eb2c2c;
+}
+
+.fa-pencil::before {
+  color: #555555;
+}
+
+.fa-quote-left::before {
+  color: #555555;
+}
+
+.fa-warning::before, .fa-exclamation-triangle::before {
+  color: #baab31;
+}
+
 /*  Additional code, not included in original prosilver */
-/* Provides the means to separate the menue part of navbar_header via configfile  */
+/* Provides the code changes required to separate the menue part of navbar_header via configfile  */
 html, body {
-  background: #081f42;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #06162e), color-stop(25%, #233e69), color-stop(80%, #233e69), to(#06162e));
-  background: -webkit-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
-  background: -o-linear-gradient(top, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
-  background: linear-gradient(180deg, #06162e 10%, #233e69 25%, #233e69 80%, #06162e 100%);
+  min-height: 101%;
+  height: auto;
+  background: -webkit-linear-gradient(top, #081f42 250px, #233e69 60%);
+  background: -o-linear-gradient(top, #081f42 250px, #233e69 60%);
+  background: linear-gradient(top, #081f42 250px, #233e69 60%);
 }
 
 .wrap-headerbar {
@@ -5765,6 +5802,50 @@ html, body {
   .postbody {
     width: 892px !important;
   }
+}
+
+/* New forabg/forumbg design */
+.forabg, .forumbg {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 5px 0;
+  margin-bottom: 8px;
+  background: -webkit-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: -o-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+}
+
+.forabg .inner, .forumbg .inner {
+  padding: 0;
+  border: 1px solid #000000;
+  border-radius: 7px;
+}
+
+ul.forums {
+  border-radius: 5px;
+}
+
+ul.topiclist li:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+ul.topiclist li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Enclosing statistic blocks in stat-container */
+#stat-container, #login-container {
+  border: 1px solid #081f42;
+  border-radius: 7px;
+  margin: 15px 5px 15px;
+  padding: 10px;
+  background-color: #dadfe6;
+}
+
+.headerspace, .headerspace h3 {
+  margin: 0;
 }
 
 /* -------------------------------------------------
