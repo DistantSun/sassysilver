@@ -20,7 +20,7 @@ html, body {
 }
 
 .headerbar-separate {
-    background-color: shade($col_base, 25%);
+    background-color: $col_headerbar;
     padding: 30px 5px 10px;
 }
 
@@ -77,13 +77,30 @@ ul.topiclist li {
 }
 
 /* Enclosing statistic blocks in stat-container */
-#stat-container, #login-container {
+
+@mixin container_base {
     border: 1px solid $col_headerbar;
     border-radius: 7px;
-    margin: 15px 5px 15px;
-    padding: 10px;
+    padding: 15px 10px;
     background-color: $col_forums;
+    margin: 0 5px;
 }
+
+#stat-container {
+    & .stat-block {
+        @include container_base;
+            &:first-child {
+                margin-top: 10px;
+            }
+            &:last-child {
+                margin-bottom: 15px;
+            }
+    }
+    & h3, & p {
+        margin: 0;
+    }
+}
+
 
 .headerspace, .headerspace h3 {
     margin: 0;
@@ -92,9 +109,8 @@ ul.topiclist li {
 
 
 /* -------------------------------------------------
- * Overrides nescessary due to either
- * limits of SAAS - or to my lack of knowledge ...
- * ------------------------------------------------- */
+ * Overrides, Mixins and other stuff ...
+  * ------------------------------------------------- */
 
 /* Switches postprofile/postbody right<->left */
 @if $define-postprofile-side == 0 {
