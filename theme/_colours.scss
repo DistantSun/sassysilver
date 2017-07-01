@@ -9,7 +9,7 @@ html, body {
 }
 
 h1 {
-  color: $col_text_white;
+  color: #FFFFFF;
 }
 
 h2 {
@@ -22,7 +22,7 @@ h3 {
 }
 
 hr {
-  border-color: $col_border_white;
+  border-color: #FFFFFF;
   border-top-color: #CCCCCC;
 }
 
@@ -41,7 +41,7 @@ a {
 /* Links on gradient backgrounds */
 
 .forumbg .header a, .forabg .header a, th a {
-  color: $col_text_white;
+  color: #FFFFFF;
 }
 
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
@@ -97,7 +97,7 @@ a {
 }
 
 .headerbar {
-  color: $col_text_white;
+  color: #FFFFFF;
   background-color: $col_headerbar;
 /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
@@ -161,7 +161,7 @@ a {
 ----------------------------------------*/
 
 ul.navlinks {
-  border-top-color: $col_border_white;
+  border-top-color: #FFFFFF;
 }
 
 /* Table styles
@@ -170,7 +170,7 @@ ul.navlinks {
 table {
   &.table1 {
     thead th {
-      color: $col_text_white;
+      color: #FFFFFF;
     }
     tbody tr {
       border-color: #BFC1CF;
@@ -262,11 +262,11 @@ dl.details {
 .jumpbox-cat-link {
   background-color: #0076b1;
   border-top-color: #0076B1;
-  color: $col_text_white;
+  color: #FFFFFF;
   &:hover {
     background-color: #12A3EB;
     border-top-color: #12A3EB;
-    color: $col_text_white;
+    color: #FFFFFF;
   }
 }
 
@@ -342,18 +342,18 @@ ul {
       color: #4C5D77;
     }
     dd {
-      border-left-color: $col_border_white;
+      border-left-color: #FFFFFF;
     }
   }
 }
 
 .rtl ul.topiclist dd {
-  border-right-color: $col_border_white;
+  border-right-color: #FFFFFF;
   border-left-color: transparent;
 }
 
 li.row {
-  border-top-color: $col_border_white;
+  border-top-color: #FFFFFF;
   border-bottom-color: #00608F;
   strong {
     color: #000000;
@@ -373,7 +373,7 @@ li.row {
 
 li.header {
   dt, dd {
-    color: $col_text_white;
+    color: #FFFFFF;
   }
 }
 
@@ -438,11 +438,10 @@ blockquote {
 blockquote blockquote {
   /* Nested quotes */
   background-color: $col_quote_center;
-}
-
-blockquote blockquote blockquote {
+  blockquote {
     /* Nested quotes */
     background-color: $col_quote_in_out;
+  }
 }
 
 /* Code block */
@@ -459,7 +458,7 @@ blockquote blockquote blockquote {
 }
 
 .syntaxbg {
-  color: $col_text_white;
+  color: #FFFFFF;
 }
 
 .syntaxcomment {
@@ -545,7 +544,7 @@ fieldset.polls {
     }
   }
   dd div {
-    color: $col_text_white;
+    color: #FFFFFF;
   }
 }
 
@@ -610,7 +609,7 @@ fieldset.polls {
 
 .postprofile {
   color: #666666;
-  border-color: $col_border_white;
+  border-color: #FFFFFF;
 }
 
 .pm .postprofile {
@@ -713,19 +712,19 @@ Colours and backgrounds for buttons.css
     &.active span {
       background: #4692BF;
       border-color: #4692BF;
-      color: $col_text_white;
+      color: #FFFFFF;
     }
     a:hover {
       background: #368AD2;
       border-color: #368AD2;
       filter: none;
-      color: $col_text_white;
+      color: #FFFFFF;
       text-shadow: none;
       .icon {
         background: #368AD2;
         border-color: #368AD2;
         filter: none;
-        color: $col_text_white;
+        color: #FFFFFF;
         text-shadow: none;
       }
     }
@@ -734,7 +733,7 @@ Colours and backgrounds for buttons.css
     background: #368AD2;
     border-color: #368AD2;
     filter: none;
-    color: $col_text_white;
+    color: #FFFFFF;
     text-shadow: none;
   }
 }
@@ -743,7 +742,7 @@ Colours and backgrounds for buttons.css
   background: #368AD2;
   border-color: #368AD2;
   filter: none;
-  color: $col_text_white;
+  color: #FFFFFF;
   text-shadow: none;
 }
 
@@ -1530,7 +1529,7 @@ li {
 
 .badge {
   background-color: #D31141;
-  color: $col_text_white;
+  color: #ffffff;
 }
 
 /* font icon */
