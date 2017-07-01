@@ -5836,12 +5836,24 @@ ul.topiclist li:last-child {
 }
 
 /* Enclosing statistic blocks in stat-container */
-#stat-container, #login-container {
+#stat-container .stat-block {
   border: 1px solid #081f42;
   border-radius: 7px;
-  margin: 15px 5px 15px;
-  padding: 10px;
+  padding: 15px 10px;
   background-color: #dadfe6;
+  margin: 0 5px;
+}
+
+#stat-container .stat-block:first-child {
+  margin-top: 10px;
+}
+
+#stat-container .stat-block:last-child {
+  margin-bottom: 15px;
+}
+
+#stat-container h3, #stat-container p {
+  margin: 0;
 }
 
 .headerspace, .headerspace h3 {
@@ -5849,9 +5861,8 @@ ul.topiclist li:last-child {
 }
 
 /* -------------------------------------------------
- * Overrides nescessary due to either
- * limits of SAAS - or to my lack of knowledge ...
- * ------------------------------------------------- */
+ * Overrides, Mixins and other stuff ...
+  * ------------------------------------------------- */
 /* Switches postprofile/postbody right<->left */
 .postprofile {
   border-width: 0 0 0 1px;
