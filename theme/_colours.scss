@@ -4,7 +4,7 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-  color: #536482;
+  color: $col_text_body;
   background-color: $col_body;
 }
 
@@ -92,7 +92,7 @@ a {
 ---------------------------------------- */
 
 .wrap {
-  background-color: #FFF;
+  background-color: $col_wrap;
   border-color: #E6E9ED;
 }
 
@@ -123,7 +123,7 @@ a {
 }
 
 .panel {
-  background-color: #ECF1F3;
+  background-color: $col_panel;
   color: #28313F;
 }
 
@@ -134,15 +134,15 @@ a {
 }
 
 .bg1, table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
-  background-color: #ECF3F7;
+  background-color: $col_bg;
 }
 
 .bg2, table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
-  background-color: #E1EBF2;
+  background-color: $col_bg2;
 }
 
 .bg3 {
-  background-color: #CADCEB;
+  background-color: $col_bg;
 }
 
 .ucprowbg {
@@ -359,7 +359,7 @@ li.row {
     color: #000000;
   }
   &:hover {
-    background-color: #F6F4D0;
+    background-color: $col_forums_hov;
     dd {
       border-left-color: #CCCCCC;
     }
@@ -426,7 +426,7 @@ dl.faq dt {
 /* Quote block */
 
 blockquote {
-  background-color: #EBEADD;
+  background-color: $col_quote_in_out;
   background-image: url("./images/quote.gif");
   border-color: #DBDBCE;
 }
@@ -437,10 +437,10 @@ blockquote {
 
 blockquote blockquote {
   /* Nested quotes */
-  background-color: #EFEED9;
+  background-color: $col_quote_center;
   blockquote {
     /* Nested quotes */
-    background-color: #EBEADD;
+    background-color: $col_quote_in_out;
   }
 }
 
@@ -1048,33 +1048,33 @@ ul.cplist {
 
 .tabs {
   .tab > a {
-    background: #BACCD9;
-    color: #536482;
+    background: $col_ucp_menue;
+    color: $col_text_body;
     &:hover {
-      background: #DDEDFB;
+      background: $col_ucp_menue_a_h;
       color: #D31141;
     }
   }
   .activetab > a {
-    background-color: #CADCEB;
+    background-color: $col_ucp_menue_a_h;
     /* Old browsers */
     /* FF3.6+ */
-    background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-    background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+    background-image: -webkit-linear-gradient(top, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
+    background-image: linear-gradient(to bottom, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
     /* IE6-9 */
-    border-color: #CADCEB;
+    border-color: $col_ucp_menue_a_h;
     box-shadow: 0 1px 1px #F2F9FF inset;
     color: #333333;
     &:hover {
-      background-color: #CADCEB;
+      background-color: $col_ucp_menue_a_h;
       /* Old browsers */
       /* FF3.6+ */
-      background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-      background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+      background-image: -webkit-linear-gradient(top, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
+      background-image: linear-gradient(to bottom, $col_ucp_menue_a_h_2 0%, $col_ucp_menue_a_h 100%);
       /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
       /* IE6-9 */
       border-color: #CADCEB;
       box-shadow: 0 1px 1px #F2F9FF inset;
@@ -1120,13 +1120,13 @@ ul.cplist {
 
 .navigation a {
   color: #333;
-  background: #CADCEB;
+  background: $col_ucp_menue_left;
   /* Old browsers */
   /* FF3.6+ */
-  background: -webkit-linear-gradient(left, #B4C4D1 50%, #CADCEB 100%);
-  background: linear-gradient(to right, #B4C4D1 50%, #CADCEB 100%);
+  background: -webkit-linear-gradient(left, $col_ucp_menue_left 0%, $col_ucp_menue_left-low 100%);
+  background: linear-gradient(to right, $col_ucp_menue_left 0%, $col_ucp_menue_left-low 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B4C4D1', endColorstr='#CADCEB',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_left', endColorstr='$col_ucp_menue_left-low',GradientType=1 );
   /* IE6-9 */
 }
 
@@ -1148,7 +1148,7 @@ ul.cplist {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   }
   .active-subsection a {
-    background: #F9F9F9;
+    background: $col_ucp_menue_left;
     color: #D31141;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     &:hover {
@@ -1531,3 +1531,41 @@ li {
   background-color: #D31141;
   color: #ffffff;
 }
+
+/* font icon */
+.fa-gears::before, .fa-cogs::before {
+	color: #e36363;
+}
+
+.fa-legal::before, .fa-gavel::before {
+	color: #6f89c7;
+}
+
+.fa-file::before {
+	color: #eab751;
+}
+
+.fa-info::before {
+	color: #71a6c5;
+}
+
+.fa-remove::before, .fa-close::before, .fa-times::before {
+	color: #ac1919;
+}
+
+.fa-exclamation::before {
+	color: #eb2c2c;
+}
+
+.fa-pencil::before {
+	color: #555555;
+}
+
+.fa-quote-left::before {
+	color: #555555;
+}
+
+.fa-warning::before, .fa-exclamation-triangle::before {
+    color: #baab31;
+}
+

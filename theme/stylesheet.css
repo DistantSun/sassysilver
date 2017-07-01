@@ -4208,7 +4208,7 @@ input.search {
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 html, body {
-  color: #536482;
+  color: #0b2855;
   background-color: #233e69;
 }
 
@@ -4293,7 +4293,7 @@ a:hover {
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
 .wrap {
-  background-color: #FFF;
+  background-color: #949BA3;
   border-color: #E6E9ED;
 }
 
@@ -4306,25 +4306,25 @@ a:hover {
 }
 
 .forumbg {
-  background-color: #47100c;
+  background-color: #0b2856;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
   background-repeat: repeat-x; */
 }
 
 .forabg {
-  background-color: #47100c;
+  background-color: #0b2856;
   /*  background-image: -webkit-linear-gradient(top, #6ACEFF 0%, #12A3EB 2px, #0076B1 92px, #0076B1 100%);
   background-image: linear-gradient(to bottom, #6ACEFF 0%, #12A3EB 2px, #0076B1 92px, #0076B1 100%);
   background-repeat: repeat-x;*/
 }
 
 .navbar {
-  background-color: #e4dbdb;
+  background-color: #c2cad5;
 }
 
 .panel {
-  background-color: #ECF1F3;
+  background-color: #dde1e8;
   color: #28313F;
 }
 
@@ -4333,15 +4333,15 @@ a:hover {
 }
 
 .bg1, table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
-  background-color: #ECF3F7;
+  background-color: #e4e7ed;
 }
 
 .bg2, table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
-  background-color: #E1EBF2;
+  background-color: #f3f4f7;
 }
 
 .bg3 {
-  background-color: #CADCEB;
+  background-color: #e4e7ed;
 }
 
 .ucprowbg {
@@ -4554,7 +4554,7 @@ li.row strong {
 }
 
 li.row:hover {
-  background-color: #F6F4D0;
+  background-color: #eef0f3;
 }
 
 li.row:hover dd {
@@ -4615,7 +4615,7 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-  background-color: #EBEADD;
+  background-color: #c2cad5;
   background-image: url("./images/quote.gif");
   border-color: #DBDBCE;
 }
@@ -4626,12 +4626,12 @@ blockquote {
 
 blockquote blockquote {
   /* Nested quotes */
-  background-color: #EFEED9;
+  background-color: #d3d8e1;
 }
 
 blockquote blockquote blockquote {
   /* Nested quotes */
-  background-color: #EBEADD;
+  background-color: #c2cad5;
 }
 
 /* Code block */
@@ -5232,42 +5232,42 @@ ul.cplist {
 /* CP tabbed menu
 ----------------------------------------*/
 .tabs .tab > a {
-  background: #BACCD9;
-  color: #536482;
+  background: #b6bfcd;
+  color: #0b2855;
 }
 
 .tabs .tab > a:hover {
-  background: #DDEDFB;
+  background: #ced4de;
   color: #D31141;
 }
 
 .tabs .activetab > a {
-  background-color: #CADCEB;
+  background-color: #ced4de;
   /* Old browsers */
   /* FF3.6+ */
-  background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E2F2FF), to(#CADCEB));
-  background-image: -o-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-  background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+  background-image: -webkit-linear-gradient(top, #485f82 0%, #ced4de 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#485f82), to(#ced4de));
+  background-image: -o-linear-gradient(top, #485f82 0%, #ced4de 100%);
+  background-image: linear-gradient(to bottom, #485f82 0%, #ced4de 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
   /* IE6-9 */
-  border-color: #CADCEB;
+  border-color: #ced4de;
   -webkit-box-shadow: 0 1px 1px #F2F9FF inset;
   box-shadow: 0 1px 1px #F2F9FF inset;
   color: #333333;
 }
 
 .tabs .activetab > a:hover {
-  background-color: #CADCEB;
+  background-color: #ced4de;
   /* Old browsers */
   /* FF3.6+ */
-  background-image: -webkit-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E2F2FF), to(#CADCEB));
-  background-image: -o-linear-gradient(top, #E2F2FF 0%, #CADCEB 100%);
-  background-image: linear-gradient(to bottom, #E2F2FF 0%, #CADCEB 100%);
+  background-image: -webkit-linear-gradient(top, #485f82 0%, #ced4de 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#485f82), to(#ced4de));
+  background-image: -o-linear-gradient(top, #485f82 0%, #ced4de 100%);
+  background-image: linear-gradient(to bottom, #485f82 0%, #ced4de 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2F2FF', endColorstr='#CADCEB',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_a_h_2', endColorstr='$col_ucp_menue_a_h',GradientType=0 );
   /* IE6-9 */
   border-color: #CADCEB;
   -webkit-box-shadow: 0 1px 1px #F2F9FF inset;
@@ -5307,15 +5307,15 @@ ul.cplist {
 /* Link styles for the sub-section links */
 .navigation a {
   color: #333;
-  background: #CADCEB;
+  background: #aab4c5;
   /* Old browsers */
   /* FF3.6+ */
-  background: -webkit-linear-gradient(left, #B4C4D1 50%, #CADCEB 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #B4C4D1), to(#CADCEB));
-  background: -o-linear-gradient(left, #B4C4D1 50%, #CADCEB 100%);
-  background: linear-gradient(to right, #B4C4D1 50%, #CADCEB 100%);
+  background: -webkit-linear-gradient(left, #aab4c5 0%, #ced4de 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#aab4c5), to(#ced4de));
+  background: -o-linear-gradient(left, #aab4c5 0%, #ced4de 100%);
+  background: linear-gradient(to right, #aab4c5 0%, #ced4de 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B4C4D1', endColorstr='#CADCEB',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col_ucp_menue_left', endColorstr='$col_ucp_menue_left-low',GradientType=1 );
   /* IE6-9 */
 }
 
@@ -5339,7 +5339,7 @@ ul.cplist {
 }
 
 .navigation .active-subsection a {
-  background: #F9F9F9;
+  background: #aab4c5;
   color: #D31141;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -5721,8 +5721,45 @@ li.notification-reported strong, li.notification-disapproved strong {
   color: #ffffff;
 }
 
+/* font icon */
+.fa-gears::before, .fa-cogs::before {
+  color: #e36363;
+}
+
+.fa-legal::before, .fa-gavel::before {
+  color: #6f89c7;
+}
+
+.fa-file::before {
+  color: #eab751;
+}
+
+.fa-info::before {
+  color: #71a6c5;
+}
+
+.fa-remove::before, .fa-close::before, .fa-times::before {
+  color: #ac1919;
+}
+
+.fa-exclamation::before {
+  color: #eb2c2c;
+}
+
+.fa-pencil::before {
+  color: #555555;
+}
+
+.fa-quote-left::before {
+  color: #555555;
+}
+
+.fa-warning::before, .fa-exclamation-triangle::before {
+  color: #baab31;
+}
+
 /*  Additional code, not included in original prosilver */
-/* Provides the means to separate the menue part of navbar_header via configfile  */
+/* Provides the code changes required to separate the menue part of navbar_header via configfile  */
 html, body {
   min-height: 101%;
   height: auto;
@@ -5765,6 +5802,50 @@ html, body {
   .postbody {
     width: 892px !important;
   }
+}
+
+/* New forabg/forumbg design */
+.forabg, .forumbg {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 5px 0;
+  margin-bottom: 8px;
+  background: -webkit-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: -o-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+}
+
+.forabg .inner, .forumbg .inner {
+  padding: 0;
+  border: 1px solid #000000;
+  border-radius: 7px;
+}
+
+ul.forums {
+  border-radius: 5px;
+}
+
+ul.topiclist li:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+ul.topiclist li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Enclosing statistic blocks in stat-container */
+#stat-container, #login-container {
+  border: 1px solid #081f42;
+  border-radius: 7px;
+  margin: 15px 5px 15px;
+  padding: 10px;
+  background-color: #dadfe6;
+}
+
+.headerspace, .headerspace h3 {
+  margin: 0;
 }
 
 /* -------------------------------------------------
@@ -6314,5 +6395,4 @@ html, body {
     width: 80px;
   }
 }
-
 
