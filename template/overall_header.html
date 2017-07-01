@@ -25,10 +25,10 @@
 <!-- ENDIF -->
 
 <!--
-	phpBB style name: prosilver
+	phpBB style name: Sassysilver
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
-	Modified by:
+	Modified by:	  Melmac
 -->
 
 <!-- IF S_ALLOW_CDN -->
@@ -74,7 +74,7 @@
 <!-- EVENT overall_header_stylesheets_after -->
 
 </head>
-<body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}">
+<body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}"<!-- IF $HEADERBAR_SEPARAT == 1 --> style="margin-top: 15px;"<!-- ENDIF -->>
 
 <!-- EVENT overall_header_body_before -->
 
@@ -96,13 +96,13 @@
 	<a id="top" class="top-anchor" accesskey="t"></a>
 
 	<div id="page-header">
-		
+
 		<!-- IF $HEADERBAR_SEPARAT == 1 -->
 		<div class="headerbar" role="banner">
 			<!-- INCLUDE headerbar.html -->
 		</div>
 		<!-- ENDIF -->
-		
+
 		<!-- IF $HEADERBAR_SEPARAT != 0  -->
 		<!-- INCLUDE menuebar.html -->
 		<!-- ENDIF -->
