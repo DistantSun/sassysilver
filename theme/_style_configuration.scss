@@ -74,7 +74,7 @@ $col_quote_in_out:                          tint($col_base, 75%) !default;      
 $col_quote_center:                          tint($col_base, 82%) !default;                                                      // Colour qoute center
 $col_ucp_menue:                             tint($col_base, 70%) !default;                                                      // UCP Menü
 $col_ucp_menue_a_h:                         tint($col_base, 80%) !default;                                                      // UCP Menü Aktiv, hover
-$col_ucp_menue_a_h_2:                       tint($col_base, 25%) !default;                                                      // UCP Menü Aktiv, hover 
+$col_ucp_menue_a_h_2:                       tint($col_base, 25%) !default;                                                      // UCP Menü Aktiv, hover
 $col_ucp_menue_left:                        tint($col_base, 65%) !default;                                                      // UCP Menü left
 $col_ucp_menue_left-low:                    tint($col_base, 80%) !default;                                                      // UCP Menü left-low
 
@@ -131,4 +131,23 @@ $col_links:                                 shade($col_base, 1%) !default;      
 /* ---------------------------------------------------------------
  * Mixins and other stuff exept for functions and calculations
  * --------------------------------------------------------------- */
+ @mixin forum_container {
+     border: none;
+     border-radius: 5px;
+     padding: 5px 5px 0;
+     margin-bottom: 8px;
+     background: linear-gradient(top, $col_headerbar 35px,$col_headerbar 36px, $col_wrap 45px, $col_wrap 100%);
+         .inner {
+             padding: 0;
+             border: 1px solid #000000;
+             border-radius: 7px;
+         }
+ }
 
+ @mixin container_base {
+     border: 1px solid $col_headerbar;
+     border-radius: 7px;
+     padding: 15px 10px;
+     background-color: $col_forums;
+     margin: 0;
+ }
