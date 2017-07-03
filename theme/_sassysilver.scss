@@ -7,6 +7,10 @@ html, body {
   background: linear-gradient(top, $col_headerbar 250px, $col_body 60%);
 }
 
+#wrap {
+    box-shadow: $box-shadow-inset-double;
+}
+
 .wrap-headerbar {
     display: block;
     margin: 0 auto;
@@ -36,9 +40,8 @@ html, body {
     background-color: $col_forums;
 }
 
-
+// Post overhaul
 // postprofile & postbody
-
 @media (min-width: 1100px) {
   .postprofile {
     width: $width-postprofile;
@@ -47,6 +50,29 @@ html, body {
   .postbody {
     width: ($width_wrap - 40px - $width-postprofile) !important;
   }
+}
+
+// Posts
+.post {
+    box-shadow: $box-shadow-outset-single-posts;
+    margin-bottom: 10px;
+}
+
+.panel {
+    box-shadow: $box-shadow-inset-double;
+    padding: 7px 12px;
+}
+
+// Diverse new spacings
+.action-bar {
+    margin: 6px 0 10px;
+}
+
+.page-footer, #page-header {
+    & .navbar {
+        padding: 5px 10px;
+        box-shadow: $box-shadow-inset-double;
+    }
 }
 
 /* New forabg/forumbg design */
