@@ -104,7 +104,7 @@ ul.topiclist li {
   * ------------------------------------------------- */
 
 /* Switches postprofile/postbody right<->left */
-@if $define-postprofile-side == 0 {
+@if $define-postprofile-side == right {
     .postprofile {
         border-width: 0 0 0 1px;
         float: right;
@@ -118,7 +118,7 @@ ul.topiclist li {
     }
 }
 
-@if $define-postprofile-side == 1 {
+@if $define-postprofile-side == left {
     .postprofile {
         border-width: 0 1px 0 0;
         float: left;

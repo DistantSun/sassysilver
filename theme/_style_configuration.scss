@@ -7,11 +7,11 @@
 // Layout switches
 
 //  Colours - general colour scheme. Do NOT change!
-$col_scheme:                                0 !default; // Board colour scheme; 0 = blue, 1 = red, 2 = green, 3 = black
+$col_scheme:                                blue !default; // Board colour scheme; available schemes: blue, red, green, black
 // Board width
 $width_wrap:                                1152px !default;                // Board width
 // Postprofile positioning & max. width
-$define-postprofile-side:                   0 !default;                     // Displays postprofile left or right: 0 = on right side, 1 = on left side
+$define-postprofile-side:                   right !default;                     // Displays postprofile left or right
 $width-postprofile:                         240px !default;                 // Width of postprofile - please choose carefully
 
 // Background images
@@ -49,14 +49,10 @@ $font-size-dd:                              $font-size-notific-title !default;
 $font-size-dd-lp:                           $font-size-p !default;
 
 
-//  Colours - general colour scheme. Do NOT change!
-
-$col_scheme:                                0 !default; // Board colour scheme; 0 = blue, 1 = red, 2 = green, 3 = black
-
 
 // Colour mapping for colour schemes
 
-$col_base:                                  map_get((0: #0B2958, 1: #48100C, 2: #0A3422, 3: #1b1a1a), $col_scheme) !default;    // Base colours for colour schemes the following colours will derive from
+$col_base:                                  map_get((blue: #0B2958, red: #48100C, green: #0A3422, black: #1b1a1a), $col_scheme) !default;    // Base colours for colour schemes the following colours will derive from
 
 // Background Colours
 $col_body:                                  tint($col_base, 10%) !default;                                                      // Body colour
