@@ -16,7 +16,6 @@
 {% EVENT index_body_forumlist_body_after %}
 
 {% if not S_USER_LOGGED_IN and not S_IS_BOT %}
-
 <div id="login-container">
 	<form method="post" action="{{ S_LOGIN_ACTION }}" class="headerspace">
 	<h3><a href="{{ U_LOGIN_LOGOUT }}">{{ lang('LOGIN_LOGOUT') }}</a>{% if S_REGISTER_ENABLED %}&nbsp; &bull; &nbsp;<a href="{{ U_REGISTER }}">{{ lang('REGISTER') }}</a>{% endif %}</h3>
@@ -36,11 +35,10 @@
 </div>
 {% endif %}
 
-<div id="stat-container">
-
 {% EVENT index_body_stat_blocks_before %}
 
 {% if S_DISPLAY_ONLINE_LIST %}
+<div class="stat-container">
 	<div class="stat-block online-list">
 		{% if U_VIEWONLINE %}<h3><a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a></h3>{% else %}<h3>{{ lang('WHO_IS_ONLINE') }}</h3>{% endif %}
 		<p>
@@ -50,9 +48,11 @@
 			{% EVENT index_body_block_online_append %}
 		</p>
 	</div>
+</div>
 {% endif %}
 
 {% if S_DISPLAY_BIRTHDAY_LIST %}
+<div class="stat-container">
 	<div class="stat-block birthday-list">
 		<h3>{{ lang('BIRTHDAYS') }}</h3>
 		<p>
@@ -61,9 +61,11 @@
 			{% EVENT index_body_block_birthday_append %}
 		</p>
 	</div>
+</div>
 {% endif %}
 
 {% if NEWEST_USER %}
+<div class="stat-container">
 	<div class="stat-block statistics">
 		<h3>{{ lang('STATISTICS') }}</h3>
 		<p>
@@ -72,10 +74,9 @@
 			{% EVENT index_body_block_stats_append %}
 		</p>
 	</div>
+</div>
 {% endif %}
 
 {% EVENT index_body_stat_blocks_after %}
-
-</div>
 
 {% INCLUDE 'overall_footer.html' %}
