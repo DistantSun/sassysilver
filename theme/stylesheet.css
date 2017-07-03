@@ -5805,7 +5805,7 @@ html, body {
 }
 
 /* New forabg/forumbg design */
-.forabg, .forumbg {
+.forabg, .forumbg, .stat-container {
   border: none;
   border-radius: 5px;
   padding: 5px 5px 0;
@@ -5815,7 +5815,7 @@ html, body {
   background: linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
 }
 
-.forabg .inner, .forumbg .inner {
+.forabg .inner, .forumbg .inner, .stat-container .inner {
   padding: 0;
   border: 1px solid #000000;
   border-radius: 7px;
@@ -5836,23 +5836,37 @@ ul.topiclist li:last-child {
 }
 
 /* Enclosing statistic blocks in stat-container */
-#stat-container .stat-block {
+#login-container {
   border: 1px solid #081f42;
   border-radius: 7px;
   padding: 15px 10px;
   background-color: #dadfe6;
+  margin: 0;
   margin: 0 5px;
+  background-color: #bfdfbf;
 }
 
-#stat-container .stat-block:first-child {
-  margin-top: 10px;
+.stat-container {
+  margin-top: 15px;
 }
 
-#stat-container .stat-block:last-child {
+.stat-container .stat-block {
+  border: 1px solid #081f42;
+  border-radius: 7px;
+  padding: 15px 10px;
+  background-color: #dadfe6;
+  margin: 0;
+}
+
+.stat-container .stat-block:first-child {
+  margin-top: 15px;
+}
+
+.stat-container .stat-block:last-child {
   margin-bottom: 15px;
 }
 
-#stat-container h3, #stat-container p {
+.stat-container h3, .stat-container p {
   margin: 0;
 }
 
