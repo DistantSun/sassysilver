@@ -21,6 +21,33 @@ html, body {
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto 10px;
+    background-color: black;
+        & .navbar {
+            padding: 1px 3px;
+                & li {
+                    background-color: tint($col_base, 65%);
+                    min-width: 52px;
+                    height: auto;
+                    padding: 2px 10px;
+                    border: 1px inset #FFFFFF;
+                    border-radius: 7px;
+                    &:hover {
+                        background-color: tint($col_base, 85%);
+                        color: red;
+                        border-style: inset;
+                    }
+                }
+                & ul.linklist li {
+                    margin-right: 2px;
+                }
+                & ul.linklist > li.rightside {
+                    margin-left: 2px;
+                }
+        }
+}
+
+ul.navlinks {
+    border: 0;
 }
 
 .headerbar-separate {
