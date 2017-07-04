@@ -1,10 +1,14 @@
 /*  Additional code, not included in original prosilver */
 
-/* Provides the means to separate the menue part of navbar_header via configfile  */
-
+/* Provides the code changes required to separate the menue part of navbar_header via configfile  */
 html, body {
-    background: $col_headerbar;
-    background: linear-gradient(180deg, shade($col_headerbar, 30%) 10%, $col_body 25%, $col_body 80%, shade($col_headerbar, 30%) 100%);
+  min-height: 101%;
+  height: auto;
+  background: linear-gradient(top, $col_headerbar 250px, $col_body 60%);
+}
+
+#wrap {
+    box-shadow: $box-shadow-inset-double;
 }
 
 .wrap-headerbar {
@@ -17,10 +21,37 @@ html, body {
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto 10px;
+    background-color: black;
+        & .navbar {
+            padding: 1px 3px;
+                & li {
+                    background-color: tint($col_base, 65%);
+                    min-width: 52px;
+                    height: auto;
+                    padding: 2px 10px;
+                    border: 1px inset #FFFFFF;
+                    border-radius: 7px;
+                    &:hover {
+                        background-color: tint($col_base, 85%);
+                        color: red;
+                        border-style: inset;
+                    }
+                }
+                & ul.linklist li {
+                    margin-right: 2px;
+                }
+                & ul.linklist > li.rightside {
+                    margin-left: 2px;
+                }
+        }
+}
+
+ul.navlinks {
+    border: 0;
 }
 
 .headerbar-separate {
-    background-color: shade($col_base, 25%);
+    background-color: $col_headerbar;
     padding: 30px 5px 10px;
 }
 
@@ -36,9 +67,8 @@ html, body {
     background-color: $col_forums;
 }
 
-
+// Post overhaul
 // postprofile & postbody
-
 @media (min-width: 1100px) {
   .postprofile {
     width: $width-postprofile;
@@ -49,14 +79,85 @@ html, body {
   }
 }
 
+// Posts
+.post {
+    box-shadow: $box-shadow-outset-single-posts;
+    margin-bottom: 10px;
+}
+
+.panel {
+    box-shadow: $box-shadow-inset-double;
+    padding: 7px 12px;
+}
+
+// Diverse new spacings
+.action-bar {
+    margin: 6px 0 10px;
+}
+
+.page-footer, #page-header {
+    & .navbar {
+        padding: 5px 10px;
+        box-shadow: $box-shadow-inset-double;
+    }
+}
+
+/* New forabg/forumbg design */
+
+.forabg, .forumbg, .stat-container {
+    @include forum_container;
+}
+
+ul.forums {
+    border-radius: 5px;
+}
+
+ul.topiclist li {
+    &:first-child {
+        @include border-top-radius(5px);
+    }
+    &:last-child {
+        @include border-bottom-radius(5px);
+    }
+}
+
+/* Enclosing statistic blocks in stat-container */
+
+#login-container {
+    @include container_base;
+    margin: 0 5px;
+    background-color: tint(green, 75%);
+}
+
+.stat-container {
+    margin-top: 15px;
+    & .stat-block {
+        @include container_base;
+            &:first-child {
+                margin-top: 15px;
+            }
+            &:last-child {
+                margin-bottom: 15px;
+            }
+    }
+    & h3, & p {
+        margin: 0;
+    }
+}
+
+
+.headerspace, .headerspace h3 {
+    margin: 0;
+}
+
+
 
 /* -------------------------------------------------
- * Overrides nescessary due to either
- * limits of SAAS - or to my lack of knowledge ...
- * ------------------------------------------------- */
+ * Overrides, Mixins and other stuff ...
+  * ------------------------------------------------- */
 
 /* Switches postprofile/postbody right<->left */
-@if $define-postprofile-side == 0 {
+@if $define-postprofile-side == right {
     .postprofile {
         border-width: 0 0 0 1px;
         float: right;
@@ -70,7 +171,7 @@ html, body {
     }
 }
 
-@if $define-postprofile-side == 1 {
+@if $define-postprofile-side == left {
     .postprofile {
         border-width: 0 1px 0 0;
         float: left;

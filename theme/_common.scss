@@ -4,6 +4,7 @@ html {
   font-size: 100%;
   /* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
   height: 101%;
+    background-image: $img-bg-html;
 }
 
 body {
@@ -22,14 +23,14 @@ h1 {
   margin-right: 200px;
   margin-top: 15px;
   font-weight: bold;
-  font-size: 2em;
+  font-size: $font-size-h1;
 }
 
 h2 {
   /* Forum header titles */
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 2em;
+  font-size: $font-size-h2;
   margin: 0.8em 0 0.2em 0;
   &.solo {
     margin-bottom: 1em;
@@ -44,19 +45,19 @@ h3 {
   border-bottom: 1px solid transparent;
   margin-bottom: 3px;
   padding-bottom: 2px;
-  font-size: 1.05em;
+  font-size: $font-size-h3;
   margin-top: 20px;
 }
 
 h4 {
   /* Forum and topic list titles */
   font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
-  font-size: 1.3em;
+  font-size: $font-size-h4;
 }
 
 p {
   line-height: 1.3em;
-  font-size: 1.1em;
+  font-size: $font-size-p;
   margin-bottom: 1.5em;
 }
 
@@ -252,7 +253,7 @@ ul.linklist {
 
 ul.linklist > li {
   float: left;
-  font-size: 1.1em;
+  font-size: $font-size-p;
   line-height: 2.2em;
   list-style-type: none;
   margin-right: 7px;
@@ -660,7 +661,7 @@ table {
       font-weight: normal;
       text-transform: uppercase;
       line-height: 1.3em;
-      font-size: 1em;
+      font-size: $font-size-th;
       padding: 0 0 4px 3px;
       span {
         padding-left: 7px;
@@ -670,7 +671,7 @@ table {
       border: 1px solid transparent;
     }
     td {
-      font-size: 1.1em;
+      font-size: $font-size-td;
     }
     tbody {
       td {
@@ -790,7 +791,7 @@ table {
 
 dl.details {
   /*font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
-  font-size: 1.1em;
+  font-size: $font-size-dl;
   dt {
     float: left;
     clear: left;
@@ -825,7 +826,7 @@ fieldset.fields1 {
     margin-left: 1em;
   }
   ul.recipients input.button2 {
-    font-size: 0.8em;
+    font-size: $font-size-fieldset;
     margin-right: 0;
     padding: 0;
   }
@@ -981,7 +982,7 @@ fieldset.fields1 {
   }
   div.alert_text > {
     p, label, select, textarea, input {
-      font-size: 1.1em;
+      font-size: $font-size-p;
     }
   }
 }
@@ -1045,12 +1046,12 @@ fieldset.fields1 {
 
 .error {
   font-weight: bold;
-  font-size: 1em;
+  font-size: $font-size-error;
 }
 
 div.rules {
   margin: 10px 0;
-  font-size: 1.1em;
+  font-size: $font-size-rules;
   padding: 5px 10px;
   border-radius: 7px;
   ul, ol {
@@ -1115,7 +1116,7 @@ form > p.post-notice strong {
   margin: 0;
   padding: 6px 10px;
   strong {
-    font-size: 0.95em;
+    font-size: $font-size-membersearch;
   }
 }
 
@@ -1133,7 +1134,7 @@ form > p.post-notice strong {
       float: none;
       border-top: 1px solid;
       list-style-type: none;
-      font-size: 0.95em;
+      font-size: $font-size-dropdown-li;
       clear: both;
       position: relative;
       &:first-child {
@@ -1184,7 +1185,7 @@ form > p.post-notice strong {
   }
   .footer {
     text-align: center;
-    font-size: 1.1em;
+    font-size: $font-size-dropdown-footer;
   }
   ul li {
     a, &.no-url {
@@ -1217,7 +1218,7 @@ form > p.post-notice strong {
     }
     p {
       margin-bottom: 4px;
-      font-size: 1em;
+      font-size: $font-size-notific-p;
     }
   }
   p {
@@ -1233,7 +1234,7 @@ form > p.post-notice strong {
     white-space: nowrap;
   }
   p.notification-time {
-    font-size: 0.9em;
+    font-size: $font-size-notific-time;
     margin: 0;
     text-align: right;
   }
@@ -1247,13 +1248,13 @@ form > p.post-notice strong {
   p {
     &.notifications_title {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      font-size: 1.2em !important;
+      font-size: $font-size-notific-title !important;
       strong {
         font-weight: bold;
       }
     }
     &.notifications_time {
-      font-size: 0.9em !important;
+      font-size: $font-size-notific-time !important;
     }
   }
 }
