@@ -5783,6 +5783,38 @@ html, body {
 .wrap-menue {
   max-width: 1182px;
   margin: 2px auto 10px;
+  background-color: black;
+}
+
+.wrap-menue .navbar {
+  padding: 1px 3px;
+}
+
+.wrap-menue .navbar li {
+  background-color: #aab4c5;
+  min-width: 52px;
+  height: auto;
+  padding: 2px 10px;
+  border: 1px inset #FFFFFF;
+  border-radius: 7px;
+}
+
+.wrap-menue .navbar li:hover {
+  background-color: #dadfe6;
+  color: red;
+  border-style: inset;
+}
+
+.wrap-menue .navbar ul.linklist li {
+  margin-right: 2px;
+}
+
+.wrap-menue .navbar ul.linklist > li.rightside {
+  margin-left: 2px;
+}
+
+ul.navlinks {
+  border: 0;
 }
 
 .headerbar-separate {
