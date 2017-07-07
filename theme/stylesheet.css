@@ -1,9 +1,9 @@
 /*  phpBB3 Style Sheet
     --------------------------------------------------------------
-	Style name:			prosilver (the default phpBB 3.1.x style)
-	Based on style:
+	Style name:			SassySilver
+	Based on style:     prosilver (the default phpBB 3.1.x style)
 	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		phpBB Limited ( https://www.phpbb.com/ )
+	Modified by:		Melmac
     --------------------------------------------------------------
 */
 /*  Custom configuration file
@@ -5763,9 +5763,11 @@ li.notification-reported strong, li.notification-disapproved strong {
 html, body {
   min-height: 101%;
   height: auto;
+  background: -webkit-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
+  background: -o-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
   background: -webkit-linear-gradient(top, #081f42 250px, #233e69 60%);
   background: -o-linear-gradient(top, #081f42 250px, #233e69 60%);
-  background: linear-gradient(top, #081f42 250px, #233e69 60%);
+  background: linear-gradient(to bottom, #081f42 250px, #233e69 60%);
 }
 
 #wrap {
@@ -5775,51 +5777,22 @@ html, body {
 
 .wrap-headerbar {
   display: block;
-  margin: 0 auto;
+  height: auto;
+  padding: 10px 0;
+}
+
+.headerbar-separate {
   max-width: 1182px;
-  background-color: #081f42;
+  margin: 0 auto;
+}
+
+.site-description {
+  color: #FFFFFF;
 }
 
 .wrap-menue {
   max-width: 1182px;
-  margin: 2px auto 10px;
-  background-color: black;
-}
-
-.wrap-menue .navbar {
-  padding: 1px 3px;
-}
-
-.wrap-menue .navbar li {
-  background-color: #aab4c5;
-  min-width: 52px;
-  height: auto;
-  padding: 2px 10px;
-  border: 1px inset #FFFFFF;
-  border-radius: 7px;
-}
-
-.wrap-menue .navbar li:hover {
-  background-color: #dadfe6;
-  color: red;
-  border-style: inset;
-}
-
-.wrap-menue .navbar ul.linklist li {
-  margin-right: 2px;
-}
-
-.wrap-menue .navbar ul.linklist > li.rightside {
-  margin-left: 2px;
-}
-
-ul.navlinks {
-  border: 0;
-}
-
-.headerbar-separate {
-  background-color: #081f42;
-  padding: 30px 5px 10px;
+  margin: 2px auto;
 }
 
 /* Sidebar - controlled via configfile */
@@ -5869,9 +5842,11 @@ ul.navlinks {
   border-radius: 5px;
   padding: 5px 5px 0;
   margin-bottom: 8px;
+  background: -webkit-linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: -o-linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
   background: -webkit-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
   background: -o-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
-  background: linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
 }
 
 .forabg .inner, .forumbg .inner, .stat-container .inner {

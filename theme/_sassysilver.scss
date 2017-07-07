@@ -4,7 +4,9 @@
 html, body {
   min-height: 101%;
   height: auto;
-  background: linear-gradient(top, $col_headerbar 250px, $col_body 60%);
+  background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+  background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+  background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
 }
 
 #wrap {
@@ -13,48 +15,23 @@ html, body {
 
 .wrap-headerbar {
     display: block;
-    margin: 0 auto;
+    height: auto;
+    padding: 10px 0;
+}
+
+.headerbar-separate {
     max-width: $width_headerbar_separate;
-    background-color: $col_headerbar;
+    margin: 0 auto;
+}
+
+.site-description {
+    color: #FFFFFF;
 }
 
 .wrap-menue {
     max-width: $width_menuebar;
-    margin: 2px auto 10px;
-    background-color: black;
-        & .navbar {
-            padding: 1px 3px;
-                & li {
-                    background-color: tint($col_base, 65%);
-                    min-width: 52px;
-                    height: auto;
-                    padding: 2px 10px;
-                    border: 1px inset #FFFFFF;
-                    border-radius: 7px;
-                    &:hover {
-                        background-color: tint($col_base, 85%);
-                        color: red;
-                        border-style: inset;
-                    }
-                }
-                & ul.linklist li {
-                    margin-right: 2px;
-                }
-                & ul.linklist > li.rightside {
-                    margin-left: 2px;
-                }
-        }
+    margin: 2px auto;
 }
-
-ul.navlinks {
-    border: 0;
-}
-
-.headerbar-separate {
-    background-color: $col_headerbar;
-    padding: 30px 5px 10px;
-}
-
 
 
 /* Sidebar - controlled via configfile */
@@ -184,3 +161,4 @@ ul.topiclist li {
         float: right;
     }
 }
+
