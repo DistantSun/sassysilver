@@ -5777,20 +5777,22 @@ html, body {
 
 .wrap-headerbar {
   display: block;
-  margin: 0 auto;
-  max-width: 1182px;
-  background-color: #081f42;
+  height: auto;
   padding: 10px 0;
+}
+
+.headerbar-separate {
+  max-width: 1182px;
+  margin: 0 auto;
+}
+
+.site-description {
+  color: #FFFFFF;
 }
 
 .wrap-menue {
   max-width: 1182px;
   margin: 2px auto;
-}
-
-.headerbar-separate {
-  background-color: #081f42;
-  padding: 30px 5px 10px;
 }
 
 /* Sidebar - controlled via configfile */
