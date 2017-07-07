@@ -15,21 +15,22 @@ html, body {
 
 .wrap-headerbar {
     display: block;
-    margin: 0 auto;
-    max-width: $width_headerbar_separate;
-    background-color: $col_headerbar;
+    height: auto;
     padding: 10px 0;
+}
+
+.headerbar-separate {
+    max-width: $width_headerbar_separate;
+    margin: 0 auto;
+}
+
+.site-description {
+    color: #FFFFFF;
 }
 
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto;
-}
-
-
-.headerbar-separate {
-    background-color: $col_headerbar;
-    padding: 30px 5px 10px;
 }
 
 
