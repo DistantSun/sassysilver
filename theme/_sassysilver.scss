@@ -4,6 +4,7 @@
 html, body {
   min-height: 101%;
   height: auto;
+  background-color: $col_body;
   background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
   background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
   background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
@@ -46,13 +47,13 @@ html, body {
 
 // Post overhaul
 // postprofile & postbody
-@media (min-width: 1100px) {
-  .postprofile {
+@media all and (min-width: 1100px) {
+  .postprofile, .search .postprofile {
     width: $width-postprofile;
   }
 
-  .postbody {
-    width: ($width_wrap - 40px - $width-postprofile) !important;
+  .postbody, .search .postbody {
+    width: ($width_wrap - 40px - $width-postprofile);
   }
 }
 
