@@ -13,15 +13,6 @@
  *  Copy the code you want to change and paste it into _custom_configurations.scss
  *  and do your edits there.
  *  -------------------------------------------------------------------- */
-@media all and (min-width: 1100px) {
-  .postprofile {
-    width: 220px;
-  }
-  .postbody {
-    width: 912px;
-  }
-}
-
 @media (max-width: 325px) {
   .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
     max-width: 310px !important;
@@ -5763,6 +5754,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 html, body {
   min-height: 101%;
   height: auto;
+  background-color: #233e69;
   background: -webkit-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
   background: -o-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
   background: -webkit-linear-gradient(top, #081f42 250px, #233e69 60%);
@@ -5805,12 +5797,12 @@ html, body {
   background-color: #dadfe6;
 }
 
-@media (min-width: 1100px) {
-  .postprofile {
-    width: 220px;
+@media all and (min-width: 1100px) {
+  .postprofile, .search .postprofile {
+    width: 240px;
   }
-  .postbody {
-    width: 892px !important;
+  .postbody, .search .postbody {
+    width: 872px;
   }
 }
 
