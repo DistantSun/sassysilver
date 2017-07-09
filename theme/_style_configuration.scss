@@ -95,18 +95,6 @@ $col_links:                                 shade($col_base, 1%) !default;      
 
 // Calculations
 
-// postprofile & postbody
-
-@media all and (min-width: 1100px) {
-  .postprofile {
-    width: $width-postprofile;
-  }
-
-  .postbody {
-    width: ($width_wrap - 20px - $width-postprofile);
-  }
-}
-
 // headerbar & menuebar width responsive
 .extra-wrapper-width {
 @each $media_width, $hb_width in (325px, 310px),
