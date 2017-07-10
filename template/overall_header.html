@@ -80,7 +80,9 @@
 
 {% if definition.HEADERBAR_SEPARAT == 0 %}
 
-	<div id="wrap-header" class="wrap-headerbar">
+	<div id="wrap-header" class="wrap-headerbar" style="height: $height-wrap-headerbar;"></div>
+
+	<div class="headerbar" style="margin-top: $margin-top-headerbar-separated; background-color: transparent;">
 		<div class="headerbar-separate" role="banner">
 			{% INCLUDE 'headerbar.html' %}
 		</div>

@@ -16,8 +16,8 @@ html, body {
 
 .wrap-headerbar {
     display: block;
-    height: auto;
-    padding: 10px 0;
+    background-color: $col_headerbar;
+    border-bottom: 1px dotted grey;
 }
 
 .headerbar-separate {
@@ -32,6 +32,23 @@ html, body {
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto;
+}
+
+.headerbar a {
+    color: $col_text_headerbar;
+    font-style: italic;
+    font-weight: 600;
+    font-size: $font-size-headerbar;
+        &:link, &:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:hover {
+        color: #CCCCCC;
+        text-decoration: underline;
+    }
+
 }
 
 
