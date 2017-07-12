@@ -18,7 +18,8 @@ $width-postprofile:                         240px !default;                 // W
 $img-bg-html:                               none !default;
 
 // Dimensions
-
+$height-wrap-headerbar:                     350px !default;
+$margin-top-headerbar-separated:            (($height-wrap-headerbar - 50) * (-1)) !default;
 $width_headerbar_separate:                  $width_wrap + 30px !default;    // Width of the headerbar if set to diplay separately
 $width_menuebar:                            $width_wrap + 30px !default;    // Width of menuebar when displayed separately
 $width-sidebar:                             180px !default;                 // Width of sidebar
@@ -47,6 +48,7 @@ $font-size-topiclist-dl:                    $font-size-p !default;
 $font-size-li-header:                       $font-size-th !default;
 $font-size-dd:                              $font-size-notific-title !default;
 $font-size-dd-lp:                           $font-size-p !default;
+$font-size-headerbar:                       $font-size-p !default;
 
 
 
@@ -77,6 +79,8 @@ $col_ucp_menue_left-low:                    tint($col_base, 80%) !default;      
 // Text Colours
 $col_text_body:                             shade($col_base, 3%) !default;                                                      // Body Text colour
 $col_text_white:                            tint($col_base, 100%) !default;                                                     // all Text White #ffffff
+$col_text_headerbar:                        #FFFFFF !default;
+
 
 
 // Border Colours
