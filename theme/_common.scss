@@ -4,7 +4,6 @@ html {
   font-size: 100%;
   /* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
   height: 101%;
-    background-image: $img-bg-html;
 }
 
 body {
@@ -146,7 +145,7 @@ a:hover {
   border: 1px solid transparent;
   border-radius: 8px;
   margin: 0 auto;
-  max-width: $width_wrap;
+  max-width: $switch-width-wrap;
   min-width: 625px;
   padding: 15px;
 }
