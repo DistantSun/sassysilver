@@ -153,3 +153,10 @@ $col_links:                                 shade($col_base, 1%) !default;      
      background-color: $col_forums;
      margin: 0;
  }
+
+ @mixin action-bar-elements {
+    padding: 2px 8px;
+    border: 1px inset $col_headerbar;
+    border-radius: 7px;
+    background-color: $col_navbar;
+ }
