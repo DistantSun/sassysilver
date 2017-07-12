@@ -11,12 +11,10 @@ $width-postprofile:                         240px;                              
 
 $switch-col-wrap-off:                       yes;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent
 
-$height-wrap-headerbar:                     400px;
 
 // The following variables control the display of background images in "html, body", "wrap-header" and "headerbar"
 // Default values are "none" - all images have to be stored in the theme's image folder
 // NOTE: To allocate a image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
 
 $img-bg-html-body:                          'bg_body.jpg';
-// $img-bg-wrap-header:                        'bg_wrap_header.jpg';
 $img-bg-headerbar:                          none;
