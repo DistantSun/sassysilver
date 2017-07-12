@@ -7,21 +7,24 @@
 // Layout switches
 
 //  Colours - general colour scheme. Do NOT change!
-$col_scheme:                                blue !default; // Board colour scheme; available schemes: blue, red, green, black
+$switch-col-scheme:                                blue !default; // Board colour scheme; available schemes: blue, red, green, black
 // Board width
-$width_wrap:                                1152px !default;                // Board width
+$switch-width-wrap:                                1152px !default;                // Board width
 // Postprofile positioning & max. width
 $define-postprofile-side:                   right !default;                     // Displays postprofile left or right
 $width-postprofile:                         240px !default;                 // Width of postprofile - please choose carefully
 
 // Background images
-$img-bg-html:                               none !default;
+$switch-col-wrap-off:                       no !default;                        // Switches background colour of #wrap to transparent; values: no, yes
+$img-bg-html-body:                          none !default;
+$img-bg-wrap-header:                        none !default;
+$img-bg-headerbar:                          none !default;
 
 // Dimensions
-$height-wrap-headerbar:                     350px !default;
-$margin-top-headerbar-separated:            (($height-wrap-headerbar - 50) * (-1)) !default;
-$width_headerbar_separate:                  $width_wrap + 30px !default;    // Width of the headerbar if set to diplay separately
-$width_menuebar:                            $width_wrap + 30px !default;    // Width of menuebar when displayed separately
+$height-wrap-headerbar:                     400px !default;
+$margin-top-headerbar-separated:            (50 - $height-wrap-headerbar) !default;
+$width_headerbar_separate:                  $switch-width-wrap + 30px !default;    // Width of the headerbar if set to diplay separately
+$width_menuebar:                            $switch-width-wrap + 30px !default;    // Width of menuebar when displayed separately
 $width-sidebar:                             180px !default;                 // Width of sidebar
 
 // Fonts sizes
@@ -54,7 +57,7 @@ $font-size-headerbar:                       $font-size-p !default;
 
 // Colour mapping for colour schemes
 
-$col_base:                                  map_get((blue: #0B2958, red: #48100C, green: #0A3422, black: #1b1a1a), $col_scheme) !default;    // Base colours for colour schemes the following colours will derive from
+$col_base:                                  map_get((blue: #0B2958, red: #48100C, green: #0A3422, black: #1b1a1a), $switch-col-scheme) !default;    // Base colours for colour schemes the following colours will derive from
 
 // Background Colours
 $col_body:                                  tint($col_base, 10%) !default;                                                      // Body colour
@@ -125,16 +128,21 @@ $col_links:                                 shade($col_base, 1%) !default;      
  * --------------------------------------------------------------- */
  @mixin forum_container {
      border: none;
-     border-radius: 5px;
-     padding: 5px 5px 0;
+     border-radius: 7px;
+     padding: 8px 8px 0;
      margin-bottom: 8px;
-     background: -webkit-linear-gradient(to bottom, $col_headerbar 35px,$col_headerbar 36px, $col_wrap 45px, $col_wrap 100%);
-     background: -o-linear-gradient(to bottom, $col_headerbar 35px,$col_headerbar 36px, $col_wrap 45px, $col_wrap 100%);
-     background: linear-gradient(to bottom, $col_headerbar 35px,$col_headerbar 36px, $col_wrap 45px, $col_wrap 100%);
+     background: -webkit-linear-gradient(to bottom, rgba($col_headerbar, 1) 45px, rgba($col_headerbar, 1) 46px, rgba($col_wrap, 0) 52px, rgba($col_wrap, 0) 100%);
+     background: -o-linear-gradient(to bottom, rgba($col_headerbar, 1) 45px, rgba($col_headerbar, 1) 46px, rgba($col_wrap, 0) 52px, rgba($col_wrap, 0) 100%);
+     background: linear-gradient(to bottom, rgba($col_headerbar, 1) 45px, rgba($col_headerbar, 1) 46px, rgba($col_wrap, 0) 52px, rgba($col_wrap, 0) 100%);
          .inner {
              padding: 0;
-             border: 1px solid #000000;
              border-radius: 7px;
+             @include border-style(null solid solid);
+             @include border-width(null 1px 1px);
+             border-color: #000000;
+                & ul.topiclist {
+                    padding: 3px;
+                }
          }
  }
 

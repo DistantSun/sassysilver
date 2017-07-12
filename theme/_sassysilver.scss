@@ -4,25 +4,53 @@
 html, body {
   min-height: 101%;
   height: auto;
-  background-color: $col_body;
-  background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-  background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-  background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+    @if $img-bg-html-body == none {
+        background-color: $col_body;
+        background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+    }
+    @else {
+        background-image: url("./images/#{$img-bg-html-body}");
+        background-size: 100%;
+        background-attachment: fixed;
+    }
 }
 
 #wrap {
     box-shadow: $box-shadow-inset-double;
+        @if $img-bg-html-body != none {
+            @if $switch-col-wrap-off == yes {
+                background-color: transparent;
+            }
+        }
 }
 
 .wrap-headerbar {
     display: block;
-    background-color: $col_headerbar;
-    border-bottom: 1px dotted grey;
+    height: $height-wrap-headerbar;
+        @if $img-bg-wrap-header == none {
+            background: transparent;
+        }
+        @else {
+            background-image: url("./images/#{$img-bg-wrap-header}");
+            background-size: cover;
+        }
+}
+
+.whb-separator {
+    height: $height-wrap-headerbar;
 }
 
 .headerbar-separate {
     max-width: $width_headerbar_separate;
     margin: 0 auto;
+        @if $img-bg-headerbar == none {
+            background: transparent;
+        }
+        @else {
+            background-image: url("./images/#{$img-bg-headerbar}");
+        }
 }
 
 .site-description {
@@ -34,21 +62,28 @@ html, body {
     margin: 2px auto;
 }
 
-.headerbar a {
-    color: $col_text_headerbar;
-    font-style: italic;
-    font-weight: 600;
-    font-size: $font-size-headerbar;
-        &:link, &:visited {
-            color: inherit;
-            text-decoration: none;
-        }
 
-        &:hover {
-        color: #CCCCCC;
-        text-decoration: underline;
-    }
+.headerbar {
+    background-color: transparent;
+        & a {
+            color: $col_text_headerbar;
+            font-style: italic;
+            font-weight: 600;
+            font-size: $font-size-headerbar;
+                &:link, &:visited {
+                    color: inherit;
+                    text-decoration: none;
+                }
 
+                &:hover {
+                    color: #CCCCCC;
+                    text-decoration: underline;
+                }
+            }
+}
+
+.hb-separator {
+    margin-top: $margin-top-headerbar-separated;
 }
 
 
@@ -70,7 +105,7 @@ html, body {
   }
 
   .postbody, .search .postbody {
-    width: ($width_wrap - 40px - $width-postprofile);
+    width: ($switch-width-wrap - 40px - $width-postprofile);
   }
 }
 
@@ -110,9 +145,11 @@ ul.forums {
 ul.topiclist li {
     &:first-child {
         @include border-top-radius(5px);
+        border-top-color: transparent;
     }
     &:last-child {
         @include border-bottom-radius(5px);
+        border-bottom-color: transparent;
     }
 }
 
@@ -129,7 +166,7 @@ ul.topiclist li {
     & .stat-block {
         @include container_base;
             &:first-child {
-                margin-top: 15px;
+                margin-top: 5px;
             }
             &:last-child {
                 margin-bottom: 15px;
