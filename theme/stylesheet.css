@@ -667,7 +667,6 @@ html {
   font-size: 100%;
   /* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
   height: 101%;
-  background-image: none;
 }
 
 body {
@@ -5751,28 +5750,31 @@ li.notification-reported strong, li.notification-disapproved strong {
 html, body {
   min-height: 101%;
   height: auto;
-  background-color: #233e69;
-  background: -webkit-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
-  background: -o-linear-gradient(to bottom, #081f42 250px, #233e69 60%);
-  background: -webkit-linear-gradient(top, #081f42 250px, #233e69 60%);
-  background: -o-linear-gradient(top, #081f42 250px, #233e69 60%);
-  background: linear-gradient(to bottom, #081f42 250px, #233e69 60%);
+  background-image: url("./images/bg_body.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 #wrap {
   -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
+  background-color: transparent;
 }
 
 .wrap-headerbar {
   display: block;
-  background-color: #081f42;
-  border-bottom: 1px dotted grey;
+  height: 400px;
+  background: transparent;
+}
+
+.whb-separator {
+  height: 400px;
 }
 
 .headerbar-separate {
   max-width: 1182px;
   margin: 0 auto;
+  background: transparent;
 }
 
 .site-description {
@@ -5782,6 +5784,10 @@ html, body {
 .wrap-menue {
   max-width: 1182px;
   margin: 2px auto;
+}
+
+.headerbar {
+  background-color: transparent;
 }
 
 .headerbar a {
@@ -5799,6 +5805,10 @@ html, body {
 .headerbar a:hover {
   color: #CCCCCC;
   text-decoration: underline;
+}
+
+.hb-separator {
+  margin-top: -350px;
 }
 
 /* Sidebar - controlled via configfile */
@@ -5845,20 +5855,30 @@ html, body {
 /* New forabg/forumbg design */
 .forabg, .forumbg, .stat-container {
   border: none;
-  border-radius: 5px;
-  padding: 5px 5px 0;
+  border-radius: 7px;
+  padding: 8px 8px 0;
   margin-bottom: 8px;
-  background: -webkit-linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
-  background: -o-linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
-  background: -webkit-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
-  background: -o-linear-gradient(top, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
-  background: linear-gradient(to bottom, #081f42 35px, #081f42 36px, #949BA3 45px, #949BA3 100%);
+  background: -webkit-linear-gradient(to bottom, #081f42 45px, #081f42 46px, rgba(148, 155, 163, 0) 52px, rgba(148, 155, 163, 0) 100%);
+  background: -o-linear-gradient(to bottom, #081f42 45px, #081f42 46px, rgba(148, 155, 163, 0) 52px, rgba(148, 155, 163, 0) 100%);
+  background: -webkit-linear-gradient(top, #081f42 45px, #081f42 46px, rgba(148, 155, 163, 0) 52px, rgba(148, 155, 163, 0) 100%);
+  background: -o-linear-gradient(top, #081f42 45px, #081f42 46px, rgba(148, 155, 163, 0) 52px, rgba(148, 155, 163, 0) 100%);
+  background: linear-gradient(to bottom, #081f42 45px, #081f42 46px, rgba(148, 155, 163, 0) 52px, rgba(148, 155, 163, 0) 100%);
 }
 
 .forabg .inner, .forumbg .inner, .stat-container .inner {
   padding: 0;
-  border: 1px solid #000000;
   border-radius: 7px;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-color: #000000;
+}
+
+.forabg .inner ul.topiclist, .forumbg .inner ul.topiclist, .stat-container .inner ul.topiclist {
+  padding: 3px;
 }
 
 ul.forums {
@@ -5868,11 +5888,13 @@ ul.forums {
 ul.topiclist li:first-child {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  border-top-color: transparent;
 }
 
 ul.topiclist li:last-child {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-bottom-color: transparent;
 }
 
 /* Enclosing statistic blocks in stat-container */
@@ -5899,7 +5921,7 @@ ul.topiclist li:last-child {
 }
 
 .stat-container .stat-block:first-child {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .stat-container .stat-block:last-child {
