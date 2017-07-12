@@ -12,7 +12,7 @@ html, body {
     }
     @else {
         background-image: url("./images/#{$img-bg-html-body}");
-        background-size: 100%;
+        background-size: 100% 100%;
         background-attachment: fixed;
     }
 }
@@ -21,25 +21,9 @@ html, body {
     box-shadow: $box-shadow-inset-double;
         @if $img-bg-html-body != none {
             @if $switch-col-wrap-off == yes {
-                background-color: transparent;
+                background-color: rgba($col_wrap, 0.5);
             }
         }
-}
-
-.wrap-headerbar {
-    display: block;
-    height: $height-wrap-headerbar;
-        @if $img-bg-wrap-header == none {
-            background: transparent;
-        }
-        @else {
-            background-image: url("./images/#{$img-bg-wrap-header}");
-            background-size: cover;
-        }
-}
-
-.whb-separator {
-    height: $height-wrap-headerbar;
 }
 
 .headerbar-separate {
@@ -60,11 +44,28 @@ html, body {
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto;
+        & .navbar {
+            padding: 1px 8px;
+            background-color: #000000;
+            border-radius: 0;
+                & a {
+                    color: #FFFFFF;
+                    font-size: 1.2em;
+                    padding: 5px;
+                    border-radius: 2px;
+                        &:hover {
+                            background-color: grey;
+                        }
+                }
+        }
 }
 
+.dropdown .dropdown-contents {
+    background-color: grey;
+}
 
 .headerbar {
-    background-color: transparent;
+    background-color: $col_headerbar;
         & a {
             color: $col_text_headerbar;
             font-style: italic;
@@ -82,8 +83,11 @@ html, body {
             }
 }
 
-.hb-separator {
-    margin-top: $margin-top-headerbar-separated;
+.copyright {
+    @include container_base;
+    margin: 10px 40px 0;
+    color: #000000;
+    box-shadow: $box-shadow-inset-double;
 }
 
 
@@ -177,9 +181,41 @@ ul.topiclist li {
     }
 }
 
-
 .headerspace, .headerspace h3 {
     margin: 0;
+}
+
+/* Diverse */
+/* Topic & Forum Titles */
+.topic-title, .forum-title {
+    text-align: center;
+        & a {
+            min-width: 33%;
+            width: auto;
+            padding: 5px 15px;
+            border: 2px inset $col_headerbar;
+            border-radius: 10px;
+            background-color: $col_navbar;
+        }
+}
+
+h2.topic-title, h2.forum-title {
+    margin: 10px 0;
+}
+
+.action-bar {
+    & a.rightside {
+        @include action-bar-elements;
+    }
+    & .jumpbox-return {
+        @include action-bar-elements;
+    }
+    & .pagination {
+        @include action-bar-elements;
+            & > a {
+                padding: 5px 0;
+            }
+    }
 }
 
 
