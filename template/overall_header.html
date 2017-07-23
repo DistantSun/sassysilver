@@ -80,11 +80,11 @@
 
 {% if definition.HEADERBAR_SEPARAT == 0 %}
 
-	<div id="wrap-header" class="wrap-headerbar">
-		<div class="headerbar-separate" role="banner">
-			{% INCLUDE 'headerbar.html' %}
-		</div>
+<div class="headerbar" style="background-color: transparent;">
+	<div class="headerbar-separate" role="banner">
+		{% INCLUDE 'headerbar.html' %}
 	</div>
+</div>
 
 	<div id="wrap-menue" class="wrap-menue">
 		{% INCLUDE 'menuebar.html' %}

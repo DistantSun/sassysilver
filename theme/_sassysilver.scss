@@ -4,25 +4,37 @@
 html, body {
   min-height: 101%;
   height: auto;
-  background-color: $col_body;
-  background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-  background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-  background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+    @if $img-bg-html-body == none {
+        background-color: $col_body;
+        background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+    }
+    @else {
+        background-image: url("./images/#{$img-bg-html-body}");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
 }
 
 #wrap {
     box-shadow: $box-shadow-inset-double;
-}
-
-.wrap-headerbar {
-    display: block;
-    height: auto;
-    padding: 10px 0;
+        @if $img-bg-html-body != none {
+            @if $switch-col-wrap-off == yes {
+                background-color: rgba($col_wrap, 0.5);
+            }
+        }
 }
 
 .headerbar-separate {
     max-width: $width_headerbar_separate;
     margin: 0 auto;
+        @if $img-bg-headerbar == none {
+            background: transparent;
+        }
+        @else {
+            background-image: url("./images/#{$img-bg-headerbar}");
+        }
 }
 
 .site-description {
@@ -32,6 +44,50 @@ html, body {
 .wrap-menue {
     max-width: $width_menuebar;
     margin: 2px auto;
+        & .navbar {
+            padding: 1px 8px;
+            background-color: #000000;
+            border-radius: 0;
+                & a {
+                    color: #FFFFFF;
+                    font-size: 1.2em;
+                    padding: 5px;
+                    border-radius: 2px;
+                        &:hover {
+                            background-color: grey;
+                        }
+                }
+        }
+}
+
+.dropdown .dropdown-contents {
+    background-color: grey;
+}
+
+.headerbar {
+    background-color: $col_headerbar;
+        & a {
+            color: $col_text_headerbar;
+            font-style: italic;
+            font-weight: 600;
+            font-size: $font-size-headerbar;
+                &:link, &:visited {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: #CCCCCC;
+                    text-decoration: underline;
+                }
+            }
+}
+
+.copyright {
+    @include container_base;
+    margin: 10px 40px 0;
+    color: #000000;
+    box-shadow: $box-shadow-inset-double;
 }
 
 
@@ -53,7 +109,7 @@ html, body {
   }
 
   .postbody, .search .postbody {
-    width: ($width_wrap - 40px - $width-postprofile);
+    width: ($switch-width-wrap - 40px - $width-postprofile);
   }
 }
 
@@ -93,9 +149,11 @@ ul.forums {
 ul.topiclist li {
     &:first-child {
         @include border-top-radius(5px);
+        border-top-color: transparent;
     }
     &:last-child {
         @include border-bottom-radius(5px);
+        border-bottom-color: transparent;
     }
 }
 
@@ -112,7 +170,7 @@ ul.topiclist li {
     & .stat-block {
         @include container_base;
             &:first-child {
-                margin-top: 15px;
+                margin-top: 5px;
             }
             &:last-child {
                 margin-bottom: 15px;
@@ -123,9 +181,41 @@ ul.topiclist li {
     }
 }
 
-
 .headerspace, .headerspace h3 {
     margin: 0;
+}
+
+/* Diverse */
+/* Topic & Forum Titles */
+.topic-title, .forum-title {
+    text-align: center;
+        & a {
+            min-width: 33%;
+            width: auto;
+            padding: 5px 15px;
+            border: 2px inset $col_headerbar;
+            border-radius: 10px;
+            background-color: $col_navbar;
+        }
+}
+
+h2.topic-title, h2.forum-title {
+    margin: 10px 0;
+}
+
+.action-bar {
+    & a.rightside {
+        @include action-bar-elements;
+    }
+    & .jumpbox-return {
+        @include action-bar-elements;
+    }
+    & .pagination {
+        @include action-bar-elements;
+            & > a {
+                padding: 5px 0;
+            }
+    }
 }
 
 
