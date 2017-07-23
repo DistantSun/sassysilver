@@ -52,11 +52,11 @@
 <link href="{{ T_STYLESHEET_LANG_LINK }}" rel="stylesheet">
 
 {% if S_CONTENT_DIRECTION eq 'rtl' %}
-	<link href="{{ T_THEME_PATH }}/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{ROOT_PATH}styles/prosilver/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_PLUPLOAD %}
-	<link href="{{ T_THEME_PATH }}/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{ROOT_PATH}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_COOKIE_NOTICE %}
@@ -80,11 +80,11 @@
 
 {% if definition.HEADERBAR_SEPARAT == 0 %}
 
-<div class="headerbar" style="background-color: transparent;">
-	<div class="headerbar-separate" role="banner">
-		{% INCLUDE 'headerbar.html' %}
+	<div class="headerbar" style="background-color: transparent;">
+		<div class="headerbar-separate" role="banner">
+			{% INCLUDE 'headerbar.html' %}
+		</div>
 	</div>
-</div>
 
 	<div id="wrap-menue" class="wrap-menue">
 		{% INCLUDE 'menuebar.html' %}

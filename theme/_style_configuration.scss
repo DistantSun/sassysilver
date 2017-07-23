@@ -21,11 +21,10 @@ $img-bg-wrap-header:                        none !default;
 $img-bg-headerbar:                          none !default;
 
 // Dimensions
-$height-wrap-headerbar:                     400px !default;
-$margin-top-headerbar-separated:            (50 - $height-wrap-headerbar) !default;
 $width_headerbar_separate:                  $switch-width-wrap + 30px !default;    // Width of the headerbar if set to diplay separately
 $width_menuebar:                            $switch-width-wrap + 30px !default;    // Width of menuebar when displayed separately
 $width-sidebar:                             180px !default;                 // Width of sidebar
+
 
 // Fonts sizes
 $font-size-base:                            2em !default;                             // Basic font size
@@ -60,28 +59,29 @@ $font-size-headerbar:                       $font-size-p !default;
 $col_base:                                  map_get((blue: #0B2958, red: #48100C, green: #0A3422, black: #1b1a1a), $switch-col-scheme) !default;    // Base colours for colour schemes the following colours will derive from
 
 // Background Colours
-$col_body:                                  tint($col_base, 10%) !default;                                                      // Body colour
-$col_wrap:                                  #949BA3 !default;                                                      // Wrap colour
-$col_category:                              shade($col_base, 2%) !default;                                                      // Category/fora header colourv
-$col_navbar:                                tint($col_base, 85%) !default;                                                      // Navbar colour
-$col_headerbar:                             shade($col_base, 25%) !default;                                                     // Headerbar background colour
+$col_body:                                  tint($col_base, 10%) !default;      // Body colour
+$col_wrap:                                  #949BA3 !default;                   // Wrap colour
+$switch-opacity-wrap:                       0.5 !default;                       // Opacity wrap background colour
+$col_category:                              shade($col_base, 2%) !default;      // Category/fora header colourv
+$col_navbar:                                tint($col_base, 85%) !default;      // Navbar colour
+$col_headerbar:                             shade($col_base, 25%) !default;     // Headerbar background colour
 
-$col_forums:                                tint($col_base, 85%) !default;                                                      // Colour ul.forums
-$col_forums_hov:                            tint($col_base, 93%) !default;                                                      // Colour ul.forums hover
-$col_bg:                                    tint($col_base, 89%) !default;                                                      // Colour bg1 bg3
-$col_bg2:                                   tint($col_base, 95%) !default;                                                      // Colour bg2
-$col_panel:                                 tint($col_base, 86%) !default;                                                      // Colour panel
-$col_quote_in_out:                          tint($col_base, 75%) !default;                                                      // Colour qoute Inside and Outside
-$col_quote_center:                          tint($col_base, 82%) !default;                                                      // Colour qoute center
-$col_ucp_menue:                             tint($col_base, 70%) !default;                                                      // UCP Menü
-$col_ucp_menue_a_h:                         tint($col_base, 80%) !default;                                                      // UCP Menü Aktiv, hover
-$col_ucp_menue_a_h_2:                       tint($col_base, 25%) !default;                                                      // UCP Menü Aktiv, hover
-$col_ucp_menue_left:                        tint($col_base, 65%) !default;                                                      // UCP Menü left
-$col_ucp_menue_left-low:                    tint($col_base, 80%) !default;                                                      // UCP Menü left-low
+$col_forums:                                tint($col_base, 85%) !default;      // Colour ul.forums
+$col_forums_hov:                            tint($col_base, 93%) !default;      // Colour ul.forums hover
+$col_bg:                                    tint($col_base, 89%) !default;      // Colour bg1 bg3
+$col_bg2:                                   tint($col_base, 95%) !default;      // Colour bg2
+$col_panel:                                 tint($col_base, 86%) !default;      // Colour panel
+$col_quote_in_out:                          tint($col_base, 75%) !default;      // Colour qoute Inside and Outside
+$col_quote_center:                          tint($col_base, 82%) !default;      // Colour qoute center
+$col_ucp_menue:                             tint($col_base, 70%) !default;      // UCP Menü
+$col_ucp_menue_a_h:                         tint($col_base, 80%) !default;      // UCP Menü Aktiv, hover
+$col_ucp_menue_a_h_2:                       tint($col_base, 25%) !default;      // UCP Menü Aktiv, hover
+$col_ucp_menue_left:                        tint($col_base, 65%) !default;      // UCP Menü left
+$col_ucp_menue_left-low:                    tint($col_base, 80%) !default;      // UCP Menü left-low
 
 // Text Colours
-$col_text_body:                             shade($col_base, 3%) !default;                                                      // Body Text colour
-$col_text_white:                            tint($col_base, 100%) !default;                                                     // all Text White #ffffff
+$col_text_body:                             shade($col_base, 3%) !default;      // Body Text colour
+$col_text_white:                            tint($col_base, 100%) !default;     // all Text White #ffffff
 $col_text_headerbar:                        #FFFFFF !default;
 
 
@@ -95,7 +95,6 @@ $box-shadow-outset-single-posts:            7px 7px 10px 0px rgba(0,0,0,0.75) !d
 $box-shadow-inset-double:                   inset 3px 3px 7px -2px rgba(0,0,0,0.75), inset -3px -3px 7px -2px rgba(0,0,0,0.75) !default;
 
 // Font colours
-
 $col_links:                                 shade($col_base, 1%) !default;                                                     // Links
 
 
@@ -141,7 +140,7 @@ $col_links:                                 shade($col_base, 1%) !default;      
              @include border-width(null 1px 1px);
              border-color: #000000;
                 & ul.topiclist {
-                    padding: 3px;
+                    padding: 3px 0;
                 }
          }
  }
@@ -155,8 +154,8 @@ $col_links:                                 shade($col_base, 1%) !default;      
  }
 
  @mixin action-bar-elements {
-    padding: 2px 8px;
-    border: 1px inset $col_headerbar;
+    padding: 1px 8px;
+    border: 1px solid #e6e9ed;
     border-radius: 7px;
     background-color: $col_navbar;
  }
