@@ -85,7 +85,7 @@ html, body {
 
 .copyright {
     @include container_base;
-    margin: 10px 40px 0;
+    margin: 10px 10px 0;
     color: #000000;
     box-shadow: $box-shadow-inset-double;
 }
@@ -193,7 +193,7 @@ ul.topiclist li {
             min-width: 33%;
             width: auto;
             padding: 5px 15px;
-            border: 2px inset $col_headerbar;
+            border: 1px solid #e6e9ed;
             border-radius: 10px;
             background-color: $col_navbar;
         }
