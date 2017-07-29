@@ -43,13 +43,18 @@
 		{% if U_VIEWONLINE %}<h3><a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a></h3>{% else %}<h3>{{ lang('WHO_IS_ONLINE') }}</h3>{% endif %}
 		<p>
 			{% EVENT index_body_block_online_prepend %}
-			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br /> <br />{{ LOGGED_IN_USER_LIST }}
-			{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
+			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br /> 
+			{% if U_VIEWONLINE %}
+				<br />{{ LOGGED_IN_USER_LIST }}
+				{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
+			{% endif %}
 			{% EVENT index_body_block_online_append %}
 		</p>
 	</div>
 </div>
 {% endif %}
+
+{% EVENT index_body_birthday_block_before %}
 
 {% if S_DISPLAY_BIRTHDAY_LIST %}
 <div class="stat-container">

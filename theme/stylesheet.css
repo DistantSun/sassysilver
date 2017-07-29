@@ -230,12 +230,13 @@ html, body {
 
 .wrap-menue {
   max-width: 1182px;
-  margin: 2px auto;
+  margin: 4px auto;
 }
 
 .wrap-menue .navbar {
-  padding: 1px 8px;
+  padding: 1px 5px;
   background-color: #000000;
+  border: 1px solid #818385;
   border-radius: 0;
 }
 
@@ -281,7 +282,7 @@ html, body {
   padding: 15px 10px;
   background-color: #dadfe6;
   margin: 0;
-  margin: 10px 10px 0;
+  margin: 10px 0 0;
   color: #000000;
   -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
@@ -354,7 +355,11 @@ html, body {
 }
 
 .forabg .inner ul.topiclist, .forumbg .inner ul.topiclist, .stat-container .inner ul.topiclist {
-  padding: 3px 0;
+  padding: 3px 0 0;
+}
+
+.forabg .inner ul.topiclist li.header, .forumbg .inner ul.topiclist li.header, .stat-container .inner ul.topiclist li.header {
+  text-align: center;
 }
 
 ul.forums {
