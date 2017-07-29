@@ -139,8 +139,11 @@ $col_links:                                 shade($col_base, 1%) !default;      
              @include border-style(null solid solid);
              @include border-width(null 1px 1px);
              border-color: #000000;
-                & ul.topiclist {
-                    padding: 3px 0;
+                ul.topiclist {
+                    padding: 3px 0 0;
+                        li.header {
+                            text-align: center;
+                        }
                 }
          }
  }

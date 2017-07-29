@@ -35,7 +35,7 @@
 <script>
 	WebFontConfig = {
 		google: {
-			families: ['Open+Sans:600:cyrillic-ext,latin,greek-ext,greek,vietnamese,latin-ext,cyrillic']
+			families: ['Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese']
 		}
 	};
 
@@ -52,11 +52,11 @@
 <link href="{{ T_STYLESHEET_LANG_LINK }}" rel="stylesheet">
 
 {% if S_CONTENT_DIRECTION eq 'rtl' %}
-	<link href="{ROOT_PATH}styles/prosilver/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{ROOT_PATH}styles/prosilver/theme/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_PLUPLOAD %}
-	<link href="{ROOT_PATH}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{ROOT_PATH}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_COOKIE_NOTICE %}
@@ -64,7 +64,7 @@
 {% endif %}
 
 <!--[if lte IE 9]>
-	<link href="{{ T_THEME_PATH }}/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{ROOT_PATH}styles/prosilver/theme/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 <![endif]-->
 
 {% EVENT overall_header_head_append %}
@@ -80,11 +80,11 @@
 
 {% if definition.HEADERBAR_SEPARAT == 0 %}
 
-	<div class="headerbar" style="background-color: transparent;">
-		<div class="headerbar-separate" role="banner">
-			{% INCLUDE 'headerbar.html' %}
-		</div>
+<div class="headerbar" style="background-color: transparent;">
+	<div class="headerbar-separate" role="banner">
+		{% INCLUDE 'headerbar.html' %}
 	</div>
+</div>
 
 	<div id="wrap-menue" class="wrap-menue">
 		{% INCLUDE 'menuebar.html' %}

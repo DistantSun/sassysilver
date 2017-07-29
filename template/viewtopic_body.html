@@ -439,11 +439,11 @@
 {% EVENT viewtopic_body_footer_before %}
 {% INCLUDE 'jumpbox.html' %}
 
-{% if S_DISPLAY_ONLINE_LIST %}
+{% if S_DISPLAY_ONLINE_LIST and U_VIEWONLINE %}
 
 <div class="stat-container">
 	<div class="stat-block online-list">
-		<h3>{% if U_VIEWONLINE %}<a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a>{% else %}{{ lang('WHO_IS_ONLINE') }}{% endif %}</h3>
+		<h3><a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a></h3>
 		<p>{{ LOGGED_IN_USER_LIST }}</p>
 	</div>
 </div>
