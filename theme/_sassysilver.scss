@@ -43,10 +43,11 @@ html, body {
 
 .wrap-menue {
     max-width: $width_menuebar;
-    margin: 2px auto;
+    margin: 4px auto;
         & .navbar {
-            padding: 1px 8px;
+            padding: 1px 5px;
             background-color: #000000;
+            border: 1px solid #818385;
             border-radius: 0;
                 & a {
                     color: #FFFFFF;
@@ -85,7 +86,7 @@ html, body {
 
 .copyright {
     @include container_base;
-    margin: 10px 10px 0;
+    margin: 10px 0 0;
     color: #000000;
     box-shadow: $box-shadow-inset-double;
 }
