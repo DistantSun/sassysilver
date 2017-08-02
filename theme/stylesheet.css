@@ -6,6 +6,15 @@
 	Modified by:		Melmac
     --------------------------------------------------------------
 */
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			SassySilver
+	Based on style:     prosilver (the default phpBB 3.1.x style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		Melmac
+    --------------------------------------------------------------
+*/
+@import url("../../prosilver/theme/stylesheet.css");
 /*  Custom configuration file
  *  -------------------------------------------------------------------- */
 /*  --------------------------------------------------------------------
@@ -13,7 +22,6 @@
  *  Copy the code you want to change and paste it into _custom_configurations.scss
  *  and do your edits there.
  *  -------------------------------------------------------------------- */
-@import url("../../prosilver/theme/stylesheet.css");
 @media (max-width: 325px) {
   .wrap-headerbar .extra-wrapper-width, .wrap-menue .extra-wrapper-width {
     max-width: 310px !important;
@@ -65,14 +73,6 @@
 /* ---------------------------------------------------------------
  * Mixins and other stuff exept for functions and calculations
  * --------------------------------------------------------------- */
-/*  phpBB3 Style Sheet
-    --------------------------------------------------------------
-	Style name:			SassySilver
-	Based on style:     prosilver (the default phpBB 3.1.x style)
-	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		Melmac
-    --------------------------------------------------------------
-*/
 /* -----------------------------------------------------------------
 Overrides to the original prosilver classes
 listed by file name
