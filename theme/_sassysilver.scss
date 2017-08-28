@@ -1,29 +1,95 @@
 /*  Additional code, not included in original prosilver */
 
-/* Provides the means to separate the menue part of navbar_header via configfile  */
-
+/* Provides the code changes required to separate the menue part of navbar_header via configfile  */
 html, body {
-    background: $col_headerbar;
-    background: linear-gradient(180deg, shade($col_headerbar, 30%) 10%, $col_body 25%, $col_body 80%, shade($col_headerbar, 30%) 100%);
+  min-height: 101%;
+  height: auto;
+    @if $img-bg-html-body == none {
+        background-color: $col_body;
+        background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+        background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
+    }
+    @else {
+        background-image: url("./images/#{$img-bg-html-body}");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
 }
 
-.wrap-headerbar {
-    display: block;
-    margin: 0 auto;
+#wrap {
+    box-shadow: $box-shadow-inset-double;
+        @if $img-bg-html-body != none {
+            @if $switch-col-wrap-off == yes {
+                background-color: rgba($col_wrap, 0.5);
+            }
+        }
+}
+
+.headerbar-separate {
     max-width: $width_headerbar_separate;
-    background-color: $col_headerbar;
+    margin: 0 auto;
+        @if $img-bg-headerbar == none {
+            background: transparent;
+        }
+        @else {
+            background-image: url("./images/#{$img-bg-headerbar}");
+        }
+}
+
+.site-description {
+    color: #FFFFFF;
 }
 
 .wrap-menue {
     max-width: $width_menuebar;
-    margin: 2px auto 10px;
+    margin: 4px auto;
+        & .navbar {
+            padding: 1px 5px;
+            background-color: #000000;
+            border: 1px solid #818385;
+            border-radius: 0;
+                & a {
+                    color: #FFFFFF;
+                    font-size: 1.2em;
+                    padding: 5px;
+                    border-radius: 2px;
+                        &:hover {
+                            background-color: grey;
+                        }
+                }
+        }
 }
 
-.headerbar-separate {
-    background-color: shade($col_base, 25%);
-    padding: 30px 5px 10px;
+.dropdown .dropdown-contents {
+    background-color: grey;
 }
 
+.headerbar {
+    background-color: $col_headerbar;
+        & a {
+            color: $col_text_headerbar;
+            font-style: italic;
+            font-weight: 600;
+            font-size: $font-size-headerbar;
+                &:link, &:visited {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: #CCCCCC;
+                    text-decoration: underline;
+                }
+            }
+}
+
+.copyright {
+    @include container_base;
+    margin: 10px 0 0;
+    color: #000000;
+    box-shadow: $box-shadow-inset-double;
+}
 
 
 /* Sidebar - controlled via configfile */
@@ -36,27 +102,131 @@ html, body {
     background-color: $col_forums;
 }
 
-
+// Post overhaul
 // postprofile & postbody
-
-@media (min-width: 1100px) {
-  .postprofile {
+@media all and (min-width: 1100px) {
+  .postprofile, .search .postprofile {
     width: $width-postprofile;
   }
 
-  .postbody {
-    width: ($width_wrap - 40px - $width-postprofile) !important;
+  .postbody, .search .postbody {
+    width: ($switch-width-wrap - 40px - $width-postprofile);
   }
 }
 
+// Posts
+.post {
+    box-shadow: $box-shadow-outset-single-posts;
+    margin-bottom: 10px;
+}
+
+.panel {
+    box-shadow: $box-shadow-inset-double;
+    padding: 7px 12px;
+}
+
+// Diverse new spacings
+.action-bar {
+    margin: 6px 0 10px;
+}
+
+.page-footer, #page-header {
+    & .navbar {
+        padding: 5px 10px;
+        box-shadow: $box-shadow-inset-double;
+    }
+}
+
+/* New forabg/forumbg design */
+
+.forabg, .forumbg, .stat-container {
+    @include forum_container;
+}
+
+ul.forums {
+    border-radius: 5px;
+}
+
+ul.topiclist li {
+    &:first-child {
+        @include border-top-radius(5px);
+        border-top-color: transparent;
+    }
+    &:last-child {
+        @include border-bottom-radius(5px);
+        border-bottom-color: transparent;
+    }
+}
+
+/* Enclosing statistic blocks in stat-container */
+
+#login-container {
+    @include container_base;
+    margin: 0 5px;
+    background-color: tint(green, 75%);
+}
+
+.stat-container {
+    margin-top: 15px;
+    & .stat-block {
+        @include container_base;
+            &:first-child {
+                margin-top: 5px;
+            }
+            &:last-child {
+                margin-bottom: 15px;
+            }
+    }
+    & h3, & p {
+        margin: 0;
+    }
+}
+
+.headerspace, .headerspace h3 {
+    margin: 0;
+}
+
+/* Diverse */
+/* Topic & Forum Titles */
+.topic-title, .forum-title {
+    text-align: center;
+        & a {
+            min-width: 33%;
+            width: auto;
+            padding: 5px 15px;
+            border: 1px solid #e6e9ed;
+            border-radius: 10px;
+            background-color: $col_navbar;
+        }
+}
+
+h2.topic-title, h2.forum-title {
+    margin: 10px 0;
+}
+
+.action-bar {
+    & a.rightside {
+        @include action-bar-elements;
+    }
+    & .jumpbox-return {
+        @include action-bar-elements;
+    }
+    & .pagination {
+        @include action-bar-elements;
+            & > a {
+                padding: 5px 0;
+            }
+    }
+}
+
+
 
 /* -------------------------------------------------
- * Overrides nescessary due to either
- * limits of SAAS - or to my lack of knowledge ...
- * ------------------------------------------------- */
+ * Overrides, Mixins and other stuff ...
+  * ------------------------------------------------- */
 
 /* Switches postprofile/postbody right<->left */
-@if $define-postprofile-side == 0 {
+@if $define-postprofile-side == right {
     .postprofile {
         border-width: 0 0 0 1px;
         float: right;
@@ -70,7 +240,7 @@ html, body {
     }
 }
 
-@if $define-postprofile-side == 1 {
+@if $define-postprofile-side == left {
     .postprofile {
         border-width: 0 1px 0 0;
         float: left;
@@ -83,3 +253,4 @@ html, body {
         float: right;
     }
 }
+

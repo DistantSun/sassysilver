@@ -7,10 +7,4 @@
     --------------------------------------------------------------
 */
 
-@import "import_prosilver";
-@import "bourbon";
-@import "custom_configuration";
-@import "style_configuration";
-@import "transition";
-@import "sassysilver";
-@import "custom";
+@import url("../../prosilver/theme/stylesheet.css");

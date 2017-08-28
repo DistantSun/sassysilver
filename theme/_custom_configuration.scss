@@ -1,11 +1,21 @@
 /*  Custom configuration file
  *  -------------------------------------------------------------------- */
 
-$width_wrap:                                1152px;         // Any size as longs as the unit is "px"
+$switch-width-wrap:                         1152px;                             // "Board width" - any value is okay as longs as the unit is "px"
 
-$col_scheme:                                0;              // Board colour scheme; 0 = blue, 1 = red, 2 = green, 3 = black
+$switch-col-scheme:                         blue;                               // Board colour scheme; available schemes: blue, red, green, black
 
-$define-postprofile-side:                   0;              // 0 = postprofile right side, 1 = postprofile left side
+$define-postprofile-side:                   right;                              // postprofile right or left
 
-$width-postprofile:                         220px;          // Maximum width of pstprofile at resolutions of 1100px and above
+$width-postprofile:                         240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
 
+$switch-col-wrap-off:                       yes;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent
+$switch-opacity-wrap:                       0.6;
+
+
+// The following variables control the display of background images in "html, body", "wrap-header" and "headerbar"
+// Default values are "none" - all images have to be stored in the theme's image folder
+// NOTE: To allocate a image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
+
+// $img-bg-html-body:                          'bg_body.jpg';
+// $img-bg-headerbar:                          none;
