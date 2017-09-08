@@ -16,7 +16,7 @@
 {% EVENT index_body_forumlist_body_after %}
 
 {% if not S_USER_LOGGED_IN and not S_IS_BOT %}
-<div id="login-container">
+<div class="login-container">
 	<form method="post" action="{{ S_LOGIN_ACTION }}" class="headerspace">
 	<h3><a href="{{ U_LOGIN_LOGOUT }}">{{ lang('LOGIN_LOGOUT') }}</a>{% if S_REGISTER_ENABLED %}&nbsp; &bull; &nbsp;<a href="{{ U_REGISTER }}">{{ lang('REGISTER') }}</a>{% endif %}</h3>
 		<fieldset class="quick-login">
@@ -43,7 +43,7 @@
 		{% if U_VIEWONLINE %}<h3><a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a></h3>{% else %}<h3>{{ lang('WHO_IS_ONLINE') }}</h3>{% endif %}
 		<p>
 			{% EVENT index_body_block_online_prepend %}
-			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br /> 
+			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br />
 			{% if U_VIEWONLINE %}
 				<br />{{ LOGGED_IN_USER_LIST }}
 				{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
