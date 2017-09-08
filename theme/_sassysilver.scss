@@ -1,256 +1,472 @@
-/*  Additional code, not included in original prosilver */
+// ***********************************************************
+//  Additional code, not included in original prosilver
+// ***********************************************************
 
-/* Provides the code changes required to separate the menue part of navbar_header via configfile  */
-html, body {
-  min-height: 101%;
+// Special selectors
+// ***********************************************************
+
+%no-bg-colour {
+  background-color: none;
+}
+
+
+
+// Provides the code changes required to separate the menue part of navbar_header via configfile
+// ***********************************************************
+html,
+body {
   height: auto;
-    @if $img-bg-html-body == none {
-        background-color: $col_body;
-        background: -webkit-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-        background: -o-linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-        background: linear-gradient(to bottom, $col_headerbar 250px, $col_body 60%);
-    }
-    @else {
-        background-image: url("./images/#{$img-bg-html-body}");
-        background-size: 100% 100%;
-        background-attachment: fixed;
-    }
+  min-height: 101%;
+
+  @if $img-bg-html-body == none {
+    background: linear-gradient(to bottom, $col-headerbar 250px, $col-body 60%);
+    background-color: $col-body;
+  } @else {
+    background-attachment: fixed;
+    background-image: url('./images/#{$img-bg-html-body}');
+    background-size: 100% 100%;
+  }
 }
 
 #wrap {
-    box-shadow: $box-shadow-inset-double;
-        @if $img-bg-html-body != none {
-            @if $switch-col-wrap-off == yes {
-                background-color: rgba($col_wrap, 0.5);
-            }
-        }
+  box-shadow: $box-shadow-inset-double;
+  @if $img-bg-html-body != none {
+    @if $switch-col-wrap-off == yes {
+      background-color: rgba($col-wrap, .5);
+    }
+  }
+
+  @if $img-bg-wrap != none {
+    background-image: url('./images/#{$img-bg-wrap}');
+    background-size: cover;
+  }
 }
 
 .headerbar-separate {
-    max-width: $width_headerbar_separate;
-    margin: 0 auto;
-        @if $img-bg-headerbar == none {
-            background: transparent;
-        }
-        @else {
-            background-image: url("./images/#{$img-bg-headerbar}");
-        }
+  margin: 0 auto;
+  max-width: $width-headerbar-separate;
+  @if $img-bg-headerbar == none {
+    background: transparent;
+  } @else {
+    background-image: url('./images/#{$img-bg-headerbar}');
+  }
 }
 
 .site-description {
-    color: #FFFFFF;
+  color: #fff;
 }
 
 .wrap-menue {
-    max-width: $width_menuebar;
-    margin: 4px auto;
-        & .navbar {
-            padding: 1px 5px;
-            background-color: #000000;
-            border: 1px solid #818385;
-            border-radius: 0;
-                & a {
-                    color: #FFFFFF;
-                    font-size: 1.2em;
-                    padding: 5px;
-                    border-radius: 2px;
-                        &:hover {
-                            background-color: grey;
-                        }
-                }
+  margin: 4px auto;
+  max-width: $width-menuebar;
+
+  & .navbar {
+    background-color: #000;
+    border: 1px solid #818385;
+    border-radius: 0;
+    padding: 1px 5px;
+
+    & a {
+      border-radius: 2px;
+      color: #FFF;
+      font-size: 1.2em;
+      padding: 5px;
+      &:hover {
+      background-color: grey;
         }
+    }
+  }
 }
 
-.dropdown .dropdown-contents {
+.dropdown {
+  .dropdown-contents {
     background-color: grey;
+  }
 }
 
 .headerbar {
-    background-color: $col_headerbar;
-        & a {
-            color: $col_text_headerbar;
-            font-style: italic;
-            font-weight: 600;
-            font-size: $font-size-headerbar;
-                &:link, &:visited {
-                    color: inherit;
-                    text-decoration: none;
-                }
+  background-color: $col-headerbar;
 
-                &:hover {
-                    color: #CCCCCC;
-                    text-decoration: underline;
-                }
-            }
+  & a {
+    color: $col-text-headerbar;
+    font-size: $font-size-headerbar;
+    font-style: italic;
+    font-weight: 600;
+
+    &:link,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  }
 }
 
 .copyright {
-    @include container_base;
-    margin: 10px 0 0;
-    color: #000000;
-    box-shadow: $box-shadow-inset-double;
+  @include container-base;
+  box-shadow: $box-shadow-inset-double;
+  color: #000;
+  margin: 10px 0 0;
 }
 
-
-/* Sidebar - controlled via configfile */
+//// Sidebar
+// Sidebar - controlled via configfile
+// ***********************************************************
 .sidebar {
-    display: block;
-    float: right;
-    width: $width-sidebar;
-    min-height: 100px;
-    height: auto;
-    background-color: $col_forums;
+  background-color: $col-forums;
+  display: block;
+  float: right;
+  height: auto;
+  min-height: 100px;
+  width: $width-sidebar;
 }
 
 // Post overhaul
-// postprofile & postbody
-@media all and (min-width: 1100px) {
-  .postprofile, .search .postprofile {
-    width: $width-postprofile;
-  }
 
-  .postbody, .search .postbody {
-    width: ($switch-width-wrap - 40px - $width-postprofile);
-  }
-}
-
-// Posts
-.post {
-    box-shadow: $box-shadow-outset-single-posts;
-    margin-bottom: 10px;
-}
-
-.panel {
-    box-shadow: $box-shadow-inset-double;
-    padding: 7px 12px;
-}
 
 // Diverse new spacings
+// ***********************************************************
 .action-bar {
-    margin: 6px 0 10px;
-}
+  margin: 6px 0 10px;
 
-.page-footer, #page-header {
-    & .navbar {
-        padding: 5px 10px;
-        box-shadow: $box-shadow-inset-double;
+  .rightside {
+    a {
+      @include action-bar-elements;
+    }
+  }
+
+  & .jumpbox-return {
+    @include action-bar-elements;
+  }
+
+  & .pagination {
+    @include action-bar-elements;
+
+    & > a {
+      padding: 5px 0;
+      }
     }
 }
 
-/* New forabg/forumbg design */
+.page-footer,
+#page-header {
+  & .navbar {
+    box-shadow: $box-shadow-inset-double;
+    padding: 5px 10px;
+  }
+}
 
-.forabg, .forumbg, .stat-container {
-    @include forum_container;
+
+// New forabg/forumbg design
+// ***********************************************************
+
+.forabg,
+.forumbg,
+.stat-container {
+  @include forum-container;
 }
 
 ul.forums {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 ul.topiclist li {
-    &:first-child {
-        @include border-top-radius(5px);
-        border-top-color: transparent;
+  &:first-child {
+    @include border-top-radius(5px);
+    border-top-color: transparent;
     }
-    &:last-child {
-        @include border-bottom-radius(5px);
-        border-bottom-color: transparent;
-    }
+
+  &:last-child {
+    @include border-bottom-radius(5px);
+    border-bottom-color: transparent;
+  }
 }
 
-/* Enclosing statistic blocks in stat-container */
+// Enclosing statistic blocks in stat-container
+// ***********************************************************
 
-#login-container {
-    @include container_base;
-    margin: 0 5px;
-    background-color: tint(green, 75%);
+.login-container {
+  @include container-base;
+  background-color: tint(green, 75%);
+  margin: 0 5px;
 }
 
 .stat-container {
-    margin-top: 15px;
-    & .stat-block {
-        @include container_base;
-            &:first-child {
-                margin-top: 5px;
-            }
-            &:last-child {
-                margin-bottom: 15px;
-            }
-    }
-    & h3, & p {
-        margin: 0;
-    }
-}
+  margin-top: 15px;
 
-.headerspace, .headerspace h3 {
+  & .stat-block {
+    @include container-base;
+
+    &:first-child {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  & h3,
+  & p {
     margin: 0;
+  }
 }
 
-/* Diverse */
-/* Topic & Forum Titles */
-.topic-title, .forum-title {
-    text-align: center;
-        & a {
-            min-width: 33%;
-            width: auto;
-            padding: 5px 15px;
-            border: 1px solid #e6e9ed;
-            border-radius: 10px;
-            background-color: $col_navbar;
-        }
+.headerspace,
+.headerspace {
+  h3 {
+    margin: 0;
+  }
 }
 
-h2.topic-title, h2.forum-title {
-    margin: 10px 0;
+
+// postbody, postprofile, mini-profile
+// ***********************************************************
+// Posts
+// ***********************************************************
+.post {
+  box-shadow: $box-shadow-outset-single-posts;
+  margin-bottom: 10px;
 }
 
-.action-bar {
-    & a.rightside {
-        @include action-bar-elements;
+.panel {
+  box-shadow: $box-shadow-inset-double;
+  padding: 7px 12px;
+}
+
+// postprofile & postbody
+// ***********************************************************
+
+.pprofile-container {
+  height: auto;
+  width: $switch-width-postprofile;
+}
+
+.pbody-container {
+  height: auto;
+  width: ($switch-width-wrap - 40px - $switch-width-postprofile);
+}
+
+#b2t-container {
+  clear: both;
+}
+
+@media all and (min-width: 1100px) {
+  .postprofile,
+  .search .postprofile {
+    width: $switch-width-postprofile;
+  }
+
+  .postbody,
+  .search .postbody {
+    width: ($switch-width-wrap - 40px - $switch-width-postprofile);
+  }
+}
+
+// Switching postbody <> postprofile
+// ***********************************************************
+@if $switch-postprofile-side == right {
+  .postprofile,
+  .pprofile-container {
+    border-width: 0 0 0 1px;
+    float: right;
+
+    dd,
+    dt {
+      margin-left: 8px;
     }
-    & .jumpbox-return {
-        @include action-bar-elements;
-    }
-    & .pagination {
-        @include action-bar-elements;
-            & > a {
-                padding: 5px 0;
-            }
-    }
+  }
+
+  .postbody,
+  .pbody-container {
+    float: left;
+  }
 }
 
+@if $switch-postprofile-side == left {
+  .postprofile,
+  .pprofile-container {
+    border-width: 0 1px 0 0;
+    float: left;
+
+    dd,
+    dl {
+      margin-right: 8px;
+    }
+  }
+
+  .postbody,
+  .pbody-container {
+    float: right;
+  }
+}
+
+// Separation of postbody & postprofile
+// ***********************************************************
+
+@if $switch-pprofile-separation == no {
+  .bg1-new {
+    background-color: $col-bg;
+  }
+
+  .bg2-new {
+    background-color: $col-bg2;
+  }
+
+  .post-layout-split {
+    border-radius: 7px;
+  }
+
+  .pprofile-container,
+  .pbody-container {
+    .back2top {
+      display: none;
+    }
+  }
 
 
-/* -------------------------------------------------
- * Overrides, Mixins and other stuff ...
-  * ------------------------------------------------- */
+  .back2top {
+    .top {
+      @include move-up15;
+    }
+  }
+} @else {
+  .bg1-new,
+  .bg2-new {
+    background-color: none;
+  }
 
-/* Switches postprofile/postbody right<->left */
-@if $define-postprofile-side == right {
+  .post {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+
+    & > .back2top {
+      display: none;
+    }
+  }
+
+  .pprofile-container,
+  .pbody-container {
+    background-color: $col-bg;
+    border-radius: 7px;
+    box-shadow: $box-shadow-outset-single-posts;
+  }
+
+  .pbody-container {
+    padding: 5px 10px;
+    width: ($switch-width-wrap - 30px - $switch-width-postprofile);
+
+    @if $switch-postprofile-side == right {
+      .back2top {
+        display: none;
+      }
+    }
+  }
+
+  .pprofile-container {
+    padding: 10px 0;
+    width: $switch-width-postprofile;
+
     .postprofile {
-        border-width: 0 0 0 1px;
-        float: right;
-           & dd, dt {
-            margin-left: 8px;
-            }
+      border: 0;
+    }
+
+    .back2top {
+      .top {
+        margin: 0;
+      }
+    }
+
+    @if $switch-postprofile-side == left {
+      .back2top {
+        display: none;
+      }
+    }
+
+    & dl {
+      margin: 0;
+    }
+  }
+
+  .postbody {
+    .content {
+      padding-bottom: 10px;
+    }
+  }
+
+  @media all and (max-width: 900px) {
+    .pprofile-container,
+    .pbody-container {
+      clear: both;
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .pprofile-container {
+      float: left;
+      padding: 10px;
+      width: auto;
+    }
+
+    .pbody-container {
+      width: auto;
     }
 
     .postbody {
-        float: left;
+      display: block;
+      width: auto;
     }
+  }
 }
 
-@if $define-postprofile-side == left {
-    .postprofile {
-        border-width: 0 1px 0 0;
-        float: left;
-            & dd, dl {
-            margin-right: 8px;
-            }
-    }
-
-    .postbody {
-        float: right;
-    }
+// Layout mini-profile
+// ***********************************************************
+.postprofile .avatar,
+.postprofile .avatar img {
+  border-radius: 5px;
 }
 
+.postprofile a.avatar {
+  background-color: #ededed;
+  border: 1px solid #000;
+  padding: 3px;
+}
+
+
+
+// ***********************************************************
+// Diverse
+// ***********************************************************
+
+// Topic & Forum Titles
+// ***********************************************************
+.topic-title,
+.forum-title {
+  text-align: center;
+
+  & a {
+    background-color: $col-navbar;
+    border: 1px solid #e6e9ed;
+    border-radius: 10px;
+    min-width: 33%;
+    padding: 5px 15px;
+    width: auto;
+  }
+}
+
+h2.topic-title,
+h2.forum-title {
+  margin: 10px 0;
+}
+
+
+
+
+// ***********************************************************
+// Overrides, Mixins and other stuff ...
+// ***********************************************************
