@@ -6,16 +6,18 @@
             $HEADERBAR_SEPARAT = 0 -> headerbar separated
             $HEADERBAR_SEPARAT = 1 -> classic appearance
 
-		Quick search position:
-			$SEARCH_IN_NAVBAR = 0 -> Search bar will be displayed in header
-			$SEARCH_IN_NAVBAR = 1 -> Search bar will be displayed in secondary navigation
+		Spli postbody and postprofile:
+			$PBODY_PPROFILE_SPLIT = 0 -> no splitting
+			$PBODY_PPROFILE_SPLIT = 1 -> split into two separate DIVs
+
 
 	Edit variables below:
 {% endif %}
 
 {% DEFINE HEADERBAR_SEPARAT = 0 %}
+{% DEFINE PBODY_PPROFILE_SPLIT = 1 %}
 
-{% DEFINE SEARCH_IN_NAVBAR = 0 %}
+
 
 {% if definition.FALSE %}
 	Do not edit code below!
