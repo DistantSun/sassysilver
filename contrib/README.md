@@ -66,8 +66,10 @@ Both Arty's SASS Compiler Extension for phpBB and Koala will fail to compile the
 This is not(!) due to them being badly programmed or flawed but to their respective authors' approach to concentrate on the basic functionality needed!
 To circumvent these restrictions there will be an alternative version of SassySilver in the near future, which will follow a different approach as far as the inclusion of the original prosilver stylesheets ist concerned.
 
+For the time being a complete set of Bourbon files will be included in the theme folder. This may change during the development process to reduce the amount of code shipped as soon as feasible.
+
 ###### (2) Additional copyrights:
 
 Please note that SassySilver, in its current state, makes use of (external) material (e.g. sample images, Bourbon library) to which additional third party copyright/license regulations may apply.
 For further information please read the corresponding license files provided with this style within their corresponding folders:
-- [Bourbon](./theme/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/bourbon/LICENSE.md""
+- [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md""
