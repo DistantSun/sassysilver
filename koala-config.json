@@ -42,6 +42,7 @@
 
 	// An array of filesystem paths or importers which should be searched for Sass templates imported with the @import directive.
 	"includePaths": [
+		"/theme/assets/parent/",
 		"/theme/bourbon/helpers/",
 		"/theme/bourbon/library/",
 		"/theme/bourbon/settings/",
