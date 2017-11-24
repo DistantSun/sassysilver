@@ -1,3 +1,71 @@
+// Overwriting original prosilver classes
+// common.css
+// *****************************************************************************
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 12px 0;
+}
+
+// .linklist {
+//   &.compact .rightside > a > span span {
+//     display: none;
+//   }
+// }
+.linklist {
+  &.compact {
+    .rightside > a > span span {
+      display: none;
+    }
+  }
+}
+
+
+// colours.css
+// *****************************************************************************
+.navlinks {
+  @include qualify(ul) {
+    border-top: 0;
+  }
+}
+
+.headerbar,
+.forumbg {
+  background-image: none;
+}
+
+.forums {
+  @include qualify(ul) {
+    background-color: $col-forums;
+    background-image: none;
+    border-radius: 5px;
+  }
+}
+
+.bg1,
+.bg3 {
+  background-color: $col-bg;
+}
+
+.bg2 {
+  background-color: $col-bg2;
+}
+
+// utilities.css
+// *****************************************************************************
+.divider {
+  @include qualify(hr) {
+    border-top-color: #ccc;
+    border-top-width: 3px;
+    display: block;
+    margin: 5px 0 10px;
+  }
+}
+// ***********************************************************
+
 // ***********************************************************
 //  Additional code, not included in original prosilver
 // ***********************************************************
@@ -8,8 +76,6 @@
 %no-bg-colour {
   background-color: none;
 }
-
-
 
 // Provides the code changes required to separate the menue part of navbar_header via configfile
 // ***********************************************************
@@ -29,7 +95,10 @@ body {
 }
 
 #wrap {
+  @include padding($pad-wrappers $pad-wrappers);
+  background-color: $col-wrap;
   box-shadow: $box-shadow-inset-double;
+  max-width: $switch-width-wrap;
   @if $img-bg-html-body != none {
     @if $switch-col-wrap-off == yes {
       background-color: rgba($col-wrap, .5);
@@ -58,7 +127,10 @@ body {
 
 .wrap-menue {
   margin: 4px auto;
-  max-width: $width-menuebar;
+  max-width: $switch-width-wrap;
+  @media (max-width: 810) {
+    @include padding(null $pad-wrappers null $pad-wrappers);
+  }
 
   & .navbar {
     background-color: #000;
@@ -68,19 +140,20 @@ body {
 
     & a {
       border-radius: 2px;
-      color: #FFF;
+      color: #fff;
       font-size: 1.2em;
       padding: 5px;
+
       &:hover {
-      background-color: grey;
-        }
+        background-color: #808080;
+      }
     }
   }
 }
 
 .dropdown {
   .dropdown-contents {
-    background-color: grey;
+    background-color: #808080;
   }
 }
 
@@ -89,7 +162,7 @@ body {
 
   & a {
     color: $col-text-headerbar;
-    font-size: $font-size-headerbar;
+    font-size: 1.2em;
     font-style: italic;
     font-weight: 600;
 
@@ -170,19 +243,28 @@ body {
   @include forum-container;
 }
 
-ul.forums {
-  border-radius: 5px;
-}
+// .forums {
+//   @include qualify(ul) {
+//     border-radius: 5px;
+//   }
+// }
 
-ul.topiclist li {
-  &:first-child {
-    @include border-top-radius(5px);
-    border-top-color: transparent;
+.topiclist {
+  @include qualify(ul) {
+    color: inherit;
+  }
+
+  & li {
+
+    &:first-child {
+      @include border-top-radius(5px);
+      border-top-color: transparent;
+      }
+
+    &:last-child {
+      @include border-bottom-radius(5px);
+      border-bottom-color: transparent;
     }
-
-  &:last-child {
-    @include border-bottom-radius(5px);
-    border-bottom-color: transparent;
   }
 }
 
@@ -191,7 +273,7 @@ ul.topiclist li {
 
 .login-container {
   @include container-base;
-  background-color: tint(green, 75%);
+  background-color: tint($col-base, 75%);
   margin: 0 5px;
 }
 
@@ -238,37 +320,53 @@ ul.topiclist li {
   padding: 7px 12px;
 }
 
-// postprofile & postbody
+// postprofile, postbody & back2top general layout
 // ***********************************************************
 
+// Set back prosilver defaults - to be transfered to pprofile-container & pbody-container
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  margin-top: 5px;
+}
+
 .pprofile-container {
+  display: block;
   height: auto;
-  width: $switch-width-postprofile;
+  width: 22%;
 }
 
 .pbody-container {
+  display: block;
   height: auto;
-  width: ($switch-width-wrap - 40px - $switch-width-postprofile);
+  width: 76%;
 }
 
-#b2t-container {
-  clear: both;
-}
+//// mini profile width restriction - laid aside
 
-@media all and (min-width: 1100px) {
-  .postprofile,
-  .search .postprofile {
-    width: $switch-width-postprofile;
-  }
+// @media all and (min-width: 1100px) {
+//   .postprofile,
+//   .search .postprofile {
+//     width: $switch-width-postprofile;
+//   }
+//
+//   .postbody,
+//   .search .postbody {
+//   width: auto;
+//   }
+// }
 
-  .postbody,
-  .search .postbody {
-    width: ($switch-width-wrap - 40px - $switch-width-postprofile);
-  }
-}
+
+//// Refactoring postprofile & postbody - start
 
 // Switching postbody <> postprofile
 // ***********************************************************
+
+
+/*
 @if $switch-postprofile-side == right {
   .postprofile,
   .pprofile-container {
@@ -328,7 +426,6 @@ ul.topiclist li {
     }
   }
 
-
   .back2top {
     .top {
       @include move-up15;
@@ -359,7 +456,7 @@ ul.topiclist li {
 
   .pbody-container {
     padding: 5px 10px;
-    width: ($switch-width-wrap - 30px - $switch-width-postprofile);
+    width: auto;
 
     @if $switch-postprofile-side == right {
       .back2top {
@@ -423,18 +520,99 @@ ul.topiclist li {
     }
   }
 }
+*/
+
+@if ($switch-pprofile-separation == no) and ($switch-postprofile-side == right) {
+  .pprofile-container {
+    float: right;
+  }
+
+  .pbody-container {
+    float: left;
+  }
+
+  @include post-separation-no;
+}
+
+@if ($switch-pprofile-separation == no) and ($switch-postprofile-side == left) {
+  .pprofile-container {
+    float: left;
+  }
+
+  .pbody-container {
+    float: right;
+  }
+
+  @include post-separation-no;
+}
+
+@if ($switch-pprofile-separation == yes) and ($switch-postprofile-side == right) {
+  .pprofile-container {
+    float: right;
+  }
+
+  .pbody-container {
+    float: left;
+
+    .back2top {
+      display: none;
+    }
+  }
+
+  @include post-separation-yes;
+}
+
+@if ($switch-pprofile-separation == yes) and ($switch-postprofile-side == left) {
+  .pprofile-container {
+    float: left;
+  }
+
+  .pbody-container {
+    float: right;
+
+    .back2top {
+      display: none;
+    }
+  }
+
+  @include post-separation-yes;
+}
+
+
+
+//// Refactoring postprofile & postbody - end
 
 // Layout mini-profile
 // ***********************************************************
-.postprofile .avatar,
-.postprofile .avatar img {
-  border-radius: 5px;
+.postprofile {
+  dd,
+  dt {
+    margin: 0 8px;
+  }
+
+  dt {
+    text-align: center;
+  }
+
+  .avatar {
+    border-radius: 5px;
+    display: inline-block;
+    float: none;
+  }
+
+  & img {
+    border-radius: 5px;
+  }
 }
 
-.postprofile a.avatar {
-  background-color: #ededed;
-  border: 1px solid #000;
-  padding: 3px;
+.postprofile {
+  & .avatar {
+    @include qualify(a) {
+      background-color: #ededed;
+      border: 1px solid #000;
+      padding: 3px;
+    }
+  }
 }
 
 
@@ -459,9 +637,11 @@ ul.topiclist li {
   }
 }
 
-h2.topic-title,
-h2.forum-title {
-  margin: 10px 0;
+.topic-title,
+.forum-title {
+  @include qualify(h2) {
+    margin: 10px 0;
+  }
 }
 
 

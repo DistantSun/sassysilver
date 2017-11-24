@@ -7,7 +7,7 @@
 // Layout switches
 
 //  Colours - general colour scheme. Do NOT change!
-$switch-col-scheme:                                'blue' !default; // Board colour scheme; available schemes: blue, red, green, black
+$switch-col-scheme:                                blue !default; // Board colour scheme; available schemes: blue, red, green, black
 // Board width
 $switch-width-wrap:                                1152px !default;             // Board width
 // Postprofile positioning & max. width
@@ -32,9 +32,16 @@ $width-sidebar:                             180px !default;                 // W
 
 
 
-// Colour mapping for colour schemes
+// $col-base:                                  map-get((blue: #0b2958, red: #48100c, green: #0a3422, black: #1b1a1a), $switch-col-scheme) !default;    // Base colours for colour schemes the following colours will derive from
 
-$col-base:                                  map-get(('blue': #0b2958, 'red': #48100c, 'green': #0a3422, 'black': #1b1a1a), $switch-col-scheme) !default;    // Base colours for colour schemes the following colours will derive from
+$colourset: (
+  blue: #0b2958,
+  red: #48100c,
+  green: #0a3422,
+  black: #1b1a1a,
+);
+
+$col-base: map-get(($colourset), $switch-col-scheme);
 
 // Background Colours
 $col-body:                                  tint($col-base, 10%) !default;      // Body colour
