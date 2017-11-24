@@ -1,0 +1,59 @@
+// Separation in post container
+//------------------------------------------------------------------------------
+@mixin post-separation-no {
+  .bg1-new {
+    background-color: $col-bg;
+  }
+
+  .bg2-new {
+    background-color: $col-bg2;
+  }
+
+  .post-layout-split {
+    border-radius: 7px;
+  }
+
+  .pprofile-container,
+  .pbody-container {
+    .back2top {
+      display: none;
+    }
+  }
+
+  .back2top {
+    .top {
+      margin-top: -15px;
+    }
+  }
+}
+
+@mixin post-separation-yes {
+  .pprofile-container,
+  .pbody-container {
+    border-radius: 7px;
+    box-shadow: $box-shadow-outset-single-posts;
+    padding: 10px;
+  }
+
+  .post {
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .postbody {
+    width: auto;
+  }
+
+  .postbody {
+    ul {
+      &.post-buttons {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// *****************************************************************************
+// Still to add:
+// Breakpoints, see https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
