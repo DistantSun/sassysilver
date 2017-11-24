@@ -9,27 +9,28 @@
 
 // Importing the renamed original prosilver stylesheets first
 // ---------------------------------------------------------------
-@import "assets/parent/normalize";
-@import "assets/parent/base";
-@import "assets/parent/utilities";
-@import "assets/parent/common";
-@import "assets/parent/links";
-@import "assets/parent/content";
-@import "assets/parent/buttons";
-@import "assets/parent/cp";
-@import "assets/parent/forms";
-@import "assets/parent/icons";
-@import "assets/parent/colours";
-@import "assets/parent/responsive";
+@import 'assets/parent/normalize';
+@import 'assets/parent/base';
+@import 'assets/parent/utilities';
+@import 'assets/parent/common';
+@import 'assets/parent/links';
+@import 'assets/parent/content';
+@import 'assets/parent/buttons';
+@import 'assets/parent/cp';
+@import 'assets/parent/forms';
+@import 'assets/parent/icons';
+@import 'assets/parent/colours';
+@import 'assets/parent/responsive';
 
-// Importing tools and utilities of the "framework" next
+// Importing tools and utilities of the 'framework' next
 // ---------------------------------------------------------------
-@import "bourbon";
-@import "assets_base";
+@import 'bourbon';
+@import 'assets_base';
 
 // Importing stylespecific stylesheets - finally
-@import "custom_configuration";
-@import "style_configuration";
-@import "assets/modules";
-@import "sassysilver";
-@import "custom";
+@import 'custom_configuration';
+@import 'style_configuration';
+@import 'assets_base';
+@import 'assets/modules';
+@import 'sassysilver';
+@import 'custom';
