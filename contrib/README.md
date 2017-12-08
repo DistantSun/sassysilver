@@ -60,15 +60,26 @@ Credits go as well to all those who helped me during the development process, ei
 
 
 ## Sidenotes
-###### (1) Compatibility issues with SASS Pre-Compilors:
+###### (1) Compatibility issues with SASS Compilers:
+1. Arty's SASS Compiler Extension:<br />
+This extension will fail to compile the stylesheets of this style correctly. This is not(!) due to it being badly programmed or flawed but to its original use case: providing a tool to compile his styles from within phpBB's ACP in order to avoid users having to install a dedicated piece of software for this job.<br />
+There is not much I can do as far as this extension is concerned without having to re-arrange the folder/file stucture of the style in a way that will render it cluttered and, in consequence, "hard to read" and hard to manage.<br />
+Therefore support for this extension will **not** be provided.
 
-Both Arty's SASS Compiler Extension for phpBB and Koala will fail to compile the stylesheets of this style correctly due to their restricted functionality and/or limited support of the full range of SASS's import functions.
-This is not(!) due to them being badly programmed or flawed but to their respective authors' approach to concentrate on the basic functionality needed!
-To circumvent these restrictions there will be an alternative version of SassySilver in the near future, which will follow a different approach as far as the inclusion of the original prosilver stylesheets ist concerned.
+2. Koala:<br />
+Koala is a different case as it will fail only in its standard configuration (as provided "out of the box"). In order to to make Koala work with this style you would have to create a dedicated configuration file and manually adapt it first<br />
+Sounds like a task not really trivial? In fact it isn't ... but this is nothing uders will have to cope with:<br />
+This style will be shipped with a dedicated configuration file ("koala-config.json"), located in the root of the style's folder, which should take care of this issue.<br />
+
+3. Editor specific compiler add-ons:<br />
+There are numerous add-ons for a wide range of editors providing a means to compile SASS files from within the respective editor, some of them more and others less sophisticated. Those suitable for the job of compiling this style will most likely have to be configured accordingly.<br />
+Please understand that information on how to accomplish this cannot be provided.
+
+###### (2) Third Party Packages included:
 
 For the time being a complete set of Bourbon files will be included in the theme folder. This may change during the development process to reduce the amount of code shipped as soon as feasible.
 
-###### (2) Additional copyrights:
+###### (3) Additional copyrights:
 
 Please note that SassySilver, in its current state, makes use of (external) material (e.g. sample images, Bourbon library) to which additional third party copyright/license regulations may apply.
 For further information please read the corresponding license files provided with this style within their corresponding folders:
