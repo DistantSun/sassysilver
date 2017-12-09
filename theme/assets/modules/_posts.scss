@@ -1,0 +1,41 @@
+// Module Posts
+//
+// Defining the layout of posts in viewtopic_body.html
+//
+// Sections:
+//  1.  Set back prosilver defaults and transfer to pprofile-container & pbody-container
+//      let postprofile & postbody containers float according to configuration
+//  2.  Format postprofile & postbody layout depending on separation status
+//
+//  Required: @function opposite-direction, @mixin post-separation-no,
+//            @mixin post-separation-yes
+
+
+// 1. Set back & transfer
+// -----------------------------------------------------------------------------
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  margin-top: 5px;
+}
+
+.pprofile-container {
+  display: block;
+  float: unquote($switch-postprofile-side);
+  height: auto;
+  width: 22%;
+}
+
+.pbody-container {
+  display: block;
+  float: opposite-direction(unquote($switch-postprofile-side));
+  height: auto;
+  width: 76%;
+}
+
+// 2.  Formatting
+// -----------------------------------------------------------------------------
+@include post-separation;
