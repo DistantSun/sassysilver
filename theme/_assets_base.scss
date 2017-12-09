@@ -10,6 +10,10 @@
 // Importing funtions
 // ---------------------------------------------------------------
 @import 'assets/functions/calculate_percentage';
+@import 'assets/functions/post_layout';
+@import 'assets/functions/colour_mapping';
+@import 'assets/functions/opposite-direction';
+@import 'assets/functions/paths';
 
 
 // Importing mixins - own & 3rd party
@@ -17,3 +21,8 @@
 @import 'assets/mixins/helpers';
 @import 'assets/mixins/post_separation';
 @import 'assets/mixins/include-media';
+
+// Importing modules
+// ---------------------------------------------------------------
+@import 'assets/modules/containers';
+@import 'assets/modules/posts';

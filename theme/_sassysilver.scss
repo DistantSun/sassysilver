@@ -1,5 +1,16 @@
-// Overwriting original prosilver classes
-// common.css
+//  Stylespecific CSS SassySilver
+//
+//  1. Stylewide overwrites of the original prosilver classes
+//    a. common.css
+//    b. colours.css
+//    c. utilities.css
+//
+//  2. Additional classes, not included in prosilver
+//    a. "Special" selectors / pseudo selectors
+//
+
+
+//  1.a => common.css
 // *****************************************************************************
 
 * {
@@ -10,11 +21,6 @@ body {
   padding: 12px 0;
 }
 
-// .linklist {
-//   &.compact .rightside > a > span span {
-//     display: none;
-//   }
-// }
 .linklist {
   &.compact {
     .rightside > a > span span {
@@ -24,7 +30,7 @@ body {
 }
 
 
-// colours.css
+//  1.b => colours.css
 // *****************************************************************************
 .navlinks {
   @include qualify(ul) {
@@ -54,7 +60,7 @@ body {
   background-color: $col-bg2;
 }
 
-// utilities.css
+//  1.c => utilities.css
 // *****************************************************************************
 .divider {
   @include qualify(hr) {
@@ -64,13 +70,9 @@ body {
     margin: 5px 0 10px;
   }
 }
-// ***********************************************************
 
-// ***********************************************************
-//  Additional code, not included in original prosilver
-// ***********************************************************
 
-// Special selectors
+//  2.a. => Special selectors
 // ***********************************************************
 
 %no-bg-colour {
@@ -89,7 +91,7 @@ body {
     background-color: $col-body;
   } @else {
     background-attachment: fixed;
-    background-image: url('./images/#{$img-bg-html-body}');
+    background-image: bg-image('#{$img-bg-html-body}');
     background-size: 100% 100%;
   }
 }
@@ -106,7 +108,7 @@ body {
   }
 
   @if $img-bg-wrap != none {
-    background-image: url('./images/#{$img-bg-wrap}');
+    background-image: bg-image('#{$img-bg-wrap}');
     background-size: cover;
   }
 }
@@ -117,7 +119,7 @@ body {
   @if $img-bg-headerbar == none {
     background: transparent;
   } @else {
-    background-image: url('./images/#{$img-bg-headerbar}');
+    background-image: image('#{$img-bg-headerbar}');
   }
 }
 
@@ -311,7 +313,6 @@ body {
 // Posts
 // ***********************************************************
 .post {
-  box-shadow: $box-shadow-outset-single-posts;
   margin-bottom: 10px;
 }
 
@@ -320,30 +321,6 @@ body {
   padding: 7px 12px;
 }
 
-// postprofile, postbody & back2top general layout
-// ***********************************************************
-
-// Set back prosilver defaults - to be transfered to pprofile-container & pbody-container
-.postbody,
-.postprofile {
-  width: 100%;
-}
-
-.postprofile {
-  margin-top: 5px;
-}
-
-.pprofile-container {
-  display: block;
-  height: auto;
-  width: 22%;
-}
-
-.pbody-container {
-  display: block;
-  height: auto;
-  width: 76%;
-}
 
 //// mini profile width restriction - laid aside
 
@@ -360,65 +337,8 @@ body {
 // }
 
 
-@if ($switch-pprofile-separation == no) and ($switch-postprofile-side == right) {
-  .pprofile-container {
-    float: right;
-  }
-
-  .pbody-container {
-    float: left;
-  }
-
-  @include post-separation-no;
-}
-
-@if ($switch-pprofile-separation == no) and ($switch-postprofile-side == left) {
-  .pprofile-container {
-    float: left;
-  }
-
-  .pbody-container {
-    float: right;
-  }
-
-  @include post-separation-no;
-}
-
-@if ($switch-pprofile-separation == yes) and ($switch-postprofile-side == right) {
-  .pprofile-container {
-    float: right;
-  }
-
-  .pbody-container {
-    float: left;
-
-    .back2top {
-      display: none;
-    }
-  }
-
-  @include post-separation-yes;
-}
-
-@if ($switch-pprofile-separation == yes) and ($switch-postprofile-side == left) {
-  .pprofile-container {
-    float: left;
-  }
-
-  .pbody-container {
-    float: right;
-
-    .back2top {
-      display: none;
-    }
-  }
-
-  @include post-separation-yes;
-}
-
-
-
 //// Refactoring postprofile & postbody - end
+
 
 // Layout mini-profile
 // ***********************************************************
