@@ -1,54 +1,57 @@
 // Separation in post container
 //------------------------------------------------------------------------------
-@mixin post-separation-no {
-  .bg1-new {
-    background-color: $col-bg;
-  }
+@mixin post-separation {
+  @if $switch-pprofile-separation == no {
+    .bg1-new {
+      background-color: $col-bg;
+    }
 
-  .bg2-new {
-    background-color: $col-bg2;
-  }
+    .bg2-new {
+      background-color: $col-bg2;
+    }
 
-  .post-layout-split {
-    border-radius: 7px;
-  }
+    .post-layout-split {
+      border-radius: 7px;
+    }
 
-  .pprofile-container,
-  .pbody-container {
+    .pprofile-container,
+    .pbody-container {
+      .back2top {
+        display: none;
+      }
+    }
+
+    .post {
+      box-shadow: $box-shadow-outset-single-posts;
+    }
+
     .back2top {
-      display: none;
+      .top {
+        margin-top: -15px;
+      }
     }
-  }
-
-  .back2top {
-    .top {
-      margin-top: -15px;
+  } @else {
+    .pprofile-container,
+    .pbody-container {
+      border-radius: 7px;
+      box-shadow: $box-shadow-outset-single-posts;
+      padding: 10px;
     }
-  }
-}
 
-@mixin post-separation-yes {
-  .pprofile-container,
-  .pbody-container {
-    border-radius: 7px;
-    box-shadow: $box-shadow-outset-single-posts;
-    padding: 10px;
-  }
+    .post {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
-  .post {
-    box-shadow: none;
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .postbody {
+      width: 100%;
+    }
 
-  .postbody {
-    width: 100%;
-  }
-
-  .postbody {
-    ul {
-      &.post-buttons {
-        margin-right: 5px;
+    .postbody {
+      ul {
+        &.post-buttons {
+          margin-right: 5px;
+        }
       }
     }
   }
