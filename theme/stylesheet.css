@@ -6016,47 +6016,51 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 .pprofile-container {
   display: block;
-  float: right;
+  float: left;
   height: auto;
   width: 22%;
 }
 
 .pbody-container {
   display: block;
-  float: left;
+  float: right;
   height: auto;
   width: 76%;
 }
 
-.bg1-new {
-  background-color: #ebe5e4;
-}
-
-.bg2-new {
-  background-color: #f6f3f3;
-}
-
-.post-layout-split {
+.pprofile-container,
+.pbody-container {
   border-radius: 7px;
-}
-
-.pprofile-container .back2top,
-.pbody-container .back2top {
-  display: none;
+  -webkit-box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
+  padding: 10px;
 }
 
 .post {
-  -webkit-box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
-  box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.postbody {
+  width: 100%;
 }
 
 .postprofile {
-  border-color: #48100c;
-  border-left: 1px solid;
+  border-width: 0;
 }
 
-.back2top .top {
-  margin-top: -15px;
+.postbody ul.post-buttons {
+  margin-right: 5px;
+}
+
+@media (max-width: 799px) {
+  .pprofile-container {
+    clear: both;
+    width: 100%;
+  }
+  .pbody-container {
+    width: 100%;
+  }
 }
 
 * {

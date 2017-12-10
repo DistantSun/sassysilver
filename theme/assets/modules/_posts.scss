@@ -6,6 +6,7 @@
 //  1.  Set back prosilver defaults and transfer to pprofile-container & pbody-container
 //      let postprofile & postbody containers float according to configuration
 //  2.  Format postprofile & postbody layout depending on separation status
+//  3.  Responsiveness
 //
 //  Required: @function opposite-direction, @mixin post-separation-no,
 //            @mixin post-separation-yes
@@ -65,8 +66,8 @@
   }
 
   .postprofile {
-    border-color: $col-base;
     @include postprofile-border($switch-postprofile-side, 1px);
+    border-color: $col-base;
   }
 
   .back2top {
@@ -101,5 +102,19 @@
         margin-right: 5px;
       }
     }
+  }
+}
+
+
+// 3.  Make me responsive ...
+// -----------------------------------------------------------------------------
+@include media('<800px') {
+  .pprofile-container {
+    clear: both;
+    width: 100%;
+  }
+
+  .pbody-container {
+    width: 100%;
   }
 }
