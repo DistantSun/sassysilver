@@ -10,13 +10,13 @@
 
 	// Add the ignore rules that Koala will not search them.
 	// e.g. ["*.json", "*.txt", "test", "path/libs"]
-	"ignores": ["*.css", "*.json"],
+	"ignores": ["*.css", "*.json", "*.js"],
 
 	// Compile options of Sass.
 	"options": {
 
 		// Output style. Can be nested (default), compact, compressed, or expanded.
-		"outputStyle": "nested",
+		"outputStyle": "expanded",
 
 		// Emit comments in the generated CSS indicating the corresponding source line.
 		"lineComments": false,
@@ -42,6 +42,7 @@
 
 	// An array of filesystem paths or importers which should be searched for Sass templates imported with the @import directive.
 	"includePaths": [
+		"/theme/",
 		"/theme/assets/parent/",
 		"/theme/bourbon/helpers/",
 		"/theme/bourbon/library/",

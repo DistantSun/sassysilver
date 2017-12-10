@@ -6010,6 +6010,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 .postprofile {
+  border-width: 0;
   margin-top: 5px;
 }
 
@@ -6027,25 +6028,35 @@ li.notification-reported strong, li.notification-disapproved strong {
   width: 76%;
 }
 
-.pprofile-container,
-.pbody-container {
+.bg1-new {
+  background-color: #ebe5e4;
+}
+
+.bg2-new {
+  background-color: #f6f3f3;
+}
+
+.post-layout-split {
   border-radius: 7px;
-  -webkit-box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
-  box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
-  padding: 10px;
+}
+
+.pprofile-container .back2top,
+.pbody-container .back2top {
+  display: none;
 }
 
 .post {
-  padding-left: 0;
-  padding-right: 0;
+  -webkit-box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.75);
 }
 
-.postbody {
-  width: 100%;
+.postprofile {
+  border-color: #48100c;
+  border-left: 1px solid;
 }
 
-.postbody ul.post-buttons {
-  margin-right: 5px;
+.back2top .top {
+  margin-top: -15px;
 }
 
 * {
