@@ -1,15 +1,83 @@
-// ***********************************************************
-//  Additional code, not included in original prosilver
-// ***********************************************************
+//  Stylespecific CSS SassySilver
+//
+//  1. Stylewide overwrites of the original prosilver classes
+//    a. common.css
+//    b. colours.css
+//    c. utilities.css
+//
+//  2. Additional classes, not included in prosilver
+//    a. "Special" selectors / pseudo selectors
+//
 
-// Special selectors
+
+//  1.a => common.css
+// *****************************************************************************
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 12px 0;
+}
+
+.linklist {
+  &.compact {
+    .rightside > a > span span {
+      display: none;
+    }
+  }
+}
+
+
+//  1.b => colours.css
+// *****************************************************************************
+.navlinks {
+  @include qualify(ul) {
+    border-top: 0;
+  }
+}
+
+.headerbar,
+.forumbg {
+  background-image: none;
+}
+
+.forums {
+  @include qualify(ul) {
+    background-color: $col-forums;
+    background-image: none;
+    border-radius: 5px;
+  }
+}
+
+.bg1,
+.bg3 {
+  background-color: $col-bg;
+}
+
+.bg2 {
+  background-color: $col-bg2;
+}
+
+//  1.c => utilities.css
+// *****************************************************************************
+.divider {
+  @include qualify(hr) {
+    border-top-color: #ccc;
+    border-top-width: 3px;
+    display: block;
+    margin: 5px 0 10px;
+  }
+}
+
+
+//  2.a. => Special selectors
 // ***********************************************************
 
 %no-bg-colour {
   background-color: none;
 }
-
-
 
 // Provides the code changes required to separate the menue part of navbar_header via configfile
 // ***********************************************************
@@ -23,13 +91,16 @@ body {
     background-color: $col-body;
   } @else {
     background-attachment: fixed;
-    background-image: url('./images/#{$img-bg-html-body}');
+    background-image: bg-image('#{$img-bg-html-body}');
     background-size: 100% 100%;
   }
 }
 
 #wrap {
+  @include padding($pad-wrappers $pad-wrappers);
+  background-color: $col-wrap;
   box-shadow: $box-shadow-inset-double;
+  max-width: $switch-width-wrap;
   @if $img-bg-html-body != none {
     @if $switch-col-wrap-off == yes {
       background-color: rgba($col-wrap, .5);
@@ -37,7 +108,7 @@ body {
   }
 
   @if $img-bg-wrap != none {
-    background-image: url('./images/#{$img-bg-wrap}');
+    background-image: bg-image('#{$img-bg-wrap}');
     background-size: cover;
   }
 }
@@ -48,7 +119,7 @@ body {
   @if $img-bg-headerbar == none {
     background: transparent;
   } @else {
-    background-image: url('./images/#{$img-bg-headerbar}');
+    background-image: image('#{$img-bg-headerbar}');
   }
 }
 
@@ -58,7 +129,10 @@ body {
 
 .wrap-menue {
   margin: 4px auto;
-  max-width: $width-menuebar;
+  max-width: $switch-width-wrap;
+  @media (max-width: 810) {
+    @include padding(null $pad-wrappers null $pad-wrappers);
+  }
 
   & .navbar {
     background-color: #000;
@@ -68,19 +142,20 @@ body {
 
     & a {
       border-radius: 2px;
-      color: #FFF;
+      color: #fff;
       font-size: 1.2em;
       padding: 5px;
+
       &:hover {
-      background-color: grey;
-        }
+        background-color: #808080;
+      }
     }
   }
 }
 
 .dropdown {
   .dropdown-contents {
-    background-color: grey;
+    background-color: #808080;
   }
 }
 
@@ -89,7 +164,7 @@ body {
 
   & a {
     color: $col-text-headerbar;
-    font-size: $font-size-headerbar;
+    font-size: 1.2em;
     font-style: italic;
     font-weight: 600;
 
@@ -170,19 +245,28 @@ body {
   @include forum-container;
 }
 
-ul.forums {
-  border-radius: 5px;
-}
+// .forums {
+//   @include qualify(ul) {
+//     border-radius: 5px;
+//   }
+// }
 
-ul.topiclist li {
-  &:first-child {
-    @include border-top-radius(5px);
-    border-top-color: transparent;
+.topiclist {
+  @include qualify(ul) {
+    color: inherit;
+  }
+
+  & li {
+
+    &:first-child {
+      @include border-top-radius(5px);
+      border-top-color: transparent;
+      }
+
+    &:last-child {
+      @include border-bottom-radius(5px);
+      border-bottom-color: transparent;
     }
-
-  &:last-child {
-    @include border-bottom-radius(5px);
-    border-bottom-color: transparent;
   }
 }
 
@@ -191,7 +275,7 @@ ul.topiclist li {
 
 .login-container {
   @include container-base;
-  background-color: tint(green, 75%);
+  background-color: tint($col-base, 75%);
   margin: 0 5px;
 }
 
@@ -229,7 +313,6 @@ ul.topiclist li {
 // Posts
 // ***********************************************************
 .post {
-  box-shadow: $box-shadow-outset-single-posts;
   margin-bottom: 10px;
 }
 
@@ -238,203 +321,56 @@ ul.topiclist li {
   padding: 7px 12px;
 }
 
-// postprofile & postbody
-// ***********************************************************
 
-.pprofile-container {
-  height: auto;
-  width: $switch-width-postprofile;
-}
+//// mini profile width restriction - laid aside
 
-.pbody-container {
-  height: auto;
-  width: ($switch-width-wrap - 40px - $switch-width-postprofile);
-}
-
-#b2t-container {
-  clear: both;
-}
-
-@media all and (min-width: 1100px) {
-  .postprofile,
-  .search .postprofile {
-    width: $switch-width-postprofile;
-  }
-
-  .postbody,
-  .search .postbody {
-    width: ($switch-width-wrap - 40px - $switch-width-postprofile);
-  }
-}
-
-// Switching postbody <> postprofile
-// ***********************************************************
-@if $switch-postprofile-side == right {
-  .postprofile,
-  .pprofile-container {
-    border-width: 0 0 0 1px;
-    float: right;
-
-    dd,
-    dt {
-      margin-left: 8px;
-    }
-  }
-
-  .postbody,
-  .pbody-container {
-    float: left;
-  }
-}
-
-@if $switch-postprofile-side == left {
-  .postprofile,
-  .pprofile-container {
-    border-width: 0 1px 0 0;
-    float: left;
-
-    dd,
-    dl {
-      margin-right: 8px;
-    }
-  }
-
-  .postbody,
-  .pbody-container {
-    float: right;
-  }
-}
-
-// Separation of postbody & postprofile
-// ***********************************************************
-
-@if $switch-pprofile-separation == no {
-  .bg1-new {
-    background-color: $col-bg;
-  }
-
-  .bg2-new {
-    background-color: $col-bg2;
-  }
-
-  .post-layout-split {
-    border-radius: 7px;
-  }
-
-  .pprofile-container,
-  .pbody-container {
-    .back2top {
-      display: none;
-    }
-  }
+// @media all and (min-width: 1100px) {
+//   .postprofile,
+//   .search .postprofile {
+//     width: $switch-width-postprofile;
+//   }
+//
+//   .postbody,
+//   .search .postbody {
+//   width: auto;
+//   }
+// }
 
 
-  .back2top {
-    .top {
-      @include move-up15;
-    }
-  }
-} @else {
-  .bg1-new,
-  .bg2-new {
-    background-color: none;
-  }
+//// Refactoring postprofile & postbody - end
 
-  .post {
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-
-    & > .back2top {
-      display: none;
-    }
-  }
-
-  .pprofile-container,
-  .pbody-container {
-    background-color: $col-bg;
-    border-radius: 7px;
-    box-shadow: $box-shadow-outset-single-posts;
-  }
-
-  .pbody-container {
-    padding: 5px 10px;
-    width: ($switch-width-wrap - 30px - $switch-width-postprofile);
-
-    @if $switch-postprofile-side == right {
-      .back2top {
-        display: none;
-      }
-    }
-  }
-
-  .pprofile-container {
-    padding: 10px 0;
-    width: $switch-width-postprofile;
-
-    .postprofile {
-      border: 0;
-    }
-
-    .back2top {
-      .top {
-        margin: 0;
-      }
-    }
-
-    @if $switch-postprofile-side == left {
-      .back2top {
-        display: none;
-      }
-    }
-
-    & dl {
-      margin: 0;
-    }
-  }
-
-  .postbody {
-    .content {
-      padding-bottom: 10px;
-    }
-  }
-
-  @media all and (max-width: 900px) {
-    .pprofile-container,
-    .pbody-container {
-      clear: both;
-      display: inline-block;
-      margin: 0 5px;
-    }
-
-    .pprofile-container {
-      float: left;
-      padding: 10px;
-      width: auto;
-    }
-
-    .pbody-container {
-      width: auto;
-    }
-
-    .postbody {
-      display: block;
-      width: auto;
-    }
-  }
-}
 
 // Layout mini-profile
 // ***********************************************************
-.postprofile .avatar,
-.postprofile .avatar img {
-  border-radius: 5px;
+.postprofile {
+  dd,
+  dt {
+    margin: 0 8px;
+  }
+
+  dt {
+    text-align: center;
+  }
+
+  .avatar {
+    border-radius: 5px;
+    display: inline-block;
+    float: none;
+  }
+
+  & img {
+    border-radius: 5px;
+  }
 }
 
-.postprofile a.avatar {
-  background-color: #ededed;
-  border: 1px solid #000;
-  padding: 3px;
+.postprofile {
+  & .avatar {
+    @include qualify(a) {
+      background-color: #ededed;
+      border: 1px solid #000;
+      padding: 3px;
+    }
+  }
 }
 
 
@@ -459,9 +395,11 @@ ul.topiclist li {
   }
 }
 
-h2.topic-title,
-h2.forum-title {
-  margin: 10px 0;
+.topic-title,
+.forum-title {
+  @include qualify(h2) {
+    margin: 10px 0;
+  }
 }
 
 

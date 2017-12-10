@@ -1,0 +1,105 @@
+// Module Posts
+//
+// Defining the layout of posts in viewtopic_body.html
+//
+// Sections:
+//  1.  Set back prosilver defaults and transfer to pprofile-container & pbody-container
+//      let postprofile & postbody containers float according to configuration
+//  2.  Format postprofile & postbody layout depending on separation status
+//
+//  Required: @function opposite-direction, @mixin post-separation-no,
+//            @mixin post-separation-yes
+
+
+// 1. Set back & transfer
+// -----------------------------------------------------------------------------
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  border-width: 0;
+  margin-top: 5px;
+}
+
+.pprofile-container {
+  display: block;
+  float: unquote($switch-postprofile-side);
+  height: auto;
+  width: 22%;
+}
+
+.pbody-container {
+  display: block;
+  float: opposite-direction(unquote($switch-postprofile-side));
+  height: auto;
+  width: 76%;
+}
+
+// 2.  Formatting
+// -----------------------------------------------------------------------------
+
+@if $switch-pprofile-separation == no {
+  .bg1-new {
+    background-color: $col-bg;
+  }
+
+  .bg2-new {
+    background-color: $col-bg2;
+  }
+
+  .post-layout-split {
+    border-radius: 7px;
+  }
+
+  .pprofile-container,
+  .pbody-container {
+    .back2top {
+      display: none;
+    }
+  }
+
+  .post {
+    box-shadow: $box-shadow-outset-single-posts;
+  }
+
+  .postprofile {
+    border-color: $col-base;
+    @include postprofile-border($switch-postprofile-side, 1px);
+  }
+
+  .back2top {
+    .top {
+      margin-top: -15px;
+    }
+  }
+} @else {
+  .pprofile-container,
+  .pbody-container {
+    border-radius: 7px;
+    box-shadow: $box-shadow-outset-single-posts;
+    padding: 10px;
+  }
+
+  .post {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .postbody {
+    width: 100%;
+  }
+
+  .postprofile {
+    border-width: 0;
+  }
+
+  .postbody {
+    ul {
+      &.post-buttons {
+        margin-right: 5px;
+      }
+    }
+  }
+}
