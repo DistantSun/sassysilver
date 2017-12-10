@@ -1,0 +1,3 @@
+@mixin postprofile-border($side, $width) {
+  border-#{opposite-direction($side)}: $width solid;
+}
