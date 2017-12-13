@@ -6016,14 +6016,14 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 .pprofile-container {
   display: block;
-  float: left;
+  float: right;
   height: auto;
   width: 22%;
 }
 
 .pbody-container {
   display: block;
-  float: right;
+  float: left;
   height: auto;
   width: 76%;
 }
@@ -6053,13 +6053,18 @@ li.notification-reported strong, li.notification-disapproved strong {
   margin-right: 5px;
 }
 
+.pbody-container > .back2top,
+.post > .back2top {
+  display: none;
+}
+
 @media (max-width: 799px) {
-  .pprofile-container {
-    clear: both;
-    width: 100%;
-  }
+  .pprofile-container,
   .pbody-container {
     width: 100%;
+  }
+  .pprofile-container {
+    clear: both;
   }
 }
 
