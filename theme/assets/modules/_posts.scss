@@ -105,16 +105,18 @@
   }
 }
 
+@include selector-postlayout('b2t');
+
 
 // 3.  Make me responsive ...
 // -----------------------------------------------------------------------------
 @include media('<800px') {
-  .pprofile-container {
-    clear: both;
+  .pprofile-container,
+  .pbody-container {
     width: 100%;
   }
 
-  .pbody-container {
-    width: 100%;
+  .pprofile-container {
+    clear: both;
   }
 }
