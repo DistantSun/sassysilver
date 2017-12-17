@@ -223,8 +223,8 @@ body {
 
     & > a {
       padding: 5px 0;
-      }
     }
+  }
 }
 
 .page-footer,
@@ -361,9 +361,7 @@ body {
   & img {
     border-radius: 5px;
   }
-}
 
-.postprofile {
   & .avatar {
     @include qualify(a) {
       background-color: #ededed;
@@ -383,6 +381,9 @@ body {
 // ***********************************************************
 .topic-title,
 .forum-title {
+  @include qualify(h2) {
+    margin: 10px 0;
+  }
   text-align: center;
 
   & a {
@@ -395,16 +396,3 @@ body {
   }
 }
 
-.topic-title,
-.forum-title {
-  @include qualify(h2) {
-    margin: 10px 0;
-  }
-}
-
-
-
-
-// ***********************************************************
-// Overrides, Mixins and other stuff ...
-// ***********************************************************
