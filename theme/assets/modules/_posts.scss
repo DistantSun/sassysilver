@@ -8,8 +8,13 @@
 //  2.  Format postprofile & postbody layout depending on separation status
 //  3.  Responsiveness
 //
-//  Required: @function opposite-direction, @mixin post-separation-no,
+//  Required: @function opposite-direction, @mixin post-separation,
 //            @mixin post-separation-yes
+
+// Variables:
+// $breakpoint: $breakpoint-master;
+$breakpoint: '<800px';
+$breakpoint-opposite: '>=800px';
 
 
 // 1. Set back & transfer
@@ -105,18 +110,73 @@
   }
 }
 
-@include selector-postlayout('b2t');
-
 
 // 3.  Make me responsive ...
 // -----------------------------------------------------------------------------
-@include media('<800px') {
+@include media($breakpoint-opposite) {
+  @include selector-postlayout('b2t');
+}
+
+@include media($breakpoint) {
   .pprofile-container,
   .pbody-container {
     width: 100%;
   }
 
+  @if $switch-pprofile-separation == yes {
+    .pprofile-container,
+    .post {
+      & > .back2top {
+        display: none;
+      }
+    }
+
+    .pprofile-container {
+      @include border-top-radius(7px);
+      @include border-bottom-radius(0);
+    }
+
+    .pbody-container {
+      @include border-top-radius(0);
+      @include border-bottom-radius(7px);
+    }
+  }
+
   .pprofile-container {
     clear: both;
+    overflow: inherit;
+  }
+
+  .has-profile {
+    .post-buttons {
+      float: right;
+      position: absolut;
+    }
+  }
+
+  .postprofile {
+    border: 0;
+    border-bottom: 1px solid;
+    min-height: 0;
+
+    .avatar {
+      float: left !important;
+      margin: 0;
+    }
+
+    & dt {
+      display: block;
+      text-align: left !important;
+    }
+
+    & dd {
+      display: none;
+    }
+
+    & img {
+      height: auto !important;
+      max-height: 32px;
+      width: auto !important;
+    }
   }
 }
