@@ -1,24 +1,10 @@
 ## Style History
 
-#### 0.3.0 (24.11.2017)
-- Begin overhaul of file structure: <br />
-   a) new sub-folder within theme root `/assets`: attempt to separate "framework-like" components from the style-specific files <br />
-   b) new sub-folder within theme root `/assets/parent`: containing the prosilver stylesheets originally imported through prosilver's `stylesheet.css`, renamed following SASS naming convention. <br />
-   c) new sub-folder within theme root `assets/bourbon`: holding Bourbon's fileset <br />
-   d) new sub-folder within theme root `assets/functions`: holding non-Bourbon function files<br />
-   e) new sub-folder within theme root `assets/mixins`: holding non-Bourbon mixin files
-- Reorganisation of `stylesheet.scss` to reflect the above mentioned new folder structure
-- Relocation of code (functions, mixins) from style-specific stylesheets to the above mentioned folders
-- Code to separate postbody/postprofile and their left/right switching re-written
-- Code cleaned-up and simplified
-
-
-##### 0.2.2 (06.11.2017) - internal revision
-- Option/Switch to display postbody and postprofile as visually separated DIVs via config SCSS file. Code completely rebuilt
+##### 0.3.0 (02.09.2017)
+- Option/Switch to display postbody and postprofile as visually separated DIVs via config SCSS file
 - If separated postprofile will be displayed above postbody in responsive mode
 - First steps to refactor the layout of mini-profile
-- Stylesheets revisioned, re-arranged and simplified
-- Original stylesheets to be imported via prosilver stylesheet.css included in theme folder again (after renaming in accordance with SASS naming scheme) and dropped "_import_prosilver.scss" and "_transition.scss" (now no longer needed) in order to allow compiling with less elaborate pre-processors such as Koala etc.
+- CSS revisioned, re-arranged and simplified
 
 ##### 0.2.1.1 (02.08.17) - Service Release:
 - Order of @import rules in stylesheet.scss adjusted to better include original prosilver stylesheets in the copiling process
