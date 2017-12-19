@@ -28,7 +28,8 @@ As far as stylesheets are concerned SassySilver's theme folder contains stylespe
 - #### Update
     - Backup your current installation's files and folders
     - Download the archive, unpack it locally
-    - Open the resulting "sassysilver" folder, go to "/theme/" and delete both "_custom_configuration.scss" and "_custom.scss" (these two files are to contain your personal/custom settings and codes you may want to keep)
+    - Open the resulting `sassysilver` folder, go to `/theme/` and delete both `_custom_configuration.scss` and `_custom.scss` (these two files are to contain your personal/custom settings and codes you may want to keep)
+    - Check your `_custom_configuration.scss` for potential changes in the naming of variables and/or for additional samples
     - Upload the remaining files and folders into the "/styles" folder on the server
     - Re-compile stylesheets
     - Clear caches
@@ -47,7 +48,6 @@ Credits go as well to all those who helped me during the development process, ei
 - [x] 4 pre-defined colour schemes - switch between them by adjusting one setting/option only
 - [x] Secondary colours will be automaticly calculated based on the choosen colour scheme
 - [x] Display of mini-profile switchable left <> right
-- [x] Option to set width of mini-profile to a fixed value in resolutions beyond 1100px - the corresponding width of postbody will be calculated accordingly
 - [x] Option to split off headerbar and main menue to display it above the board wrapper
 - [x] Option to split display of mini-profile and postbody and show them side by side in separate DIVs
 - [x] Option to display a background image in forum body and then select between images by simply changing the image name in the corresponding cofig variable (sample images included)
@@ -55,6 +55,7 @@ Credits go as well to all those who helped me during the development process, ei
 - [x] Option to switch opacity of background colour in board wrapper on or off, opacity level configurable as well (these switches will only take effect when backround images for board wrapper are turned off)
 
 - #### Planned
+- [ ] Option to set width of mini-profile to a fixed value in resolutions beyond 1280px - the corresponding width of postbody will be calculated accordingly
 - [ ] Option to display and easyly change background image in headerbar
 - [ ] Sidebar right, switchable to visible <> hidden
 
