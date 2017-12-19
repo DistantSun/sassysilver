@@ -1,21 +1,26 @@
-/*  Custom configuration file
- *  -------------------------------------------------------------------- */
+// Custom configuration file
+
 
 $switch-width-wrap:                         1152px;                             // "Board width" - any value is okay as longs as the unit is "px"
 
-$switch-col-scheme:                         blue;                               // Board colour scheme; available schemes: blue, red, green, black
+$switch-col-scheme:                         red;                               // Board colour scheme; available schemes: blue, red, green, black
 
-$define-postprofile-side:                   right;                              // postprofile right or left
+$switch-postprofile-side:                   'right';                              // postprofile right or left
+$switch-pprofile-separation:                'yes';                                 // Display postprofile <> postbody separatly; values: no, yes
 
-$width-postprofile:                         240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
+// $switch-width-postprofile:                  240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
 
-$switch-col-wrap-off:                       yes;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent
-$switch-opacity-wrap:                       0.6;
+$switch-col-wrap-off:                       no;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent)
+$switch-opacity-wrap:                       .6;
 
 
 // The following variables control the display of background images in "html, body", "wrap-header" and "headerbar"
 // Default values are "none" - all images have to be stored in the theme's image folder
 // NOTE: To allocate a image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
 
-// $img-bg-html-body:                          'bg_body.jpg';
+$img-bg-html-body:                          'bg_body.jpg';
+$img-bg-wrap:                               'bg_img_wrap_05.jpg';
 // $img-bg-headerbar:                          none;
+
+// Breakpoin RWD
+$breakpoint-master:                        '<800px';
