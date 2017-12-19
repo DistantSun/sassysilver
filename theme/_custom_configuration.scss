@@ -5,10 +5,10 @@ $switch-width-wrap:                         1152px;                             
 
 $switch-col-scheme:                         red;                               // Board colour scheme; available schemes: blue, red, green, black
 
-$switch-postprofile-side:                   right;                              // postprofile right or left
-$switch-pprofile-separation:                no;                                 // Display postprofile <> postbody separatly; values: no, yes
+$switch-postprofile-side:                   'right';                              // postprofile right or left
+$switch-pprofile-separation:                'yes';                                 // Display postprofile <> postbody separatly; values: no, yes
 
-$switch-width-postprofile:                  240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
+// $switch-width-postprofile:                  240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
 
 $switch-col-wrap-off:                       no;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent)
 $switch-opacity-wrap:                       .6;
@@ -21,3 +21,6 @@ $switch-opacity-wrap:                       .6;
 $img-bg-html-body:                          'bg_body.jpg';
 $img-bg-wrap:                               'bg_img_wrap_05.jpg';
 // $img-bg-headerbar:                          none;
+
+// Breakpoin RWD
+$breakpoint-master:                        '<800px';
