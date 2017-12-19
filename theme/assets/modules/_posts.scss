@@ -1,0 +1,185 @@
+// Module Posts
+//
+// Defining the layout of posts in viewtopic_body.html
+//
+// Sections:
+//  1.  Set back prosilver defaults and transfer to pprofile-container & pbody-container
+//      let postprofile & postbody containers float according to configuration
+//  2.  Format postprofile & postbody layout depending on separation status
+//  3.  Responsiveness
+//
+//  Required: @function opposite-direction, @mixin post-separation,
+//            @mixin post-separation-yes
+
+// Variables:
+// $breakpoint: $breakpoint-master;
+$breakpoint: '<800px';
+$breakpoint-revers: '>=800px';
+
+
+// 1. Set back & transfer
+// -----------------------------------------------------------------------------
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  border-width: 0;
+  margin-top: 5px;
+}
+
+.pprofile-container {
+  display: block;
+  float: unquote($switch-postprofile-side);
+  height: auto;
+  width: 22%;
+}
+
+.pbody-container {
+  display: block;
+  float: opposite-direction(unquote($switch-postprofile-side));
+  height: auto;
+  width: 76%;
+}
+
+// 2.  Formatting
+// -----------------------------------------------------------------------------
+
+@if $switch-pprofile-separation == no {
+  .bg1-new {
+    background-color: $col-bg;
+  }
+
+  .bg2-new {
+    background-color: $col-bg2;
+  }
+
+  .post-layout-split {
+    border-radius: 7px;
+  }
+
+  .pprofile-container,
+  .pbody-container {
+    .back2top {
+      display: none;
+    }
+  }
+
+  .post {
+    box-shadow: $box-shadow-outset-single-posts;
+  }
+
+  .postprofile {
+    @include postprofile-border($switch-postprofile-side, 1px);
+    border-color: $col-base;
+  }
+
+  .back2top {
+    .top {
+      margin-top: -15px;
+    }
+  }
+} @else {
+  .pprofile-container,
+  .pbody-container {
+    border-radius: 7px;
+    box-shadow: $box-shadow-outset-single-posts;
+    padding: 10px;
+  }
+
+  .post {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .postbody {
+    width: 100%;
+  }
+
+  .postprofile {
+    border-width: 0;
+  }
+
+  .postbody {
+    ul {
+      &.post-buttons {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+
+// 3.  Make me responsive ...
+// -----------------------------------------------------------------------------
+@include media($breakpoint-revers) {
+  @include selector-postlayout('b2t');
+}
+
+@include media($breakpoint) {
+  .pprofile-container,
+  .pbody-container {
+    position: relative;
+    width: 100%;
+  }
+
+
+  .pprofile-container {
+    @include border-top-radius(7px);
+    @include border-bottom-radius(0);
+    clear: both;
+    overflow: inherit;
+    padding-bottom: 0;
+  }
+
+  .pbody-container {
+    @include border-top-radius(0);
+    @include border-bottom-radius(7px);
+    padding-top: 0;
+  }
+
+  @if $switch-pprofile-separation == yes {
+    .pprofile-container,
+    .post {
+      & > .back2top {
+        display: none;
+      }
+    }
+  }
+
+  .has-profile {
+    .post-buttons {
+      float: right;
+      position: absolut;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .postprofile {
+    border: 0;
+    border-bottom: 1px solid;
+    min-height: 0;
+
+    .avatar {
+      float: left !important;
+      margin: 0 5px 0 0;
+    }
+
+    & dt {
+      display: block;
+      text-align: left !important;
+    }
+
+    & dd {
+      display: none;
+    }
+
+    & img {
+      height: auto !important;
+      max-height: 32px;
+      width: auto !important;
+    }
+  }
+}
