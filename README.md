@@ -30,6 +30,7 @@ As far as stylesheets are concerned SassySilver's theme folder contains stylespe
     - Download the archive, unpack it locally
     - Open the resulting `sassysilver` folder, go to `/theme/` and delete both `_custom_configuration.scss` and `_custom.scss` (these two files are to contain your personal/custom settings and codes you may want to keep)
     - Check your `_custom_configuration.scss` for potential changes in the naming of variables and/or for additional samples
+
     - Upload the remaining files and folders into the "/styles" folder on the server
     - Re-compile stylesheets
     - Clear caches
