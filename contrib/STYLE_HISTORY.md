@@ -1,15 +1,17 @@
 ## Style History
 
-#### 0.3.0 (24.11.2017)
+#### 0.3.0 (19.12.2017)
 - Begin overhaul of file structure: <br />
-   a) new sub-folder within theme root `/assets`: attempt to separate "framework-like" components from the style-specific files <br />
-   b) new sub-folder within theme root `/assets/parent`: containing the prosilver stylesheets originally imported through prosilver's `stylesheet.css`, renamed following SASS naming convention. <br />
-   c) new sub-folder within theme root `assets/bourbon`: holding Bourbon's fileset <br />
-   d) new sub-folder within theme root `assets/functions`: holding non-Bourbon function files<br />
-   e) new sub-folder within theme root `assets/mixins`: holding non-Bourbon mixin files
-- Reorganisation of `stylesheet.scss` to reflect the above mentioned new folder structure
+   a) **New** sub-folder within theme root `/assets`: attempt to separate "framework-like" components from the style-specific files <br />
+   b) **New** sub-folder within theme root `/assets/parent`: containing the prosilver stylesheets originally imported through prosilver's `stylesheet.css`, renamed following SASS naming convention. <br />
+   c) **New** sub-folder within theme root `assets/bourbon`: holding Bourbon's fileset <br />
+   d) **New** sub-folder within theme root `assets/functions`: holding non-Bourbon function files<br />
+   e) **New** sub-folder within theme root `assets/mixins`: holding non-Bourbon mixin files <br />
+   f) New sub-folder within theme root `assets/modules`: holding holding object-based rulesets
+- Reorganisation of `stylesheet.scss` and introduction of `_assets_base.scss`to reflect the above mentioned new folder structure
 - Relocation of code (functions, mixins) from style-specific stylesheets to the above mentioned folders
-- Code to separate postbody/postprofile and their left/right switching re-written
+- Code to separate postbody/postprofile and to switch positioning of postprifile left/right re-written
+- Bugfixes in responsive layout of posts corrected
 - Code cleaned-up and simplified
 
 
