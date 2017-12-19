@@ -1,16 +1,36 @@
-/*  phpBB3 Style Sheet
-    --------------------------------------------------------------
-	Style name:			SassySilver
-	Based on style:     prosilver (the default phpBB 3.1.x style)
-	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		Melmac ( http://phpbb.aplacetomeet.de )
-    --------------------------------------------------------------
-*/
+//  phpBB3 Style Sheet
+// ---------------------------------------------------------------
+// Style name:			SassySilver
+// Based on style:     prosilver (the default phpBB 3.1.x style)
+// Original author:	Tom Beddard ( http://www.subblue.com/ )
+// Modified by:		Melmac ( http://phpbb.aplacetomeet.de )
+// ---------------------------------------------------------------
 
-@import "import_prosilver";
-@import "bourbon";
-@import "custom_configuration";
-@import "style_configuration";
-@import "transition";
-@import "sassysilver";
-@import "custom";
+
+// Importing the renamed original prosilver stylesheets first
+// ---------------------------------------------------------------
+@import 'assets/parent/normalize';
+@import 'assets/parent/base';
+@import 'assets/parent/utilities';
+@import 'assets/parent/common';
+@import 'assets/parent/links';
+@import 'assets/parent/content';
+@import 'assets/parent/buttons';
+@import 'assets/parent/cp';
+@import 'assets/parent/forms';
+@import 'assets/parent/icons';
+@import 'assets/parent/colours';
+@import 'assets/parent/responsive';
+
+// Importing tools and utilities of the 'framework' next
+// ---------------------------------------------------------------
+@import 'bourbon';
+
+
+// Importing stylespecific stylesheets - finally
+@import 'custom_configuration';
+@import 'style_configuration';
+@import 'assets_base';
+// @import 'assets/modules';
+@import 'sassysilver';
+@import 'custom';

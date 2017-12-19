@@ -1,0 +1,45 @@
+// Defining coloursets' base-colours
+// ----------------------------------------------------------------
+
+$colourset: (
+  blue: #0b2958,
+  red: #48100c,
+  green: #0a3422,
+  black: #1b1a1a,
+);
+
+$col-base: map-get(($colourset), $switch-col-scheme);
+
+// Background Colours
+$col-body:                                  tint($col-base, 10%) !default;      // Body colour
+$col-wrap:                                  #949ba3 !default;                   // Wrap colour
+$switch-opacity-wrap:                       .5 !default;                       // Opacity wrap background colour
+$col-category:                              shade($col-base, 2%) !default;      // Category/fora header colourv
+$col-navbar:                                tint($col-base, 85%) !default;      // Navbar colour
+$col-headerbar:                             shade($col-base, 25%) !default;     // Headerbar background colour
+
+$col-forums:                                tint($col-base, 85%) !default;      // Colour ul.forums
+$col-forums-hov:                            tint($col-base, 93%) !default;      // Colour ul.forums hover
+$col-bg:                                    tint($col-base, 89%) !default;      // Colour bg1 bg3
+$col-bg2:                                   tint($col-base, 95%) !default;      // Colour bg2
+$col-panel:                                 tint($col-base, 86%) !default;      // Colour panel
+$col-quote-in-out:                          tint($col-base, 75%) !default;      // Colour qoute Inside and Outside
+$col-quote-center:                          tint($col-base, 82%) !default;      // Colour qoute center
+$col-ucp-menue:                             tint($col-base, 70%) !default;      // UCP Menü
+$col-ucp-menue-a-h:                         tint($col-base, 80%) !default;      // UCP Menü Aktiv, hover
+$col-ucp-menue-a-h-2:                       tint($col-base, 25%) !default;      // UCP Menü Aktiv, hover
+$col-ucp-menue-left:                        tint($col-base, 65%) !default;      // UCP Menü left
+$col-ucp-menue-left-low:                    tint($col-base, 80%) !default;      // UCP Menü left-low
+
+// Text Colours
+$col-text-body:                             shade($col-base, 3%) !default;      // Body Text colour
+$col-text-headerbar:                        #fff !default;
+
+// Border Colours
+$col-border-white:                          tint($col-base, 100%) !default;                     // border White #ffffff
+
+// Font colours
+$col-links:                                 shade($col-base, 1%) !default;                     // Links
+
+// Enhancing coloursets to create colour schemes
+// ----------------------------------------------------------------

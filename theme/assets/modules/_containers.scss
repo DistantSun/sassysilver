@@ -1,0 +1,45 @@
+///Formats .forabg, .forumbg, .stat-container
+@mixin forum-container {
+  background: linear-gradient(to bottom, rgba($col-headerbar, 1) 45px, rgba($col-headerbar, 1) 46px, rgba($col-wrap, 0) 52px, rgba($col-wrap, 0) 100%);
+  border: 0;
+  border-radius: 7px;
+  margin-bottom: 8px;
+  padding: 8px 8px 0;
+
+  .inner {
+    @include border-style(null solid solid);
+    @include border-width(null 1px 1px);
+    border-color: #000;
+    border-radius: 7px;
+    padding: 0;
+
+    .topiclist {
+      @include qualify(ul) {
+        padding: 3px 0 0;
+      }
+
+      .header {
+        @include qualify(li) {
+          text-align: center;
+          }
+      }
+    }
+  }
+}
+
+/// Container base
+@mixin container-base {
+  background-color: $col-forums;
+  border: 1px solid $col-headerbar;
+  border-radius: 7px;
+  margin: 0;
+  padding: 15px 10px;
+}
+
+/// Action bar
+@mixin action-bar-elements {
+  background-color: $col-navbar;
+  border: 1px solid #e6e9ed;
+  border-radius: 7px;
+  padding: 1px 8px;
+}

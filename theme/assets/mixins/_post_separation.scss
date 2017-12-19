@@ -1,0 +1,23 @@
+@mixin selector-postlayout($select) {
+  $combination: (unquote($switch-pprofile-separation) + '-' + unquote($switch-postprofile-side));
+
+  @if $select == 'b2t' {
+    @if $combination == yes-left {
+      .pprofile-container,
+      .post {
+        & > .back2top {
+          display: none;
+        }
+      }
+    }
+
+    @if $combination == yes-right {
+      .pbody-container,
+      .post {
+        & > .back2top {
+          display: none;
+        }
+      }
+    }
+  }
+}
