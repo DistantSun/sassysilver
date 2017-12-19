@@ -6084,56 +6084,8 @@ h1 {
   font-size: 2em;
 }
 
-@media (max-width: 799px) {
-  .pprofile-container,
-  .pbody-container {
-    width: 100%;
-  }
-  .pprofile-container > .back2top,
-  .post > .back2top {
-    display: none;
-  }
-  .pprofile-container {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .pbody-container {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-  }
-  .pprofile-container {
-    clear: both;
-    overflow: inherit;
-  }
-  .has-profile .post-buttons {
-    float: right;
-    position: absolut;
-  }
-  .postprofile {
-    border: 0;
-    border-bottom: 1px solid;
-    min-height: 0;
-  }
-  .postprofile .avatar {
-    float: left !important;
-    margin: 0;
-  }
-  .postprofile dt {
-    display: block;
-    text-align: left !important;
-  }
-  .postprofile dd {
-    display: none;
-  }
-  .postprofile img {
-    height: auto !important;
-    max-height: 32px;
-    width: auto !important;
-  }
+h2 {
+  font-size: 2em;
 }
 
 h3 {
