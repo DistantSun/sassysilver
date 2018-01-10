@@ -1564,7 +1564,8 @@ fieldset.fields1 dl.pmlist dd.recipients {
 /* Pagination in viewforum for multipage topics */
 .row .pagination {
   display: block;
-  margin-top: -12px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .row .pagination > ul {
@@ -2160,7 +2161,7 @@ ul.topiclist dl {
 }
 
 ul.topiclist li.row dl {
-  padding: 2px 0;
+  margin: 2px 0;
 }
 
 ul.topiclist dt, ul.topiclist dd {
@@ -2210,6 +2211,11 @@ ul.topiclist dd {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+ul.topiclist li.row dd {
+  padding: 4px 0 999px 0;
+  margin-bottom: -995px;
 }
 
 ul.topiclist dfn {
@@ -2273,6 +2279,10 @@ li.header dl.row-item dt .list-inner {
 }
 
 /* Forum list column styles */
+.row .list-inner {
+  padding: 4px 0;
+}
+
 dl.row-item {
   background-position: 10px 50%;
   /* Position of folder icon */
@@ -2668,6 +2678,7 @@ blockquote .codebox {
 /* Attachments
 ----------------------------------------*/
 .attachbox {
+  font-size: 13px;
   float: left;
   width: auto;
   max-width: 100%;
@@ -3000,7 +3011,7 @@ table.fixed-width-table {
   display: inline-block;
   padding: 2px 8px;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: 600;
   font-family: "Open Sans", "Droid Sans", Verdana, Arial, Helvetica;
   line-height: 1.4;
   text-align: center;
@@ -5796,7 +5807,7 @@ li.notification-reported strong, li.notification-disapproved strong {
     float: none;
   }
   fieldset dd, fieldset.fields1 dd, fieldset.fields2 dd {
-    margin-left: 20px;
+    margin-left: 0px;
   }
   textarea, dd textarea, .message-box textarea {
     width: 100%;
@@ -5912,12 +5923,11 @@ li.notification-reported strong, li.notification-disapproved strong {
   .postprofile .avatar {
     margin-right: 5px;
   }
-  /*  Deactivated => "modules/_posts.scss"
-	.postprofile .avatar img {
-		width: auto !important;
-		height: auto !important;
-		max-height: 32px;
-*/
+  .postprofile .avatar img {
+    width: auto !important;
+    height: auto !important;
+    max-height: 32px;
+  }
   .has-profile .postbody h3 {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -5993,15 +6003,6 @@ li.notification-reported strong, li.notification-disapproved strong {
   }
   dd.posts, dd.topics, dd.views {
     width: 80px;
-  }
-}
-
-@media (max-width: 992px) {
-  .row .pagination {
-    text-align: left;
-    float: left;
-    margin-top: 4px;
-    margin-bottom: 4px;
   }
 }
 
@@ -6175,6 +6176,7 @@ body {
   -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   max-width: 1152px;
+  background-color: rgba(148, 155, 163, 0.5);
   background-image: url("./images/styling/bg_img_wrap_05.jpg");
   background-size: cover;
 }
