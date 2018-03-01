@@ -1,16 +1,21 @@
 // Custom configuration file
 
+// "Board width" - any value is okay as longs as the unit is "px"
+$switch-width-wrap:                         1152px;
 
-$switch-width-wrap:                         1152px;                             // "Board width" - any value is okay as longs as the unit is "px"
+// Board colour scheme; available schemes: blue, red, green, black
+$switch-col-scheme:                         red;
 
-$switch-col-scheme:                         red;                               // Board colour scheme; available schemes: blue, red, green, black
+// postprofile right or left
+$switch-postprofile-side:                   'right';
+// Display postprofile <> postbody separatly; values: no, yes
+$switch-pprofile-separation:                'yes';
 
-$switch-postprofile-side:                   'right';                              // postprofile right or left
-$switch-pprofile-separation:                'yes';                                 // Display postprofile <> postbody separatly; values: no, yes
+// Maximum width of pstprofile at resolutions of 1100px and above
+// $switch-width-postprofile:                  240px;
 
-// $switch-width-postprofile:                  240px;                              // Maximum width of pstprofile at resolutions of 1100px and above
-
-$switch-col-wrap-off:                       yes;                                // Set value to "yes" if you want to switch background colour of #wrap to transparent)
+// Set value to "yes" if you want to switch background colour of #wrap to transparent)
+$switch-col-wrap-off:                       yes;
 $switch-opacity-wrap:                       .6;
 
 
@@ -23,4 +28,4 @@ $img-bg-wrap:                               'bg_img_wrap_05.jpg';
 // $img-bg-headerbar:                          none;
 
 // Breakpoin RWD
-$breakpoint-master:                        '<800px';
+$breakpoint-master:                        '800px';
