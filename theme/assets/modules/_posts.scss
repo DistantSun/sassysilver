@@ -13,33 +13,34 @@
 
 // Variables:
 // $breakpoint: $breakpoint-master;
-$breakpoint: '<#{$breakpoint-master}';
-$breakpoint-revers: '>=#{$breakpoint-master}';
-
-// Colours
-$col-bg1-new: $col-bg;
-$col-bg2-new: $col-bg2;
-
-// divers
-$container-border-radius: 7px;
-$pprofile-container-width: 22%;
-$pbody-container-width: (100 - $pprofile-container-width - 2);
+$breakpoint: '<800px';
+$breakpoint-revers: '>=800px';
 
 
-// 1. Container definitions
+// 1. Set back & transfer
 // -----------------------------------------------------------------------------
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  border-width: 0;
+  margin-top: 5px;
+}
+
 .pprofile-container {
   display: block;
   float: unquote($switch-postprofile-side);
-  width: $pprofile-container-width;
   height: auto;
+  width: 22%;
 }
 
 .pbody-container {
   display: block;
   float: opposite-direction(unquote($switch-postprofile-side));
-  width: $pbody-container-width;
   height: auto;
+  width: 76%;
 }
 
 // 2.  Formatting
@@ -47,68 +48,63 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
 
 @if $switch-pprofile-separation == no {
   .bg1-new {
-    background-color: $col-bg1-new;
+    background-color: $col-bg;
   }
 
   .bg2-new {
-    background-color: $col-bg2-new;
+    background-color: $col-bg2;
   }
 
-  .pm-container,
-  .post-container {
-    border-radius: $container-border-radius;
+  .post-layout-split {
+    border-radius: 7px;
   }
 
-  .post-container {
-    .pprofile-container,
-    .pbody-container {
-      .back2top {
-        display: none;
-      }
-    }
-
-    .post {
-      box-shadow: $box-shadow-outset-single-posts;
-    }
-
-    .postprofile {
-      @include postprofile-border($switch-postprofile-side, 1px);
-      border-color: $col-base;
-    }
-
+  .pprofile-container,
+  .pbody-container {
     .back2top {
-      .top {
-        margin-top: -15px;
-      }
+      display: none;
+    }
+  }
+
+  .post {
+    box-shadow: $box-shadow-outset-single-posts;
+  }
+
+  .postprofile {
+    @include postprofile-border($switch-postprofile-side, 1px);
+    border-color: $col-base;
+  }
+
+  .back2top {
+    .top {
+      margin-top: -15px;
     }
   }
 } @else {
-  .post-container {
-    .pprofile-container,
-    .pbody-container {
-      border-radius: $container-border-radius;
-      box-shadow: $box-shadow-outset-single-posts;
-      padding: 10px;
-    }
+  .pprofile-container,
+  .pbody-container {
+    border-radius: 7px;
+    box-shadow: $box-shadow-outset-single-posts;
+    padding: 10px;
+  }
 
-    .post {
-      padding-right: 0;
-      padding-left: 0;
-    }
+  .post {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    .postbody {
-      width: 100%;
-    }
+  .postbody {
+    width: 100%;
+  }
 
-    .postprofile {
-      border-width: 0;
-    }
+  .postprofile {
+    border-width: 0;
+  }
 
-    .postbody {
-      ul {
-        &.post-buttons {
-          margin-right: 5px;
-        }
+  .postbody {
+    ul {
+      &.post-buttons {
+        margin-right: 5px;
       }
     }
   }
@@ -128,6 +124,7 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
     width: 100%;
   }
 
+
   .pprofile-container {
     @include border-top-radius(7px);
     @include border-bottom-radius(0);
@@ -142,12 +139,21 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
     padding-top: 0;
   }
 
+  @if $switch-pprofile-separation == yes {
+    .pprofile-container,
+    .post {
+      & > .back2top {
+        display: none;
+      }
+    }
+  }
+
   .has-profile {
     .post-buttons {
-      position: absolut;
-      top: 0;
-      right: 0;
       float: right;
+      position: absolut;
+      right: 0;
+      top: 0;
     }
   }
 
@@ -162,8 +168,8 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
     }
 
     & dt {
-      text-align: left !important;
       display: block;
+      text-align: left !important;
     }
 
     & dd {
@@ -171,18 +177,9 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
     }
 
     & img {
-      width: auto !important;
       height: auto !important;
       max-height: 32px;
-    }
-  }
-
-  @if $switch-pprofile-separation == yes {
-    .pprofile-container,
-    .post {
-      & > .back2top {
-        display: none;
-      }
+      width: auto !important;
     }
   }
 }
