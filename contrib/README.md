@@ -85,3 +85,6 @@ For the time being a complete set of Bourbon files will be included in the theme
 Please note that SassySilver, in its current state, makes use of (external) material (e.g. sample images, Bourbon library) to which additional third party copyright/license regulations may apply.
 For further information please read the corresponding license files provided with this style within their corresponding folders:
 - [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md""
+
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver) 
