@@ -1,5 +1,10 @@
 ## Style History
 
+#### 0.4.0 ()
+- Style updated to phpBB 3.2.2
+- Code of `/modules/_posts.css` adjusted to prevent postbody and postprofile of PMs from being separated
+- New file `/assets/parent/_transform.scss`: providing a more transparent way to reset certain original prosilver classes/expressions for the time being.
+
 #### 0.3.0 (19.12.2017)
 - Begin overhaul of file structure: <br />
    a) **New** sub-folder within theme root `/assets`: attempt to separate "framework-like" components from the style-specific files <br />
