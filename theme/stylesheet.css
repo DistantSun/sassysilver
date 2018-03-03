@@ -6016,6 +6016,11 @@ li.notification-reported strong, li.notification-disapproved strong {
   margin-top: 5px;
 }
 
+.search .postprofile,
+.search .postbody {
+  width: 100%;
+}
+
 .pprofile-container {
   display: block;
   float: right;
@@ -6645,4 +6650,24 @@ h2.topic-title, .forum-title {
   width: auto;
   min-width: 33%;
   padding: 5px 15px;
+}
+
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+  border-color: #f4e636;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+  border-color: #1923a4;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+  border-color: #41bb3c;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+  border-color: #7e0d0d;
 }
