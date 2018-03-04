@@ -6359,6 +6359,26 @@ ul.forums {
   background-color: #f6f3f3;
 }
 
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+  border-color: #770e0e;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+  border-color: #1923a4;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+  border-color: #23c61d;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+  border-color: #000;
+}
+
 hr.divider {
   border-top-width: 3px;
   border-top-color: #ccc;
@@ -6461,15 +6481,6 @@ body {
   box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   color: #000;
   margin: 10px 0 0;
-}
-
-.sidebar {
-  background-color: #e4dbdb;
-  display: block;
-  float: right;
-  width: 180px;
-  height: auto;
-  min-height: 100px;
 }
 
 .action-bar {
@@ -6650,24 +6661,4 @@ h2.topic-title, .forum-title {
   width: auto;
   min-width: 33%;
   padding: 5px 15px;
-}
-
-.pmlist li.pm_marked_colour,
-.pm_marked_colour {
-  border-color: #f4e636;
-}
-
-.pmlist li.pm_replied_colour,
-.pm_replied_colour {
-  border-color: #1923a4;
-}
-
-.pmlist li.pm_friend_colour,
-.pm_friend_colour {
-  border-color: #41bb3c;
-}
-
-.pmlist li.pm_foe_colour,
-.pm_foe_colour {
-  border-color: #7e0d0d;
 }

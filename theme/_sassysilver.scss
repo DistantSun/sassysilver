@@ -60,6 +60,27 @@ body {
   background-color: $col-bg2;
 }
 
+// New colours for PM markers
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+  border-color: #770e0e;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+  border-color: #1923a4;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+  border-color: #23c61d;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+  border-color: #000;
+}
+
 //  1.c => utilities.css
 // *****************************************************************************
 .divider {
@@ -188,17 +209,18 @@ body {
   margin: 10px 0 0;
 }
 
+// TODO:
 //// Sidebar
 // Sidebar - controlled via configfile
 // ***********************************************************
-.sidebar {
-  background-color: $col-forums;
-  display: block;
-  float: right;
-  width: $width-sidebar;
-  height: auto;
-  min-height: 100px;
-}
+// .sidebar {
+//   background-color: $col-forums;
+//   display: block;
+//   float: right;
+//   width: $width-sidebar;
+//   height: auto;
+//   min-height: 100px;
+// }
 
 // Post overhaul
 

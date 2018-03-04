@@ -3,6 +3,7 @@
 #### 0.4.1 ()
 - Bug in display of PMs fixed
 - Bug in display of search results fixed
+- Re-coloured marker system for PMs
 
 
 #### 0.4.0 (08.01.2018)

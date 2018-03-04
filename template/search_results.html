@@ -172,34 +172,34 @@
 	<!-- BEGIN searchresults -->
 		<!-- EVENT search_results_post_before -->
 <div class="pm-container">
-<div class="search post <!-- IF searchresults.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF searchresults.S_POST_REPORTED --> reported<!-- ENDIF -->">
-	<div class="inner">
+	<div class="search post <!-- IF searchresults.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF searchresults.S_POST_REPORTED --> reported<!-- ENDIF -->">
+		<div class="inner">
 
-		<!-- IF searchresults.S_IGNORE_POST -->
-		<div class="postbody">
-			{searchresults.L_IGNORE_POST}
+			<!-- IF searchresults.S_IGNORE_POST -->
+			<div class="postbody">
+				{searchresults.L_IGNORE_POST}
+			</div>
+			<!-- ELSE -->
+			<div class="pprofile-container">
+				<dl class="postprofile">
+					<!-- EVENT search_results_postprofile_before -->
+					<dt class="author">{L_POST_BY_AUTHOR} {searchresults.POST_AUTHOR_FULL}</dt>
+					<dd class="search-result-date">{searchresults.POST_DATE}</dd>
+					<dd>{L_FORUM}{L_COLON} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></dd>
+					<dd>{L_TOPIC}{L_COLON} <a href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a></dd>
+					<!-- EVENT search_results_topic_title_after -->
+					<dd>{L_REPLIES}{L_COLON} <strong>{searchresults.TOPIC_REPLIES}</strong></dd>
+					<dd>{L_VIEWS}{L_COLON} <strong>{searchresults.TOPIC_VIEWS}</strong></dd>
+					<!-- EVENT search_results_postprofile_after -->
+				</dl>
+			</div>
+			<div class="pbody-container">
+				<div class="postbody">
+					<h3><a href="{searchresults.U_VIEW_POST}">{searchresults.POST_SUBJECT}</a></h3>
+					<div class="content">{searchresults.MESSAGE}</div>
+				</div>
+			</div>
 		</div>
-		<!-- ELSE -->
-<div class="pprofile-container">
-		<dl class="postprofile">
-			<!-- EVENT search_results_postprofile_before -->
-			<dt class="author">{L_POST_BY_AUTHOR} {searchresults.POST_AUTHOR_FULL}</dt>
-			<dd class="search-result-date">{searchresults.POST_DATE}</dd>
-			<dd>{L_FORUM}{L_COLON} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a></dd>
-			<dd>{L_TOPIC}{L_COLON} <a href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a></dd>
-			<!-- EVENT search_results_topic_title_after -->
-			<dd>{L_REPLIES}{L_COLON} <strong>{searchresults.TOPIC_REPLIES}</strong></dd>
-			<dd>{L_VIEWS}{L_COLON} <strong>{searchresults.TOPIC_VIEWS}</strong></dd>
-			<!-- EVENT search_results_postprofile_after -->
-		</dl>
-</div>
-<div class="pbody-container">
-		<div class="postbody">
-			<h3><a href="{searchresults.U_VIEW_POST}">{searchresults.POST_SUBJECT}</a></h3>
-			<div class="content">{searchresults.MESSAGE}</div>
-		</div>
-</div>
-</div>
 		<!-- ENDIF -->
 
 		<!-- IF not searchresults.S_IGNORE_POST -->
@@ -220,7 +220,8 @@
 	<div class="inner">
 		<strong>{L_NO_SEARCH_RESULTS}</strong>
 	</div>
-</div>	<!-- END searchresults -->
+</div>
+<!-- END searchresults -->
 <!-- ENDIF -->
 
 <div class="action-bar bottom">
@@ -228,14 +229,14 @@
 	<form method="post" action="{S_SEARCH_ACTION}">
 		<!-- INCLUDE display_options.html -->
 	</form>
-		<!-- ENDIF -->
+	<!-- ENDIF -->
 
 	<div class="pagination">
 		{SEARCH_MATCHES}
 		<!-- IF .pagination -->
-			<!-- INCLUDE pagination.html -->
+		<!-- INCLUDE pagination.html -->
 		<!-- ELSE -->
-			 &bull; {PAGE_NUMBER}
+		&bull; {PAGE_NUMBER}
 		<!-- ENDIF -->
 	</div>
 </div>
