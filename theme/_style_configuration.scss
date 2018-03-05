@@ -7,28 +7,39 @@
 // Layout switches
 
 //  Colours - general colour scheme. Do NOT change!
-$switch-col-scheme:                                blue !default; // Board colour scheme; available schemes: blue, red, green, black
+// Board colour scheme; available schemes: blue, red, green, black
+$switch-col-scheme:                                blue !default;
+
 // Board width
-$switch-width-wrap:                                1152px !default;             // Board width
+$switch-width-wrap:                                1152px !default;
+
 // Postprofile positioning & max. width
-$switch-pprofile-separation:                       'no' !default;                // display postprofile<>postbody separatly; values: no, yes
-$switch-postprofile-side:                          'right' !default;              // Displays postprofile left or right
-// $switch-width-postprofile:                         240px !default;              // Width of postprofile - please choose carefully
+// display postprofile<>postbody separatly; values: no, yes
+$switch-pprofile-separation:                       'no' !default;
+// Displays postprofile left or right
+$switch-postprofile-side:                          'right' !default;
+// Width of postprofile - please choose carefully
+// $switch-width-postprofile:                         240px !default;
 
 // Background images
-$switch-col-wrap-off:                       'no' !default;                        // Switches background colour of #wrap to transparent; values: no, yes
+// Switches background colour of #wrap to transparent; values: no, yes
+$switch-col-wrap-off:                       'no' !default;
 $img-bg-html-body:                          none !default;
 $img-bg-wrap:                               none !default;
 $img-bg-wrap-header:                        none !default;
 $img-bg-headerbar:                          none !default;
 
 // Paddings
-$pad-wrappers:                              15px !default;                      // Standard padding for #wrap & .wrap-menue
+// Standard padding for #wrap & .wrap-menue
+$pad-wrappers:                              15px !default;
 
 // Dimensions
-$width-headerbar-separate:                  $switch-width-wrap !default;    // Width of the headerbar if set to diplay separately
-$width-menuebar:                            $switch-width-wrap !default;    // Width of menuebar when displayed separately
-$width-sidebar:                             180px !default;                 // Width of sidebar - not yet realized
+// Width of the headerbar if set to diplay separately
+$width-headerbar-separate:                  $switch-width-wrap !default;
+// Width of menuebar when displayed separately
+$width-menuebar:                            $switch-width-wrap !default;
+// Width of sidebar - not yet realized
+$width-sidebar:                             180px !default;
 
 
 
@@ -80,4 +91,4 @@ $box-shadow-outset-single-posts:            7px 7px 10px 0 rgba(0, 0, 0, .75) !d
 $box-shadow-inset-double:                   inset 3px 3px 7px -2px rgba(0, 0, 0, .75), inset -3px -3px 7px -2px rgba(0, 0, 0, .75) !default;
 
 // Breakpoints for RWD
-// $breakpoint-master:                          800px !default;
+$breakpoint-master:                          800px !default;
