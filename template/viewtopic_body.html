@@ -133,14 +133,14 @@
 
 {% for postrow in loops.postrow %}
 
-<!---- post-layout start ---->
+<!-- INFO: post-layout start -->
 
 	{% EVENT viewtopic_body_postrow_post_before %}
 	{% if postrow.S_FIRST_UNREAD %}
 		<a id="unread" class="anchor"{% if S_UNREAD_VIEW %} data-url="{{ postrow.U_MINI_POST }}"{% endif %}></a>
 	{% endif %}
 
-<div class="post-layout-split{% if postrow.S_ROW_COUNT is odd %} bg1-new{% else %} bg2-new{% endif %}">
+<div class="post-container{% if postrow.S_ROW_COUNT is odd %} bg1-new{% else %} bg2-new{% endif %}">
 
 	<div id="p{{ postrow.POST_ID }}" class="post has-profile {% if postrow.S_UNREAD_POST %} unreadpost{% endif %}{% if postrow.S_POST_REPORTED %} reported{% endif %}{% if postrow.S_POST_DELETED %} deleted{% endif %}{% if postrow.POSTER_WARNINGS %} warned{% endif %}">
 

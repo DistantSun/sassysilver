@@ -1,9 +1,16 @@
 ## Style History
 
-#### 0.4.0 ()
+#### 0.4.1 ()
+- Bug in display of PMs fixed
+- Bug in display of search results fixed
+- Re-coloured marker system for PMs
+
+
+#### 0.4.0 (08.01.2018)
 - Style updated to phpBB 3.2.2
 - Code of `/modules/_posts.css` adjusted to prevent postbody and postprofile of PMs from being separated
 - New file `/assets/parent/_transform.scss`: providing a more transparent way to reset certain original prosilver classes/expressions for the time being.
+
 
 #### 0.3.0 (19.12.2017)
 - Begin overhaul of file structure: <br />

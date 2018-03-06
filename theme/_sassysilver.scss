@@ -60,12 +60,33 @@ body {
   background-color: $col-bg2;
 }
 
+// New colours for PM markers
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+  border-color: #770e0e;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+  border-color: #1923a4;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+  border-color: #23c61d;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+  border-color: #000;
+}
+
 //  1.c => utilities.css
 // *****************************************************************************
 .divider {
   @include qualify(hr) {
-    border-top-color: #ccc;
     border-top-width: 3px;
+    border-top-color: #ccc;
     display: block;
     margin: 5px 0 10px;
   }
@@ -90,13 +111,13 @@ body {
     background: linear-gradient(to bottom, $col-headerbar 250px, $col-body 60%);
     background-color: $col-body;
   } @else {
-    background-attachment: fixed;
     background-image: bg-image('#{$img-bg-html-body}');
+    background-attachment: fixed;
     background-size: 100% 100%;
   }
 }
 
-#wrap {
+.wrap {
   @include padding($pad-wrappers $pad-wrappers);
   background-color: $col-wrap;
   box-shadow: $box-shadow-inset-double;
@@ -114,8 +135,8 @@ body {
 }
 
 .headerbar-separate {
-  margin: 0 auto;
   max-width: $width-headerbar-separate;
+  margin: 0 auto;
   @if $img-bg-headerbar == none {
     background: transparent;
   } @else {
@@ -128,11 +149,8 @@ body {
 }
 
 .wrap-menue {
-  margin: 4px auto;
   max-width: $switch-width-wrap;
-  @media (max-width: 810) {
-    @include padding(null $pad-wrappers null $pad-wrappers);
-  }
+  margin: 4px auto;
 
   & .navbar {
     background-color: #000;
@@ -141,15 +159,18 @@ body {
     padding: 1px 5px;
 
     & a {
+      font-size: 1.2em;
       border-radius: 2px;
       color: #fff;
-      font-size: 1.2em;
       padding: 5px;
 
       &:hover {
         background-color: #808080;
       }
     }
+  }
+  @media (max-width: 810) {
+    @include padding(null $pad-wrappers null $pad-wrappers);
   }
 }
 
@@ -163,20 +184,20 @@ body {
   background-color: $col-headerbar;
 
   & a {
-    color: $col-text-headerbar;
     font-size: 1.2em;
-    font-style: italic;
     font-weight: 600;
+    font-style: italic;
+    color: $col-text-headerbar;
 
     &:link,
     &:visited {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     &:hover {
-      color: #ccc;
       text-decoration: underline;
+      color: #ccc;
     }
   }
 }
@@ -188,17 +209,18 @@ body {
   margin: 10px 0 0;
 }
 
+// TODO:
 //// Sidebar
 // Sidebar - controlled via configfile
 // ***********************************************************
-.sidebar {
-  background-color: $col-forums;
-  display: block;
-  float: right;
-  height: auto;
-  min-height: 100px;
-  width: $width-sidebar;
-}
+// .sidebar {
+//   background-color: $col-forums;
+//   display: block;
+//   float: right;
+//   width: $width-sidebar;
+//   height: auto;
+//   min-height: 100px;
+// }
 
 // Post overhaul
 
@@ -228,7 +250,7 @@ body {
 }
 
 .page-footer,
-#page-header {
+.page-header {
   & .navbar {
     box-shadow: $box-shadow-inset-double;
     padding: 5px 10px;
@@ -390,9 +412,9 @@ body {
     background-color: $col-navbar;
     border: 1px solid #e6e9ed;
     border-radius: 10px;
+    width: auto;
     min-width: 33%;
     padding: 5px 15px;
-    width: auto;
   }
 }
 
