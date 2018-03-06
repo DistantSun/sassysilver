@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27">
+<path fill="#2A77B9" d="M13.5 0C6 0 0 6 0 13.5S6 27 13.5 27 27 21 27 13.5 21 0 13.5 0zm0 26C6.6 26 1 20.4 1 13.5S6.6 1 13.5 1 26 6.6 26 13.5 20.4 26 13.5 26z"/>
+<path fill="#FFF" d="M13.5 1C6.6 1 1 6.6 1 13.5S6.6 26 13.5 26 26 20.4 26 13.5 20.4 1 13.5 1zm0 23C7.7 24 3 19.3 3 13.5S7.7 3 13.5 3 24 7.7 24 13.5 19.3 24 13.5 24z"/>
+<linearGradient id="a" gradientUnits="userSpaceOnUse" x1="1766.298" y1="3283.922" x2="1766.298" y2="3262.922" gradientTransform="translate(-1752.797 -3259.922)">
+<stop offset="0" stop-color="#FFF"/>
+<stop offset="1" stop-color="#D4D4D4"/>
+</linearGradient>
+<circle fill="url(#a)" cx="13.5" cy="13.5" r="10.5"/>
+<g id="b">
+<path fill="#666" d="M8 11.1h11v.9H8zM8 13.1h11v.9H8zM8 15h11v1H8zM8 19h6v1H8zM8 17h11v1H8zM8 7h8v1H8z"/>
+<path fill="#999" d="M8 8h8v1H8z"/>
+<animateTransform xlink:href="#b" attributeName="transform" dur="2s" type="rotate" from="0 13.5 13.5" to="360 13.5 13.5" repeatCount="indefinite"/>
+</g>
+<g>
+<path fill="#FFF" d="M24 8.4l-.9-2.9-2.3.7V4h-3v2.4l-2.2-.8-.9 2.9 2.3.8-1.4 2L18 13l1.5-2 1.6 2.2 2.4-1.8-1.7-2.3 2.2-.7zm-2 2.8l-.8.6-1.8-2.4-1.7 2.4-.9-.6 1.9-2.5-2.9-.9.4-1 2.6.9V5h1v2.7l2.7-.9.3 1-2.7.8 1.9 2.6z"/>
+<path fill="#95213D" d="M22.8 7.8l-.3-1-2.7.9V5h-1v2.7l-2.6-.9-.4 1 2.9.9-1.9 2.5.9.6 1.7-2.4 1.8 2.4.8-.6-1.9-2.6"/>
+</g>
+</svg>

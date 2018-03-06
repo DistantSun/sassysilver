@@ -13,34 +13,33 @@
 
 // Variables:
 // $breakpoint: $breakpoint-master;
-$breakpoint: '<800px';
-$breakpoint-revers: '>=800px';
+$breakpoint: '<#{$breakpoint-master}';
+$breakpoint-revers: '>=#{$breakpoint-master}';
+
+// Colours
+$col-bg1-new: $col-bg;
+$col-bg2-new: $col-bg2;
+
+// divers
+$container-border-radius: 7px;
+$pprofile-container-width: 22%;
+$pbody-container-width: (100 - $pprofile-container-width - 2);
 
 
-// 1. Set back & transfer
+// 1. Container definitions
 // -----------------------------------------------------------------------------
-.postbody,
-.postprofile {
-  width: 100%;
-}
-
-.postprofile {
-  border-width: 0;
-  margin-top: 5px;
-}
-
 .pprofile-container {
   display: block;
   float: unquote($switch-postprofile-side);
+  width: $pprofile-container-width;
   height: auto;
-  width: 22%;
 }
 
 .pbody-container {
   display: block;
   float: opposite-direction(unquote($switch-postprofile-side));
+  width: $pbody-container-width;
   height: auto;
-  width: 76%;
 }
 
 // 2.  Formatting
@@ -48,63 +47,68 @@ $breakpoint-revers: '>=800px';
 
 @if $switch-pprofile-separation == no {
   .bg1-new {
-    background-color: $col-bg;
+    background-color: $col-bg1-new;
   }
 
   .bg2-new {
-    background-color: $col-bg2;
+    background-color: $col-bg2-new;
   }
 
-  .post-layout-split {
-    border-radius: 7px;
+  .pm-container,
+  .post-container {
+    border-radius: $container-border-radius;
   }
 
-  .pprofile-container,
-  .pbody-container {
-    .back2top {
-      display: none;
+  .post-container {
+    .pprofile-container,
+    .pbody-container {
+      .back2top {
+        display: none;
+      }
     }
-  }
 
-  .post {
-    box-shadow: $box-shadow-outset-single-posts;
-  }
+    .post {
+      box-shadow: $box-shadow-outset-single-posts;
+    }
 
-  .postprofile {
-    @include postprofile-border($switch-postprofile-side, 1px);
-    border-color: $col-base;
-  }
+    .postprofile {
+      @include postprofile-border($switch-postprofile-side, 1px);
+      border-color: $col-base;
+    }
 
-  .back2top {
-    .top {
-      margin-top: -15px;
+    .back2top {
+      .top {
+        margin-top: -15px;
+      }
     }
   }
 } @else {
-  .pprofile-container,
-  .pbody-container {
-    border-radius: 7px;
-    box-shadow: $box-shadow-outset-single-posts;
-    padding: 10px;
-  }
+  .post-container {
+    .pprofile-container,
+    .pbody-container {
+      border-radius: $container-border-radius;
+      box-shadow: $box-shadow-outset-single-posts;
+      padding: 10px;
+    }
 
-  .post {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .post {
+      padding-right: 0;
+      padding-left: 0;
+    }
 
-  .postbody {
-    width: 100%;
-  }
+    .postbody {
+      width: 100%;
+    }
 
-  .postprofile {
-    border-width: 0;
-  }
+    .postprofile {
+      border-width: 0;
+    }
 
-  .postbody {
-    ul {
-      &.post-buttons {
-        margin-right: 5px;
+    .postbody {
+      ul {
+        &.post-buttons {
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -124,7 +128,6 @@ $breakpoint-revers: '>=800px';
     width: 100%;
   }
 
-
   .pprofile-container {
     @include border-top-radius(7px);
     @include border-bottom-radius(0);
@@ -139,21 +142,12 @@ $breakpoint-revers: '>=800px';
     padding-top: 0;
   }
 
-  @if $switch-pprofile-separation == yes {
-    .pprofile-container,
-    .post {
-      & > .back2top {
-        display: none;
-      }
-    }
-  }
-
   .has-profile {
     .post-buttons {
-      float: right;
       position: absolut;
-      right: 0;
       top: 0;
+      right: 0;
+      float: right;
     }
   }
 
@@ -168,8 +162,8 @@ $breakpoint-revers: '>=800px';
     }
 
     & dt {
-      display: block;
       text-align: left !important;
+      display: block;
     }
 
     & dd {
@@ -177,9 +171,18 @@ $breakpoint-revers: '>=800px';
     }
 
     & img {
+      width: auto !important;
       height: auto !important;
       max-height: 32px;
-      width: auto !important;
+    }
+  }
+
+  @if $switch-pprofile-separation == yes {
+    .pprofile-container,
+    .post {
+      & > .back2top {
+        display: none;
+      }
     }
   }
 }

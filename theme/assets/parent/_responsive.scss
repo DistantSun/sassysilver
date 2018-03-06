@@ -344,7 +344,7 @@
 	}
 
 	fieldset dd, fieldset.fields1 dd, fieldset.fields2 dd {
-		margin-left: 20px;
+		margin-left: 0px;
 	}
 
 	textarea, dd textarea, .message-box textarea {
@@ -487,12 +487,11 @@
 		margin-right: 5px;
 	}
 
-/*  Deactivated => "modules/_posts.scss"
 	.postprofile .avatar img {
 		width: auto !important;
 		height: auto !important;
 		max-height: 32px;
-*/
+	}
 
 	.has-profile .postbody h3 {
 		margin-left: 0 !important;
@@ -579,14 +578,5 @@
 
 	dd.posts, dd.topics, dd.views {
     	width: 80px;
-	}
-}
-
-@media (max-width: 992px) {
-	.row .pagination {
-		text-align: left;
-		float: left;
-		margin-top: 4px;
-		margin-bottom: 4px;
 	}
 }
