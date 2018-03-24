@@ -4,6 +4,11 @@
 - Bug in display of PMs fixed
 - Bug in display of search results fixed
 - Re-coloured marker system for PMs
+- Re-build headerbar to provide for responsiveness in separate view when custom logos are inserted
+- Option added to switch display of site description on<>off
+- Option added to switch display location of site description betwee left, center and right
+- Search box layered with z-index
+- Added new (default) logo
 
 
 #### 0.4.0 (08.01.2018)
