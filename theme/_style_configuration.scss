@@ -13,6 +13,11 @@ $switch-col-scheme:                                blue !default;
 // Board width
 $switch-width-wrap:                                1152px !default;
 
+//  Logo & Site-Description positioning
+$switch-logo-position:                             'center' !default;
+$switch-show-sitedescription:                      'yes' !default;
+$switch-position-sitedescription:                  'center' !default;
+
 // Postprofile positioning & max. width
 // display postprofile<>postbody separatly; values: no, yes
 $switch-pprofile-separation:                       'no' !default;

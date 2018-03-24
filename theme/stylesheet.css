@@ -6021,6 +6021,10 @@ li.notification-reported strong, li.notification-disapproved strong {
   width: 100%;
 }
 
+.site_logo {
+  background-image: none;
+}
+
 .pprofile-container {
   display: block;
   float: right;
@@ -6120,6 +6124,104 @@ li.notification-reported strong, li.notification-disapproved strong {
   .post > .back2top {
     display: none;
   }
+}
+
+.headerbar-separate {
+  max-width: 1152px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.headerbar {
+  background-color: #360c09;
+  padding: 5px;
+}
+
+.headerbar a {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+  color: #fff;
+  display: inline;
+}
+
+.headerbar a:link, .headerbar a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headerbar a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+.wrap-menue {
+  max-width: 1152px;
+  margin: 4px auto;
+}
+
+.wrap-menue .navbar {
+  background-color: #000;
+  border: 1px solid #818385;
+  border-radius: 0;
+  padding: 1px 5px;
+}
+
+.wrap-menue .navbar a {
+  font-size: 1.2em;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px;
+}
+
+.wrap-menue .navbar a:hover {
+  background-color: #808080;
+}
+
+@media (max-width: 810) {
+  .wrap-menue {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.dropdown .dropdown-contents {
+  background-color: #808080;
+}
+
+.logo {
+  display: none;
+}
+
+.logo-container {
+  text-align: "left";
+  position: relative;
+}
+
+.logo-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.site-description {
+  display: none;
+}
+
+.absolute {
+  position: relative;
+}
+
+.search-box-container {
+  position: absolute;
+  z-index: 9000;
+  top: 10px;
+  right: 10px;
+}
+
+.search-header {
+  float: none;
+  margin: 0;
 }
 
 blockquote {
@@ -6335,6 +6437,24 @@ body {
   display: none;
 }
 
+html,
+body {
+  height: auto;
+  min-height: 101%;
+  background: -webkit-linear-gradient(top, #360c09 250px, #5a2824 60%);
+  background: -o-linear-gradient(top, #360c09 250px, #5a2824 60%);
+  background: linear-gradient(to bottom, #360c09 250px, #5a2824 60%);
+  background-color: #5a2824;
+}
+
+.wrap {
+  padding: 15px;
+  background-color: #949ba3;
+  -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
+  max-width: 1152px;
+}
+
 ul.navlinks {
   border-top: 0;
 }
@@ -6384,91 +6504,6 @@ hr.divider {
   border-top-color: #ccc;
   display: block;
   margin: 5px 0 10px;
-}
-
-html,
-body {
-  height: auto;
-  min-height: 101%;
-  background-image: url("./images/styling/bg_body.jpg");
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-.wrap {
-  padding: 15px;
-  background-color: #949ba3;
-  -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
-  max-width: 1152px;
-  background-color: rgba(148, 155, 163, 0.5);
-  background-image: url("./images/styling/bg_img_wrap_05.jpg");
-  background-size: cover;
-}
-
-.headerbar-separate {
-  max-width: 1152px;
-  margin: 0 auto;
-  background: transparent;
-}
-
-.site-description {
-  color: #fff;
-}
-
-.wrap-menue {
-  max-width: 1152px;
-  margin: 4px auto;
-}
-
-.wrap-menue .navbar {
-  background-color: #000;
-  border: 1px solid #818385;
-  border-radius: 0;
-  padding: 1px 5px;
-}
-
-.wrap-menue .navbar a {
-  font-size: 1.2em;
-  border-radius: 2px;
-  color: #fff;
-  padding: 5px;
-}
-
-.wrap-menue .navbar a:hover {
-  background-color: #808080;
-}
-
-@media (max-width: 810) {
-  .wrap-menue {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-.dropdown .dropdown-contents {
-  background-color: #808080;
-}
-
-.headerbar {
-  background-color: #360c09;
-}
-
-.headerbar a {
-  font-size: 1.2em;
-  font-weight: 600;
-  font-style: italic;
-  color: #fff;
-}
-
-.headerbar a:link, .headerbar a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.headerbar a:hover {
-  text-decoration: underline;
-  color: #ccc;
 }
 
 .copyright {

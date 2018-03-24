@@ -3,6 +3,11 @@
 // "Board width" - any value is okay as longs as the unit is "px"
 $switch-width-wrap:                         1152px;
 
+//  Logo & Site-Description positioning
+$switch-logo-position:                      'left';
+$switch-show-sitedescription:               'no';
+$switch-position-sitedescription:            'center';
+
 // Board colour scheme; available schemes: blue, red, green, black
 $switch-col-scheme:                         red;
 
@@ -23,8 +28,8 @@ $switch-opacity-wrap:                       .6;
 // Default values are "none" - all images have to be stored in the theme's image folder
 // NOTE: To allocate a image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
 
-$img-bg-html-body:                          'bg_body.jpg';
-$img-bg-wrap:                               'bg_img_wrap_05.jpg';
+// $img-bg-html-body:                          'bg_body.jpg';
+// $img-bg-wrap:                               'bg_img_wrap_05.jpg';
 // $img-bg-headerbar:                          none;
 
 // Breakpoin RWD
