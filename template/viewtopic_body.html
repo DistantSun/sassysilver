@@ -144,10 +144,10 @@
 
 	<div id="p{{ postrow.POST_ID }}" class="post has-profile {% if postrow.S_UNREAD_POST %} unreadpost{% endif %}{% if postrow.S_POST_REPORTED %} reported{% endif %}{% if postrow.S_POST_DELETED %} deleted{% endif %}{% if postrow.POSTER_WARNINGS %} warned{% endif %}">
 
-<!---- postlayout inner ---->
+<!-- NOTE postlayout inner -->
 		<div class="inner">
 
-<!---- pprofile-container ---->
+<!-- NOTE: pprofile-container -->
 	<div class="pprofile-container{% if postrow.S_ROW_COUNT is odd %} bg1{% else %} bg2{% endif %}{% if postrow.S_ONLINE and not postrow.S_POST_HIDDEN %} online{% endif %}{% if postrow.POSTER_WARNINGS %} warned{% endif %}">
 		<dl class="postprofile" id="profile{{ postrow.POST_ID }}"{% if postrow.S_POST_HIDDEN %} style="display: none;"{% endif %}>
 			<dt class="{% if postrow.RANK_TITLE or postrow.RANK_IMG %}has-profile-rank{% else %}no-profile-rank{% endif %} {% if postrow.POSTER_AVATAR %}has-avatar{% else %}no-avatar{% endif %}">
