@@ -31,4 +31,7 @@ $asset-base-path: '.' !default;
   @return asset('images/styling', $file);
 }
 
-//------------------------------------------------------------------------------
+//  Icon set switcher helper
+@function icon-asset($folder, $name, $format) {
+  @return url('./images' + '/' + $folder + '/' + $name + '.' + $format);
+}
