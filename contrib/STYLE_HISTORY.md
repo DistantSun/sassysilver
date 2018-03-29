@@ -1,6 +1,6 @@
 ## Style History
 
-#### 0.4.1 ()
+#### 0.4.1 (08.03.2018)
 - Bug in display of PMs fixed
 - Bug in display of search results fixed
 - Re-coloured marker system for PMs
@@ -9,6 +9,11 @@
 - Option added to switch display location of site description betwee left, center and right
 - Search box layered with z-index
 - Added new (default) logo
+- Logo position switchable left/center/right
+- Forum & topic icons: choose between different sets of icons: <br />
+standard => prosilver <br />
+vector1 => with kind permission and created by Mazeltof
+-
 
 
 #### 0.4.0 (08.01.2018)
