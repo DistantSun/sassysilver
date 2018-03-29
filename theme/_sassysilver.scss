@@ -18,7 +18,7 @@
 }
 
 body {
-  padding: 12px 0;
+  padding: 0 0 12px 0;
 }
 
 .linklist {
@@ -32,6 +32,39 @@ body {
 
 //  1.b => colours.css
 // *****************************************************************************
+html,
+body {
+  height: auto;
+  min-height: 101%;
+
+  @if $img-bg-html-body == none {
+    background: linear-gradient(to bottom, $col-headerbar 250px, $col-body 60%);
+    background-color: $col-body;
+  } @else {
+    background-image: bg-image('#{$img-bg-html-body}');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+}
+
+
+.wrap {
+  @include padding($pad-wrappers $pad-wrappers);
+  background-color: $col-wrap;
+  box-shadow: $box-shadow-inset-double;
+  max-width: $switch-width-wrap;
+  @if $img-bg-html-body != none {
+    @if $switch-col-wrap-off == yes {
+      background-color: rgba($col-wrap, .5);
+    }
+  }
+
+  @if $img-bg-wrap != none {
+    background-image: bg-image('#{$img-bg-wrap}');
+    background-size: cover;
+  }
+}
+
 .navlinks {
   @include qualify(ul) {
     border-top: 0;
@@ -100,107 +133,6 @@ body {
   background-color: none;
 }
 
-// Provides the code changes required to separate the menue part of navbar_header via configfile
-// ***********************************************************
-html,
-body {
-  height: auto;
-  min-height: 101%;
-
-  @if $img-bg-html-body == none {
-    background: linear-gradient(to bottom, $col-headerbar 250px, $col-body 60%);
-    background-color: $col-body;
-  } @else {
-    background-image: bg-image('#{$img-bg-html-body}');
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  }
-}
-
-.wrap {
-  @include padding($pad-wrappers $pad-wrappers);
-  background-color: $col-wrap;
-  box-shadow: $box-shadow-inset-double;
-  max-width: $switch-width-wrap;
-  @if $img-bg-html-body != none {
-    @if $switch-col-wrap-off == yes {
-      background-color: rgba($col-wrap, .5);
-    }
-  }
-
-  @if $img-bg-wrap != none {
-    background-image: bg-image('#{$img-bg-wrap}');
-    background-size: cover;
-  }
-}
-
-.headerbar-separate {
-  max-width: $width-headerbar-separate;
-  margin: 0 auto;
-  @if $img-bg-headerbar == none {
-    background: transparent;
-  } @else {
-    background-image: image('#{$img-bg-headerbar}');
-  }
-}
-
-.site-description {
-  color: #fff;
-}
-
-.wrap-menue {
-  max-width: $switch-width-wrap;
-  margin: 4px auto;
-
-  & .navbar {
-    background-color: #000;
-    border: 1px solid #818385;
-    border-radius: 0;
-    padding: 1px 5px;
-
-    & a {
-      font-size: 1.2em;
-      border-radius: 2px;
-      color: #fff;
-      padding: 5px;
-
-      &:hover {
-        background-color: #808080;
-      }
-    }
-  }
-  @media (max-width: 810) {
-    @include padding(null $pad-wrappers null $pad-wrappers);
-  }
-}
-
-.dropdown {
-  .dropdown-contents {
-    background-color: #808080;
-  }
-}
-
-.headerbar {
-  background-color: $col-headerbar;
-
-  & a {
-    font-size: 1.2em;
-    font-weight: 600;
-    font-style: italic;
-    color: $col-text-headerbar;
-
-    &:link,
-    &:visited {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    &:hover {
-      text-decoration: underline;
-      color: #ccc;
-    }
-  }
-}
 
 .copyright {
   @include container-base;
@@ -209,7 +141,7 @@ body {
   margin: 10px 0 0;
 }
 
-// TODO:
+// TODO: Implement sidebar?
 //// Sidebar
 // Sidebar - controlled via configfile
 // ***********************************************************
@@ -267,6 +199,7 @@ body {
   @include forum-container;
 }
 
+//  TODO: remove code after testing
 // .forums {
 //   @include qualify(ul) {
 //     border-radius: 5px;
@@ -417,4 +350,3 @@ body {
     padding: 5px 15px;
   }
 }
-
