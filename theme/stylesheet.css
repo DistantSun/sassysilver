@@ -6025,6 +6025,13 @@ li.notification-reported strong, li.notification-disapproved strong {
   background-image: none;
 }
 
+blockquote cite:before,
+.uncited:before,
+.rtl blockquote cite:before,
+.rtl .uncited:before {
+  content: none;
+}
+
 .pprofile-container {
   display: block;
   float: right;
@@ -6205,9 +6212,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 .site-description {
-  text-align: center;
-  color: #fff;
-  width: 100%;
+  display: none;
 }
 
 .absolute {
@@ -6227,203 +6232,215 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 blockquote {
-  background-image: url("./images/vector1/quote.svg");
+  background-image: url("./images/standard/quote.gif");
 }
 
 .rtl blockquote {
-  background-image: url("./images/vector1/quote_rtl.svg");
+  background-image: url("./images/standard/quote_rtl.gif");
 }
 
 .online {
-  background-image: url("./images/vector1/icon_user_online.svg");
+  background-image: url("./images/standard/icon_user_online.gif");
 }
 
 .contact-icon {
-  background-image: url("./images/vector1/icons_contact.svg");
+  background-image: url("./images/standard/icons_contact.gif");
 }
 
 .global_read {
-  background-image: url("./images/vector1/announce_read.svg");
+  background-image: url("./images/standard/announce_read.gif");
 }
 
 .global_read_mine {
-  background-image: url("./images/vector1/announce_read_mine.svg");
+  background-image: url("./images/standard/announce_read_mine.gif");
 }
 
 .global_read_locked {
-  background-image: url("./images/vector1/announce_read_locked.svg");
+  background-image: url("./images/standard/announce_read_locked.gif");
 }
 
 .global_read_locked_mine {
-  background-image: url("./images/vector1/announce_read_locked_mine.svg");
+  background-image: url("./images/standard/announce_read_locked_mine.gif");
 }
 
 .global_unread {
-  background-image: url("./images/vector1/announce_unread.svg");
+  background-image: url("./images/standard/announce_unread.gif");
 }
 
 .global_unread_mine {
-  background-image: url("./images/vector1/announce_unread_mine.svg");
+  background-image: url("./images/standard/announce_unread_mine.gif");
 }
 
 .global_unread_locked {
-  background-image: url("./images/vector1/announce_unread_locked.svg");
+  background-image: url("./images/standard/announce_unread_locked.gif");
 }
 
 .global_unread_locked_mine {
-  background-image: url("./images/vector1/announce_unread_locked_mine.svg");
+  background-image: url("./images/standard/announce_unread_locked_mine.gif");
 }
 
 .announce_read {
-  background-image: url("./images/vector1/announce_read.svg");
+  background-image: url("./images/standard/announce_read.gif");
 }
 
 .announce_read_mine {
-  background-image: url("./images/vector1/announce_read_mine.svg");
+  background-image: url("./images/standard/announce_read_mine.gif");
 }
 
 .announce_read_locked {
-  background-image: url("./images/vector1/announce_read_locked.svg");
+  background-image: url("./images/standard/announce_read_locked.gif");
 }
 
 .announce_read_locked_mine {
-  background-image: url("./images/vector1/announce_read_locked_mine.svg");
+  background-image: url("./images/standard/announce_read_locked_mine.gif");
 }
 
 .announce_unread {
-  background-image: url("./images/vector1/announce_unread.svg");
+  background-image: url("./images/standard/announce_unread.gif");
 }
 
 .announce_unread_mine {
-  background-image: url("./images/vector1/announce_unread_mine.svg");
+  background-image: url("./images/standard/announce_unread_mine.gif");
 }
 
 .announce_unread_locked {
-  background-image: url("./images/vector1/announce_unread_locked.svg");
+  background-image: url("./images/standard/announce_unread_locked.gif");
 }
 
 .announce_unread_locked_mine {
-  background-image: url("./images/vector1/announce_unread_locked_mine.svg");
+  background-image: url("./images/standard/announce_unread_locked_mine.gif");
 }
 
 .forum_link {
-  background-image: url("./images/vector1/forum_link.svg");
+  background-image: url("./images/standard/forum_link.gif");
 }
 
 .forum_read {
-  background-image: url("./images/vector1/forum_read.svg");
+  background-image: url("./images/standard/forum_read.gif");
 }
 
 .forum_read_locked {
-  background-image: url("./images/vector1/forum_read_locked.svg");
+  background-image: url("./images/standard/forum_read_locked.gif");
 }
 
 .forum_read_subforum {
-  background-image: url("./images/vector1/forum_read_subforum.svg");
+  background-image: url("./images/standard/forum_read_subforum.gif");
 }
 
 .forum_unread {
-  background-image: url("./images/vector1/forum_unread.svg");
+  background-image: url("./images/standard/forum_unread.gif");
 }
 
 .forum_unread_locked {
-  background-image: url("./images/vector1/forum_unread_locked.svg");
+  background-image: url("./images/standard/forum_unread_locked.gif");
 }
 
 .forum_unread_subforum {
-  background-image: url("./images/vector1/forum_unread_subforum.svg");
+  background-image: url("./images/standard/forum_unread_subforum.gif");
 }
 
 .sticky_read {
-  background-image: url("./images/vector1/sticky_read.svg");
+  background-image: url("./images/standard/sticky_read.gif");
 }
 
 .sticky_read_mine {
-  background-image: url("./images/vector1/sticky_read_mine.svg");
+  background-image: url("./images/standard/sticky_read_mine.gif");
 }
 
 .sticky_read_locked {
-  background-image: url("./images/vector1/sticky_read_locked.svg");
+  background-image: url("./images/standard/sticky_read_locked.gif");
 }
 
 .sticky_read_locked_mine {
-  background-image: url("./images/vector1/sticky_read_locked_mine.svg");
+  background-image: url("./images/standard/sticky_read_locked_mine.gif");
 }
 
 .sticky_unread {
-  background-image: url("./images/vector1/sticky_unread.svg");
+  background-image: url("./images/standard/sticky_unread.gif");
 }
 
 .sticky_unread_mine {
-  background-image: url("./images/vector1/sticky_unread_mine.svg");
+  background-image: url("./images/standard/sticky_unread_mine.gif");
 }
 
 .sticky_unread_locked {
-  background-image: url("./images/vector1/sticky_unread_locked.svg");
+  background-image: url("./images/standard/sticky_unread_locked.gif");
 }
 
 .sticky_unread_locked_mine {
-  background-image: url("./images/vector1/sticky_unread_locked_mine.svg");
+  background-image: url("./images/standard/sticky_unread_locked_mine.gif");
 }
 
 .topic_moved {
-  background-image: url("./images/vector1/topic_moved.svg");
+  background-image: url("./images/standard/topic_moved.gif");
 }
 
 .topic_read {
-  background-image: url("./images/vector1/topic_read.svg");
+  background-image: url("./images/standard/topic_read.gif");
 }
 
 .topic_read_mine {
-  background-image: url("./images/vector1/topic_read_mine.svg");
+  background-image: url("./images/standard/topic_read_mine.gif");
 }
 
 .topic_read_hot {
-  background-image: url("./images/vector1/topic_read_hot.svg");
+  background-image: url("./images/standard/topic_read_hot.gif");
 }
 
 .topic_read_hot_mine {
-  background-image: url("./images/vector1/topic_read_hot_mine.svg");
+  background-image: url("./images/standard/topic_read_hot_mine.gif");
 }
 
 .topic_read_locked {
-  background-image: url("./images/vector1/topic_read_locked.svg");
+  background-image: url("./images/standard/topic_read_locked.gif");
 }
 
 .topic_read_locked_mine {
-  background-image: url("./images/vector1/topic_read_locked_mine.svg");
+  background-image: url("./images/standard/topic_read_locked_mine.gif");
 }
 
 .topic_unread {
-  background-image: url("./images/vector1/topic_unread.svg");
+  background-image: url("./images/standard/topic_unread.gif");
 }
 
 .topic_unread_mine {
-  background-image: url("./images/vector1/topic_unread_mine.svg");
+  background-image: url("./images/standard/topic_unread_mine.gif");
 }
 
 .topic_unread_hot {
-  background-image: url("./images/vector1/topic_unread_hot.svg");
+  background-image: url("./images/standard/topic_unread_hot.gif");
 }
 
 .topic_unread_hot_mine {
-  background-image: url("./images/vector1/topic_unread_hot_mine.svg");
+  background-image: url("./images/standard/topic_unread_hot_mine.gif");
 }
 
 .topic_unread_locked {
-  background-image: url("./images/vector1/topic_unread_locked.svg");
+  background-image: url("./images/standard/topic_unread_locked.gif");
 }
 
 .topic_unread_locked_mine {
-  background-image: url("./images/vector1/topic_unread_locked_mine.svg");
+  background-image: url("./images/standard/topic_unread_locked_mine.gif");
 }
 
 .pm_read {
-  background-image: url("./images/vector1/pm_read.svg");
+  background-image: url("./images/standard/pm_read.gif");
 }
 
 .pm_unread {
-  background-image: url("./images/vector1/pm_unread.svg");
+  background-image: url("./images/standard/pm_unread.gif");
+}
+
+blockquote {
+  background-repeat: no-repeat;
+}
+
+blockquote cite {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bdbdbd;
+  margin-bottom: 5px;
+  padding: 10px 0 5px;
 }
 
 * {
