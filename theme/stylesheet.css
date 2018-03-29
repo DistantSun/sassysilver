@@ -6134,7 +6134,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 
 .headerbar {
   background-color: #360c09;
-  padding: 5px;
+  padding: 20px 5px 5px 5px;
 }
 
 .headerbar a {
@@ -6205,7 +6205,9 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 .site-description {
-  display: none;
+  text-align: center;
+  color: #fff;
+  width: 100%;
 }
 
 .absolute {
@@ -6430,7 +6432,7 @@ blockquote {
 }
 
 body {
-  padding: 12px 0;
+  padding: 0 0 12px 0;
 }
 
 .linklist.compact .rightside > a > span span {
