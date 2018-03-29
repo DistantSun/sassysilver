@@ -78,3 +78,16 @@ $icon-mapping: (
     background-image: icon-asset($switch-icon-set, $icon-name, $icon-format);
   }
 }
+
+//  Additional CSS
+blockquote {
+  background-repeat: no-repeat;
+
+  cite {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #bdbdbd;
+    margin-bottom: 5px;
+    padding: 10px 0 5px;
+  }
+}
