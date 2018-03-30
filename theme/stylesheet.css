@@ -6091,6 +6091,7 @@ blockquote cite:before,
     border-bottom-right-radius: 0;
     clear: both;
     overflow: inherit;
+    margin-bottom: 1px;
     padding-bottom: 0;
   }
   .pbody-container {

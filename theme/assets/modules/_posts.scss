@@ -133,6 +133,7 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
     @include border-bottom-radius(0);
     clear: both;
     overflow: inherit;
+    margin-bottom: 1px;
     padding-bottom: 0;
   }
 
