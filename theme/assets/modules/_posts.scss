@@ -124,7 +124,6 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
 @include media($breakpoint) {
   .pprofile-container,
   .pbody-container {
-    position: relative;
     width: 100%;
   }
 
@@ -145,10 +144,8 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
 
   .has-profile {
     .post-buttons {
-      position: absolut;
-      top: 0;
-      right: 0;
-      float: right;
+      top: 15px;
+      right: 30px;
     }
   }
 
