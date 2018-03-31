@@ -6081,7 +6081,6 @@ blockquote cite:before,
 @media (max-width: 799px) {
   .pprofile-container,
   .pbody-container {
-    position: relative;
     width: 100%;
   }
   .pprofile-container {
@@ -6102,10 +6101,8 @@ blockquote cite:before,
     padding-top: 0;
   }
   .has-profile .post-buttons {
-    position: absolut;
-    top: 0;
-    right: 0;
-    float: right;
+    top: 15px;
+    right: 30px;
   }
   .postprofile {
     border: 0;
@@ -6142,7 +6139,7 @@ blockquote cite:before,
 
 .headerbar {
   background-color: #360c09;
-  padding: 20px 5px 5px 5px;
+  padding: 20px 5px 10px 5px;
 }
 
 .headerbar a {
@@ -6472,6 +6469,7 @@ body {
   -webkit-box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
   max-width: 1152px;
+  margin: 0 auto;
   background-color: rgba(148, 155, 163, 0.5);
   background-image: url("./images/styling/bg_img_wrap_05.jpg");
   background-size: cover;

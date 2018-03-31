@@ -53,6 +53,7 @@ body {
   background-color: $col-wrap;
   box-shadow: $box-shadow-inset-double;
   max-width: $switch-width-wrap;
+  margin: 0 auto;
   @if $img-bg-html-body != none {
     @if $switch-col-wrap-off == yes {
       background-color: rgba($col-wrap, .5);
