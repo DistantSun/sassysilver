@@ -13,6 +13,7 @@
 //  ----------------------------------------------------------------------------
 
 //  1.  variables
+$breakpoint: '<#{$breakpoint-master}';
 
 //  2.  Controlling the Separation of the Headerbar
 //      & Basic Formatting
@@ -57,9 +58,13 @@
 
   //  4.  Menue
   & .navbar {
+    @include media($breakpoint) {
+      padding: 0 10px;
+    }
     background-color: #000;
     border: 1px solid #818385;
     border-radius: 0;
+    margin: 0;
     padding: 1px 5px;
 
     & a {
@@ -72,9 +77,6 @@
         background-color: #808080;
       }
     }
-  }
-  @media (max-width: 810) {
-    @include padding(null $pad-wrappers null $pad-wrappers);
   }
 }
 
