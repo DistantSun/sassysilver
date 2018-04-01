@@ -6169,7 +6169,14 @@ blockquote cite:before,
   background-color: #000;
   border: 1px solid #818385;
   border-radius: 0;
+  margin: 0;
   padding: 1px 5px;
+}
+
+@media (max-width: 799px) {
+  .wrap-menue .navbar {
+    padding: 0 10px;
+  }
 }
 
 .wrap-menue .navbar a {
@@ -6181,13 +6188,6 @@ blockquote cite:before,
 
 .wrap-menue .navbar a:hover {
   background-color: #808080;
-}
-
-@media (max-width: 810) {
-  .wrap-menue {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
 }
 
 .dropdown .dropdown-contents {
