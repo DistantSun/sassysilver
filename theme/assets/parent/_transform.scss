@@ -25,3 +25,11 @@ blockquote cite:before,
 .rtl .uncited:before {
   content: none;
 }
+
+table.fixed-width-table {
+	table-layout: inherit;
+}
+
+.attach-controls {
+  float: right;
+}
