@@ -52,11 +52,12 @@
 <link href="{{ T_STYLESHEET_LANG_LINK }}" rel="stylesheet">
 
 {% if S_CONTENT_DIRECTION eq 'rtl' %}
-	<link href="{{ ROOT_PATH }}styles/prosilver/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{{ ROOT_PATH }}styles/prosilver/theme/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_PLUPLOAD %}
-	<link href="{{ ROOT_PATH }}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+<!--	<link href="{{ ROOT_PATH }}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet"> -->
+		<link href="{{ ROOT_PATH }}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_COOKIE_NOTICE %}
@@ -98,7 +99,7 @@
 	<div id="page-header class="page-header">
 
 		{% if definition.HEADERBAR_SEPARAT == 1 %}
-		<div class="headerbar" role="banner">
+		<div class="headerbar" style="padding-top: 5px;" role="banner">
 			{% INCLUDE 'headerbar.html' %}
 		</div>
 

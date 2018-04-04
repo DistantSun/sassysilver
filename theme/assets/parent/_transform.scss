@@ -14,3 +14,18 @@
     width: 100%;
   }
 }
+
+.site_logo {
+  background-image: none;
+}
+
+blockquote cite:before,
+.uncited:before,
+.rtl blockquote cite:before,
+.rtl .uncited:before {
+  content: none;
+}
+
+table.fixed-width-table {
+  table-layout: inherit;
+}

@@ -21,6 +21,7 @@
 @import 'assets/parent/icons';
 @import 'assets/parent/colours';
 @import 'assets/parent/responsive';
+
 // Resetting selectors/expressions used differently in SassySilver
 // ---------------------------------------------------------------
 @import 'assets/parent/transform';
@@ -29,11 +30,9 @@
 // ---------------------------------------------------------------
 @import 'bourbon';
 
-
 // Importing stylespecific stylesheets - finally
 @import 'custom_configuration';
 @import 'style_configuration';
 @import 'assets_base';
-// @import 'assets/modules';
 @import 'sassysilver';
 @import 'custom';
