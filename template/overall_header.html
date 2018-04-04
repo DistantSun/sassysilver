@@ -52,11 +52,12 @@
 <link href="{{ T_STYLESHEET_LANG_LINK }}" rel="stylesheet">
 
 {% if S_CONTENT_DIRECTION eq 'rtl' %}
-	<link href="{{ ROOT_PATH }}styles/prosilver/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{{ ROOT_PATH }}styles/prosilver/theme/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_PLUPLOAD %}
-	<link href="{{ ROOT_PATH }}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+<!--	<link href="{{ ROOT_PATH }}styles/prosilver/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet"> -->
+		<link href="{{ ROOT_PATH }}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_COOKIE_NOTICE %}
