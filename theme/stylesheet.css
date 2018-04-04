@@ -6032,6 +6032,10 @@ blockquote cite:before,
   content: none;
 }
 
+table.fixed-width-table {
+  table-layout: inherit;
+}
+
 .pprofile-container {
   display: block;
   float: right;
