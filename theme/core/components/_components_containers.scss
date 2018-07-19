@@ -1,0 +1,42 @@
+///  TODO: Remove when tested
+//@mixin forum-container {
+//  background-color: linear-gradient(to bottom, $col-headerbar 45px, $col-headerbar 46px, rgba($col-wrap, 0) 52px, rgba($col-wrap, 0) 100%);
+//  border: 0;
+//  border-radius: 7px;
+//  margin-bottom: 8px;
+//  padding: 8px 8px 0;
+//
+//  .inner {
+//    padding: 0;
+//  }
+//}
+
+
+/// Container base
+@mixin container-base {
+  background-color: $col-forums;
+  border: 1px solid $col-headerbar;
+  border-radius: 7px;
+  margin: 0;
+  padding: 15px 10px;
+}
+
+
+/// TODO: Remove when tested
+/// Statistics container, copyright container
+//.stat-container,
+//.copyright {
+//  @include container-base;
+//  box-shadow: $box-shadow-inset-double;
+//  color: #000;
+//  margin: 10px 0 0;
+//}
+
+
+/// Action bar
+@mixin action-bar-elements {
+  background-color: $col-navbar;
+  border: 1px solid #e6e9ed;
+  border-radius: 7px;
+  padding: 1px 8px;
+}

@@ -1,0 +1,22 @@
+@mixin forum-container {
+  background: linear-gradient(to bottom, $col-headerbar 45px, $col-headerbar 46px, rgba($col-wrap, 0) 52px, rgba($col-wrap, 0) 100%);
+  border: 0;
+  border-radius: 7px;
+  margin-bottom: 8px;
+  padding: 8px 8px 0;
+
+  .inner {
+    padding: 0;
+  }
+}
+
+
+@mixin topiclist {
+  ul.topiclist {
+    padding: 3px, 0, 0;
+
+    li.header dt {
+      text-align: center;
+    }
+  }
+}

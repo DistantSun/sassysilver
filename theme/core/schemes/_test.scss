@@ -1,0 +1,138 @@
+// Primary Colors
+$test-primary:          hsl(200, 85%, 50%) !default;
+$test-primary-light:    saturate(lighten($test-primary, 25%), 15%);
+$test-primary-dark:     saturate(darken($test-primary, 15%), 15%);
+
+// Secondary Colors
+$test-secondary:        adjust-hue($test-primary, 10%) !default;
+$test-secondary-light:  saturate(lighten($test-secondary, 25%), 15%);
+$test-secondary-dark:   saturate(darken($test-secondary, 15%), 15%);
+
+$test-accent:           adjust-hue($test-primary, 145%) !default;
+
+$test-ui:               desaturate(adjust-hue($test-primary, 20%), 65%) !default;
+$test-ui-light:         lighten($test-ui, 25%);
+$test-ui-dark:          darken($test-ui, 15%);
+$test-ui-super-dark:    darken($test-ui, 30%);
+
+// Additioanl UI Vars
+$test-links:            desaturate(darken($test-secondary, 20%), 5%) !default;
+$test-highlight:        hsl(55, 100%, 90%) !default;
+$test-code:             hsl(125, 40%, 50%) !default;
+
+$test-background:       $test-primary !default;
+$test-background-0:     desaturate(lighten($test-primary, 45%), 45%);
+$test-background-light: saturate($test-background-0, 60%);
+$test-background-dark:  desaturate(darken($test-background-0, 14%), 10%);
+
+$test-polls:            $test-accent !default;
+
+
+
+$test: (
+  ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
+
+  primary:   $test-primary,
+  primary-light: $test-primary-light,
+  primary-dark:  $test-primary-dark,
+
+  // UI Colors
+  ui-light:      $test-ui-light ,
+  ui-dark:       $test-ui-dark,
+  ui-super-dark: $test-ui-super-dark,
+
+  // Accent Colors
+  accent-light:     saturate(lighten($test-accent, 25%), 15%),
+  accent-dark:      saturate(darken($test-accent, 15%), 15%),
+  accent-hover:     desaturate(lighten($test-accent, 10%), 45%),
+  //col-accent-highlight: lighten($test-accent-hover, 5%),
+  accent-highlight: lighten($test-accent, 50%),
+
+  // Background Colors
+  bg-1:          $test-background-0,
+  bg-2:          darken($test-background-0, 5%),
+  bg-3:          darken($test-background-0, 10%),
+  bg-4:          desaturate($test-background-0, 20%),
+  bg-light:      saturate($test-background-0, 60%),
+  bg-dark:       desaturate(darken($test-background-0, 14%), 10%),
+  bg-dark-hover: lighten($test-background-dark, 5%),
+  bg-body:       lighten($test-primary, 40%),
+
+  // Link Colors
+  link:                           $test-links,
+  link-accent:                    saturate(lighten($test-links, 10%), 15%),
+  link-hover:                     darken($test-accent, 5%),
+  link-hover-highlight:           lighten($test-accent, 35%),
+
+  link-secondary:                 desaturate(lighten($test-links, 20%), 15%),
+  link-secondary-accent:          desaturate(lighten($test-links, 20%), 45%),
+  link-secondary-hover:           darken(desaturate(lighten($test-links, 20%), 15%), 25%),
+  link-secondary-hover-highlight: desaturate(lighten($test-links, 55%), 35%),
+
+  // Button Colors
+  button-border: $gray-400,
+  button-box-shadow: $white,
+  button-text-shadow: $white,
+  button-text: darken($test-accent, 5%),
+  button-background: $gray-300,
+  button-background-light: $white,
+  button-icon: $gray-500,
+
+  button-icon-hover: $test-primary-dark,
+  button-border-hover: $test-primary-dark,
+  button-text-shadow-hover: rgba(desaturate(darken($test-accent, 5%), 20%), .2),
+
+  button-form-text: $gray-900,
+  button-form-border: $gray-700,
+  button-form-text-hover: darken($test-accent, 5%),
+  button-form-border-hover: darken($test-accent, 5%),
+  button-form-input-border-focus: $test-primary-dark,
+  button-form-input-text-focus: $test-primary-dark,
+
+  // Tab Colors
+  tab-text: $test-ui-dark,
+  tab-background: $test-background-dark,
+
+  tab-text-hover: darken($test-accent, 5%),
+  tab-background-hover: $test-background-light,
+
+  tab-text-active: $gray-900,
+  tab-background-active: darken($test-background-0, 10%),
+  tab-border-active: darken($test-background-0, 10%),
+  tab-background-active-light: $test-background-light,
+
+  tab-background-mini: darken($test-background-0, 5%),
+  tab-text-mini-active: $gray-900,
+  tab-background-mini-active: $gray-50,
+
+  // Poll Colors
+  poll-bg1: desaturate(darken($test-polls, 10%), 10%),
+  poll-bg2: desaturate(darken($test-polls, 5%), 5%),
+  poll-bg3: $test-polls,
+  poll-bg4: saturate(lighten($test-polls, 5%), 5%),
+  poll-bg5: saturate(lighten($test-polls, 10%), 10%),
+
+  poll-border1: desaturate(darken($test-polls, 20%), 10%),
+  poll-border2: desaturate(darken($test-polls, 20%), 5%),
+  poll-border3: desaturate(darken($test-polls, 20%), 5%),
+  poll-border4: desaturate($test-polls, 5%),
+  poll-border5: desaturate($test-polls, 5%),
+
+  // Highlight colors
+  blockquote: desaturate($test-highlight, 45%),
+  blockquote-inner: desaturate($test-highlight, 30%),
+
+  // PM Colors
+  pm-reply: desaturate(lighten($test-primary, 20%), 65%),
+  pm-friend: desaturate(darken($test-primary, 5%), 45%),
+  pm-reported: $test-accent,
+  pm-marked: adjust-hue(saturate($test-accent, 15%), -310%),
+  pm-foe: $black,
+
+  // Other Unique Colors
+  loader-blue: #4285f4,
+  loader-red: #de3e35,
+  loader-yellow: #f7c223,
+  loader-green: #1b9a59,
+  online: #85de39,
+);
