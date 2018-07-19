@@ -1,6 +1,0 @@
-// Calculating percentage
-// **********************
-
-@function calc-pc($target, $container) {
-  @return ($target / $container) * 100%;
-}
