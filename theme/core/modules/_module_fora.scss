@@ -1,0 +1,5 @@
+.forabg,
+.forumbg {
+  @include forum-container;
+  @include topiclist;
+}

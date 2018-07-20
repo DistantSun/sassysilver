@@ -1,38 +1,25 @@
 //  phpBB3 Style Sheet
-// ---------------------------------------------------------------
-// Style name:			SassySilver
-// Based on style:     prosilver (the default phpBB 3.1.x style)
-// Original author:	Tom Beddard ( http://www.subblue.com/ )
-// Modified by:		Melmac ( http://phpbb.aplacetomeet.de )
-// ---------------------------------------------------------------
+//    --------------------------------------------------------------
+//	Style name:			  PS Test
+//	Based on style:   prosilver (the default phpBB 3.2.x style)
+//	Original author:	Tom Beddard ( http://www.subblue.com/ )
+//	Modified by:		  Melmac
+//    --------------------------------------------------------------
 
 
-// Importing the renamed original prosilver stylesheets first
-// ---------------------------------------------------------------
-@import 'assets/parent/normalize';
-@import 'assets/parent/base';
-@import 'assets/parent/utilities';
-@import 'assets/parent/common';
-@import 'assets/parent/links';
-@import 'assets/parent/content';
-@import 'assets/parent/buttons';
-@import 'assets/parent/cp';
-@import 'assets/parent/forms';
-@import 'assets/parent/icons';
-@import 'assets/parent/colours';
-@import 'assets/parent/responsive';
+//  1. Import stylesheets "inherited" from prosilver
+@import 'inherit_prosilver';
 
-// Resetting selectors/expressions used differently in SassySilver
-// ---------------------------------------------------------------
-@import 'assets/parent/transform';
 
-// Importing tools and utilities of the 'framework' next
-// ---------------------------------------------------------------
-@import 'bourbon';
-
-// Importing stylespecific stylesheets - finally
+//  3. Process configuration stylesheets
 @import 'custom_configuration';
 @import 'style_configuration';
-@import 'assets_base';
+
+
+//  4.  Load framework
+@import 'framework';
+
+
+//  5.  Process style specific stylesheets
 @import 'sassysilver';
 @import 'custom';
