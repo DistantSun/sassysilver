@@ -58,6 +58,7 @@ $red: (
   bg-dark-hover: lighten($red-background-dark, 5%),
   bg-body:       linear-gradient(to bottom, $red-primary-dark 250px, darken($red-primary, 5%) 60%),
   bg-wrap:       rgba($gray-400, 0.6),
+  bg-forumcontainer: linear-gradient(to bottom, $red-primary-dark 45px, $red-primary-dark 46px, rgba($red-primary-dark, 0) 52px, rgba($red-primary-dark, 0) 100%),
 
   // Link Colors
   link:                           $red-links,

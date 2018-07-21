@@ -30,7 +30,7 @@ body {
   margin: 0 auto;
   @if $img-bg-html-body != none {
     @if $switch-col-wrap-off == yes {
-      background-color: rgba($col-wrap, 0.5);
+      background-color: rgba($col-bg-wrap, 0.5);
     }
   }
 

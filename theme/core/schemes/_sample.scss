@@ -29,7 +29,7 @@ $sample-polls:            $sample-accent !default;
 
 
 
-$test: (
+$sample: (
   ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
 
   primary:       $sample-primary,
@@ -49,15 +49,16 @@ $test: (
   accent-highlight: lighten($sample-accent, 50%),
 
   // Background Colors
-  bg-1:          $sample-background-0,
-  bg-2:          darken($sample-background-0, 5%),
-  bg-3:          darken($sample-background-0, 10%),
-  bg-4:          desaturate($sample-background-0, 20%),
-  bg-light:      saturate($sample-background-0, 60%),
-  bg-dark:       desaturate(darken($sample-background-0, 14%), 10%),
-  bg-dark-hover: lighten($sample-background-dark, 5%),
-  bg-body:       darken($sample-primary, 20%),
-  bg-wrap:       lighten($sample-primary, 40%),
+  bg-1:              $sample-background-0,
+  bg-2:              darken($sample-background-0, 5%),
+  bg-3:              darken($sample-background-0, 10%),
+  bg-4:              desaturate($sample-background-0, 20%),
+  bg-light:          saturate($sample-background-0, 60%),
+  bg-dark:           desaturate(darken($sample-background-0, 14%), 10%),
+  bg-dark-hover:     lighten($sample-background-dark, 5%),
+  bg-body:           darken($sample-primary, 20%),
+  bg-wrap:           $gray-300,
+  bg-forumcontainer: $sample-primary-dark,
 
   // Link Colors
   link:                           $sample-links,

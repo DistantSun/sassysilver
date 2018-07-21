@@ -45,7 +45,7 @@ Credits go as well to all those who helped me during the development process, ei
 
 ## Features
 - #### Build in
-- [x] 4 pre-defined colour schemes - switch between them by adjusting one setting/option only
+- [x] Pre-defined colour schemes - switch between them by adjusting one setting/option only
 - [x] Secondary colours will be automaticly calculated based on the choosen colour scheme
 - [x] Display of mini-profile switchable left <> right
 - [x] Option to split off headerbar and main menue to display it above the board wrapper
@@ -87,4 +87,4 @@ For further information please read the corresponding license files provided wit
 - [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md""
 
 
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver) 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver)

@@ -39,3 +39,13 @@ ul.forums {
   background-image: none;
   border-radius: 0;
 }
+
+.button:hover,
+.button:focus {
+  text-shadow: none !important;
+}
+
+//  TODO: Remove when tested
+//.headerbar {
+//  background-image: none;
+//}

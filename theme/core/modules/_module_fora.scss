@@ -3,3 +3,11 @@
   @include forum-container;
   @include topiclist;
 }
+
+.forums {
+  @include qualify(ul) {
+    background-color: $col-forums;
+    background-image: none;
+    border-radius: 5px;
+  }
+}

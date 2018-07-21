@@ -29,6 +29,7 @@ $breakpoint: '<#{$breakpoint-master}';
 
 .headerbar {
   background-color: $col-headerbar;
+  background-image: none;
   padding: 20px 5px 10px;
 
   & a {
@@ -61,7 +62,7 @@ $breakpoint: '<#{$breakpoint-master}';
     @include media($breakpoint) {
       padding: 0 10px;
     }
-    background-color: #000;
+    background-color: $black;
     border: 1px solid #818385;
     border-radius: 0;
     margin: 0;

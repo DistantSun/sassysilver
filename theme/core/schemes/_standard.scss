@@ -45,7 +45,6 @@ $standard: (
   accent-light:     saturate(lighten($standard-accent, 25%), 15%),
   accent-dark:      saturate(darken($standard-accent, 15%), 15%),
   accent-hover:     desaturate(lighten($standard-accent, 10%), 45%),
-  //col-accent-highlight: lighten($standard-accent-hover, 5%),
   accent-highlight: lighten($standard-accent, 50%),
 
   // Background Colors
