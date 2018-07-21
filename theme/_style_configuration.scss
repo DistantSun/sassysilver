@@ -29,7 +29,7 @@ $switch-pprofile-separation:      'no' !default;
 // Displays postprofile left or right
 $switch-postprofile-side:         'right' !default;
 
-//  TODO: temporarily removed - needs complete re-coding ...
+//  NOTE: temporarily removed - needs complete re-coding ...
 // Width of postprofile - please choose carefully
 // $switch-width-postprofile:                         240px !default;
 
@@ -50,7 +50,7 @@ $pad-wrappers:                    15px !default;
 $width-headerbar-separate:        $switch-width-wrap !default;
 // Width of menuebar when displayed separately
 $width-menuebar:                  $switch-width-wrap !default;
-//  TODO: Width of sidebar - not yet realized
+//  NOTE: Width of sidebar - not yet realized
 // $width-sidebar:                             180px !default;
 
 

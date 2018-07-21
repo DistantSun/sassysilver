@@ -11,15 +11,15 @@
 @import 'inherit_prosilver';
 
 
-//  3. Process configuration stylesheets
+//  2. Process configuration stylesheets
 @import 'custom_configuration';
 @import 'style_configuration';
 
 
-//  4.  Load framework
+//  3.  Load framework
 @import 'framework';
 
 
-//  5.  Process style specific stylesheets
+//  4.  Process style specific stylesheets
 @import 'sassysilver';
 @import 'custom';

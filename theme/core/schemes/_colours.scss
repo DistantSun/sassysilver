@@ -3,25 +3,31 @@
 //  =========================================================================
 
 //  =========================================================================
-//  1.  Functions & mixins to select values according to the choosen schemes
-//  2.  Assign scheme specific values
+//  1.  Import all colour scheme stylesheets
+//  2.  Functions & mixins to assign values according to the choosen schemes
+//  3.  Assign scheme specific values
 //  =========================================================================
 
+
+//  1.  Import existing scheme stylesheets
+//      Add new import rule here
 @import 'prosilver';
 @import 'standard';
 @import 'red';
-@import 'test';
+@import 'green';
 
-///  1.  Functions & mixins
-///  1.1  Mapping all colour maps of scheme files
+
+//  2.  Functions & mixins
+//  2.1  Mapping all colour maps of scheme files
+//       Add your declataion here
 $colour-maps: (
   prosilver: $prosilver,
   standard:  $standard,
   red:       $red,
-  test:      $test,
+  green:     $green,
 );
 
-///  1.2  Function to select colours according to selected colour scheme
+///  2.2  Function to select colours according to selected colour scheme
 @function getcolor($element) {
   $scheme:   $switch-col-scheme;
   $selected: map-get(map-get($colour-maps, $scheme), $element);
@@ -30,7 +36,8 @@ $colour-maps: (
 }
 
 
-///  2.  Assign scheme dependent colour values to theme variables
+// ========================================================================
+//  3.  Assign scheme dependent colour values to theme variables
 // Primary Colors
 $col-primary:       getcolor(primary);
 $col-primary-light: getcolor(primary-light);
@@ -61,15 +68,16 @@ $col-bg:        getcolor(bg);
 $col-polls:     getcolor(polls);
 
 // Background Colors
-$col-bg-01:         getcolor(bg-1);
-$col-bg-02:         getcolor(bg-2);
-$col-bg-03:         getcolor(bg-3);
-$col-bg-04:         getcolor(bg-4);
-$col-bg-light:      getcolor(bg-light);
-$col-bg-dark:       getcolor(bg-dark);
-$col-bg-dark-hover: getcolor(bg-dark-hover);
-$col-bg-body:       getcolor(bg-body);
-$col-bg-wrap:       getcolor(bg-wrap);
+$col-bg-01:             getcolor(bg-1);
+$col-bg-02:             getcolor(bg-2);
+$col-bg-03:             getcolor(bg-3);
+$col-bg-04:             getcolor(bg-4);
+$col-bg-light:          getcolor(bg-light);
+$col-bg-dark:           getcolor(bg-dark);
+$col-bg-dark-hover:     getcolor(bg-dark-hover);
+$col-bg-body:           getcolor(bg-body);
+$col-bg-wrap:           getcolor(bg-wrap);
+$col-bg-forumcontainer: getcolor(bg-forumcontainer);
 
 // Link Colors
 $col-link:                 getcolor(link);
@@ -146,14 +154,18 @@ $col-loader-yellow: getcolor(loader-yellow);
 $col-loader-green:  getcolor(loader-green);
 $col-online:        getcolor(online);
 
+// Additional Colours
+
+// ========================================================================
+
 
 //  ==========================================================================
-//  INFO: Temporary transfer to existing colour variables
+//  NOTE: Temporary transfer to existing colour variables
 //  Subject to change during development!
 //  ==========================================================================
 $col-base:               $col-primary;
 $col-body:               $col-bg-body;                          // Body colour
-$col-wrap:               /*#949ba3*/$gray-300 !default;              // Wrap colour
+//$col-wrap:               /*#949ba3*/$gray-300 !default;              // Wrap colour
 $switch-opacity-wrap:    0.5 !default;                               // Opacity wrap background colour
 $col-category:           $col-primary-dark !default;      // Category/fora header colourv
 $col-navbar:             $col-primary-dark !default;      // Navbar colour
@@ -180,16 +192,17 @@ $col-text-headerbar:     #fff !default;
 $col-border-white:       $white !default;     // border White #ffffff
 
 // Font colours
-$col-links:              shade($col-primary-dark, 1%);
+$col-links:              darken($col-primary-dark, 1%);
 
 
 // ======================================================================
 // Common Colours
 //---------------------------------------------------------------------------
-html,
-body {
-  color: $col-ui-dark;
-}
+//  TODO: Remove when testet
+//html,
+//body {
+//  color: $col-ui-dark;
+//}
 
 h1 {
   color: $white;
@@ -487,13 +500,6 @@ p.post-notice {
 // round cornered boxes and backgrounds
 .headerbar {
   color: $white;
-}
-
-.headerbar,
-.forumbg {
-  background-color: $col-primary;
-  background-image: linear-gradient(to bottom, $col-primary-light 0%, $col-primary-dark 0.1%, $col-primary 30%, $col-primary 100%);
-  background-repeat: repeat-x;
 }
 
 .forabg {
