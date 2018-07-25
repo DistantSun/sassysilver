@@ -13,7 +13,7 @@ $green-accent:           adjust-hue($green-primary, 145%) !default;
 $green-ui:               desaturate(adjust-hue($green-primary, 20%), 65%) !default;
 $green-ui-light:         lighten($green-ui, 25%);
 $green-ui-dark:          darken($green-ui, 15%);
-$green-ui-super-dark:    darken($green-ui, 30%);
+$green-ui-super-dark:    darken($green-ui, 20%);
 
 // Additioanl UI Vars
 $green-links:            desaturate(darken($green-secondary, 20%), 5%) !default;
@@ -56,9 +56,9 @@ $green: (
   bg-light:          saturate($green-background-0, 60%),
   bg-dark:           desaturate(darken($green-background-0, 14%), 10%),
   bg-dark-hover:     lighten($green-background-dark, 5%),
-  bg-body:           darken($green-primary, 20%),
+  bg-body:           linear-gradient(to bottom, darken($green-primary, 25%) 250px, darken($green-primary, 10%) 70%, darken($green-primary, 35%) 100%),
   bg-wrap:           $gray-300,
-  bg-forumcontainer: $green-primary-dark,
+  bg-forumcontainer: linear-gradient(to bottom, $green-primary-dark 45px, $green-primary-dark 46px, rgba($green-primary-dark, 0) 52px, rgba($green-primary-dark, 0) 100%),
 
   // Link Colors
   link:                           $green-links,
