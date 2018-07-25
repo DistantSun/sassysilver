@@ -13,10 +13,12 @@
 @import 'core/helpers/text-inputs-list';
 @import 'core/helpers/settings';
 
+
 //  2.  Functions
 //  2.1.  Functions copyright by Bourbon
 @import 'core/functions/compact-shorthand';
 @import 'core/functions/contains-falsy';
+
 //  2.2.  Diverse
 @import 'core/functions/calculate_percentage';
 @import 'core/functions/opposite-direction';
@@ -33,8 +35,8 @@
 @import 'core/mixins/post_layout';
 @import 'core/mixins/border_radius';
 @import 'core/mixins/padding';
-//@import 'core/mixins/border-style'; // TODO: Delete when tested
 @import 'core/mixins/border-width';
+
 
 //  4.  Global variables
 @import 'core/variables/named_colours';
@@ -42,7 +44,7 @@
 
 //  5.  Manage colour schemes
 //  --------------------------------------------------------------
-@import 'core/schemes/colours';
+@import 'colours_configuration';
 
 
 //  6.  components

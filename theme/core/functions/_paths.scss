@@ -22,11 +22,11 @@ $asset-base-path: '.' !default;
   @return asset('images', $file);
 }
 
-/// Background image asset helper
-/// @access public
-/// @param {String} $file - Asset file name, including extension
-/// @return {URL} - A `url()` function leading to the image
-/// @require {function} asset
+// Background image asset helper
+// @access public
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the image
+// @require {function} asset
 @function bg-image($file) {
   @return asset('images/styling', $file);
 }
