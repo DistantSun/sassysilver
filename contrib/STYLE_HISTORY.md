@@ -1,11 +1,5 @@
 ## Style History
 
-#### 0.5.0 (wip!)
-- Switched to new file structure (hopefully for the last time ...) preliminary to the implementation of the reworked colour scheme system and in order to better separate framework from stylespecific code (still wip, though ...).
-- Stylesheets redistribubed along with code optimizations
-- "Condensed" Bourbon Library: Removed functions, mixins etc. files that were no longer used/needed
-
-
 #### 0.4.1 (08.03.2018)
 - Bug in display of PMs fixed
 - Bug in display of search results fixed
