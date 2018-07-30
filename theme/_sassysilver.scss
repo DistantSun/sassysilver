@@ -29,21 +29,6 @@
   }
 }
 
-//  TODO: Remove when tested
-//.headerbar/*,
-//.forumbg*/ {
-//  background-image: none;
-//}
-
-//  TODO: Remove when tested
-//.forums {
-//  @include qualify(ul) {
-//    background-color: $col-forums;
-//    background-image: none;
-//    border-radius: 5px;
-//  }
-//}
-
 .bg1,
 .bg3 {
   background-color: $col-bg;
@@ -184,7 +169,7 @@
 }
 
 
-//  TODO: mini profile width restriction - laid aside
+//  NOTE: mini profile width restriction - laid aside
 
 // @media all and (min-width: 1100px) {
 //   .postprofile,
