@@ -175,25 +175,10 @@ $col-forums:             lighten($col-bg-01, 5%) !default;                 // Co
 $col-forums-hover:         tint($col-primary-dark, 93%) !default;      // Colour ul.forums hover
 $col-bg:                 $col-bg-01;                                 // Colour bg1 & bg3
 $col-bg2:                $col-bg-02;                                 // Colour bg2
-// $col-panel:              tint($col-primary-dark, 86%) !default;      // Colour panel
-// $col-quote-in-out:       tint($col-primary-dark, 75%) !default;      // Colour qoute Inside and Outside
-// $col-quote-center:       tint($col-primary-dark, 82%) !default;      // Colour qoute center
-// $col-ucp-menue:          tint($col-primary-dark, 70%) !default;      // UCP Menü
-// $col-ucp-menue-a-h:      tint($col-primary-dark, 80%) !default;      // UCP Menü Aktiv, hover
-// $col-ucp-menue-a-h-2:    tint($col-primary-dark, 25%) !default;      // UCP Menü Aktiv, hover
-// $col-ucp-menue-left:     tint($col-primary-dark, 65%) !default;      // UCP Menü left
-// $col-ucp-menue-left-low: tint($col-primary-dark, 80%) !default;      // UCP Menü left-low
 
 // Text Colours
-// $col-text-body:          shade($col-primary-dark, 3%) !default;      // Body Text colour
 $col-text-headerbar:     #fff !default;
 $col-text-catfora-title: $white;
-
-// Border Colours
-// $col-border-white:       $white !default;     // border White #ffffff
-
-// Font colours
-// $col-links:              darken($col-primary-dark, 1%);
 
 
 // ======================================================================
@@ -552,83 +537,6 @@ li.header dt,
 li.header dd {
   color: $white;
 }
-
-
-//
-// Poll Colours
-//---------------------------------------------------------------------------
-
-//  TODO: Delete when tested
-//fieldset.polls dl {
-//  border-top-color: $col-bg-03;
-//  color: $gray-700;
-//}
-//
-//fieldset.polls dl.voted {
-//  color: $black;
-//}
-//
-//fieldset.polls dd div {
-//  color: $white;
-//}
-//
-//.rtl .pollbar1,
-//.rtl .pollbar2,
-//.rtl .pollbar3,
-//.rtl .pollbar4,
-//.rtl .pollbar5 {
-//  border-right-color: transparent;
-//}
-//
-//.pollbar1 {
-//  background-color: $col-poll-bg1;
-//  border-right-color: $col-poll-border1;
-//  border-bottom-color: $col-poll-border1;
-//}
-//
-//.pollbar2 {
-//  background-color: $col-poll-bg2;
-//  border-right-color: $col-poll-border2;
-//  border-bottom-color: $col-poll-border2;
-//}
-//
-//.pollbar3 {
-//  background-color: $col-poll-bg3;
-//  border-right-color: $col-poll-border3;
-//  border-bottom-color: $col-poll-border3;
-//}
-//
-//.pollbar4 {
-//  background-color: $col-poll-bg4;
-//  border-right-color: $col-poll-border4;
-//  border-bottom-color: $col-poll-border4;
-//}
-//
-//.pollbar5 {
-//  background-color: $col-poll-bg5;
-//  border-right-color: $col-poll-border5;
-//  border-bottom-color: $col-poll-border5;
-//}
-//
-//.rtl .pollbar1 {
-//  border-left-color: $col-poll-border1;
-//}
-//
-//.rtl .pollbar2 {
-//  border-left-color: $col-poll-border2;
-//}
-//
-//.rtl .pollbar3 {
-//  border-left-color: $col-poll-border3;
-//}
-//
-//.rtl .pollbar4 {
-//  border-left-color: $col-poll-border4;
-//}
-//
-//.rtl .pollbar5 {
-//  border-left-color: $col-poll-border5;
-//}
 
 
 //
