@@ -1,0 +1,81 @@
+// Poll Colours
+//---------------------------------------------------------------------------
+.polls {
+  @include qualify(fieldset) {
+    dl {
+      border-top-color: $col-bg-03;
+      color: $gray-700;
+
+      &.voted {
+        color: $black;
+      }
+    }
+
+    dd {
+      div {
+        color: $white;
+      }
+    }
+  }
+}
+
+
+.rtl {
+  .pollbar1,
+  .pollbar2,
+  .pollbar3,
+  .pollbar4,
+  .pollbar5 {
+    border-right-color: transparent;
+  }
+
+  .pollbar1 {
+    border-left-color: $col-poll-border1;
+  }
+
+  .pollbar2 {
+    border-left-color: $col-poll-border2;
+  }
+
+  .pollbar3 {
+    border-left-color: $col-poll-border3;
+  }
+
+  .pollbar4 {
+    border-left-color: $col-poll-border4;
+  }
+
+  .pollbar5 {
+    border-left-color: $col-poll-border5;
+  }
+}
+
+.pollbar1 {
+  background-color: $col-poll-bg1;
+  border-right-color: $col-poll-border1;
+  border-bottom-color: $col-poll-border1;
+}
+
+.pollbar2 {
+  background-color: $col-poll-bg2;
+  border-right-color: $col-poll-border2;
+  border-bottom-color: $col-poll-border2;
+}
+
+.pollbar3 {
+  background-color: $col-poll-bg3;
+  border-right-color: $col-poll-border3;
+  border-bottom-color: $col-poll-border3;
+}
+
+.pollbar4 {
+  background-color: $col-poll-bg4;
+  border-right-color: $col-poll-border4;
+  border-bottom-color: $col-poll-border4;
+}
+
+.pollbar5 {
+  background-color: $col-poll-bg5;
+  border-right-color: $col-poll-border5;
+  border-bottom-color: $col-poll-border5;
+}

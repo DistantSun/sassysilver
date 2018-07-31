@@ -52,7 +52,11 @@
 @import 'core/components/components_containers';
 @import 'core/components/components_body';
 @import 'core/components/components_fora';
-@import 'core/components/components_posts';
+@import 'core/components/components_pagination';
+@import 'core/components/components_pm';
+@import 'core/components/components_polls';
+@import 'core/components/components_post_elements';
+@import 'core/components/components_search_box';
 
 
 //  7.  Modules
@@ -60,4 +64,4 @@
 @import 'core/modules/module_fora';
 @import 'core/modules/module_posts';
 @import 'core/modules/module_headerbar';
-@import 'core/modules/module_icon_sets';
+@import 'core/modules/module_iconsets';

@@ -1,0 +1,75 @@
+//  Code block
+.codebox {
+  background-color: $white;
+  border-color: $col-bg-dark;
+
+  p {
+    border-bottom-color: $gray-300;
+  }
+
+  code {
+    color: $col-code;
+  }
+}
+
+
+//  Attachments
+.attachbox {
+  background-color: $white;
+  border-color: $col-bg-dark;
+
+  dd {
+    border-top-color: $col-bg-dark;
+  }
+
+  p {
+    color: $gray-700;
+
+    &.stats {
+      color: $gray-700;
+    }
+  }
+}
+
+.attach-image img {
+  border-color: $gray-500;
+}
+
+
+//  Inline image thumbnails
+dl.thumbnail {
+  img {
+    background-color: $white;
+    border-color: $gray-700;
+  }
+
+  dd {
+    color: $gray-700;
+  }
+
+  dt {
+    a:hover {
+      background-color: $gray-200;
+
+      img {
+        border-color: $col-link-secondary;
+      }
+    }
+  }
+}
+
+
+// Quote block & Nested quotes
+blockquote {
+  background-color: $col-blockquote;
+  border-color: desaturate($col-blockquote, 10%);
+
+  // Nested quotes
+  blockquote {
+    background-color: $col-blockquote-inner;
+
+    blockquote {
+      background-color: $col-blockquote;
+    }
+  }
+}
