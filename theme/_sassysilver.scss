@@ -12,15 +12,6 @@
 
 //  1.a => common.css
 // *****************************************************************************
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 0 0 12px 0;
-}
-
 .linklist {
   &.compact {
     .rightside > a > span span {
@@ -32,56 +23,9 @@ body {
 
 //  1.b => colours.css
 // *****************************************************************************
-html,
-body {
-  height: auto;
-  min-height: 101%;
-
-  @if $img-bg-html-body == none {
-    background: linear-gradient(to bottom, $col-headerbar 250px, $col-body 60%);
-    background-color: $col-body;
-  } @else {
-    background-image: bg-image('#{$img-bg-html-body}');
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  }
-}
-
-
-.wrap {
-  @include padding($pad-wrappers $pad-wrappers);
-  background-color: $col-wrap;
-  box-shadow: $box-shadow-inset-double;
-  max-width: $switch-width-wrap;
-  margin: 0 auto;
-  @if $img-bg-html-body != none {
-    @if $switch-col-wrap-off == yes {
-      background-color: rgba($col-wrap, .5);
-    }
-  }
-
-  @if $img-bg-wrap != none {
-    background-image: bg-image('#{$img-bg-wrap}');
-    background-size: cover;
-  }
-}
-
 .navlinks {
   @include qualify(ul) {
     border-top: 0;
-  }
-}
-
-.headerbar,
-.forumbg {
-  background-image: none;
-}
-
-.forums {
-  @include qualify(ul) {
-    background-color: $col-forums;
-    background-image: none;
-    border-radius: 5px;
   }
 }
 
@@ -94,26 +38,6 @@ body {
   background-color: $col-bg2;
 }
 
-// New colours for PM markers
-.pmlist li.pm_marked_colour,
-.pm_marked_colour {
-  border-color: #770e0e;
-}
-
-.pmlist li.pm_replied_colour,
-.pm_replied_colour {
-  border-color: #1923a4;
-}
-
-.pmlist li.pm_friend_colour,
-.pm_friend_colour {
-  border-color: #23c61d;
-}
-
-.pmlist li.pm_foe_colour,
-.pm_foe_colour {
-  border-color: #000;
-}
 
 //  1.c => utilities.css
 // *****************************************************************************
@@ -132,14 +56,6 @@ body {
 
 %no-bg-colour {
   background-color: none;
-}
-
-
-.copyright {
-  @include container-base;
-  box-shadow: $box-shadow-inset-double;
-  color: #000;
-  margin: 10px 0 0;
 }
 
 // TODO: Implement sidebar?
@@ -190,34 +106,16 @@ body {
   }
 }
 
-
-// New forabg/forumbg design
-// ***********************************************************
-
-.forabg,
-.forumbg,
-.stat-container {
-  @include forum-container;
-}
-
-//  TODO: remove code after testing
-// .forums {
-//   @include qualify(ul) {
-//     border-radius: 5px;
-//   }
-// }
-
 .topiclist {
   @include qualify(ul) {
     color: inherit;
   }
 
   & li {
-
     &:first-child {
       @include border-top-radius(5px);
       border-top-color: transparent;
-      }
+    }
 
     &:last-child {
       @include border-bottom-radius(5px);
@@ -229,24 +127,18 @@ body {
 // Enclosing statistic blocks in stat-container
 // ***********************************************************
 
-.login-container {
-  @include container-base;
-  background-color: tint($col-base, 75%);
-  margin: 0 5px;
-}
-
 .stat-container {
   margin-top: 15px;
 
   & .stat-block {
     @include container-base;
-
-    &:first-child {
-      margin-top: 5px;
-    }
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
 
     &:last-child {
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
   }
 
@@ -256,7 +148,6 @@ body {
   }
 }
 
-.headerspace,
 .headerspace {
   h3 {
     margin: 0;
@@ -278,7 +169,7 @@ body {
 }
 
 
-//// mini profile width restriction - laid aside
+//  NOTE: mini profile width restriction - laid aside
 
 // @media all and (min-width: 1100px) {
 //   .postprofile,
@@ -293,7 +184,8 @@ body {
 // }
 
 
-//// Refactoring postprofile & postbody - end
+// Refactoring postprofile & postbody - end
+// ---------------------------------------------------------------------------
 
 
 // Layout mini-profile
@@ -318,10 +210,10 @@ body {
     border-radius: 5px;
   }
 
-  & .avatar {
-    @include qualify(a) {
+  a {
+    &.avatar {
       background-color: #ededed;
-      border: 1px solid #000;
+      border: 1px solid $black;
       padding: 3px;
     }
   }
@@ -332,22 +224,3 @@ body {
 // ***********************************************************
 // Diverse
 // ***********************************************************
-
-// Topic & Forum Titles
-// ***********************************************************
-.topic-title,
-.forum-title {
-  @include qualify(h2) {
-    margin: 10px 0;
-  }
-  text-align: center;
-
-  & a {
-    background-color: $col-navbar;
-    border: 1px solid #e6e9ed;
-    border-radius: 10px;
-    width: auto;
-    min-width: 33%;
-    padding: 5px 15px;
-  }
-}

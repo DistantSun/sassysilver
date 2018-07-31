@@ -1,0 +1,17 @@
+// Container base
+@mixin container-base {
+  background-color: $col-forums;
+  border: 1px solid $col-headerbar;
+  border-radius: 7px;
+  margin: 0;
+  padding: 15px 10px;
+}
+
+
+// Action bar
+@mixin action-bar-elements {
+  background-color: $col-navbar;
+  border: 1px solid #e6e9ed;
+  border-radius: 7px;
+  padding: 1px 8px;
+}
