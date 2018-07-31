@@ -1,0 +1,46 @@
+.postbody,
+.postprofile {
+  width: 100%;
+}
+
+.postprofile {
+  border-width: 0;
+  margin-top: 5px;
+}
+
+.search {
+  .postprofile,
+  .postbody {
+    width: 100%;
+  }
+}
+
+.search-header {
+  box-shadow: none;
+}
+
+.site_logo {
+  background-image: none;
+}
+
+blockquote cite:before,
+.uncited:before,
+.rtl blockquote cite:before,
+.rtl .uncited:before {
+  content: none;
+}
+
+table.fixed-width-table {
+  table-layout: inherit;
+}
+
+ul.forums {
+  background-color: none;
+  background-image: none;
+  border-radius: 0;
+}
+
+.button:hover,
+.button:focus {
+  text-shadow: none !important;
+}

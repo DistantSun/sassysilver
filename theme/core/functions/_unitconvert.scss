@@ -1,0 +1,46 @@
+@function unitconvert($value, $currentUnit, $convertUnit) {
+  @if $currentUnit == px {
+
+    @if $convertUnit == ems {
+      @return $value / 16 + 0em;
+    }
+
+    @else if $convertUnit == percent {
+      @return percentage($value / 16);
+    }
+
+  } @else if $currentUnit == ems {
+
+    @if $convertUnit == px {
+      @return $value * 16 + 0px;
+    }
+
+    @else if $convertUnit == percent {
+      @return percentage($value);
+    }
+
+  } @else if $currentUnit == percent {
+
+    @if $convertUnit == px {
+      @return $value * 16 / 100 + 0px;
+    }
+
+    @else if $convertUnit == ems {
+      @return $value / 100 + 0em;
+    }
+
+  } @else if $currentUnit == pts {
+
+    @if $convertUnit == px {
+      @return $value * 1.3333 +0px;
+    }
+
+    @else if $convertUnit == ems {
+      @return $value / 12 + 0em;
+    }
+
+    @else if $convertUnit == percent {
+      @return percentage($value / 12);
+    }
+  }
+}

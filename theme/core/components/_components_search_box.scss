@@ -1,0 +1,14 @@
+.search-box {
+  .inputbox {
+    border-color: $gray-400;
+
+    &:hover,
+    &:focus {
+      border-color: $gray-400;
+    }
+  }
+}
+
+.search-header {
+  box-shadow: 0 0 10px $col-primary-dark;
+}

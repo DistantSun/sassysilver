@@ -1,0 +1,140 @@
+// Primary Colors
+$prosilver-primary:          hsl(200, 85%, 50%) !default;
+$prosilver-primary-light:    saturate(lighten($prosilver-primary, 25%), 15%);
+$prosilver-primary-dark:     saturate(darken($prosilver-primary, 15%), 15%);
+
+// Secondary Colors
+$prosilver-secondary:        adjust-hue($prosilver-primary, 10%) !default;
+$prosilver-secondary-light:  saturate(lighten($prosilver-secondary, 25%), 15%);
+$prosilver-secondary-dark:   saturate(darken($prosilver-secondary, 15%), 15%);
+
+$prosilver-accent:           adjust-hue($prosilver-primary, 145%) !default;
+
+$prosilver-ui:               desaturate(adjust-hue($prosilver-primary, 20%), 65%) !default;
+$prosilver-ui-light:         lighten($prosilver-ui, 25%);
+$prosilver-ui-dark:          darken($prosilver-ui, 15%);
+$prosilver-ui-super-dark:    darken($prosilver-ui, 30%);
+
+// Additioanl UI Vars
+$prosilver-links:            desaturate(darken($prosilver-secondary, 20%), 5%) !default;
+$prosilver-highlight:        hsl(55, 100%, 90%) !default;
+$prosilver-code:             hsl(125, 40%, 50%) !default;
+
+$prosilver-background:       $prosilver-primary !default;
+$prosilver-background-0:     desaturate(lighten($prosilver-primary, 45%), 45%);
+$prosilver-background-light: saturate($prosilver-background-0, 60%);
+$prosilver-background-dark:  desaturate(darken($prosilver-background-0, 14%), 10%);
+
+$prosilver-polls:            $prosilver-accent !default;
+
+
+
+$prosilver: (
+  ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
+
+  primary:       $prosilver-primary,
+  primary-light: $prosilver-primary-light,
+  primary-dark:  $prosilver-primary-dark,
+
+  // UI Colors
+  ui-light:      $prosilver-ui-light ,
+  ui-dark:       $prosilver-ui-dark,
+  ui-super-dark: $prosilver-ui-super-dark,
+
+  // Accent Colors
+  accent-light:     saturate(lighten($prosilver-accent, 25%), 15%),
+  accent-dark:      saturate(darken($prosilver-accent, 15%), 15%),
+  accent-hover:     desaturate(lighten($prosilver-accent, 10%), 45%),
+  //col-accent-highlight: lighten($prosilver-accent-hover, 5%),
+  accent-highlight: lighten($prosilver-accent, 50%),
+
+  // Background Colors
+  bg-1:              $prosilver-background-0,
+  bg-2:              darken($prosilver-background-0, 5%),
+  bg-3:              darken($prosilver-background-0, 10%),
+  bg-4:              desaturate($prosilver-background-0, 20%),
+  bg-light:          saturate($prosilver-background-0, 60%),
+  bg-dark:           desaturate(darken($prosilver-background-0, 14%), 10%),
+  bg-dark-hover:     lighten($prosilver-background-dark, 5%),
+  bg-body:           $white,
+  bg-wrap:           $white,
+  bg-forumcontainer: $prosilver-primary-dark,
+
+  // Link Colors
+  link:                           $prosilver-links,
+  link-accent:                    saturate(lighten($prosilver-links, 10%), 15%),
+  link-hover:                     darken($prosilver-accent, 5%),
+  link-hover-highlight:           lighten($prosilver-accent, 35%),
+
+  link-secondary:                 desaturate(lighten($prosilver-links, 20%), 15%),
+  link-secondary-accent:          desaturate(lighten($prosilver-links, 20%), 45%),
+  link-secondary-hover:           darken(desaturate(lighten($prosilver-links, 20%), 15%), 25%),
+  link-secondary-hover-highlight: desaturate(lighten($prosilver-links, 55%), 35%),
+
+  // Button Colors
+  button-border:           $gray-400,
+  button-box-shadow:       $white,
+  button-text-shadow:      $white,
+  button-text:             darken($prosilver-accent, 5%),
+  button-background:       $gray-300,
+  button-background-light: $white,
+  button-icon:             $gray-500,
+
+  button-icon-hover:        $prosilver-primary-dark,
+  button-border-hover:      $prosilver-primary-dark,
+  button-text-shadow-hover: rgba(desaturate(darken($prosilver-accent, 5%), 20%), .2),
+
+  button-form-text:               $gray-900,
+  button-form-border:             $gray-700,
+  button-form-text-hover:         darken($prosilver-accent, 5%),
+  button-form-border-hover:       darken($prosilver-accent, 5%),
+  button-form-input-border-focus: $prosilver-primary-dark,
+  button-form-input-text-focus:   $prosilver-primary-dark,
+
+  // Tab Colors
+  tab-text:       $prosilver-ui-dark,
+  tab-background: $prosilver-background-dark,
+
+  tab-text-hover:       darken($prosilver-accent, 5%),
+  tab-background-hover: $prosilver-background-light,
+
+  tab-text-active:             $gray-900,
+  tab-background-active:       darken($prosilver-background-0, 10%),
+  tab-border-active:           darken($prosilver-background-0, 10%),
+  tab-background-active-light: $prosilver-background-light,
+
+  tab-background-mini:        darken($prosilver-background-0, 5%),
+  tab-text-mini-active:       $gray-900,
+  tab-background-mini-active: $gray-50,
+
+  // Poll Colors
+  poll-bg1: desaturate(darken($prosilver-polls, 10%), 10%),
+  poll-bg2: desaturate(darken($prosilver-polls, 5%), 5%),
+  poll-bg3: $prosilver-polls,
+  poll-bg4: saturate(lighten($prosilver-polls, 5%), 5%),
+  poll-bg5: saturate(lighten($prosilver-polls, 10%), 10%),
+
+  poll-border1: desaturate(darken($prosilver-polls, 20%), 10%),
+  poll-border2: desaturate(darken($prosilver-polls, 10%), 5%),
+  poll-border3: desaturate(darken($prosilver-polls, 5%), 5%),
+  poll-border4: desaturate($prosilver-polls, 5%),
+  poll-border5: desaturate($prosilver-polls, 5%),
+
+  // Highlight colors
+  blockquote:       desaturate($prosilver-highlight, 45%),
+  blockquote-inner: desaturate($prosilver-highlight, 30%),
+
+  // PM Colors
+  pm-reply:    desaturate(lighten($prosilver-primary, 20%), 65%),
+  pm-friend:   desaturate(darken($prosilver-primary, 5%), 45%),
+  pm-reported: $prosilver-accent,
+  pm-marked:   adjust-hue(saturate($prosilver-accent, 15%), -310%),
+  pm-foe:      $black,
+
+  // Other Unique Colors
+  loader-blue:   #4285f4,
+  loader-red:    #de3e35,
+  loader-yellow: #f7c223,
+  loader-green:  #1b9a59,
+  online:        #85de39,
+);

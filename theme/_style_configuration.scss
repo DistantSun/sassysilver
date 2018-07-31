@@ -9,7 +9,7 @@
 
 //  Colours - general colour scheme. Do NOT change!
 // Board colour scheme; available schemes: blue, red, green, black
-$switch-col-scheme:               blue !default;
+$switch-col-scheme:               'standard' !default;
 
 // Board width
 $switch-width-wrap:               1152px !default;
@@ -29,7 +29,7 @@ $switch-pprofile-separation:      'no' !default;
 // Displays postprofile left or right
 $switch-postprofile-side:         'right' !default;
 
-//  TODO: temporarily removed - needs complete re-coding ...
+//  NOTE: temporarily removed - needs complete re-coding ...
 // Width of postprofile - please choose carefully
 // $switch-width-postprofile:                         240px !default;
 
@@ -50,14 +50,14 @@ $pad-wrappers:                    15px !default;
 $width-headerbar-separate:        $switch-width-wrap !default;
 // Width of menuebar when displayed separately
 $width-menuebar:                  $switch-width-wrap !default;
-//  TODO: Width of sidebar - not yet realized
+//  NOTE: Width of sidebar - not yet realized
 // $width-sidebar:                             180px !default;
 
 
 // Diverse
-$box-shadow-outset-bottom:        0 5px 7px -1px rgba(0, 0, 0, .75);
-$box-shadow-outset-single-posts:  7px 7px 10px 0 rgba(0, 0, 0, .75) !default;
-$box-shadow-inset-double:         inset 3px 3px 7px -2px rgba(0, 0, 0, .75), inset -3px -3px 7px -2px rgba(0, 0, 0, .75) !default;
+$box-shadow-outset-bottom:        0 5px 7px -1px rgba(0, 0, 0, 0.75) !default;
+$box-shadow-outset-single-posts:  7px 7px 10px 0 rgba(0, 0, 0, 0.75) !default;
+$box-shadow-inset-double:         inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75) !default;
 
 // Breakpoints for RWD
 $breakpoint-master:               800px !default;
