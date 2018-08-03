@@ -6011,6 +6011,7 @@ ul.forums {
 				text-shadow: none !important;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 h1 {
 				color: #fff;
 }
@@ -6387,6 +6388,7 @@ li.reported:hover {
 				color: #13a4ec;
 }
 
+/* stylelint-enable selector-no-qualifying-type */
 .gallery label {
 				background: #fff;
 				border-color: #dedede;
@@ -7506,6 +7508,11 @@ ul.topiclist {
 .panel {
 				box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
 				padding: 7px 12px;
+}
+
+.postprofile {
+				/* stylelint-disable selector-no-qualifying-type */
+				/* stylelint-enable selector-no-qualifying-type */
 }
 
 .postprofile dd, .postprofile dt {
