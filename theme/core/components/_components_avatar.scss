@@ -1,0 +1,12 @@
+// Avatar Gallery Colours
+//---------------------------------------------------------------------------
+.gallery {
+  label {
+    background: $white;
+    border-color: $gray-300;
+
+    &:hover {
+      background-color: $gray-200;
+    }
+  }
+}

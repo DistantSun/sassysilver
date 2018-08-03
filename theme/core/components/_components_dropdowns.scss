@@ -1,0 +1,76 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+// Dropdowns Colours
+//---------------------------------------------------------------------------
+.dropdown-extended {
+  a {
+    &.mark-read {
+      background-color: $white;
+    }
+  }
+
+  ul {
+    li {
+      border-top-color: $gray-400;
+
+      &:hover {
+        background-color: $col-link-secondary-hover-highlight;
+        color: $black;
+      }
+    }
+  }
+
+  .header,
+  .footer {
+    border-color: $gray-400;
+    color: $black;
+  }
+
+  .footer {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  .header {
+    background-color: $col-bg-light;
+    background-image: linear-gradient(to bottom, $col-bg-light 0%, $col-bg-03 100%);
+  }
+
+  .pointer-inner {
+    border-color: $col-bg-light transparent;
+  }
+}
+
+
+.dropdown {
+  .pointer {
+    border-color: $gray-400 transparent;
+  }
+
+  .pointer-inner {
+    border-color: $white transparent;
+  }
+
+  .dropdown-contents {
+    background: $white;
+    border-color: $gray-400;
+    box-shadow: 1px 3px 5px rgba($black, 0.2);
+  }
+
+  li {
+    border-color: $gray-300;
+
+    &.separator {
+      border-color: $gray-300;
+    }
+
+    li {
+      border-color: $gray-300;
+    }
+  }
+}
+
+
+.dropdown-up .dropdown-contents { box-shadow: 1px 0 5px rgba($black, 0.2); }
+
+/* stylelint-enable selector-no-qualifying-type */

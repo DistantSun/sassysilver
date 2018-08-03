@@ -1,4 +1,19 @@
-// New colours for PM markers
+//  PM colours
+// ---------------------------------------------------------------------------
+
+// pm message history
+.current {
+  color: $black;
+}
+
+
+// PM marking colours
+.pmlist li.pm_message_reported_colour,
+.pm_message_reported_colour {
+  border-right-color: $col-pm-reported;
+  border-left-color: $col-pm-reported;
+}
+
 .pmlist li.pm_marked_colour,
 .pm_marked_colour {
   border-color: $col-pm-marked;

@@ -1,0 +1,34 @@
+// Tab Colours
+//---------------------------------------------------------------------------
+
+.tabs .tab > a {
+  background: $col-tab-background;
+  color: $col-tab-text;
+}
+
+.tabs .tab > a:hover {
+  background: $col-tab-background-hover;
+  color: $col-tab-text-hover;
+}
+
+// responsive tabs
+.responsive-tab .responsive-tab-link:before { border-color: $col-tab-text; }
+.responsive-tab .responsive-tab-link:hover:before { border-color: $col-tab-text-hover; }
+
+.tabs .activetab > a,
+.tabs .activetab > a:hover {
+  background-color: $col-tab-background-active;
+  background-image: linear-gradient(to bottom, $col-tab-background-active-light 0%, $col-tab-background-active 100%);
+  border-color: $col-tab-border-active;
+  box-shadow: 0 1px 1px $col-bg-light inset;
+  color: $col-tab-text-active;
+}
+
+// mini tabbed menu used in mcp
+.minitabs .tab > a { background-color: $col-tab-background-mini; }
+
+.minitabs .activetab > a,
+.minitabs .activetab > a:hover {
+  background-color: $col-tab-background-mini-active;
+  color: $col-tab-text-mini-active;
+}

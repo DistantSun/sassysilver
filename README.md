@@ -32,15 +32,6 @@ Please feel free to report any issues, bugs or feature requests in the correspon
     - Re-compile stylesheets
     - Clear caches
 
-- #### Update
-    - Backup your current installation's files and folders
-    - Download the archive, unpack it locally
-    - Open the resulting `sassysilver` folder, go to `/theme/` and delete both `_custom_configuration.scss` and `_custom.scss` (these two files are to contain your personal/custom settings and codes you may want to keep)
-    - Check your `_custom_configuration.scss` for potential changes in the naming of variables and/or for additional samples
-    - Upload the remaining files and folders into the "/styles" folder on the server
-    - Re-compile stylesheets
-    - Clear caches
-
 
 ### Credits
 The development of this style was inspired by the outstanding phpBB 3.0/3.1 styles by Arty (https://www.artodia.com/) introducing the potential of SASS in creating highly flexible and configurable phpBB styles.
@@ -74,12 +65,7 @@ Credits go as well to all those who helped me during the development process, ei
 Please make shure to have the latest version of the SASS Compiler Extension istalled!<br />
 The file structur has been rearranged to provide compatibility of SassySilver with this extension - please understand that this, for various reasons, cannot be guaranteed in the future.
 
-2. Koala:<br />
-Koala is a different case as it will fail only in its standard configuration (as provided "out of the box"). In order to to make Koala work with this style you would have to create a dedicated configuration file and manually adapt it first<br />
-Sounds like a task not really trivial? In fact it isn't ... but this is nothing you will have to cope with:<br />
-This style will be shipped with a dedicated configuration file ("koala-config.json"), located in the root of the style's folder, which should take care of this issue.<br />
-
-3. Editor specific compiler add-ons:<br />
+2. Editor specific compiler add-ons:<br />
 There are numerous add-ons for a wide range of editors providing a means to compile SASS files from within the respective editor, some of them more and others less sophisticated. Those suitable for the job of compiling this style will most likely have to be configured accordingly.<br />
 Please understand that information on how to accomplish this cannot be provided.
 
@@ -91,7 +77,7 @@ For the time being a complete set of Bourbon files will be included in the theme
 
 Please note that SassySilver, in its current state, makes use of (external) material (e.g. sample images, Bourbon library, SASS functions and mixins) to which additional third party copyright/license regulations may apply.
 For further information please read the corresponding license files provided with this style within their corresponding folders, e.g.
-- [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md"
+- [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license")
 
 -------------------------------------------
 

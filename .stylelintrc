@@ -157,11 +157,11 @@
 
 		"selector-descendant-combinator-no-non-space": true,
 		"selector-max-id": 0,
-#		"selector-no-qualifying-type": [
-#			true, {
-#				"ignore": ["attribute"]
-#			}
-#		],
+		"selector-no-qualifying-type": [
+			true, {
+				"ignore": ["attribute"]
+			}
+		],
 
 		"shorthand-property-no-redundant-values": true,
 
