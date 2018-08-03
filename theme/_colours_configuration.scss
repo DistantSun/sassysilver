@@ -6,18 +6,24 @@
 //  1.  Import all colour scheme stylesheets
 //  2.  Functions & mixins to assign values according to the choosen schemes
 //  3.  Assign scheme specific values
+//  4.  Assign (3) to secondary theme colour variables
 //  =========================================================================
 
 
+// ========================================================================
 //  1.  Import existing scheme stylesheets
 //      Add new import rule here
+// ========================================================================
 @import 'core/schemes/prosilver';
 @import 'core/schemes/standard';
 @import 'core/schemes/red';
 @import 'core/schemes/green';
 
 
+// ========================================================================
 //  2.  Functions & mixins
+// ========================================================================
+
 //  2.1  Mapping all colour maps of scheme files
 //       Add your declaration here
 $colour-maps: (
@@ -27,7 +33,8 @@ $colour-maps: (
   green:     $green,
 );
 
-///  2.2  Function to select colours according to selected colour scheme
+//  2.2  Function to select colours according to selected colour scheme
+//  Do not change!
 @function getcolor($element) {
   $scheme:   $switch-col-scheme;
   $selected: map-get(map-get($colour-maps, $scheme), $element);
@@ -38,571 +45,141 @@ $colour-maps: (
 
 // ========================================================================
 //  3.  Assign scheme dependent colour values to theme variables
+// ========================================================================
+
 // Primary Colors
-$col-primary:       getcolor(primary);
-$col-primary-light: getcolor(primary-light);
-$col-primary-dark:  getcolor(primary-dark);
+$col-primary:       getcolor(primary) !default;
+$col-primary-light: getcolor(primary-light) !default;
+$col-primary-dark:  getcolor(primary-dark) !default;
 
 // Secondary Colors
 $col-secondary:       getcolor(secondary);
-$col-secondary-light: getcolor(secondary-light);
-$col-secondary-dark:  getcolor(secondary-dark);
+$col-secondary-light: getcolor(secondary-light) !default;
+$col-secondary-dark:  getcolor(secondary-dark) !default;
 
 // UI Colors
-$col-ui:            getcolor(ui);
-$col-ui-light:      getcolor(ui-light);
-$col-ui-dark:       getcolor(ui-dark);
-$col-ui-super-dark: getcolor(ui-super-dark);
+$col-ui:            getcolor(ui) !default;
+$col-ui-light:      getcolor(ui-light) !default;
+$col-ui-dark:       getcolor(ui-dark) !default;
+$col-ui-super-dark: getcolor(ui-super-dark) !default;
 
 // Accent Colors:
-$col-accent-light:     getcolor(accent-light);
-$col-accent-dark:      getcolor(accent-dark);
-$col-accent-hover:     getcolor(accent-hover);
-$col-accent-highlight: getcolor(accent-highlight);
+$col-accent-light:     getcolor(accent-light) !default;
+$col-accent-dark:      getcolor(accent-dark) !default;
+$col-accent-hover:     getcolor(accent-hover) !default;
+$col-accent-highlight: getcolor(accent-highlight) !default;
 
 // Additioanl UI Vars
 $col-links:     getcolor(links) !default;
-$col-highlight: getcolor(highlight);
-$col-code:      getcolor(code);
-$col-bg:        getcolor(bg);
-$col-polls:     getcolor(polls);
+$col-highlight: getcolor(highlight) !default;
+$col-code:      getcolor(code) !default;
+$col-bg:        getcolor(bg) !default;
+$col-polls:     getcolor(polls) !default;
 
 // Background Colors
-$col-bg-01:             getcolor(bg-1);
-$col-bg-02:             getcolor(bg-2);
-$col-bg-03:             getcolor(bg-3);
-$col-bg-04:             getcolor(bg-4);
-$col-bg-light:          getcolor(bg-light);
-$col-bg-dark:           getcolor(bg-dark);
-$col-bg-dark-hover:     getcolor(bg-dark-hover);
-$col-bg-body:           getcolor(bg-body);
-$col-bg-wrap:           getcolor(bg-wrap);
-$col-bg-forumcontainer: getcolor(bg-forumcontainer);
+$col-bg-01:             getcolor(bg-1) !default;
+$col-bg-02:             getcolor(bg-2) !default;
+$col-bg-03:             getcolor(bg-3) !default;
+$col-bg-04:             getcolor(bg-4) !default;
+$col-bg-light:          getcolor(bg-light) !default;
+$col-bg-dark:           getcolor(bg-dark) !default;
+$col-bg-dark-hover:     getcolor(bg-dark-hover) !default;
+$col-bg-body:           getcolor(bg-body) !default;
+$col-bg-wrap:           getcolor(bg-wrap) !default;
+$col-bg-forumcontainer: getcolor(bg-forumcontainer) !default;
 
 // Link Colors
-$col-link:                 getcolor(link);
-$col-link-accent:          getcolor(link-accent);
-$col-link-hover:           getcolor(link-hover);
-$col-link-hover-highlight: getcolor(link-hover-highlight);
+$col-link:                 getcolor(link) !default;
+$col-link-accent:          getcolor(link-accent) !default;
+$col-link-hover:           getcolor(link-hover) !default;
+$col-link-hover-highlight: getcolor(link-hover-highlight) !default;
 
-$col-link-secondary:                 getcolor(link-secondary);
-$col-link-secondary-accent:          getcolor(link-secondary-accent);
-$col-link-secondary-hover:           getcolor(link-secondary-hover);
-$col-link-secondary-hover-highlight: getcolor(link-secondary-hover-highlight);
+$col-link-secondary:                 getcolor(link-secondary) !default;
+$col-link-secondary-accent:          getcolor(link-secondary-accent) !default;
+$col-link-secondary-hover:           getcolor(link-secondary-hover) !default;
+$col-link-secondary-hover-highlight: getcolor(link-secondary-hover-highlight) !default;
 
 // Button Colors
-$col-button-border:           getcolor(button-border);
-$col-button-box-shadow:       getcolor(button-box-shadow);
-$col-button-text-shadow:      getcolor(button-text-shadowy);
-$col-button-text:             getcolor(button-text);
-$col-button-background:       getcolor(button-background);
-$col-button-background-light: getcolor(button-background-light);
-$col-button-icon:             getcolor(button-icon);
+$col-button-border:           getcolor(button-border) !default;
+$col-button-box-shadow:       getcolor(button-box-shadow) !default;
+$col-button-text-shadow:      getcolor(button-text-shadowy) !default;
+$col-button-text:             getcolor(button-text) !default;
+$col-button-background:       getcolor(button-background) !default;
+$col-button-background-light: getcolor(button-background-light) !default;
+$col-button-icon:             getcolor(button-icon) !default;
 
-$col-button-icon-hover:        getcolor(button-icon-hover);
-$col-button-border-hover:      getcolor(button-border-hover);
-$col-button-text-shadow-hover: getcolor(button-text-shadow-hover);
+$col-button-icon-hover:        getcolor(button-icon-hover) !default;
+$col-button-border-hover:      getcolor(button-border-hover) !default;
+$col-button-text-shadow-hover: getcolor(button-text-shadow-hover) !default;
 
-$col-button-form-text:               getcolor(button-form-text);
-$col-button-form-border:             getcolor(button-form-border);
-$col-button-form-text-hover:         getcolor(button-form-text-hover);
-$col-button-form-border-hover:       getcolor(button-form-border-hover);
-$col-button-form-input-border-focus: getcolor(button-form-input-border-focus);
-$col-button-form-input-text-focus:   getcolor(button-form-input-text-focus);
+$col-button-form-text:               getcolor(button-form-text) !default;
+$col-button-form-border:             getcolor(button-form-border) !default;
+$col-button-form-text-hover:         getcolor(button-form-text-hover) !default;
+$col-button-form-border-hover:       getcolor(button-form-border-hover) !default;
+$col-button-form-input-border-focus: getcolor(button-form-input-border-focus) !default;
+$col-button-form-input-text-focus:   getcolor(button-form-input-text-focus) !default;
 
 // Tab Colors
-$col-tab-text:                    getcolor(tab-text);
-$col-tab-background:              getcolor(tab-background);
-$col-tab-text-hover:              getcolor(tab-text-hover);
-$col-tab-background-hover:        getcolor(tab-background-hover);
-$col-tab-text-active:             getcolor(tab-text-active);
-$col-tab-background-active:       getcolor(tab-background-active);
-$col-tab-border-active:           getcolor(tab-border-active);
-$col-tab-background-active-light: getcolor(tab-background-active-light);
-$col-tab-background-mini:         getcolor(tab-background-mini);
-$col-tab-text-mini-active:        getcolor(tab-text-mini-active);
-$col-tab-background-mini-active:  getcolor(tab-background-mini-active);
+$col-tab-text:                    getcolor(tab-text) !default;
+$col-tab-background:              getcolor(tab-background) !default;
+$col-tab-text-hover:              getcolor(tab-text-hover) !default;
+$col-tab-background-hover:        getcolor(tab-background-hover) !default;
+$col-tab-text-active:             getcolor(tab-text-active) !default;
+$col-tab-background-active:       getcolor(tab-background-active) !default;
+$col-tab-border-active:           getcolor(tab-border-active) !default;
+$col-tab-background-active-light: getcolor(tab-background-active-light) !default;
+$col-tab-background-mini:         getcolor(tab-background-mini) !default;
+$col-tab-text-mini-active:        getcolor(tab-text-mini-active) !default;
+$col-tab-background-mini-active:  getcolor(tab-background-mini-active) !default;
 
 // Poll Colors
-$col-poll-bg1: getcolor(poll-bg1);
-$col-poll-bg2: getcolor(poll-bg2);
-$col-poll-bg3: getcolor(poll-bg3);
-$col-poll-bg4: getcolor(poll-bg4);
-$col-poll-bg5: getcolor(poll-bg5);
+$col-poll-bg1: getcolor(poll-bg1) !default;
+$col-poll-bg2: getcolor(poll-bg2) !default;
+$col-poll-bg3: getcolor(poll-bg3) !default;
+$col-poll-bg4: getcolor(poll-bg4) !default;
+$col-poll-bg5: getcolor(poll-bg5) !default;
 
-$col-poll-border1: getcolor(poll-border1);
-$col-poll-border2: getcolor(poll-border2);
-$col-poll-border3: getcolor(poll-border3);
-$col-poll-border4: getcolor(poll-border4);
-$col-poll-border5: getcolor(poll-border5);
+$col-poll-border1: getcolor(poll-border1) !default;
+$col-poll-border2: getcolor(poll-border2) !default;
+$col-poll-border3: getcolor(poll-border3) !default;
+$col-poll-border4: getcolor(poll-border4) !default;
+$col-poll-border5: getcolor(poll-border5) !default;
 
 // Highlight colors
-$col-blockquote:       getcolor(blockquote);
-$col-blockquote-inner: getcolor(blockquote-inner);
+$col-blockquote:       getcolor(blockquote) !default;
+$col-blockquote-inner: getcolor(blockquote-inner) !default;
 
 // PM Colors
-$col-pm-reply:    getcolor(pm-reply);
-$col-pm-friend:   getcolor(pm-friend);
-$col-pm-reported: getcolor(pm-reported);
-$col-pm-marked:   getcolor(pm-marked);
-$col-pm-foe:      getcolor(pm-foe);
+$col-pm-reply:    getcolor(pm-reply) !default;
+$col-pm-friend:   getcolor(pm-friend) !default;
+$col-pm-reported: getcolor(pm-reported) !default;
+$col-pm-marked:   getcolor(pm-marked) !default;
+$col-pm-foe:      getcolor(pm-foe) !default;
 
 // Other Unique Colors
-$col-loader-blue:   getcolor(loader-blue);
-$col-loader-red:    getcolor(loader-red);
-$col-loader-yellow: getcolor(loader-yellow);
-$col-loader-green:  getcolor(loader-green);
-$col-online:        getcolor(online);
+$col-loader-blue:   getcolor(loader-blue) !default;
+$col-loader-red:    getcolor(loader-red) !default;
+$col-loader-yellow: getcolor(loader-yellow) !default;
+$col-loader-green:  getcolor(loader-green) !default;
+$col-online:        getcolor(online) !default;
 
-// Additional Colours
 
 // ========================================================================
+//  4.  Secondary theme colour variables
+//  NOTE: Subject to change during development!
+// ========================================================================
+$col-base:               $col-primary !default;
+$col-body:               $col-bg-body !default;             // Body colour
+//$col-wrap:               /*#949ba3*/$gray-300 !default;   // Wrap colour
+$switch-opacity-wrap:    0.5 !default;                      // Opacity wrap background colour
+// $col-category:           $col-primary-dark !default;     // Category/fora header colourv
+$col-navbar:             $col-primary-dark !default;        // Navbar colour
+$col-headerbar:          $col-primary-dark !default;        // Headerbar background colour
 
-
-//  ==========================================================================
-//  NOTE: Temporary transfer to existing colour variables
-//  Subject to change during development!
-//  ==========================================================================
-$col-base:               $col-primary;
-$col-body:               $col-bg-body;                          // Body colour
-//$col-wrap:               /*#949ba3*/$gray-300 !default;              // Wrap colour
-$switch-opacity-wrap:    0.5 !default;                               // Opacity wrap background colour
-// $col-category:           $col-primary-dark !default;      // Category/fora header colourv
-$col-navbar:             $col-primary-dark !default;      // Navbar colour
-$col-headerbar:          $col-primary-dark !default;                 // Headerbar background colour
-
-$col-forums:             lighten($col-bg-01, 5%) !default;                 // Colour ul.forums
-$col-forums-hover:         tint($col-primary-dark, 93%) !default;      // Colour ul.forums hover
-$col-bg:                 $col-bg-01;                                 // Colour bg1 & bg3
-$col-bg2:                $col-bg-02;                                 // Colour bg2
+$col-forums:             lighten($col-bg-01, 5%) !default;         // Colour ul.forums
+$col-bg:                 $col-bg-01 !default;                      // Colour bg1 & bg3
+$col-bg2:                $col-bg-02 !default;                      // Colour bg2
 
 // Text Colours
 $col-text-headerbar:     #fff !default;
-$col-text-catfora-title: $white;
-
-
-// ======================================================================
-// Common Colours
-//---------------------------------------------------------------------------
-h1 {
-  color: $white;
-}
-
-h2 {
-  color: $col-ui-super-dark;
-}
-
-h3 {
-  border-bottom-color: $gray-300;
-  color: $col-secondary-dark;
-}
-
-hr {
-  border-color: $white;
-  border-top-color: $gray-300;
-}
-
-
-
-// Link Colours
-//---------------------------------------------------------------------------
-
-a {
-  color: $col-link;
-
-  &:hover {
-    color: $col-link-hover;
-  }
-}
-
-// links on gradient backgrounds
-.forumbg .header a,
-.forabg .header a,
-th a {
-  color: $white;
-}
-
-.forumbg .header a:hover,
-.forabg .header a:hover,
-th a:hover {
-  color: $col-secondary-light;
-}
-
-// post body links
-.postlink {
-  border-bottom-color: $col-link-secondary;
-  color: $col-link-secondary;
-}
-
-.postlink:visited {
-  border-bottom-color: $col-link-secondary-accent;
-  color: $col-link-secondary-accent;
-}
-
-.postlink:hover {
-  background-color: $col-link-secondary-hover-highlight;
-  color: $col-link-secondary-hover;
-}
-
-.signature a,
-.signature a:hover {
-  background-color: transparent;
-}
-
-// arrow links
-.arrow-left:hover,
-.arrow-right:hover {
-  color: $col-link-secondary;
-}
-
-.post:target .content {
-  color: $black;
-}
-
-.post:target h3 a {
-  color: $black;
-}
-
-// horizontal lists
-ul.navlinks {
-  border-top-color: $white;
-}
-
-
-//
-// Icon Colours
-//---------------------------------------------------------------------------
-
-.top i {
-  color: $gray-500;
-}
-
-.icon.icon-blue,
-a:hover .icon.icon-blue {
-  color: $col-secondary-dark;
-}
-
-.icon.icon-green,
-a:hover .icon.icon-green {
-  color: $col-code;
-}
-
-.icon.icon-red,
-a:hover .icon.icon-red {
-  color: $col-link-hover;
-}
-
-.icon.icon-orange,
-a:hover .icon.icon-orange {
-  color: $col-pm-marked;
-}
-
-.icon.icon-bluegray,
-a:hover .icon.icon-bluegray {
-  color: $col-ui-dark;
-}
-
-.icon.icon-gray,
-a:hover .icon.icon-gray {
-  color: $gray-600;
-}
-
-.icon.icon-lightgray,
-a:hover .icon.icon-lightgray {
-  color: $gray-500;
-}
-
-.icon.icon-black,
-a:hover .icon.icon-black {
-  color: $gray-900;
-}
-
-
-//
-// Button Colours
-//---------------------------------------------------------------------------
-.button {
-  border-color: $col-button-border;
-  box-shadow: 0 0 0 1px $col-button-box-shadow inset;
-  color: $col-button-text;
-}
-
-.button:hover,
-.button:focus {
-  background-image: -webkit-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  background-image: -o-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  background-image: linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  border-color: $col-button-border-hover;
-  text-shadow: 1px 1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow-hover;
-  color: $col-button-text;
-}
-
-.button .icon,
-.button-secondary {
-  color: $col-button-icon;
-}
-
-a.button1,
-input.button1, // form
-a.button2,
-input.button2 { // form-bold
-  background-color: $col-button-background-light;
-  background-image: linear-gradient(to bottom, $col-button-background 0%, $col-button-background-light 100%);
-  border-color: $col-button-form-border;
-  color: $col-button-form-text;
-}
-
-a.button1:hover,
-input.button1:hover, // form
-a.button2:hover,
-input.button2:hover { // form-bold
-  text-shadow: none;
-  background-color: $col-button-background;
-  background-image: linear-gradient(to bottom, $col-button-background-light 0%, $col-button-background 100%);
-  border-color: $col-button-form-border-hover;
-  color: $col-button-form-text-hover;
-}
-
-input.button1:focus, // form
-input.button2:focus { // form-bold
-  text-shadow: none;
-  border-color: $col-button-form-input-border-focus;
-  color: $col-button-form-input-text-focus;
-}
-
-.button-secondary:focus,
-.button-secondary:hover,
-.button:focus .icon,
-.button:hover .icon {
-  color: $col-button-icon-hover;
-}
-
-.button-search:hover,
-.button-search-end:hover {
-  border-color: $col-button-border;
-}
-
-.caret { border-color: $gray-400; }
-.contact-icons a { border-color: $gray-300; }
-.contact-icons a:hover { background-color: $gray-200; }
-
-
-//
-// Jumpbox Colours
-//---------------------------------------------------------------------------
-.jumpbox .dropdown li { border-top-color: $gray-300; }
-
-.jumpbox-cat-link {
-  background-color: $col-primary-dark;
-  border-top-color: $col-primary-dark;
-  color: $white;
-}
-
-.jumpbox-cat-link:hover,
-.jumpbox-cat-link:focus {
-  background-color: $col-primary;
-  border-top-color: $col-primary;
-  color: $white;
-}
-
-.jumpbox-forum-link {
-  background-color: $col-bg-02;
-}
-
-.jumpbox-forum-link:hover {
-  background-color: $col-highlight;
-}
-
-.jumpbox-sub-link {
-  background-color: $col-bg-02;
-}
-
-.jumpbox-sub-link:hover {
-  background-color: $col-bg-light;
-}
-
-.jumpbox .dropdown .pointer-inner {
-  border-color: $col-bg-02 transparent;
-}
-
-
-//
-// Content Block Colours
-//---------------------------------------------------------------------------
-
-// Various Panel BG Colours
-.bg1 {
-  background-color: $col-bg-01;
-}
-
-.bg2 {
-  background-color: $col-bg-02;
-}
-
-.bg3 {
-  background-color: $col-bg-03;
-}
-
-.wrap {
-  background-color: $white;
-  border-color: $gray-200;
-}
-
-.content {
-  color: $gray-900;
-}
-
-.panel {
-  background-color: $col-bg-04;
-  color: $col-ui-super-dark;
-}
-
-.content h2,
-.panel h2 {
-  border-bottom-color: $gray-300;
-  color: $col-secondary-dark;
-}
-
-.navbar {
-  background-color: $col-bg-03;
-}
-
-div.rules {
-  background-color: $col-accent-hover;
-  color: $col-link-hover;
-}
-
-p.post-notice {
-  background-color: $col-accent-hover;
-  background-image: none;
-}
-
-// round cornered boxes and backgrounds
-.headerbar {
-  color: $white;
-}
-
-.forabg {
-  background-color: $col-primary-dark;
-  background-image: linear-gradient(to bottom, $col-primary-light 0%, $col-primary 0.1%, $col-primary-dark 30%, $col-primary-dark 100%);
-  background-repeat: repeat-x;
-}
-
-
-//
-// Forum & Topic Row Colours
-//---------------------------------------------------------------------------
-
-ul.forums {
-  background-color: $col-bg-01;
-  background-image: linear-gradient(to bottom, darken($col-bg-01, 15%) 0%, $col-bg-01 100%);
-}
-
-ul.topiclist li {
-  color: $col-ui-dark;
-}
-
-ul.topiclist dd {
-  border-left-color: $white;
-}
-
-.rtl ul.topiclist dd {
-  border-right-color: $white;
-  border-left-color: transparent;
-}
-
-li.row {
-  border-top-color: $white;
-  border-bottom-color: $col-primary-dark;
-}
-
-li.row strong {
-  color: $black;
-}
-
-li.row:hover {
-  background-color: $col-highlight;
-}
-
-li.row:hover dd {
-  border-left-color: $gray-300;
-}
-
-.rtl li.row:hover dd {
-  border-right-color: $gray-300;
-  border-left-color: transparent;
-}
-
-li.header dt,
-li.header dd {
-  color: $white;
-}
-
-
-//
-// Post Colours
-//---------------------------------------------------------------------------
-
-// profile
-.postprofile {
-  border-color: $white;
-  color: $gray-700;
-}
-
-.pm .postprofile { border-color: $gray-300; }
-.postprofile strong { color: $black; }
-dd.profile-warnings { color: $col-link-hover; }
-
-// post body styles
-.postbody { color: $gray-900; }
-
-.posthilit {
-  background-color: $col-link-hover-highlight;
-  color: $col-link-hover;
-}
-
-// post signature
-.signature { border-top-color: $gray-300; }
-
-// post noticies
-.notice { border-top-color: $gray-300; }
-
-
-//
-// JS Animation Colours
-//---------------------------------------------------------------------------
-
-.phpbb_alert {
-  background-color: $white;
-  border-color: $gray-500;
-}
-
-.alert_close .icon:before { background-color: $white; }
-.darken { background-color: $black; }
-
-
-//
-// Notification Colours
-//---------------------------------------------------------------------------
-.notification_list p.notification-time { color: $col-ui-dark; }
-
-li.notification-reported strong,
-li.notification-disapproved strong {
-  color: $col-link-hover;
-}
-
-.badge {
-  background-color: $col-link-hover;
-  color: $white;
-}
-
-
-//
-// Misc Colours
-//---------------------------------------------------------------------------
-dl.faq dt { color: $gray-900; }
-.copyright { color: $gray-800; }
-.error { color: $col-link-hover; }
-.reported { background-color: $col-accent-highlight; }
-li.reported:hover { background-color: $col-accent-hover !important; }
-.sep { color: $col-primary; }
+$col-text-catfora-title: $white !default;
