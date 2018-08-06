@@ -12,12 +12,10 @@
 
 // ========================================================================
 //  1.  Import existing scheme stylesheets
-//      Add new import rule here
+//      NOTE:
+//      In order to secure  compatibility with certain SASS pre-processors this
+//      will have to be done via "_framework.css" ...
 // ========================================================================
-@import 'core/schemes/prosilver';
-@import 'core/schemes/standard';
-@import 'core/schemes/red';
-@import 'core/schemes/green';
 
 
 // ========================================================================
