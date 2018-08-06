@@ -26,8 +26,8 @@
 
 
 //  2. Process configuration stylesheets
-@import 'custom_configuration';
-@import 'style_configuration';
+@import 'custom_files/custom_configuration';
+@import 'core/configuration/core_configuration';
 
 
 //  3.  Load framework
@@ -36,4 +36,4 @@
 
 //  4.  Process style specific stylesheets
 @import 'sassysilver';
-@import 'custom';
+@import 'custom_files/custom';

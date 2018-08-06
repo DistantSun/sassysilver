@@ -44,7 +44,20 @@
 
 //  5.  Manage colour schemes
 //  --------------------------------------------------------------
-@import 'colours_configuration';
+//  5.1.  Import default colour scheme - DO NOT DELETE!
+@import 'core/schemes/default';
+
+//  5.2  Import custom colour schemes
+//  NOTE: Please add/remove import rules for your custom scheme stylesheets here.
+//        The appropriate location should be in "_colours_configuration.scss"
+//        but in order to secure compatibility with certain pre-processors
+//        this, for the time being, is unavoidable ...
+@import 'custom_files/colour_schemes/prosilver';
+@import 'custom_files/colour_schemes/red';
+@import 'custom_files/colour_schemes/green';
+
+//  5.3.  Import configuration files
+@import 'core/configuration/colours_configuration';
 @import 'core/inherited/assign_scheme_colours';
 
 
