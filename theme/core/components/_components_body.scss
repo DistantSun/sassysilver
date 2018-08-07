@@ -10,6 +10,9 @@ body {
 
   @if $img-bg-html-body == none {
     background: $col-bg-body;
+  } @if $img-bg-html-body == texture {
+    background-image: bg-image('#{$img-body}');
+    background-repeat: repeat;
   } @else {
     background-image: bg-image('#{$img-bg-html-body}');
     background-attachment: fixed;

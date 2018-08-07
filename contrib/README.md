@@ -8,13 +8,13 @@ As far as stylesheets are concerned SassySilver's theme folder contains stylespe
 
 ###### A fee notes ...
 - SassySilver is still under development. Although most of the features already implemented passed tests to insure their functionality, there still is a chance you may encouter flaws as the code gets more and more complex with each new option added during the development process.
-- Some more feature may still be added to SassySilver until it reaches RC status and a few other may still change the moment they hit limits in functionality not foreseeable at the moment. Those adjustments will nevertheless focus on keeping the existing switches and usage of variables untouched as far as possible, but no garantee can be given at the current state (ALPHA or BETA releases).
+- Some more features may still be added to SassySilver until it reaches RC status and a few other may still change the moment they hit limits in functionality not foreseeable at the moment. Those adjustments will nevertheless focus on keeping the existing switches and usage of variables untouched as far as possible, but no garantee can be given at the current state (ALPHA or BETA releases).
 - A dedicated FAQ/How-to file will be included in the near future.
 
 
 ## System Requirements
 - based on prosilver => prosilver must be installed for this style to work!
-- phpBB >= 3.2.1
+- phpBB >= 3.2.2
 - SASS Pre-Processor (see http://sass-lang.com/install for further information) supporting full SASS syntax/functionality (1)
 
 ## Install / Update
@@ -26,13 +26,7 @@ As far as stylesheets are concerned SassySilver's theme folder contains stylespe
     - Clear caches
 
 - #### Update
-    - Backup your current installation's files and folders
-    - Download the archive, unpack it locally
-    - Open the resulting `sassysilver` folder, go to `/theme/` and delete both `_custom_configuration.scss` and `_custom.scss` (these two files are to contain your personal/custom settings and codes you may want to keep)
-    - Check your `_custom_configuration.scss` for potential changes in the naming of variables and/or for additional samples
-    - Upload the remaining files and folders into the "/styles" folder on the server
-    - Re-compile stylesheets
-    - Clear caches
+    - to be revised
 
 
 ### Credits
@@ -45,7 +39,7 @@ Credits go as well to all those who helped me during the development process, ei
 
 ## Features
 - #### Build in
-- [x] 4 pre-defined colour schemes - switch between them by adjusting one setting/option only
+- [x] Pre-defined colour schemes - switch between them by adjusting one setting/option only
 - [x] Secondary colours will be automaticly calculated based on the choosen colour scheme
 - [x] Display of mini-profile switchable left <> right
 - [x] Option to split off headerbar and main menue to display it above the board wrapper
@@ -63,14 +57,10 @@ Credits go as well to all those who helped me during the development process, ei
 ## Sidenotes
 ###### (1) Compatibility issues with SASS Compilers:
 1. Arty's SASS Compiler Extension:<br />
-This extension will fail to compile the stylesheets of this style correctly. This is not(!) due to it being badly programmed or flawed but to its original use case: providing a tool to compile his styles from within phpBB's ACP in order to avoid users having to install a dedicated piece of software for this job.<br />
-There is not much I can do as far as this extension is concerned without having to re-arrange the folder/file stucture of the style in a way that will render it cluttered and, in consequence, "hard to read" and hard to manage.<br />
-Therefore support for this extension will **not** be provided.
+Again supported. I will do my best to provide compatibility of SassySilver with this easy-to-use tool as long as feasible.
 
 2. Koala:<br />
-Koala is a different case as it will fail only in its standard configuration (as provided "out of the box"). In order to to make Koala work with this style you would have to create a dedicated configuration file and manually adapt it first<br />
-Sounds like a task not really trivial? In fact it isn't ... but this is nothing uders will have to cope with:<br />
-This style will be shipped with a dedicated configuration file ("koala-config.json"), located in the root of the style's folder, which should take care of this issue.<br />
+Koala can no longer be supported.
 
 3. Editor specific compiler add-ons:<br />
 There are numerous add-ons for a wide range of editors providing a means to compile SASS files from within the respective editor, some of them more and others less sophisticated. Those suitable for the job of compiling this style will most likely have to be configured accordingly.<br />
@@ -78,7 +68,7 @@ Please understand that information on how to accomplish this cannot be provided.
 
 ###### (2) Third Party Packages included:
 
-For the time being a complete set of Bourbon files will be included in the theme folder. This may change during the development process to reduce the amount of code shipped as soon as feasible.
+For the time being a reduced set of Bourbon files will be included in the theme folder. This may change during the development process to reduce the amount of code shipped as soon as feasible.
 
 ###### (3) Additional copyrights:
 
@@ -87,4 +77,4 @@ For further information please read the corresponding license files provided wit
 - [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md""
 
 
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver) 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver)
