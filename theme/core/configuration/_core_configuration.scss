@@ -36,6 +36,11 @@ $switch-postprofile-side:         'right' !default;
 // Background images
 // Switches background colour of #wrap to transparent; values: no, yes
 $switch-col-wrap-off:             'no' !default;
+
+// Background body
+// @ptions: none, texture, filename;
+// none => colour as defined in scheme; texture => texture as defined in scheme;
+// design => background image as specified
 $img-bg-html-body:                none !default;
 $img-bg-wrap:                     none !default;
 $img-bg-wrap-header:              none !default;
