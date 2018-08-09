@@ -8,10 +8,10 @@ body {
   height: auto;
   min-height: 101%;
 
-  @if $img-bg-html-body == none {
+  @if $switch-background-body == none {
     background: $col-bg-body;
-  } @if $img-bg-html-body == texture {
-    background-image: bg-image('#{$img-body}');
+  } @if $switch-background-body == texture {
+    background-image: bg-image('#{$bg-body-texture}');
     background-repeat: repeat;
   } @else {
     background-image: bg-image('#{$img-bg-html-body}');

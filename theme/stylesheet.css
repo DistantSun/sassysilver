@@ -6405,7 +6405,7 @@ li.reported:hover {
 html, body {
 				height: auto;
 				min-height: 101%;
-				background-image: url("./images/styling/bg_body-blue.jpg");
+				background-image: url("./images/styling/bg_body-blue.svg");
 				background-repeat: repeat;
 }
 
