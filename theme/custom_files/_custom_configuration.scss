@@ -1,7 +1,21 @@
 // Custom configuration file
+// ===================================================================
 
-//  Select colour scheme
+//  Select colour scheme & body Background
+//  ------------------------------------------------------------------
 $switch-col-scheme:               prosilver;
+
+// Background body
+// @ptions: none, texture, image;
+// none => colour as defined in scheme; texture => texture as defined in scheme;
+// image => background image as specified below
+$switch-background-body:          texture;
+
+// Background image, full size
+// NOTE: To allocate an image replace "none" with the complete image name
+// wrapped in single quotes - eg: 'my_background_image.png'
+$img-bg-html-body:                'bg_body.jpg';
+
 
 // "Board width" - any value is okay as longs as the unit is "px"
 $switch-width-wrap:               1152px;
@@ -34,7 +48,7 @@ $switch-opacity-wrap:             0.6;
 // Default values are "none" - all images have to be stored in the theme's image folder
 // NOTE: To allocate an image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
 
-$img-bg-html-body: texture;
+// $img-bg-html-body:                texture;
 // $img-bg-html-body:                'bg_body.jpg';
 // $img-bg-wrap:                     'bg_img_wrap_05.jpg';
 // $img-bg-headerbar:                          none;

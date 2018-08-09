@@ -7,9 +7,11 @@
 // Layout switches
 // ***************
 
-//  Colours - general colour scheme. Do NOT change!
-// Board colour scheme; available schemes: blue, red, green, black
+//  Colours & body background - default scheme
+// Board colour scheme
 $switch-col-scheme:               'standard' !default;
+$switch-background-body:          none !default;
+$img-bg-html-body:                'bg_body.jpg';
 
 // Board width
 $switch-width-wrap:               1152px !default;
@@ -38,10 +40,11 @@ $switch-postprofile-side:         'right' !default;
 $switch-col-wrap-off:             'no' !default;
 
 // Background body
-// @ptions: none, texture, filename;
+// @ptions: none, texture, image;
 // none => colour as defined in scheme; texture => texture as defined in scheme;
 // design => background image as specified
-$img-bg-html-body:                none !default;
+// $img-bg-html-body:                none !default;
+
 $img-bg-wrap:                     none !default;
 $img-bg-wrap-header:              none !default;
 $img-bg-headerbar:                none !default;
