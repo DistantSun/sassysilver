@@ -14,8 +14,8 @@ body {
   height: auto;
   min-height: 101%;
 
-  @if $switch-background-body == none {
-    background: $col-bg-body;
+  @if $switch-background-body == colour {
+    background: $bg-body-colour;
   } @if $switch-background-body == css {
     @include bg-svg-color($bg-body-css);
   } @if $switch-background-body == texture {
@@ -72,6 +72,6 @@ body {
 
 .login-container {
   @include container-base;
-  background-color: tint($col-base, 75%);
+  background-color: tint($col-primary, 75%);
   margin: 0 5px;
 }

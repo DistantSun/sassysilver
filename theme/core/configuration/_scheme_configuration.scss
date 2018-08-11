@@ -169,17 +169,17 @@ $col-online:        set-value(online) !default;
 //  4.  Secondary theme colour variables
 //  NOTE: Subject to change during development!
 // ========================================================================
-$col-base:               $col-primary !default;
-$col-body:               $col-bg-body !default;             // Body colour
-//$col-wrap:               /*#949ba3*/$gray-300 !default;   // Wrap colour
-$switch-opacity-wrap:    0.5 !default;                      // Opacity wrap background colour
-// $col-category:           $col-primary-dark !default;     // Category/fora header colourv
-$col-navbar:             $col-primary-dark !default;        // Navbar colour
-$col-headerbar:          $col-primary-dark !default;        // Headerbar background colour
 
-$col-forums:             lighten($col-bg-01, 5%) !default;         // Colour ul.forums
-$col-bg:                 $col-bg-01 !default;                      // Colour bg1 & bg3
-$col-bg2:                $col-bg-02 !default;                      // Colour bg2
+//$col-wrap:               /*#949ba3*/$gray-300 !default;   // Wrap colour
+$switch-opacity-wrap:    0.5 !default;                       // Opacity wrap background colour
+
+$col-navbar:             $col-bg-03 !default;         // Navbar colour
+$col-cat-titlebar:       $col-primary-dark !default;         // Category/fora header colour
+$col-headerbar:          $col-primary-dark !default;         // Headerbar background colour
+
+$col-forums:             lighten($col-bg-01, 5%) !default;   // Colour ul.forums
+$col-bg:                 $col-bg-01 !default;                // Colour bg1 & bg3
+$col-bg2:                $col-bg-02 !default;                // Colour bg2
 
 // Text Colours
 $col-text-headerbar:     $white !default;
@@ -188,5 +188,5 @@ $col-text-catfora-title: $white !default;
 // Misc
 $bg-body-texture:        set-value(bg-body-texture) !default;
 $bg-body-image:          set-value(bg-body-image) !default;
-
+$bg-body-colour:         $col-bg-body !default;
 $bg-body-css:            set-value(bg-body-css) !default;
