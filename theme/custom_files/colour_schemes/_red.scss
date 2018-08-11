@@ -139,6 +139,7 @@ $red: (
   online: #85de39,
 
   // Misc
-  bg-body-texture: 'bg_body-black.svg',
+  bg-body-texture: 'bg_body-red.svg',
   bg-body-image:   'bg_body.jpg',
+  bg-body-css:      darken($red-primary, 10%),
 );

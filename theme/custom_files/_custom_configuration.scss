@@ -1,5 +1,9 @@
+/* stylelint-disable color-named */
+
+// ===================================================================
 // Custom configuration file
 // ===================================================================
+
 
 //  Select colour scheme & body Background
 //  ------------------------------------------------------------------
@@ -9,7 +13,8 @@ $switch-col-scheme:               prosilver;
 // @ptions: none, texture, image;
 // none => colour as defined in scheme; texture => texture as defined in scheme;
 // image => background image as specified below
-$switch-background-body:          texture;
+// css => svg texture with adjustable colour as defined in scheme
+$switch-background-body:          css;
 
 // Background image, full size
 // NOTE: To allocate an image replace "none" with the complete image name
@@ -55,3 +60,5 @@ $switch-opacity-wrap:             0.6;
 
 // Breakpoin RWD
 $breakpoint-master:               '800px';
+
+/* stylelint-ensable color-named */

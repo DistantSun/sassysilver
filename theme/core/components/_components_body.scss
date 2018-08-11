@@ -1,8 +1,14 @@
+//  Components used to format the body/overall appearance
+// ========================================================================
+
+//  Set box-sizing for all elements
+// ------------------------------------------------------------------------
 * {
   box-sizing: border-box;
 }
 
-
+//  Body
+// ------------------------------------------------------------------------
 html,
 body {
   height: auto;
@@ -10,21 +16,31 @@ body {
 
   @if $switch-background-body == none {
     background: $col-bg-body;
+  } @if $switch-background-body == css {
+    @include bg-svg-color($bg-body-css);
   } @if $switch-background-body == texture {
     background-image: bg-image('#{$bg-body-texture}');
     background-repeat: repeat;
-  } @else {
+  } @if $switch-background-body == image {
     background-image: bg-image('#{$img-bg-html-body}');
     background-attachment: fixed;
     background-size: 100% 100%;
   }
 }
 
+/*   @else {
+  background-image: bg-image('#{$img-bg-html-body}');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+} */
+
 body {
   padding: 0 0 12px;
 }
 
 
+//  Wrap
+// ------------------------------------------------------------------------
 .wrap {
   @include padding($pad-wrappers $pad-wrappers);
   background-color: $col-bg-wrap;
@@ -44,6 +60,8 @@ body {
 }
 
 
+//  Containers on index
+// ------------------------------------------------------------------------
 .stat-container,
 .copyright {
   @include container-base;
