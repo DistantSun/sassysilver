@@ -26,16 +26,19 @@
 //       Add your declaration here
 $colour-maps: (
   prosilver: $prosilver,
-  standard:  $standard,
   red:       $red,
   green:     $green,
 );
 
-//  2.2  Function to select colours according to selected colour scheme
+//  2.2  Function to select variable values according to selected colour scheme
 //  Do not change!
-@function getcolor($element) {
+@function set-value($element) {
+  // Which colour scheme is currently configured?
   $scheme:   $switch-col-scheme;
-  $selected: map-get(map-get($colour-maps, $scheme), $element);
+  // Create production map by merging the configured with the default scheme map
+  $mapped: map-merge($default, map-get($colour-maps, $scheme));
+  // Fetch values from production map
+  $selected: map-get($mapped, $element);
 
   @return $selected;
 }
@@ -46,120 +49,120 @@ $colour-maps: (
 // ========================================================================
 
 // Primary Colors
-$col-primary:       getcolor(primary) !default;
-$col-primary-light: getcolor(primary-light) !default;
-$col-primary-dark:  getcolor(primary-dark) !default;
+$col-primary:       set-value(primary) !default;
+$col-primary-light: set-value(primary-light) !default;
+$col-primary-dark:  set-value(primary-dark) !default;
 
 // Secondary Colors
-$col-secondary:       getcolor(secondary);
-$col-secondary-light: getcolor(secondary-light) !default;
-$col-secondary-dark:  getcolor(secondary-dark) !default;
+$col-secondary:       set-value(secondary);
+$col-secondary-light: set-value(secondary-light) !default;
+$col-secondary-dark:  set-value(secondary-dark) !default;
 
 // UI Colors
-$col-ui:            getcolor(ui) !default;
-$col-ui-light:      getcolor(ui-light) !default;
-$col-ui-dark:       getcolor(ui-dark) !default;
-$col-ui-super-dark: getcolor(ui-super-dark) !default;
+$col-ui:            set-value(ui) !default;
+$col-ui-light:      set-value(ui-light) !default;
+$col-ui-dark:       set-value(ui-dark) !default;
+$col-ui-super-dark: set-value(ui-super-dark) !default;
 
 // Accent Colors:
-$col-accent-light:     getcolor(accent-light) !default;
-$col-accent-dark:      getcolor(accent-dark) !default;
-$col-accent-hover:     getcolor(accent-hover) !default;
-$col-accent-highlight: getcolor(accent-highlight) !default;
+$col-accent-light:     set-value(accent-light) !default;
+$col-accent-dark:      set-value(accent-dark) !default;
+$col-accent-hover:     set-value(accent-hover) !default;
+$col-accent-highlight: set-value(accent-highlight) !default;
 
 // Additioanl UI Vars
-$col-links:     getcolor(links) !default;
-$col-highlight: getcolor(highlight) !default;
-$col-code:      getcolor(code) !default;
-$col-bg:        getcolor(bg) !default;
-$col-polls:     getcolor(polls) !default;
+$col-links:     set-value(links) !default;
+$col-highlight: set-value(highlight) !default;
+$col-code:      set-value(code) !default;
+$col-bg:        set-value(bg) !default;
+$col-polls:     set-value(polls) !default;
 
 // Background Colors
-$col-bg-01:             getcolor(bg-1) !default;
-$col-bg-02:             getcolor(bg-2) !default;
-$col-bg-03:             getcolor(bg-3) !default;
-$col-bg-04:             getcolor(bg-4) !default;
-$col-bg-light:          getcolor(bg-light) !default;
-$col-bg-dark:           getcolor(bg-dark) !default;
-$col-bg-dark-hover:     getcolor(bg-dark-hover) !default;
-$col-bg-body:           getcolor(bg-body) !default;
-$col-bg-wrap:           getcolor(bg-wrap) !default;
-$col-bg-forumcontainer: getcolor(bg-forumcontainer) !default;
+$col-bg-01:             set-value(bg-1) !default;
+$col-bg-02:             set-value(bg-2) !default;
+$col-bg-03:             set-value(bg-3) !default;
+$col-bg-04:             set-value(bg-4) !default;
+$col-bg-light:          set-value(bg-light) !default;
+$col-bg-dark:           set-value(bg-dark) !default;
+$col-bg-dark-hover:     set-value(bg-dark-hover) !default;
+$col-bg-body:           set-value(bg-body) !default;
+$col-bg-wrap:           set-value(bg-wrap) !default;
+$col-bg-forumcontainer: set-value(bg-forumcontainer) !default;
 
 // Link Colors
-$col-link:                 getcolor(link) !default;
-$col-link-accent:          getcolor(link-accent) !default;
-$col-link-hover:           getcolor(link-hover) !default;
-$col-link-hover-highlight: getcolor(link-hover-highlight) !default;
+$col-link:                 set-value(link) !default;
+$col-link-accent:          set-value(link-accent) !default;
+$col-link-hover:           set-value(link-hover) !default;
+$col-link-hover-highlight: set-value(link-hover-highlight) !default;
 
-$col-link-secondary:                 getcolor(link-secondary) !default;
-$col-link-secondary-accent:          getcolor(link-secondary-accent) !default;
-$col-link-secondary-hover:           getcolor(link-secondary-hover) !default;
-$col-link-secondary-hover-highlight: getcolor(link-secondary-hover-highlight) !default;
+$col-link-secondary:                 set-value(link-secondary) !default;
+$col-link-secondary-accent:          set-value(link-secondary-accent) !default;
+$col-link-secondary-hover:           set-value(link-secondary-hover) !default;
+$col-link-secondary-hover-highlight: set-value(link-secondary-hover-highlight) !default;
 
 // Button Colors
-$col-button-border:           getcolor(button-border) !default;
-$col-button-box-shadow:       getcolor(button-box-shadow) !default;
-$col-button-text-shadow:      getcolor(button-text-shadowy) !default;
-$col-button-text:             getcolor(button-text) !default;
-$col-button-background:       getcolor(button-background) !default;
-$col-button-background-light: getcolor(button-background-light) !default;
-$col-button-icon:             getcolor(button-icon) !default;
+$col-button-border:           set-value(button-border) !default;
+$col-button-box-shadow:       set-value(button-box-shadow) !default;
+$col-button-text-shadow:      set-value(button-text-shadowy) !default;
+$col-button-text:             set-value(button-text) !default;
+$col-button-background:       set-value(button-background) !default;
+$col-button-background-light: set-value(button-background-light) !default;
+$col-button-icon:             set-value(button-icon) !default;
 
-$col-button-icon-hover:        getcolor(button-icon-hover) !default;
-$col-button-border-hover:      getcolor(button-border-hover) !default;
-$col-button-text-shadow-hover: getcolor(button-text-shadow-hover) !default;
+$col-button-icon-hover:        set-value(button-icon-hover) !default;
+$col-button-border-hover:      set-value(button-border-hover) !default;
+$col-button-text-shadow-hover: set-value(button-text-shadow-hover) !default;
 
-$col-button-form-text:               getcolor(button-form-text) !default;
-$col-button-form-border:             getcolor(button-form-border) !default;
-$col-button-form-text-hover:         getcolor(button-form-text-hover) !default;
-$col-button-form-border-hover:       getcolor(button-form-border-hover) !default;
-$col-button-form-input-border-focus: getcolor(button-form-input-border-focus) !default;
-$col-button-form-input-text-focus:   getcolor(button-form-input-text-focus) !default;
+$col-button-form-text:               set-value(button-form-text) !default;
+$col-button-form-border:             set-value(button-form-border) !default;
+$col-button-form-text-hover:         set-value(button-form-text-hover) !default;
+$col-button-form-border-hover:       set-value(button-form-border-hover) !default;
+$col-button-form-input-border-focus: set-value(button-form-input-border-focus) !default;
+$col-button-form-input-text-focus:   set-value(button-form-input-text-focus) !default;
 
 // Tab Colors
-$col-tab-text:                    getcolor(tab-text) !default;
-$col-tab-background:              getcolor(tab-background) !default;
-$col-tab-text-hover:              getcolor(tab-text-hover) !default;
-$col-tab-background-hover:        getcolor(tab-background-hover) !default;
-$col-tab-text-active:             getcolor(tab-text-active) !default;
-$col-tab-background-active:       getcolor(tab-background-active) !default;
-$col-tab-border-active:           getcolor(tab-border-active) !default;
-$col-tab-background-active-light: getcolor(tab-background-active-light) !default;
-$col-tab-background-mini:         getcolor(tab-background-mini) !default;
-$col-tab-text-mini-active:        getcolor(tab-text-mini-active) !default;
-$col-tab-background-mini-active:  getcolor(tab-background-mini-active) !default;
+$col-tab-text:                    set-value(tab-text) !default;
+$col-tab-background:              set-value(tab-background) !default;
+$col-tab-text-hover:              set-value(tab-text-hover) !default;
+$col-tab-background-hover:        set-value(tab-background-hover) !default;
+$col-tab-text-active:             set-value(tab-text-active) !default;
+$col-tab-background-active:       set-value(tab-background-active) !default;
+$col-tab-border-active:           set-value(tab-border-active) !default;
+$col-tab-background-active-light: set-value(tab-background-active-light) !default;
+$col-tab-background-mini:         set-value(tab-background-mini) !default;
+$col-tab-text-mini-active:        set-value(tab-text-mini-active) !default;
+$col-tab-background-mini-active:  set-value(tab-background-mini-active) !default;
 
 // Poll Colors
-$col-poll-bg1: getcolor(poll-bg1) !default;
-$col-poll-bg2: getcolor(poll-bg2) !default;
-$col-poll-bg3: getcolor(poll-bg3) !default;
-$col-poll-bg4: getcolor(poll-bg4) !default;
-$col-poll-bg5: getcolor(poll-bg5) !default;
+$col-poll-bg1: set-value(poll-bg1) !default;
+$col-poll-bg2: set-value(poll-bg2) !default;
+$col-poll-bg3: set-value(poll-bg3) !default;
+$col-poll-bg4: set-value(poll-bg4) !default;
+$col-poll-bg5: set-value(poll-bg5) !default;
 
-$col-poll-border1: getcolor(poll-border1) !default;
-$col-poll-border2: getcolor(poll-border2) !default;
-$col-poll-border3: getcolor(poll-border3) !default;
-$col-poll-border4: getcolor(poll-border4) !default;
-$col-poll-border5: getcolor(poll-border5) !default;
+$col-poll-border1: set-value(poll-border1) !default;
+$col-poll-border2: set-value(poll-border2) !default;
+$col-poll-border3: set-value(poll-border3) !default;
+$col-poll-border4: set-value(poll-border4) !default;
+$col-poll-border5: set-value(poll-border5) !default;
 
 // Highlight colors
-$col-blockquote:       getcolor(blockquote) !default;
-$col-blockquote-inner: getcolor(blockquote-inner) !default;
+$col-blockquote:       set-value(blockquote) !default;
+$col-blockquote-inner: set-value(blockquote-inner) !default;
 
 // PM Colors
-$col-pm-reply:    getcolor(pm-reply) !default;
-$col-pm-friend:   getcolor(pm-friend) !default;
-$col-pm-reported: getcolor(pm-reported) !default;
-$col-pm-marked:   getcolor(pm-marked) !default;
-$col-pm-foe:      getcolor(pm-foe) !default;
+$col-pm-reply:    set-value(pm-reply) !default;
+$col-pm-friend:   set-value(pm-friend) !default;
+$col-pm-reported: set-value(pm-reported) !default;
+$col-pm-marked:   set-value(pm-marked) !default;
+$col-pm-foe:      set-value(pm-foe) !default;
 
 // Other Unique Colors
-$col-loader-blue:   getcolor(loader-blue) !default;
-$col-loader-red:    getcolor(loader-red) !default;
-$col-loader-yellow: getcolor(loader-yellow) !default;
-$col-loader-green:  getcolor(loader-green) !default;
-$col-online:        getcolor(online) !default;
+$col-loader-blue:   set-value(loader-blue) !default;
+$col-loader-red:    set-value(loader-red) !default;
+$col-loader-yellow: set-value(loader-yellow) !default;
+$col-loader-green:  set-value(loader-green) !default;
+$col-online:        set-value(online) !default;
 
 
 // ========================================================================
@@ -179,11 +182,11 @@ $col-bg:                 $col-bg-01 !default;                      // Colour bg1
 $col-bg2:                $col-bg-02 !default;                      // Colour bg2
 
 // Text Colours
-$col-text-headerbar:     #fff !default;
+$col-text-headerbar:     $white !default;
 $col-text-catfora-title: $white !default;
 
 // Misc
-$bg-body-texture:        getcolor(bg-body-texture) !default;
-$bg-body-image:          getcolor(bg-body-image) !default;
+$bg-body-texture:        set-value(bg-body-texture) !default;
+$bg-body-image:          set-value(bg-body-image) !default;
 
-$bg-body-css:            getcolor(bg-body-css) !default;
+$bg-body-css:            set-value(bg-body-css) !default;
