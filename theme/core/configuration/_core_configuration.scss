@@ -8,10 +8,11 @@
 // ***************
 
 //  Colours & body background - default scheme
-// Board colour scheme
+//  Board colour scheme
 $switch-col-scheme:               'default' !default;
-$switch-background-body:          none !default;
-$img-bg-html-body:                'bg_body.jpg';
+//  Body background type
+$switch-background-body:          colour !default;
+$img-bg-html-body:                'bg_body.jpg' !default;
 
 // Board width
 $switch-width-wrap:               1152px !default;
