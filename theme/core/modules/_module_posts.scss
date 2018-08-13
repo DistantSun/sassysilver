@@ -76,7 +76,7 @@ $pbody-container-width: (100 - $pprofile-container-width - 2);
 
     .postprofile {
       @include postprofile-border($switch-postprofile-side, 1px);
-      border-color: $col-base;
+      border-color: $col-primary;
     }
 
     .back2top {
