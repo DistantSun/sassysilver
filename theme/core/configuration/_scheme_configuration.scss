@@ -25,6 +25,7 @@
 //  2.1  Mapping all colour maps of scheme files
 //       Add your declaration here
 $colour-maps: (
+  default:   $default,
   prosilver: $prosilver,
   red:       $red,
   green:     $green,
@@ -35,7 +36,7 @@ $colour-maps: (
 @function set-value($element) {
   // Which colour scheme is currently configured?
   $scheme:   $switch-col-scheme;
-  // Create production map by merging the configured with the default scheme map
+  // Create production map by merging the configured into the default scheme map
   $mapped: map-merge($default, map-get($colour-maps, $scheme));
   // Fetch values from production map
   $selected: map-get($mapped, $element);

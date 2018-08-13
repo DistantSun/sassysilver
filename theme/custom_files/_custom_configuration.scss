@@ -7,11 +7,11 @@
 
 //  Select colour scheme & body Background
 //  ------------------------------------------------------------------
-$switch-col-scheme:               red;
+$switch-col-scheme:               default;
 
 // Background body
-// @ptions: none, texture, image;
-// none => colour as defined in scheme; texture => texture as defined in scheme;
+// @ptions: colour, texture, image, css;
+// colour => colour as defined in scheme; texture => texture as defined in scheme;
 // image => background image as specified below
 // css => svg texture with adjustable colour as defined in scheme
 $switch-background-body:          css;
