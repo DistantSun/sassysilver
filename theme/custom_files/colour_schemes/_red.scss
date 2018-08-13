@@ -51,7 +51,7 @@ $red: (
   // Background Colors
   bg-1:          lighten($red-background-0, 3%),
   bg-2:          lighten($red-background-0, 5%),
-  bg-3:          darken($red-background-0, 5%),
+  bg-3:          darken($red-background-0, 2%),
   bg-4:          desaturate($red-background-0, 20%),
   bg-light:      saturate($red-background-0, 60%),
   bg-dark:       desaturate(darken($red-background-0, 14%), 10%),

@@ -1,38 +1,44 @@
+// =========================================================================
+//  Default colour scheme for SassySilver - please DO NOT CHANGE, EDIT OR DELETE!
+//  This scheme stylesheet provides a fall back and is an integral part of
+//  of the scheming workflow.
+// =========================================================================
+
 // Primary Colors
-$default-primary:          hsl(200, 85%, 50%) !default;
+$default-primary:          hsl(200, 85%, 50%);
 $default-primary-light:    saturate(lighten($default-primary, 25%), 15%);
 $default-primary-dark:     saturate(darken($default-primary, 15%), 15%);
 
 // Secondary Colors
-$default-secondary:        adjust-hue($default-primary, 10%) !default;
+$default-secondary:        adjust-hue($default-primary, 10%);
 $default-secondary-light:  saturate(lighten($default-secondary, 25%), 15%);
 $default-secondary-dark:   saturate(darken($default-secondary, 15%), 15%);
 
-$default-accent:           adjust-hue($default-primary, 145%) !default;
+$default-accent:           adjust-hue($default-primary, 145%);
 
-$default-ui:               desaturate(adjust-hue($default-primary, 20%), 65%) !default;
+$default-ui:               desaturate(adjust-hue($default-primary, 20%), 65%);
 $default-ui-light:         lighten($default-ui, 25%);
 $default-ui-dark:          darken($default-ui, 15%);
 $default-ui-super-dark:    darken($default-ui, 30%);
 
 // Additioanl UI Vars
-$default-links:            desaturate(darken($default-secondary, 20%), 5%) !default;
-$default-highlight:        hsl(55, 100%, 90%) !default;
-$default-code:             hsl(125, 40%, 50%) !default;
+$default-links:            desaturate(darken($default-secondary, 20%), 5%);
+$default-highlight:        hsl(55, 100%, 90%);
+$default-code:             hsl(125, 40%, 50%);
 
-$default-background:       $default-primary !default;
+$default-background:       $default-primary;
 $default-background-0:     desaturate(lighten($default-primary, 45%), 45%);
 $default-background-light: saturate($default-background-0, 60%);
 $default-background-dark:  desaturate(darken($default-background-0, 14%), 10%);
 
-$default-polls:            $default-accent !default;
+$default-polls:            $default-accent;
 
 
 
 $default: (
   ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
 
-  primary:   $default-primary,
+  primary:       $default-primary,
   primary-light: $default-primary-light,
   primary-dark:  $default-primary-dark,
 
@@ -58,10 +64,10 @@ $default: (
   bg-body:       lighten($default-primary, 40%),
 
   // Link Colors
-  link:                           $default-links,
-  link-accent:                    saturate(lighten($default-links, 10%), 15%),
-  link-hover:                     darken($default-accent, 5%),
-  link-hover-highlight:           lighten($default-accent, 35%),
+  link:                 $default-links,
+  link-accent:          saturate(lighten($default-links, 10%), 15%),
+  link-hover:           darken($default-accent, 5%),
+  link-hover-highlight: lighten($default-accent, 35%),
 
   link-secondary:                 desaturate(lighten($default-links, 20%), 15%),
   link-secondary-accent:          desaturate(lighten($default-links, 20%), 45%),
@@ -69,39 +75,39 @@ $default: (
   link-secondary-hover-highlight: desaturate(lighten($default-links, 55%), 35%),
 
   // Button Colors
-  button-border: $gray-400,
-  button-box-shadow: $white,
-  button-text-shadow: $white,
-  button-text: darken($default-accent, 5%),
-  button-background: $gray-300,
+  button-border:           $gray-400,
+  button-box-shadow:       $white,
+  button-text-shadow:      $white,
+  button-text:             darken($default-accent, 5%),
+  button-background:       $gray-300,
   button-background-light: $white,
-  button-icon: $gray-500,
+  button-icon:             $gray-500,
 
-  button-icon-hover: $default-primary-dark,
-  button-border-hover: $default-primary-dark,
+  button-icon-hover:        $default-primary-dark,
+  button-border-hover:      $default-primary-dark,
   button-text-shadow-hover: rgba(desaturate(darken($default-accent, 5%), 20%), .2),
 
-  button-form-text: $gray-900,
-  button-form-border: $gray-700,
-  button-form-text-hover: darken($default-accent, 5%),
-  button-form-border-hover: darken($default-accent, 5%),
+  button-form-text:               $gray-900,
+  button-form-border:             $gray-700,
+  button-form-text-hover:         darken($default-accent, 5%),
+  button-form-border-hover:       darken($default-accent, 5%),
   button-form-input-border-focus: $default-primary-dark,
-  button-form-input-text-focus: $default-primary-dark,
+  button-form-input-text-focus:   $default-primary-dark,
 
   // Tab Colors
-  tab-text: $default-ui-dark,
+  tab-text:       $default-ui-dark,
   tab-background: $default-background-dark,
 
-  tab-text-hover: darken($default-accent, 5%),
+  tab-text-hover:       darken($default-accent, 5%),
   tab-background-hover: $default-background-light,
 
-  tab-text-active: $gray-900,
-  tab-background-active: darken($default-background-0, 10%),
-  tab-border-active: darken($default-background-0, 10%),
+  tab-text-active:             $gray-900,
+  tab-background-active:       darken($default-background-0, 10%),
+  tab-border-active:           darken($default-background-0, 10%),
   tab-background-active-light: $default-background-light,
 
-  tab-background-mini: darken($default-background-0, 5%),
-  tab-text-mini-active: $gray-900,
+  tab-background-mini:        darken($default-background-0, 5%),
+  tab-text-mini-active:       $gray-900,
   tab-background-mini-active: $gray-50,
 
   // Poll Colors
@@ -118,25 +124,25 @@ $default: (
   poll-border5: desaturate($default-polls, 5%),
 
   // Highlight colors
-  blockquote: desaturate($default-highlight, 45%),
+  blockquote:       desaturate($default-highlight, 45%),
   blockquote-inner: desaturate($default-highlight, 30%),
 
   // PM Colors
-  pm-reply: desaturate(lighten($default-primary, 20%), 65%),
-  pm-friend: desaturate(darken($default-primary, 5%), 45%),
+  pm-reply:    desaturate(lighten($default-primary, 20%), 65%),
+  pm-friend:   desaturate(darken($default-primary, 5%), 45%),
   pm-reported: $default-accent,
-  pm-marked: adjust-hue(saturate($default-accent, 15%), -310%),
-  pm-foe: $black,
+  pm-marked:   adjust-hue(saturate($default-accent, 15%), -310%),
+  pm-foe:      $black,
 
   // Other Unique Colors
-  loader-blue: #4285f4,
-  loader-red: #de3e35,
+  loader-blue:   #4285f4,
+  loader-red:    #de3e35,
   loader-yellow: #f7c223,
-  loader-green: #1b9a59,
-  online: #85de39,
+  loader-green:  #1b9a59,
+  online:        #85de39,
 
   // Misc
   bg-body-texture: 'bg_body-blue.svg',
   bg-body-image:   'bg_body.jpg',
-  bg-body-css:      $default-primary-dark,
+  bg-body-css:      #002f52,
 );

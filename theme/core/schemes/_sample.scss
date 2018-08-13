@@ -1,3 +1,12 @@
+// =========================================================================
+//  Sample scheme stylesheet - please use as base for your own colour schemes.
+//  For a tutorial on how to create your personal scheme, please see the
+//  the detailed instructions included in "/contrib/docs/HowTo_schemes"
+// =========================================================================
+
+
+//  1.  Basic colours:
+// -------------------------------------------------------------------------
 // Primary Colors
 $sample-primary:          hsl(200, 85%, 50%) !default;
 $sample-primary-light:    saturate(lighten($sample-primary, 25%), 15%);
@@ -28,27 +37,28 @@ $sample-background-dark:  desaturate(darken($sample-background-0, 14%), 10%);
 $sample-polls:            $sample-accent !default;
 
 
-
+//  2.  Map of secondary colour definitions - this map will be merged into
+//      the default colour scheme.
+// -------------------------------------------------------------------------
 $sample: (
-  ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
-
+  //=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
+  //  2.1  Primary colours
   primary:       $sample-primary,
   primary-light: $sample-primary-light,
   primary-dark:  $sample-primary-dark,
 
-  // UI Colors
+  //  2.2  UI Colors
   ui-light:      $sample-ui-light ,
   ui-dark:       $sample-ui-dark,
   ui-super-dark: $sample-ui-super-dark,
 
-  // Accent Colors
+  //  2.3  Accent Colors
   accent-light:     saturate(lighten($sample-accent, 25%), 15%),
   accent-dark:      saturate(darken($sample-accent, 15%), 15%),
   accent-hover:     desaturate(lighten($sample-accent, 10%), 45%),
-  //col-accent-highlight: lighten($sample-accent-hover, 5%),
   accent-highlight: lighten($sample-accent, 50%),
 
-  // Background Colors
+  //  2.4  Background Colors
   bg-1:              $sample-background-0,
   bg-2:              darken($sample-background-0, 5%),
   bg-3:              darken($sample-background-0, 10%),
@@ -60,7 +70,7 @@ $sample: (
   bg-wrap:           $gray-300,
   bg-forumcontainer: $sample-primary-dark,
 
-  // Link Colors
+  //  2.5  Link Colors
   link:                           $sample-links,
   link-accent:                    saturate(lighten($sample-links, 10%), 15%),
   link-hover:                     darken($sample-accent, 5%),
@@ -71,43 +81,43 @@ $sample: (
   link-secondary-hover:           darken(desaturate(lighten($sample-links, 20%), 15%), 25%),
   link-secondary-hover-highlight: desaturate(lighten($sample-links, 55%), 35%),
 
-  // Button Colors
-  button-border: $gray-400,
-  button-box-shadow: $white,
-  button-text-shadow: $white,
-  button-text: darken($sample-accent, 5%),
-  button-background: $gray-300,
+  //  2.6  Button Colors
+  button-border:           $gray-400,
+  button-box-shadow:       $white,
+  button-text-shadow:      $white,
+  button-text:             darken($sample-accent, 5%),
+  button-background:       $gray-300,
   button-background-light: $white,
-  button-icon: $gray-500,
+  button-icon:             $gray-500,
 
-  button-icon-hover: $sample-primary-dark,
-  button-border-hover: $sample-primary-dark,
+  button-icon-hover:        $sample-primary-dark,
+  button-border-hover:      $sample-primary-dark,
   button-text-shadow-hover: rgba(desaturate(darken($sample-accent, 5%), 20%), .2),
 
-  button-form-text: $gray-900,
-  button-form-border: $gray-700,
-  button-form-text-hover: darken($sample-accent, 5%),
-  button-form-border-hover: darken($sample-accent, 5%),
+  button-form-text:               $gray-900,
+  button-form-border:             $gray-700,
+  button-form-text-hover:         darken($sample-accent, 5%),
+  button-form-border-hover:       darken($sample-accent, 5%),
   button-form-input-border-focus: $sample-primary-dark,
-  button-form-input-text-focus: $sample-primary-dark,
+  button-form-input-text-focus:   $sample-primary-dark,
 
-  // Tab Colors
-  tab-text: $sample-ui-dark,
+  //  2.7  Tab Colors
+  tab-text:       $sample-ui-dark,
   tab-background: $sample-background-dark,
 
-  tab-text-hover: darken($sample-accent, 5%),
+  tab-text-hover:       darken($sample-accent, 5%),
   tab-background-hover: $sample-background-light,
 
-  tab-text-active: $gray-900,
-  tab-background-active: darken($sample-background-0, 10%),
-  tab-border-active: darken($sample-background-0, 10%),
+  tab-text-active:             $gray-900,
+  tab-background-active:       darken($sample-background-0, 10%),
+  tab-border-active:           darken($sample-background-0, 10%),
   tab-background-active-light: $sample-background-light,
 
-  tab-background-mini: darken($sample-background-0, 5%),
-  tab-text-mini-active: $gray-900,
+  tab-background-mini:        darken($sample-background-0, 5%),
+  tab-text-mini-active:       $gray-900,
   tab-background-mini-active: $gray-50,
 
-  // Poll Colors
+  //  2.8  Poll Colors
   poll-bg1: desaturate(darken($sample-polls, 10%), 10%),
   poll-bg2: desaturate(darken($sample-polls, 5%), 5%),
   poll-bg3: $sample-polls,
@@ -120,26 +130,28 @@ $sample: (
   poll-border4: desaturate($sample-polls, 5%),
   poll-border5: desaturate($sample-polls, 5%),
 
-  // Highlight colors
-  blockquote: desaturate($sample-highlight, 45%),
+  //  2.9  Highlight colors
+  blockquote:       desaturate($sample-highlight, 45%),
   blockquote-inner: desaturate($sample-highlight, 30%),
 
-  // PM Colors
-  pm-reply: desaturate(lighten($sample-primary, 20%), 65%),
-  pm-friend: desaturate(darken($sample-primary, 5%), 45%),
+  //  2.10  PM Colors
+  pm-reply:    desaturate(lighten($sample-primary, 20%), 65%),
+  pm-friend:   desaturate(darken($sample-primary, 5%), 45%),
   pm-reported: $sample-accent,
-  pm-marked: adjust-hue(saturate($sample-accent, 15%), -310%),
-  pm-foe: $black,
+  pm-marked:   adjust-hue(saturate($sample-accent, 15%), -310%),
+  pm-foe:      $black,
 
-  // Other Unique Colors
-  loader-blue: #4285f4,
-  loader-red: #de3e35,
+  //  2.11  Other Unique Colors
+  loader-blue:   #4285f4,
+  loader-red:    #de3e35,
   loader-yellow: #f7c223,
-  loader-green: #1b9a59,
-  online: #85de39,
+  loader-green:  #1b9a59,
+  online:        #85de39,
 
-  // Misc
+  //  2.12  Misc
   bg-body-texture: 'bg_body-black.svg',
   bg-body-image:   'bg_body.jpg',
   bg-body-css:      $sample-primary-dark,
+
+  //  2.13  Your custom declations go here
 );
