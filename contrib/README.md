@@ -11,6 +11,11 @@ As far as stylesheets are concerned SassySilver's theme folder contains stylespe
 - Some more features may still be added to SassySilver until it reaches RC status and a few other may still change the moment they hit limits in functionality not foreseeable at the moment. Those adjustments will nevertheless focus on keeping the existing switches and usage of variables untouched as far as possible, but no garantee can be given at the current state (ALPHA or BETA releases).
 - A dedicated FAQ/How-to file will be included in the near future.
 
+## Issues & Feedback: ##
+Please feel free to report any issues, bugs or feature requests in the corresponding issue section at [GitHub => SassySilver Issues][7d2c666b]
+
+  [7d2c666b]: https://github.com/DistantSun/sassysilver/issues "SassySilver Issues"
+
 
 ## System Requirements
 - based on prosilver => prosilver must be installed for this style to work!
@@ -34,7 +39,7 @@ The development of this style was inspired by the outstanding phpBB 3.0/3.1 styl
 Myself being far away from his skills SassySilver is NOT inteded to be a copy of his works but a first step to dig into the possibilities SASS may offer.
 
 Credits go as well to all those who helped me during the development process, either by testing SassySilver or pointing me to flaws made or inconsistencies left in the code.
-(Special thanks go to Talk19zehn for proof-reading the code, numerous hints to alternative approaches and sharing her knowledge.)
+(Special thanks go to Talk19zehn and Joyce&Luna for proof-reading the code, numerous hints to alternative approaches and sharing their knowledge.)
 
 
 ## Features
@@ -44,6 +49,7 @@ Credits go as well to all those who helped me during the development process, ei
 - [x] Display of mini-profile switchable left <> right
 - [x] Option to split off headerbar and main menue to display it above the board wrapper
 - [x] Option to split display of mini-profile and postbody and show them side by side in separate DIVs
+- [x] Option to choose between colour, texture, image and CSS-based SVG for forum body background
 - [x] Option to display a background image in forum body and then select between images by simply changing the image name in the corresponding cofig variable (sample images included)
 - [x] Dito regarding background image in board wrapper (sample images included)
 - [x] Option to switch opacity of background colour in board wrapper on or off, opacity level configurable as well (these switches will only take effect when backround images for board wrapper are turned off)
@@ -60,11 +66,12 @@ Credits go as well to all those who helped me during the development process, ei
 Again supported. I will do my best to provide compatibility of SassySilver with this easy-to-use tool as long as feasible.
 
 2. Koala:<br />
-Koala can no longer be supported.
+Koala can no longer be supported due to its outdated and no longer supported SASS implementation
 
 3. Editor specific compiler add-ons:<br />
 There are numerous add-ons for a wide range of editors providing a means to compile SASS files from within the respective editor, some of them more and others less sophisticated. Those suitable for the job of compiling this style will most likely have to be configured accordingly.<br />
 Please understand that information on how to accomplish this cannot be provided.
+
 
 ###### (2) Third Party Packages included:
 
@@ -73,8 +80,8 @@ For the time being a reduced set of Bourbon files will be included in the theme 
 ###### (3) Additional copyrights:
 
 Please note that SassySilver, in its current state, makes use of (external) material (e.g. sample images, Bourbon library) to which additional third party copyright/license regulations may apply.
-For further information please read the corresponding license files provided with this style within their corresponding folders:
-- [Bourbon](./theme/assets/bourbon/LICENSE.md/ "Bourbon MIT license") see "/SassySilver/theme/assets/bourbon/LICENSE.md""
+For further information please read the corresponding license files or references included in the files.
+
 
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/DistantSun/sassysilver.svg?columns=all)](https://waffle.io/DistantSun/sassysilver)
