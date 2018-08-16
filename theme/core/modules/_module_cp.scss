@@ -1,0 +1,31 @@
+.cp-main {
+  float: right;
+  width: 80%;
+}
+
+.cp-menu {
+  @include container-base;
+  box-shadow: $box-shadow-inset-double;
+  margin-top: 2.357rem;
+  padding-top: 10px;
+
+  .navigation {
+    @include cpmenu-navigation-std;
+
+    .active-subsection {
+      @include cpmenu-navigation-activesub-std;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+  .panel-container {
+    width: 100%;
+  }
+
+  .navigation a,
+  .rtl .navigation a {
+    background: desaturate(darken($col-tab-background, 10%), 15%);
+  }
+}

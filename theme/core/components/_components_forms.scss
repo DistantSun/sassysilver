@@ -22,13 +22,11 @@ dd {
   }
 }
 
+/* stylelint-disable max-nesting-depth */
 fieldset {
   &.fields1 {
     background-color: transparent;
   }
-
-  /* stylelint-disable max-nesting-depth */
-
   // Hover effects
   &.fields2 {
     dl {
@@ -41,8 +39,6 @@ fieldset {
       }
     }
   }
-
-
   // Quick-login on index page
   &.quick-login {
     input {
@@ -51,7 +47,6 @@ fieldset {
       }
     }
   }
-
   // Hover effects
   dl {
     &:hover {
@@ -63,7 +58,6 @@ fieldset {
     }
   }
 }
-
 /* stylelint-enable max-nesting-depth */
 
 
@@ -81,23 +75,6 @@ fieldset {
 }
 
 
-//  TODO: Re-locate this block to propper stylesheet!
-// Posting page styles
-.message-box {
-  textarea {
-    color: $gray-900;
-
-    &.drag-n-drop {
-      outline-color: rgba($gray-700, 0.5);
-    }
-
-    &.drag-n-drop-highlight {
-      outline-color: rgba($col-primary, 0.5);
-    }
-  }
-}
-
-
 // Input field styles
 .inputbox {
   background-color: $white;
@@ -110,15 +87,16 @@ fieldset {
   }
 }
 
-.inputbox:-moz-placeholder,
-.inputbox::-webkit-input-placeholder {
-  color: $gray-900;
-}
-
-.inputbox:focus:-moz-placeholder,
-.inputbox:focus::-webkit-input-placeholder {
-  color: transparent;
-}
+// TODO: Remove when tested
+//.inputbox:-moz-placeholder,
+//.inputbox::-webkit-input-placeholder {
+//  color: $gray-900;
+//}
+//
+//.inputbox:focus:-moz-placeholder,
+//.inputbox:focus::-webkit-input-placeholder {
+//  color: transparent;
+//}
 
 input.disabled { color: $gray-600; }
 option.disabled-option { color: $gray-600; }
