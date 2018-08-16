@@ -1,0 +1,43 @@
+// UCP Nav Colours
+//---------------------------------------------------------------------------
+
+// Link styles for the sub-section links
+.navigation {
+  a {
+    background: $col-tab-background;
+    background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
+    color: $col-tab-text-mini-active;
+  }
+
+  .active-subsection {
+    a {
+      background: $col-tab-background-mini-active;
+      color: $col-tab-text-hover;
+
+      &:hover {
+        color: $col-tab-text-hover;
+      }
+    }
+  }
+}
+
+.rtl {
+  .navigation {
+    a {
+      background-image: linear-gradient(to right, $col-tab-background 50%, desaturate(darken($col-tab-background, 10%), 15%) 100%);
+
+      &:hover {
+        background: desaturate(darken($col-tab-background, 10%), 15%);
+        color: $col-tab-text-hover;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+  .navigation a,
+  .rtl .navigation a {
+    background: desaturate(darken($col-tab-background, 10%), 15%);
+  }
+}
