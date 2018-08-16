@@ -1,0 +1,108 @@
+// CP Colours
+//---------------------------------------------------------------------------
+
+// main cp box
+.panel-container {
+  h3,
+  hr {
+    border-color: $col-bg-03;
+  }
+
+  h2 {
+    color: $gray-900;
+  }
+
+  .panel {
+    background-color: $gray-50;
+
+    li {
+      .row {
+        border-top-color: $gray-50;
+        border-bottom-color: $col-bg-03;
+      }
+
+      .header {
+        dd,
+        dt {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+
+.cp-menu {
+  hr {
+    border-color: $col-bg-03;
+  }
+}
+
+.cplist {
+  @include qualify(ul) {
+    border-top-color: $col-bg-03;
+  }
+}
+
+.cp-main {
+  .pm {
+    background-color: $col-bg-01;
+  }
+}
+
+.cp-mini {
+  background-color: $col-bg-01;
+}
+
+.mini {
+  @include qualify(dl) {
+    dt {
+      color: $col-ui-dark;
+    }
+  }
+}
+
+@mixin cpmenu-navigation-std {
+  padding: 0;
+
+  a {
+    background: $col-tab-background;
+    background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
+    color: $col-tab-text-mini-active;
+  }
+}
+
+@mixin cpmenu-navigation-activesub-std {
+  a {
+    background: $col-tab-background-mini-active;
+    color: $col-tab-text-hover;
+
+    &:hover {
+      color: $col-tab-text-hover;
+    }
+  }
+}
+
+
+//  TODO: Display navigation as buttons
+@mixin cpmenu-navigation-btn {
+  padding: 0;
+
+  a {
+    background: $col-tab-background;
+    background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
+    color: $col-tab-text-mini-active;
+  }
+}
+
+
+
+// TODO: Code relocated - remove when tested
+// UCP Nav Colours
+//---------------------------------------------------------------------------
+//@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+//  .navigation a,
+//  .rtl .navigation a {
+//    background: desaturate(darken($col-tab-background, 10%), 15%);
+//  }
+//}

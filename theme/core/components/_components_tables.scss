@@ -1,0 +1,39 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+// Table Colours
+//---------------------------------------------------------------------------
+
+table.zebra-list tr:nth-child(odd) td,
+ul.zebra-list li:nth-child(odd) {
+  background-color: $col-bg-01;
+}
+
+table.zebra-list tr:nth-child(even) td,
+ul.zebra-list li:nth-child(even) {
+  background-color: $col-bg-02;
+}
+table.table1 thead th { color: $white; }
+table.table1 tbody tr { border-color: $col-bg-03; }
+
+table.table1 tbody tr:hover,
+table.table1 tbody tr.hover {
+  background-color: $col-link-secondary-hover-highlight;
+  color: $black;
+}
+
+table.table1 tbody th {
+  background-color: $white;
+  border-bottom-color: $black;
+  color: $gray-900;
+}
+
+table.info tbody th { color: $black; }
+table.table1 td { color: $col-ui-dark; }
+table.table1 tbody td { border-top-color: $gray-50; }
+
+.panel-container table.table1 thead th {
+  border-bottom-color: $gray-900;
+  color: $gray-900;
+}
+
+/* stylelint-enable selector-no-qualifying-type */

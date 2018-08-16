@@ -1,0 +1,31 @@
+.forabg,
+.forumbg {
+  @include forum-container;
+  @include topiclist;
+}
+
+.forums {
+  @include qualify(ul) {
+    background-color: $col-forums;
+    background-image: none;
+    border-radius: 5px;
+  }
+}
+
+.topic-title,
+.forum-title {
+  @include qualify(h2) {
+    margin: 10px 0;
+  }
+  text-align: center;
+
+  & a {
+    background-color: $col-cat-titlebar;
+    border: 1px solid #e6e9ed;
+    border-radius: 10px;
+    color: $col-text-catfora-title;
+    width: auto;
+    min-width: 33%;
+    padding: 5px 15px;
+  }
+}

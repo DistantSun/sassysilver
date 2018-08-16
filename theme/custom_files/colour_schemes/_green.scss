@@ -1,0 +1,145 @@
+// Primary Colors
+$green-primary:          #28832b !default;
+$green-primary-light:    scale-color($green-primary, $lightness: 50%);
+$green-primary-dark:     saturate(darken($green-primary, 20%), 15%);
+
+// Secondary Colors
+$green-secondary:        adjust-hue($green-primary, 10%) !default;
+$green-secondary-light:  saturate(lighten($green-secondary, 25%), 15%);
+$green-secondary-dark:   saturate(darken($green-secondary, 15%), 15%);
+
+$green-accent:           adjust-hue($green-primary, 145%) !default;
+
+$green-ui:               desaturate(adjust-hue($green-primary, 20%), 65%) !default;
+$green-ui-light:         lighten($green-ui, 25%);
+$green-ui-dark:          darken($green-ui, 15%);
+$green-ui-super-dark:    darken($green-ui, 20%);
+
+// Additioanl UI Vars
+$green-links:            desaturate(darken($green-secondary, 20%), 5%) !default;
+$green-highlight:        hsl(55, 100%, 90%) !default;
+$green-code:             hsl(125, 40%, 50%) !default;
+
+$green-background:       $green-primary !default;
+$green-background-0:     desaturate(lighten($green-primary, 45%), 45%);
+$green-background-light: saturate($green-background-0, 60%);
+$green-background-dark:  desaturate(darken($green-background-0, 14%), 10%);
+
+$green-polls:            $green-accent !default;
+
+
+
+$green: (
+  ///=========== ALL VARS BEYOND HERE ARE BASED ON THE VARS ABOVE ==============
+
+  primary:       $green-primary,
+  primary-light: $green-primary-light,
+  primary-dark:  $green-primary-dark,
+
+  // UI Colors
+  ui-light:      $green-ui-light ,
+  ui-dark:       $green-ui-dark,
+  ui-super-dark: $green-ui-super-dark,
+
+  // Accent Colors
+  accent-light:     saturate(lighten($green-accent, 25%), 15%),
+  accent-dark:      saturate(darken($green-accent, 15%), 15%),
+  accent-hover:     desaturate(lighten($green-accent, 10%), 45%),
+  //col-accent-highlight: lighten($green-accent-hover, 5%),
+  accent-highlight: lighten($green-accent, 50%),
+
+  // Background Colors
+  bg-1:              $green-background-0,
+  bg-2:              darken($green-background-0, 5%),
+  bg-3:              darken($green-background-0, 10%),
+  bg-4:              desaturate($green-background-0, 20%),
+  bg-light:          saturate($green-background-0, 60%),
+  bg-dark:           desaturate(darken($green-background-0, 14%), 10%),
+  bg-dark-hover:     lighten($green-background-dark, 5%),
+  bg-body:           linear-gradient(to bottom, darken($green-primary, 25%) 250px, darken($green-primary, 10%) 70%, darken($green-primary, 35%) 100%),
+  bg-wrap:           $gray-300,
+  bg-forumcontainer: linear-gradient(to bottom, $green-primary-dark 45px, $green-primary-dark 46px, rgba($green-primary-dark, 0) 52px, rgba($green-primary-dark, 0) 100%),
+
+  // Link Colors
+  link:                           $green-links,
+  link-accent:                    saturate(lighten($green-links, 10%), 15%),
+  link-hover:                     darken($green-accent, 5%),
+  link-hover-highlight:           lighten($green-accent, 35%),
+
+  link-secondary:                 desaturate(lighten($green-links, 20%), 15%),
+  link-secondary-accent:          desaturate(lighten($green-links, 20%), 45%),
+  link-secondary-hover:           darken(desaturate(lighten($green-links, 20%), 15%), 25%),
+  link-secondary-hover-highlight: desaturate(lighten($green-links, 55%), 35%),
+
+  // Button Colors
+  button-border: $gray-400,
+  button-box-shadow: $white,
+  button-text-shadow: $white,
+  button-text: darken($green-accent, 5%),
+  button-background: $gray-300,
+  button-background-light: $white,
+  button-icon: $gray-500,
+
+  button-icon-hover: $green-primary-dark,
+  button-border-hover: $green-primary-dark,
+  button-text-shadow-hover: rgba(desaturate(darken($green-accent, 5%), 20%), .2),
+
+  button-form-text: $gray-900,
+  button-form-border: $gray-700,
+  button-form-text-hover: darken($green-accent, 5%),
+  button-form-border-hover: darken($green-accent, 5%),
+  button-form-input-border-focus: $green-primary-dark,
+  button-form-input-text-focus: $green-primary-dark,
+
+  // Tab Colors
+  tab-text: $green-ui-dark,
+  tab-background: $green-background-dark,
+
+  tab-text-hover: darken($green-accent, 5%),
+  tab-background-hover: $green-background-light,
+
+  tab-text-active: $gray-900,
+  tab-background-active: darken($green-background-0, 10%),
+  tab-border-active: darken($green-background-0, 10%),
+  tab-background-active-light: $green-background-light,
+
+  tab-background-mini: darken($green-background-0, 5%),
+  tab-text-mini-active: $gray-900,
+  tab-background-mini-active: $gray-50,
+
+  // Poll Colors
+  poll-bg1: desaturate(darken($green-polls, 10%), 10%),
+  poll-bg2: desaturate(darken($green-polls, 5%), 5%),
+  poll-bg3: $green-polls,
+  poll-bg4: saturate(lighten($green-polls, 5%), 5%),
+  poll-bg5: saturate(lighten($green-polls, 10%), 10%),
+
+  poll-border1: desaturate(darken($green-polls, 20%), 10%),
+  poll-border2: desaturate(darken($green-polls, 20%), 5%),
+  poll-border3: desaturate(darken($green-polls, 20%), 5%),
+  poll-border4: desaturate($green-polls, 5%),
+  poll-border5: desaturate($green-polls, 5%),
+
+  // Highlight colors
+  blockquote: desaturate($green-highlight, 45%),
+  blockquote-inner: desaturate($green-highlight, 30%),
+
+  // PM Colors
+  pm-reply: desaturate(lighten($green-primary, 20%), 65%),
+  pm-friend: desaturate(darken($green-primary, 5%), 45%),
+  pm-reported: $green-accent,
+  pm-marked: adjust-hue(saturate($green-accent, 15%), -310%),
+  pm-foe: $black,
+
+  // Other Unique Colors
+  loader-blue: #4285f4,
+  loader-red: #de3e35,
+  loader-yellow: #f7c223,
+  loader-green: #1b9a59,
+  online: #85de39,
+
+  // Misc
+  bg-body-texture: 'bg_body-green.svg',
+  bg-body-image:   'bg_body.jpg',
+  bg-body-css:      $green-primary-dark,
+);

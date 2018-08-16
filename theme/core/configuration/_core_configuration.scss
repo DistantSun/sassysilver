@@ -1,0 +1,72 @@
+// *****************************************************************************
+//  Central configuration file - DO NOT CHANGE !
+//  Copy the code you want to change and paste it into _custom_configurations.scss
+//  and do your edits there.
+// *****************************************************************************
+
+// Layout switches
+// ***************
+
+//  Colours & body background - default scheme
+//  Board colour scheme
+$switch-col-scheme:               default !default;
+//  Body background type
+$switch-background-body:          colour !default;
+$img-bg-html-body:                'bg_body.jpg' !default;
+
+// Board width
+$switch-width-wrap:               1152px !default;
+
+//  Logo & Site-Description positioning
+$switch-logo-position:            'center' !default;
+$switch-show-sitedescription:     'yes' !default;
+$switch-position-sitedescription: 'center' !default;
+
+//  Switch between different sets for forum & topic icons
+//  Available options: standard (= prosilver), vector1 (icons by Mazeltof)
+$switch-icon-set:                 'standard' !default;
+
+// Postprofile positioning & max. width
+// display postprofile<>postbody separatly; values: no, yes
+$switch-pprofile-separation:      'no' !default;
+// Displays postprofile left or right
+$switch-postprofile-side:         'right' !default;
+
+//  NOTE: temporarily removed - needs complete re-coding ...
+// Width of postprofile - please choose carefully
+// $switch-width-postprofile:                         240px !default;
+
+// Background images
+// Switches background colour of #wrap to transparent; values: no, yes
+$switch-col-wrap-off:             'no' !default;
+
+// Background body
+// @ptions: none, texture, image;
+// none => colour as defined in scheme; texture => texture as defined in scheme;
+// design => background image as specified
+// $img-bg-html-body:                none !default;
+
+$img-bg-wrap:                     none !default;
+$img-bg-wrap-header:              none !default;
+$img-bg-headerbar:                none !default;
+
+// Paddings
+// Standard padding for #wrap & .wrap-menue
+$pad-wrappers:                    15px !default;
+
+// Dimensions
+// Width of the headerbar if set to diplay separately
+$width-headerbar-separate:        $switch-width-wrap !default;
+// Width of menuebar when displayed separately
+$width-menuebar:                  $switch-width-wrap !default;
+//  NOTE: Width of sidebar - not yet realized
+// $width-sidebar:                             180px !default;
+
+
+// Diverse
+$box-shadow-outset-bottom:        0 5px 7px -1px rgba(0, 0, 0, 0.75) !default;
+$box-shadow-outset-single-posts:  7px 7px 10px 0 rgba(0, 0, 0, 0.75) !default;
+$box-shadow-inset-double:         inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75) !default;
+
+// Breakpoints for RWD
+$breakpoint-master:               800px !default;

@@ -1,0 +1,36 @@
+.pagination {
+  li {
+    a {
+      background: $gray-200;
+      filter: none;
+      border-color: $gray-400;
+      box-shadow: none;
+      color: $gray-500;
+    }
+
+    &.ellipsis {
+      span {
+        background: $col-link-secondary;
+        border-color: $col-link-secondary;
+        color: $white;
+      }
+    }
+
+    &.active span {
+      background: $col-link-secondary;
+      border-color: $col-link-secondary;
+      color: $white;
+    }
+  }
+}
+
+.pagination li a:hover,
+.pagination li a:hover .icon,
+.pagination .dropdown-visible a.dropdown-trigger,
+.nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+  background: $col-link-secondary;
+  filter: none;
+  border-color: $col-link-secondary;
+  text-shadow: none;
+  color: $white;
+}

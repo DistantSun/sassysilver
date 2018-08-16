@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="205.987" height="205.987" viewBox="0 0 68.666 68.662">
+  <defs>
+    <filter id="a" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" numOctaves="3" baseFrequency="1" result="result0"/>
+      <feColorMatrix result="result4" values="0" type="saturate"/>
+      <feComposite in="SourceGraphic" in2="result4" operator="arithmetic" k1="1.25" k2=".5" k3=".5" result="result2"/>
+      <feBlend result="result5" in="result2" in2="SourceGraphic"/>
+      <feComposite in="result5" in2="SourceGraphic" operator="in" result="result3"/>
+    </filter>
+  </defs>
+  <rect width="230.565" height="225.274" x="-457.351" y="-99.875" ry="1.535" transform="matrix(.3012 0 0 .30827 137.361 30.397)" fill="#121212" filter="url(#a)"/>
+</svg>

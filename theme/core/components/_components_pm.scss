@@ -1,0 +1,35 @@
+//  PM colours
+// ---------------------------------------------------------------------------
+
+// pm message history
+.current {
+  color: $black;
+}
+
+
+// PM marking colours
+.pmlist li.pm_message_reported_colour,
+.pm_message_reported_colour {
+  border-right-color: $col-pm-reported;
+  border-left-color: $col-pm-reported;
+}
+
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+  border-color: $col-pm-marked;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+  border-color: $col-pm-reply;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+  border-color: $col-pm-friend;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+  border-color: $col-pm-foe;
+}

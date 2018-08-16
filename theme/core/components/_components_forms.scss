@@ -1,0 +1,104 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+// Form Colours
+// ---------------------------------------------------------------------------
+
+// General form styles
+select {
+  background-color: $gray-50;
+  border-color: $gray-700;
+  color: $black;
+}
+
+label {
+  color: $col-ui-dark;
+}
+
+
+// Definition list layout for forms
+dd {
+  label {
+    color: $gray-900;
+  }
+}
+
+/* stylelint-disable max-nesting-depth */
+fieldset {
+  &.fields1 {
+    background-color: transparent;
+  }
+  // Hover effects
+  &.fields2 {
+    dl {
+      &:hover {
+        dt {
+          label {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+  // Quick-login on index page
+  &.quick-login {
+    input {
+      &.inputbox {
+        background-color: $gray-100;
+      }
+    }
+  }
+  // Hover effects
+  dl {
+    &:hover {
+      dt {
+        label {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+/* stylelint-enable max-nesting-depth */
+
+
+// Misc layout styles
+.details {
+  @include qualify(dl) {
+    dt {
+      color: $black;
+    }
+
+    dd {
+      color: $col-ui-dark;
+    }
+  }
+}
+
+
+// Input field styles
+.inputbox {
+  background-color: $white;
+  border-color: $gray-400;
+  color: $gray-900;
+
+  &:hover,
+  &:focus {
+    border-color: $col-primary;
+  }
+}
+
+// TODO: Remove when tested
+//.inputbox:-moz-placeholder,
+//.inputbox::-webkit-input-placeholder {
+//  color: $gray-900;
+//}
+//
+//.inputbox:focus:-moz-placeholder,
+//.inputbox:focus::-webkit-input-placeholder {
+//  color: transparent;
+//}
+
+input.disabled { color: $gray-600; }
+option.disabled-option { color: $gray-600; }
+
+/* stylelint-enable selector-no-qualifying-type */

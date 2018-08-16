@@ -1,0 +1,64 @@
+/* stylelint-disable color-named */
+
+// ===================================================================
+// Custom configuration file
+// ===================================================================
+
+
+//  Select colour scheme & body Background
+//  ------------------------------------------------------------------
+$switch-col-scheme:               default;
+
+// Background body
+// @ptions: colour, texture, image, css;
+// colour => colour as defined in scheme; texture => texture as defined in scheme;
+// image => background image as specified below
+// css => svg texture with adjustable colour as defined in scheme
+$switch-background-body:          css;
+
+// Background image, full size
+// NOTE: To allocate an image replace "none" with the complete image name
+// wrapped in single quotes - eg: 'my_background_image.png'
+$img-bg-html-body:                'bg_body.jpg';
+
+
+// "Board width" - any value is okay as longs as the unit is "px"
+$switch-width-wrap:               1152px;
+
+//  Logo & Site-Description positioning
+$switch-logo-position:            'left';
+$switch-show-sitedescription:     'no';
+$switch-position-sitedescription: 'center';
+
+//  Switch between different sets for forum & topic icons
+$switch-icon-set:                 standard;
+
+// Board colour scheme; available schemes: blue, red, green, black
+// $switch-col-scheme:               red;
+
+// postprofile right or left
+$switch-postprofile-side:         'right';
+// Display postprofile <> postbody separatly; values: no, yes
+$switch-pprofile-separation:      'yes';
+
+// Maximum width of pstprofile at resolutions of 1100px and above
+// $switch-width-postprofile:                  240px;
+
+// Set value to "yes" if you want to switch background colour of #wrap to transparent)
+$switch-col-wrap-off:             no;
+$switch-opacity-wrap:             0.6;
+
+
+// The following variables control the display of background images in "html, body", "wrap-header" and "headerbar"
+// Default values are "none" - all images have to be stored in the theme's image folder
+// NOTE: To allocate an image replace "none" with the complete image name wrapped in single quotes - eg: 'my_background_image.png'
+
+// $img-bg-html-body:                texture;
+// $img-bg-html-body:                'bg_body.jpg';
+// $img-bg-wrap:                     'bg_img_wrap_05.jpg';
+// $img-bg-headerbar:                          none;
+
+// Breakpoin RWD
+$breakpoint-master:               '800px';
+
+/* stylelint-ensable color-named */

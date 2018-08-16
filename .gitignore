@@ -1,0 +1,5 @@
+*~
+/.github
+.gitignore
+.postcss-sorting.json
+.stylelintrc

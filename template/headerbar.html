@@ -2,8 +2,8 @@
 			<div class="inner absolute">
 
 				<div class="logo-container">
-					<a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->">
-						<img src="{T_THEME_PATH}/images/site_logo.png" class="logo-responsive" alt="" />
+					<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">
+						<img src="{{ T_THEME_PATH }}/images/site_logo.png" class="logo-responsive" alt="" />
 					</a>
 				</div>
 
