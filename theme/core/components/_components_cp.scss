@@ -15,19 +15,22 @@
   .panel {
     background-color: $gray-50;
 
-    li.row {
-      border-top-color: $gray-50;
-      border-bottom-color: $col-bg-03;
-    }
+    li {
+      .row {
+        border-top-color: $gray-50;
+        border-bottom-color: $col-bg-03;
+      }
 
-    li.header {
-      dd,
-      dt {
-        color: $black;
+      .header {
+        dd,
+        dt {
+          color: $black;
+        }
       }
     }
   }
 }
+
 
 .cp-menu {
   hr {
@@ -59,34 +62,47 @@
   }
 }
 
+@mixin cpmenu-navigation-std {
+  padding: 0;
 
-// UCP Nav Colours
-//---------------------------------------------------------------------------
-
-// Link styles for the sub-section links
-.navigation a {
-  background: $col-tab-background;
-  background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
-  color: $col-tab-text-mini-active;
-}
-
-.rtl .navigation a { background-image: linear-gradient(to right, $col-tab-background 50%, desaturate(darken($col-tab-background, 10%), 15%) 100%); }
-
-.navigation a:hover {
-  background: desaturate(darken($col-tab-background, 10%), 15%);
-  color: $col-tab-text-hover;
-}
-
-.navigation .active-subsection a {
-  background: $col-tab-background-mini-active;
-  color: $col-tab-text-hover;
-}
-
-.navigation .active-subsection a:hover { color: $col-tab-text-hover; }
-
-@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
-  .navigation a,
-  .rtl .navigation a {
-    background: desaturate(darken($col-tab-background, 10%), 15%);
+  a {
+    background: $col-tab-background;
+    background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
+    color: $col-tab-text-mini-active;
   }
 }
+
+@mixin cpmenu-navigation-activesub-std {
+  a {
+    background: $col-tab-background-mini-active;
+    color: $col-tab-text-hover;
+
+    &:hover {
+      color: $col-tab-text-hover;
+    }
+  }
+}
+
+
+//  TODO: Display navigation as buttons
+@mixin cpmenu-navigation-btn {
+  padding: 0;
+
+  a {
+    background: $col-tab-background;
+    background-image: linear-gradient(to right, desaturate(darken($col-tab-background, 10%), 15%) 50%, $col-tab-background 100%);
+    color: $col-tab-text-mini-active;
+  }
+}
+
+
+
+// TODO: Code relocated - remove when tested
+// UCP Nav Colours
+//---------------------------------------------------------------------------
+//@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+//  .navigation a,
+//  .rtl .navigation a {
+//    background: desaturate(darken($col-tab-background, 10%), 15%);
+//  }
+//}

@@ -71,6 +71,7 @@
 @import 'core/components/components_dropdowns';
 @import 'core/components/components_fora';
 @import 'core/components/components_forms';
+@import 'core/components/components_navigation';
 @import 'core/components/components_pagination';
 @import 'core/components/components_pm';
 @import 'core/components/components_polls';
@@ -82,6 +83,7 @@
 
 //  7.  Modules
 //  --------------------------------------------------------------
+@import 'core/modules/module_cp';
 @import 'core/modules/module_fora';
 @import 'core/modules/module_posts';
 @import 'core/modules/module_headerbar';

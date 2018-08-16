@@ -6462,12 +6462,13 @@ body {
 				background-color: #fafafa;
 }
 
-.panel-container .panel li.row {
+.panel-container .panel li .row {
 				border-top-color: #fafafa;
 				border-bottom-color: #c9dee8;
 }
 
-.panel-container .panel li.header dd, .panel-container .panel li.header dt {
+.panel-container .panel li .header dd,
+.panel-container .panel li .header dt {
 				color: #000;
 }
 
@@ -6489,37 +6490,6 @@ ul.cplist {
 
 dl.mini dt {
 				color: #47536b;
-}
-
-.navigation a {
-				background: #c0d3dd;
-				background-image: linear-gradient(to right, #aab9c0 50%, #c0d3dd 100%);
-				color: #212121;
-}
-
-.rtl .navigation a {
-				background-image: linear-gradient(to right, #c0d3dd 50%, #aab9c0 100%);
-}
-
-.navigation a:hover {
-				background: #aab9c0;
-				color: #d41142;
-}
-
-.navigation .active-subsection a {
-				background: #fafafa;
-				color: #d41142;
-}
-
-.navigation .active-subsection a:hover {
-				color: #d41142;
-}
-
-@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
-				.navigation a,
-				.rtl .navigation a {
-								background: #aab9c0;
-				}
 }
 
 /* stylelint-disable selector-no-qualifying-type */
@@ -6601,10 +6571,7 @@ dd label {
 				color: #212121;
 }
 
-fieldset {
-				/* stylelint-disable max-nesting-depth */
-}
-
+/* stylelint-disable max-nesting-depth */
 fieldset.fields1 {
 				background-color: transparent;
 }
@@ -6630,18 +6597,6 @@ dl.details dd {
 				color: #47536b;
 }
 
-.message-box textarea {
-				color: #212121;
-}
-
-.message-box textarea.drag-n-drop {
-				outline-color: rgba(97, 97, 97, 0.5);
-}
-
-.message-box textarea.drag-n-drop-highlight {
-				outline-color: rgba(19, 164, 236, 0.5);
-}
-
 .inputbox {
 				background-color: #fff;
 				border-color: #bdbdbd;
@@ -6650,16 +6605,6 @@ dl.details dd {
 
 .inputbox:hover, .inputbox:focus {
 				border-color: #13a4ec;
-}
-
-.inputbox:-moz-placeholder,
-.inputbox::-webkit-input-placeholder {
-				color: #212121;
-}
-
-.inputbox:focus:-moz-placeholder,
-.inputbox:focus::-webkit-input-placeholder {
-				color: transparent;
 }
 
 input.disabled {
@@ -6671,6 +6616,37 @@ option.disabled-option {
 }
 
 /* stylelint-enable selector-no-qualifying-type */
+.navigation a {
+				background: #c0d3dd;
+				background-image: linear-gradient(to right, #aab9c0 50%, #c0d3dd 100%);
+				color: #212121;
+}
+
+.navigation .active-subsection a {
+				background: #fafafa;
+				color: #d41142;
+}
+
+.navigation .active-subsection a:hover {
+				color: #d41142;
+}
+
+.rtl .navigation a {
+				background-image: linear-gradient(to right, #c0d3dd 50%, #aab9c0 100%);
+}
+
+.rtl .navigation a:hover {
+				background: #aab9c0;
+				color: #d41142;
+}
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+				.navigation a,
+				.rtl .navigation a {
+								background: #aab9c0;
+				}
+}
+
 .pagination li a {
 				background: #ededed;
 				filter: none;
@@ -6944,6 +6920,51 @@ table.table1 tbody td {
 				color: #212121;
 }
 
+.cp-main {
+				float: right;
+				width: 80%;
+}
+
+.cp-menu {
+				background-color: white;
+				border: 1px solid #0077b3;
+				border-radius: 7px;
+				margin: 0;
+				padding: 15px 10px;
+				box-shadow: inset 3px 3px 7px -2px rgba(0, 0, 0, 0.75), inset -3px -3px 7px -2px rgba(0, 0, 0, 0.75);
+				margin-top: 2.357rem;
+				padding-top: 10px;
+}
+
+.cp-menu .navigation {
+				padding: 0;
+}
+
+.cp-menu .navigation a {
+				background: #c0d3dd;
+				background-image: linear-gradient(to right, #aab9c0 50%, #c0d3dd 100%);
+				color: #212121;
+}
+
+.cp-menu .navigation .active-subsection a {
+				background: #fafafa;
+				color: #d41142;
+}
+
+.cp-menu .navigation .active-subsection a:hover {
+				color: #d41142;
+}
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+				.panel-container {
+								width: 100%;
+				}
+				.navigation a,
+				.rtl .navigation a {
+								background: #aab9c0;
+				}
+}
+
 .forabg,
 .forumbg {
 				border: 0;
@@ -6993,6 +7014,7 @@ h2.topic-title, .forum-title {
 				padding: 5px 15px;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 .pprofile-container, .pbody-container {
 				display: block;
 				height: auto;
@@ -7030,6 +7052,18 @@ h2.topic-title, .forum-title {
 
 .post-container .postprofile {
 				border-width: 0;
+}
+
+.message-box textarea {
+				color: #212121;
+}
+
+.message-box textarea.drag-n-drop {
+				outline-color: rgba(97, 97, 97, 0.5);
+}
+
+.message-box textarea.drag-n-drop-highlight {
+				outline-color: rgba(19, 164, 236, 0.5);
 }
 
 @media (min-width: 800px) {
@@ -7092,6 +7126,7 @@ h2.topic-title, .forum-title {
 				}
 }
 
+/* stylelint-enable selector-no-qualifying-type */
 .headerbar-separate {
 				max-width: 1152px;
 				margin: 0 auto;
