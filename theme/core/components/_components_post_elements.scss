@@ -1,3 +1,5 @@
+/* stylelint-disable selector-no-qualifying-type */
+
 //  Code block
 .codebox {
   background-color: $white;
@@ -73,3 +75,5 @@ blockquote {
     }
   }
 }
+
+/* stylelint-enable selector-no-qualifying-type */
