@@ -66,7 +66,7 @@ Credits go as well to all those who helped me during the development process, ei
 Again supported. I will do my best to provide compatibility of SassySilver with this easy-to-use tool as long as feasible.
 
 2. Koala:<br />
-Koala can no longer be supported due to its outdated and no longer supported SASS implementation
+Koala can no longer be supported due to its outdated and no longer supported SASS implementation.
 
 3. Editor specific compiler add-ons:<br />
 There are numerous add-ons for a wide range of editors providing a means to compile SASS files from within the respective editor, some of them more and others less sophisticated. Those suitable for the job of compiling this style will most likely have to be configured accordingly.<br />

@@ -3,3 +3,13 @@
 //
 //	This file requires SASS compiler.
 // ---------------------------------------------------------
+
+
+//  In case you want to restrict your edit(s) to a certain scheme only, you
+//  need to surround your code with an @if conditional. See example below.
+//  @if $switch-col-scheme == prosilver {
+//    .forabg,
+//    .forumbg {
+//      padding-bottom: 7px;
+//    }
+//  }
