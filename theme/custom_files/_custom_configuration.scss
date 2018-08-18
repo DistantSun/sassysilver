@@ -25,10 +25,13 @@ $img-bg-html-body:                'bg_body.jpg';
 // "Board width" - any value is okay as longs as the unit is "px"
 $switch-width-wrap:               1152px;
 
+//	(Physical) Width of logo images
+$dim-logo-width:                  512px;
+
 //  Logo & Site-Description positioning
-$switch-logo-position:            'left';
-$switch-show-sitedescription:     'no';
-$switch-position-sitedescription: 'center';
+$switch-logo-position:            'left';   // Options: left, center, right
+$switch-show-sitedescription:     'no';			  // Options: yes, no
+$switch-position-sitedescription: 'center';	// Options: left, center, right
 
 //  Switch between different sets for forum & topic icons
 $switch-icon-set:                 standard;

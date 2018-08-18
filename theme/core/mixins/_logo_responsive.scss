@@ -1,0 +1,25 @@
+//	Responsive resizing of logo
+//	=========================================================================
+
+//	TODO: Logos with a width less than the width of headerbar won't scale
+//	in mobile modes unless display resolution falls under the with of the
+//	logo image.
+//	A function is needed to start scaling down the dimension of the logo,
+//	kicking in the moment when as soon as res(h) of display < width oh headerbar
+
+//	Variables needed
+$width-wrap: $switch-width-wrap;
+$width-logo: $dim-logo-width;
+$breakpoint-scale-logo: $switch-width-wrap - 1;
+
+//	Calculate the relative width of logo in relation to wrap width, thus
+//	creating a unitless scaling factor
+$scale-logo: $width-logo/($width-wrap/100);
+
+@mixin logo-scaled {
+  @media (max-width: $breakpoint-scale-logo) {
+    width: $scale-logo * 1vw;
+  }
+
+  @content;
+}

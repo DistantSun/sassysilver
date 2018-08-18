@@ -1,4 +1,6 @@
-//  TODO: This code is sloppy - needs cleaning up ...
+/* stylelint-disable declaration-property-unit-whitelist */
+
+
 //  TODO: Create and assign variables
 //
 //  Modul containing the CSS in regards to formatting of
@@ -71,7 +73,7 @@ $breakpoint: '<#{$breakpoint-master}';
     & a {
       font-size: 1.2em;
       border-radius: 2px;
-      color: #fff;
+      color: $white;
       padding: 5px;
 
       &:hover {
@@ -99,6 +101,7 @@ $breakpoint: '<#{$breakpoint-master}';
 }
 
 .logo-responsive {
+  @include logo-scaled;
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -110,7 +113,7 @@ $breakpoint: '<#{$breakpoint-master}';
     display: none;
   } @else {
     text-align: #{$switch-position-sitedescription};
-    color: #fff;
+    color: $white;
     width: 100%;
   }
 }

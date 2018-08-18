@@ -6411,11 +6411,6 @@ html, body {
 				background-repeat: repeat;
 }
 
-/*   @else {
-  background-image: bg-image('bg_body.jpg');
-  background-attachment: fixed;
-  background-size: 100% 100%;
-} */
 body {
 				padding: 0 0 12px;
 }
@@ -6767,6 +6762,7 @@ fieldset.polls dd div {
 				border-bottom-color: #e61a4d;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 .codebox {
 				background-color: #fff;
 				border-color: #c0d3dd;
@@ -6827,6 +6823,7 @@ blockquote blockquote blockquote {
 				background-color: #f4f1d7;
 }
 
+/* stylelint-enable selector-no-qualifying-type */
 .search-box .inputbox {
 				border-color: #bdbdbd;
 }
@@ -6839,6 +6836,7 @@ blockquote blockquote blockquote {
 				box-shadow: 0 0 10px #0077b3;
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
 				background-color: #edf4f7;
 }
@@ -6883,6 +6881,7 @@ table.table1 tbody td {
 				color: #212121;
 }
 
+/* stylelint-enable selector-no-qualifying-type */
 .tabs .tab > a {
 				background: #c0d3dd;
 				color: #47536b;
@@ -7127,6 +7126,7 @@ h2.topic-title, .forum-title {
 }
 
 /* stylelint-enable selector-no-qualifying-type */
+/* stylelint-disable declaration-property-unit-whitelist */
 .headerbar-separate {
 				max-width: 1152px;
 				margin: 0 auto;
@@ -7204,6 +7204,12 @@ h2.topic-title, .forum-title {
 				display: inline-block;
 				max-width: 100%;
 				height: auto;
+}
+
+@media (max-width: 1151px) {
+				.logo-responsive {
+								width: 44.44444vw;
+				}
 }
 
 .site-description {
