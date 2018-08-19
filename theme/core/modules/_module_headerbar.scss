@@ -28,6 +28,10 @@ $breakpoint: '<#{$breakpoint-master}';
   } @else {
     background-image: image('#{$img-bg-headerbar}');
   }
+
+	@media (max-width: 960px) {
+		padding: 5px 0;
+	}
 }
 
 .headerbar {

@@ -7134,6 +7134,12 @@ h2.topic-title, .forum-title {
 				background: transparent;
 }
 
+@media (max-width: 960px) {
+				.headerbar-separate {
+								padding: 5px 0;
+				}
+}
+
 .headerbar {
 				background-color: #0077b3;
 				background-image: none;
