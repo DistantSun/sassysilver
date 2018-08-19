@@ -7130,13 +7130,15 @@ h2.topic-title, .forum-title {
 .headerbar-separate {
 				max-width: 1152px;
 				margin: 0 auto;
+				padding: 20px 0 15px;
 				background: transparent;
 }
 
 .headerbar {
 				background-color: #0077b3;
 				background-image: none;
-				padding: 20px 5px 10px;
+				padding: 0;
+				margin-bottom: 0;
 }
 
 .headerbar a {
@@ -7159,7 +7161,7 @@ h2.topic-title, .forum-title {
 
 .wrap-menue {
 				max-width: 1152px;
-				margin: 4px auto;
+				margin: 0 auto 4px;
 }
 
 .wrap-menue .navbar {
@@ -7223,8 +7225,8 @@ h2.topic-title, .forum-title {
 .search-box-container {
 				position: absolute;
 				z-index: 9000;
-				top: 10px;
 				right: 10px;
+				bottom: 5px;
 }
 
 .search-header {
