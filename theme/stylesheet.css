@@ -7224,7 +7224,7 @@ h2.topic-title, .forum-title {
 				display: none;
 }
 
-.absolute {
+.relative {
 				position: relative;
 }
 
@@ -7592,6 +7592,14 @@ ul.topiclist {
 				background-color: #ededed;
 				border: 1px solid #000;
 				padding: 3px;
+}
+
+.signature a {
+				background-color: transparent;
+}
+
+.signature a:hover {
+				background-color: transparent;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
