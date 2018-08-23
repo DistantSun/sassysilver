@@ -79,31 +79,19 @@
 
 {% EVENT overall_header_body_before %}
 
-{% if definition.HEADERBAR_SEPARAT == 1 %}
-<div class="headerbar" style="background-color: transparent;">
-	<div class="headerbar-separate" role="banner">
-		{% INCLUDE 'headerbar.html' %}
+<div class="headerbar-separate">
+	<div class="headerbar" role="banner">
+		{% INCLUDE 'headerbar_separate.html' %}
 	</div>
-</div>
-
-	<div id="wrap-menue" class="wrap-menue">
-		{% INCLUDE 'menuebar.html' %}
-	</div>
-{% endif %}
 
 <div id="wrap" class="wrap">
 	<a id="top" class="top-anchor" accesskey="t"></a>
 
-	<div id="page-header class="page-header">
+	<div id="page-header" class="page-header">
 
-		{% if definition.HEADERBAR_SEPARAT == 0 %}
-		<div class="headerbar" style="padding: 5px 0 5px 5px;" role="banner">
+		<div class="headerbar-classic">
 			{% INCLUDE 'headerbar.html' %}
 		</div>
-
-		{% INCLUDE 'menuebar.html' %}
-
-		{% endif %}
 
 		{% EVENT overall_header_navbar_before %}
 

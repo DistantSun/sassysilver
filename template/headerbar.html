@@ -1,38 +1,42 @@
 		{% EVENT overall_header_headerbar_before %}
-			<div class="inner relative">
+			<div class="headerbar" style="padding: 5px 0 5px 5px;" role="banner">
+				<div class="inner relative">
 
-				<div class="logo-container">
-					<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">
-						<img src="{{ T_THEME_PATH }}/images/site_logo.png" class="logo-responsive" alt="" />
-					</a>
-				</div>
-
-				<div id="site-description" class="site-description">
-					<h1>{{ SITENAME }}</h1>
-					<p>{{ SITE_DESCRIPTION }}</p>
-					<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
-				</div>
-
-				<div class="search-box-container">
-				{% EVENT overall_header_searchbox_before %}
-				{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
-					<div id="search-box" class="search-box search-header" role="search">
-						<form action="{{ U_SEARCH }}" method="get" id="search">
-						<fieldset>
-							<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
-							<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
-								<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
-							</button>
-							<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
-								<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
-							</a>
-							{{ S_SEARCH_HIDDEN_FIELDS }}
-						</fieldset>
-						</form>
+					<div class="logo-container">
+						<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">
+							<img src="{{ T_THEME_PATH }}/images/site_logo.png" class="logo-responsive" alt="" />
+						</a>
 					</div>
-				{% endif %}
-				{% EVENT overall_header_searchbox_after %}
 
+					<div id="site-description" class="site-description">
+						<h1>{{ SITENAME }}</h1>
+						<p>{{ SITE_DESCRIPTION }}</p>
+						<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
+					</div>
+
+					<div class="search-box-container">
+					{% EVENT overall_header_searchbox_before %}
+					{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
+						<div id="search-box" class="search-box search-header" role="search">
+							<form action="{{ U_SEARCH }}" method="get" id="search">
+							<fieldset>
+								<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
+								<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
+								</button>
+								<a href="{{ U_SEARCH }}" class="button button-search-end" title="{{ lang('SEARCH_ADV') }}">
+									<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH_ADV') }}</span>
+								</a>
+								{{ S_SEARCH_HIDDEN_FIELDS }}
+							</fieldset>
+							</form>
+						</div>
+					{% endif %}
+					{% EVENT overall_header_searchbox_after %}
+
+					</div>
 				</div>
+				{% EVENT overall_header_headerbar_after %}
 			</div>
-			{% EVENT overall_header_headerbar_after %}
+
+			{% INCLUDE 'menuebar.html' %}

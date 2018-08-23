@@ -17,28 +17,27 @@
 //  1.  variables
 $breakpoint: '<#{$breakpoint-master}';
 
-//  2.  Controlling the Separation of the Headerbar
-//      & Basic Formatting
-.headerbar-separate {
-  max-width: $width-headerbar-separate;
-  margin: 0 auto;
-  padding: 20px 0 15px;
-  @if $img-bg-headerbar == none {
-    background: transparent;
-  } @else {
-    background-image: image('#{$img-bg-headerbar}');
-  }
 
-	@media (max-width: 960px) {
-		padding: 5px 0;
-	}
+//  2.  Headerbar
+//  2.1 "Classic" display inside #wrap
+.headerbar-classic {
+  display: if($switch-headerbar-style != 'classic', none, block);
 }
 
-.headerbar {
-  background-color: $col-headerbar;
-  background-image: none;
-  padding: 0;
-  margin-bottom: 0;
+//  2.2 Separated display above #wrap
+.headerbar-separate {
+  display: if($switch-headerbar-style != 'separate', none, block);
+  width: 100%;
+
+  @if $img-bg-headerbar-separate == none {
+    background-color: transparent;
+  } @else {
+    background-image: image('#{$img-bg-headerbar-separate}');
+  }
+
+  @media (max-width: 960px) {
+    padding: 5px 0;
+  }
 
   & a {
     font-size: 1.2em;
@@ -63,7 +62,7 @@ $breakpoint: '<#{$breakpoint-master}';
 //  3.  Upper Menue Wrapper
 .wrap-menue {
   max-width: $switch-width-wrap;
-  margin: 0 auto 4px;
+  margin: 10px auto -5px;
 
   //  4.  Menue
   & .navbar {
@@ -75,6 +74,10 @@ $breakpoint: '<#{$breakpoint-master}';
     border-radius: 0;
     margin: 0;
     padding: 1px 5px;
+
+    .inner {
+      padding: 3px 0;
+    }
 
     & a {
       font-size: 1.2em;
