@@ -7,9 +7,13 @@
 // Layout switches
 // ***************
 
-//  Colours & body background - default scheme
+//  General Layout
+$switch-headerbar-style:          'separate' !default;
+
+//  Colours & body background - default settings
 //  Board colour scheme
 $switch-col-scheme:               default !default;
+
 //  Body background type
 $switch-background-body:          colour !default;
 $img-bg-html-body:                'bg_body.jpg' !default;
@@ -18,7 +22,7 @@ $img-bg-html-body:                'bg_body.jpg' !default;
 $switch-width-wrap:               1152px !default;
 
 //	(Physical) Width of logo images
-$dim-logo-width:                 512px !default;
+$dim-logo-width:                  512px !default;
 
 //  Logo & Site-Description positioning
 $switch-logo-position:            'center' !default;
@@ -51,7 +55,7 @@ $switch-col-wrap-off:             'no' !default;
 
 $img-bg-wrap:                     none !default;
 $img-bg-wrap-header:              none !default;
-$img-bg-headerbar:                none !default;
+$img-bg-headerbar-separate:                none !default;
 
 // Paddings
 // Standard padding for #wrap & .wrap-menue

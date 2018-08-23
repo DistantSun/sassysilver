@@ -6,6 +6,7 @@
 - Basic implementation of revised colour scheme system: one dedicated scheme stylesheet per colour scheme; easy integration of new schemes
 - Functions/mixins to automate switching between colour schemes
 - Options to format body background: colour, texture, image, CSS driven inline SVG - switchable
+- Option to switch display of headerbar from #wrap to separate location above #wrap moved from HTML switching to CSS-switch in configuration file, thus allowing un-cluttering of the corresponding code in `overall_header.html`.
 - Start allocation of variables to stylesheets (still w.i.p)
 - Switch between scheme specific background colour, texture and background image (either scheme specific or stylewide)
 - Further relocation of code to dedicated module and component stylesheets (still w.i.p)

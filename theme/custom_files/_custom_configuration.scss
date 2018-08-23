@@ -5,15 +5,22 @@
 // ===================================================================
 
 
+//  General Layout
+//  ------------------------------------------------------------------
+
+// Display headerbar inside wrap oder separated above
+// @parameter: 'classic', 'separate'
+$switch-headerbar-style:          'separate';
+
 //  Select colour scheme & body Background
 //  ------------------------------------------------------------------
-$switch-col-scheme:               default;
+$switch-col-scheme:               red;
 
 // Background body
-// @ptions: colour, texture, image, css;
-// colour => colour as defined in scheme; texture => texture as defined in scheme;
-// image => background image as specified below
-// css => svg texture with adjustable colour as defined in scheme
+// @parameter: colour, texture, image, css;
+//    colour => colour as defined in scheme; texture (as defined in scheme);
+//    image => background image as specified below
+//    css => svg texture with adjustable colour as defined in scheme
 $switch-background-body:          css;
 
 // Background image, full size
@@ -29,9 +36,9 @@ $switch-width-wrap:               1152px;
 $dim-logo-width:                  512px;
 
 //  Logo & Site-Description positioning
-$switch-logo-position:            'left';   // Options: left, center, right
-$switch-show-sitedescription:     'no';			  // Options: yes, no
-$switch-position-sitedescription: 'center';	// Options: left, center, right
+$switch-logo-position:            'left';       // Options: left, center, right
+$switch-show-sitedescription:     'no';			      // Options: yes, no
+$switch-position-sitedescription: 'center';	    // Options: left, center, right
 
 //  Switch between different sets for forum & topic icons
 $switch-icon-set:                 standard;

@@ -42,6 +42,7 @@ body {
   box-shadow: $box-shadow-inset-double;
   max-width: $switch-width-wrap;
   margin: 0 auto;
+  margin-top: if($switch-headerbar-style == 'classic', 15px, 0);
   @if $img-bg-html-body != none {
     @if $switch-col-wrap-off == yes {
       background-color: rgba($col-bg-wrap, 0.5);
