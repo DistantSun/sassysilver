@@ -8,47 +8,50 @@
 //  General Layout
 //  ------------------------------------------------------------------
 
-// Display headerbar inside wrap oder separated above
-// @parameter: 'classic', 'separate'
+//  Display headerbar inside wrap oder separated above
+//  @parameter: 'classic', 'separate'
 $switch-headerbar-style:          'separate';
 
 //  Select colour scheme & body Background
+//  @parameter: Name of scheme file (w/o leading "_" or type suffix)
 //  ------------------------------------------------------------------
 $switch-col-scheme:               red;
 
-// Background body
-// @parameter: colour, texture, image, css;
-//    colour => colour as defined in scheme; texture (as defined in scheme);
+//  Background formatting of body
+//  @parameter: colour, texture, image, css;
+//    colour => colour as defined in scheme;
+//    texture => image file (as defined in scheme);
 //    image => background image as specified below
 //    css => svg texture with adjustable colour as defined in scheme
 $switch-background-body:          css;
 
-// Background image, full size
-// NOTE: To allocate an image replace "none" with the complete image name
-// wrapped in single quotes - eg: 'my_background_image.png'
+//  body background image (full size)
+//  @parameter: full name of image file, wrapped in single quotes
 $img-bg-html-body:                'bg_body.jpg';
 
-
-// "Board width" - any value is okay as longs as the unit is "px"
+//  Defines board width = width of #wrap element
+//  @parameter: value, unit: px or %
 $switch-width-wrap:               1152px;
 
-//	(Physical) Width of logo images
+//	(Physical) Width of logo images - needed to calculate scaling factor
+//  @parameter: value, unit: px
 $dim-logo-width:                  512px;
 
 //  Logo & Site-Description positioning
-$switch-logo-position:            'left';       // Options: left, center, right
-$switch-show-sitedescription:     'no';			      // Options: yes, no
-$switch-position-sitedescription: 'center';	    // Options: left, center, right
+$switch-logo-position:            'left';     // Options: left, center, right
+$switch-show-sitedescription:     'no';			  // Options: yes, no
+$switch-position-sitedescription: 'center';	  // Options: left, center, right
 
 //  Switch between different sets for forum & topic icons
 $switch-icon-set:                 standard;
 
-// Board colour scheme; available schemes: blue, red, green, black
-// $switch-col-scheme:               red;
 
-// postprofile right or left
+//  Displays postprofile to the right or left of message box
+//  @parameter: left, right, wrapped in single quotes
 $switch-postprofile-side:         'right';
-// Display postprofile <> postbody separatly; values: no, yes
+
+//  Display postprofile <> postbody separatly
+//  @parameter: yes, no, wrapped in single quotes
 $switch-pprofile-separation:      'yes';
 
 // Maximum width of pstprofile at resolutions of 1100px and above
