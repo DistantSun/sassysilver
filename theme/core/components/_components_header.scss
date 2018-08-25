@@ -1,7 +1,11 @@
 .headerbar {
   max-width: $width-headerbar-separate;
   margin: 0 auto;
-  padding: 20px 0 15px;
   background-color: transparent; //$col-headerbar;
   background-image: none;
+  padding: 0;
+
+  .inner {
+    padding: if($switch-headerbar-style == 'separate', 10px 5px, 0);
+  }
 }
