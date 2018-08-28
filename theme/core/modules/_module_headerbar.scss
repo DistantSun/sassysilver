@@ -31,19 +31,12 @@ $breakpoint: '<#{$breakpoint-master}';
 //  2.2 Separated display above #wrap
 .headerbar-separate {
   display: if($switch-headerbar-style != 'separate', none, block);
-  margin-bottom: 5px;
   width: 100%;
-
-  @if $img-bg-headerbar-separate == none {
-    background-color: transparent;
-  } @else {
-    background-image: image('#{$img-bg-headerbar-separate}');
-  }
+  margin-bottom: 5px;
 
   & a {
     font-size: 1.2em;
     font-weight: 600;
-    font-style: italic;
     color: $col-text-headerbar;
     display: inline;
 
@@ -57,6 +50,12 @@ $breakpoint: '<#{$breakpoint-master}';
       text-decoration: underline;
       color: #ccc;
     }
+  }
+
+  @if $img-bg-headerbar-separate == none {
+    background-color: transparent;
+  } @else {
+    background-image: image('#{$img-bg-headerbar-separate}');
   }
 }
 
@@ -87,6 +86,7 @@ $breakpoint: '<#{$breakpoint-master}';
       padding: 5px;
 
       &:hover {
+        text-decoration: none;
         background-color: #808080;
       }
     }
