@@ -87,15 +87,9 @@ $breakpoint: '<#{$breakpoint-master}';
 
       &:hover {
         text-decoration: none;
-        background-color: #808080;
+        background-color: $col-link-accent;
       }
     }
-  }
-}
-
-.dropdown {
-  .dropdown-contents {
-    background-color: #808080;
   }
 }
 
