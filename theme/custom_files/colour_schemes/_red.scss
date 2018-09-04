@@ -62,7 +62,7 @@ $red: (
 
   // Link Colors
   link:                           $red-links,
-  link-accent:                    saturate(lighten($red-links, 10%), 15%),
+  link-accent:                    saturate(lighten($red-links, 20%), 15%),
   link-hover:                     darken($red-accent, 5%),
   link-hover-highlight:           lighten($red-accent, 35%),
 
