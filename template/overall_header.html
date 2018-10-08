@@ -7,7 +7,6 @@
 {{ META }}
 <title>{% if UNREAD_NOTIFICATIONS_COUNT %}({{ UNREAD_NOTIFICATIONS_COUNT }}) {% endif %}{% if not S_VIEWTOPIC and not S_VIEWFORUM %}{{ SITENAME }} - {% endif %}{% if S_IN_MCP %}{{ lang('MCP') }} - {% elseif S_IN_UCP %}{{ lang('UCP') }} - {% endif %}{{ PAGE_TITLE }}{% if S_VIEWTOPIC or S_VIEWFORUM %} - {{ SITENAME }}{% endif %}</title>
 
-{% INCLUDE '_style_config.html' %}
 
 {% if S_ENABLE_FEEDS %}
 	{% if S_ENABLE_FEEDS_OVERALL %}<link rel="alternate" type="application/atom+xml" title="{{ lang('FEED') }} - {{ SITENAME }}" href="{{ path('phpbb_feed_index') }}">{% endif %}
