@@ -1,16 +1,25 @@
 ## Style History
 
-#### 0.5.0 (w.i.p)
-- New folder structure for stylesheets (hopefully for the last time ...)
-- Separation of stylesheets between core stylesheets and, respectivly, custom stylesheets, relocated to their corresponding folders (see above)
-- Basic implementation of revised colour scheme system: one dedicated scheme stylesheet per colour scheme; easy integration of new schemes
-- Functions/mixins to automate switching between colour schemes
-- Options to format body background: colour, texture, image, CSS driven inline SVG - switchable
-- Option to switch display of headerbar from #wrap to separate location above #wrap moved from HTML switching to CSS-switch in configuration file, thus allowing un-cluttering of the corresponding code in `overall_header.html`.
-- Start allocation of variables to stylesheets (still w.i.p)
-- Switch between scheme specific background colour, texture and background image (either scheme specific or stylewide)
-- Further relocation of code to dedicated module and component stylesheets (still w.i.p)
-- Dropped support for Koala since it uses an outdated and no longer supported SASS implementation (Arty's SASS Compiler Extension is still supported and will be so as long as feasible)
+#### 0.5.0 (09.10.2018) - First BETA Release
+- New folder structure for stylesheets (hopefully for the last time ... ;))
+- Separation of "custom" stylesheets and "core" stylesheets plus relocation to their corresponding directories/folders.
+- Basic implementation of revised colour scheme system: one dedicated scheme stylesheet per colour scheme (two schemes included and sample stylesheet provided).
+- Added functions/mixins to automate switching between colour schemes.
+- Option to switch formatting of body background: (1) colour, (2) texture, (3) image, (4) CSS driven inline SVG (either scheme specific or stylewide).
+- Option to switch display location moved from HTML switching to a CSS-switch in configuration file, thus allowing un-cluttering of the corresponding code in `overall_header.html`.
+- Start allocation of variables to stylesheets (in minor parts still w.i.p)
+- Further relocation of code to dedicated module and component stylesheets (in part still w.i.p).
+- Existing code in part re-written and simplified with comments added.
+- Bugfixes
+- Dropped support for Koala: Koala uses an outdated and no longer supported SASS implementation (Arty's SASS Compiler Extension is still supported and will be so as long as feasible).
+- Style updated to phpBB 3.2.3 :)
+
+
+**Important:**\
+Starting with 0.5.0 support for Koala has to be dropped.\
+Koala, even in its latest version, is based on an outdated and no longer supported SASS implementation.\
+In order to keep the code and file structure transparent and manageable while utilizing more current SASS features, I am afraid this step can no longer be avoided. Better to make a cut now in an early enough phase of the development than to implement short lived workarounds ...\
+(Arty's SASS Compiler Extension is still supported and will be so as long as feasible).
 
 
 #### 0.4.1 (08.03.2018)
