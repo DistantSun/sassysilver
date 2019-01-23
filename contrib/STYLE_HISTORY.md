@@ -1,5 +1,12 @@
 ## Style History
 
+#### 0.5.2 ()
+- Style updated to phpBB 3.2.5
+- Simplified ""
+
+#### 0.5.1 (22.11.2019) - Release skipped
+- Style updated to phpBB 3.2.4
+
 #### 0.5.0 (09.10.2018) - First BETA Release
 - New folder structure for stylesheets (hopefully for the last time ... ;))
 - Separation of "custom" stylesheets and "core" stylesheets plus relocation to their corresponding directories/folders.

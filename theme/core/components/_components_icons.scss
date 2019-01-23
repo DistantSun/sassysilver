@@ -1,0 +1,47 @@
+//
+// Icon Colours
+//---------------------------------------------------------------------------
+
+.top i {
+  color: $gray-500;
+}
+
+.icon.icon-blue,
+a:hover .icon.icon-blue {
+  color: $col-secondary-dark;
+}
+
+.icon.icon-green,
+a:hover .icon.icon-green {
+  color: $col-code;
+}
+
+.icon.icon-red,
+a:hover .icon.icon-red {
+  color: $col-link-hover;
+}
+
+.icon.icon-orange,
+a:hover .icon.icon-orange {
+  color: $col-pm-marked;
+}
+
+.icon.icon-bluegray,
+a:hover .icon.icon-bluegray {
+  color: $col-ui-dark;
+}
+
+.icon.icon-gray,
+a:hover .icon.icon-gray {
+  color: $gray-600;
+}
+
+.icon.icon-lightgray,
+a:hover .icon.icon-lightgray {
+  color: $gray-500;
+}
+
+.icon.icon-black,
+a:hover .icon.icon-black {
+  color: $gray-900;
+}

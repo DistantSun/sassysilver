@@ -23,191 +23,6 @@ hr {
 
 
 
-// Link Colours
-//---------------------------------------------------------------------------
-
-a {
-  color: $col-link;
-
-  &:hover {
-    color: $col-link-hover;
-  }
-}
-
-// links on gradient backgrounds
-.forumbg .header a,
-.forabg .header a,
-th a {
-  color: $white;
-}
-
-.forumbg .header a:hover,
-.forabg .header a:hover,
-th a:hover {
-  color: $col-secondary-light;
-}
-
-// post body links
-.postlink {
-  border-bottom-color: $col-link-secondary;
-  color: $col-link-secondary;
-}
-
-.postlink:visited {
-  border-bottom-color: $col-link-secondary-accent;
-  color: $col-link-secondary-accent;
-}
-
-.postlink:hover {
-  background-color: $col-link-secondary-hover-highlight;
-  color: $col-link-secondary-hover;
-}
-
-.signature a,
-.signature a:hover {
-  background-color: transparent;
-}
-
-// arrow links
-.arrow-left:hover,
-.arrow-right:hover {
-  color: $col-link-secondary;
-}
-
-.post:target .content {
-  color: $black;
-}
-
-.post:target h3 a {
-  color: $black;
-}
-
-// horizontal lists
-.navlinks {
-  @include qualify(ul) {
-    border-top-color: $white;
-  }
-}
-
-
-//
-// Icon Colours
-//---------------------------------------------------------------------------
-
-.top i {
-  color: $gray-500;
-}
-
-.icon.icon-blue,
-a:hover .icon.icon-blue {
-  color: $col-secondary-dark;
-}
-
-.icon.icon-green,
-a:hover .icon.icon-green {
-  color: $col-code;
-}
-
-.icon.icon-red,
-a:hover .icon.icon-red {
-  color: $col-link-hover;
-}
-
-.icon.icon-orange,
-a:hover .icon.icon-orange {
-  color: $col-pm-marked;
-}
-
-.icon.icon-bluegray,
-a:hover .icon.icon-bluegray {
-  color: $col-ui-dark;
-}
-
-.icon.icon-gray,
-a:hover .icon.icon-gray {
-  color: $gray-600;
-}
-
-.icon.icon-lightgray,
-a:hover .icon.icon-lightgray {
-  color: $gray-500;
-}
-
-.icon.icon-black,
-a:hover .icon.icon-black {
-  color: $gray-900;
-}
-
-
-//
-// Button Colours
-//---------------------------------------------------------------------------
-.button {
-  border-color: $col-button-border;
-  box-shadow: 0 0 0 1px $col-button-box-shadow inset;
-  color: $col-button-text;
-}
-
-.button:hover,
-.button:focus {
-  background-image: -webkit-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  background-image: -o-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  background-image: linear-gradient($col-button-background 0%, $col-button-background-light 100%);
-  border-color: $col-button-border-hover;
-  text-shadow: 1px 1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow-hover;
-  color: $col-button-text;
-}
-
-.button .icon,
-.button-secondary {
-  color: $col-button-icon;
-}
-
-a.button1,
-input.button1, // form
-a.button2,
-input.button2 { // form-bold
-  background-color: $col-button-background-light;
-  background-image: linear-gradient(to bottom, $col-button-background 0%, $col-button-background-light 100%);
-  border-color: $col-button-form-border;
-  color: $col-button-form-text;
-}
-
-a.button1:hover,
-input.button1:hover, // form
-a.button2:hover,
-input.button2:hover { // form-bold
-  text-shadow: none;
-  background-color: $col-button-background;
-  background-image: linear-gradient(to bottom, $col-button-background-light 0%, $col-button-background 100%);
-  border-color: $col-button-form-border-hover;
-  color: $col-button-form-text-hover;
-}
-
-input.button1:focus, // form
-input.button2:focus { // form-bold
-  text-shadow: none;
-  border-color: $col-button-form-input-border-focus;
-  color: $col-button-form-input-text-focus;
-}
-
-.button-secondary:focus,
-.button-secondary:hover,
-.button:focus .icon,
-.button:hover .icon {
-  color: $col-button-icon-hover;
-}
-
-.button-search:hover,
-.button-search-end:hover {
-  border-color: $col-button-border;
-}
-
-.caret { border-color: $gray-400; }
-.contact-icons a { border-color: $gray-300; }
-.contact-icons a:hover { background-color: $gray-200; }
-
-
 //
 // Jumpbox Colours
 //---------------------------------------------------------------------------
@@ -217,29 +32,29 @@ input.button2:focus { // form-bold
   background-color: $col-primary-dark;
   border-top-color: $col-primary-dark;
   color: $white;
-}
 
-.jumpbox-cat-link:hover,
-.jumpbox-cat-link:focus {
-  background-color: $col-primary;
-  border-top-color: $col-primary;
-  color: $white;
+  &:hover,
+  &:focus {
+    background-color: $col-primary;
+    border-top-color: $col-primary;
+    color: $white;
+  }
 }
 
 .jumpbox-forum-link {
   background-color: $col-bg-02;
-}
 
-.jumpbox-forum-link:hover {
-  background-color: $col-highlight;
+  &:hover {
+    background-color: $col-highlight;
+  }
 }
 
 .jumpbox-sub-link {
   background-color: $col-bg-02;
-}
 
-.jumpbox-sub-link:hover {
-  background-color: $col-bg-light;
+  &:hover {
+    background-color: $col-bg-light;
+  }
 }
 
 .jumpbox .dropdown .pointer-inner {

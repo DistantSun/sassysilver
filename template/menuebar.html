@@ -123,11 +123,13 @@
 								<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{{ lang('PROFILE') }}</span>
 							</a>
 						</li>
-						<li>
-							<a href="{{ U_USER_PROFILE }}" title="{{ lang('READ_PROFILE') }}" role="menuitem">
-								<i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{{ lang('READ_PROFILE') }}</span>
-							</a>
-						</li>
+						{% if U_USER_PROFILE %}
+							<li>
+								<a href="{{ U_USER_PROFILE }}" title="{{ lang('READ_PROFILE') }}" role="menuitem">
+									<i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{{ lang('READ_PROFILE') }}</span>
+								</a>
+							</li>
+						{% endif %}
 
 						{% EVENT navbar_header_profile_list_after %}
 

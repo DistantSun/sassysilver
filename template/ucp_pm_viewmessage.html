@@ -139,21 +139,10 @@
 					<p class="author">
 						<strong>{{ lang('SENT_AT') }}{{ lang('COLON') }}</strong> {{ SENT_DATE }}
 						<br /><strong>{{ lang('PM_FROM') }}{{ lang('COLON') }}</strong> {{ MESSAGE_AUTHOR_FULL }}
-						{% if S_TO_RECIPIENT %}<br /><strong>{{ lang('TO') }}{{ lang('COLON') }}</strong>
-						{% for to_recipient in loops.to_recipient %}
-						{% if to_recipient.NAME_FULL %}{{ to_recipient.NAME_FULL }}
-						{% else %}<a href="{{ to_recipient.U_VIEW }}" style="color:{% if to_recipient.COLOUR %}{{ to_recipient.COLOUR }}{% elseif to_recipient.IS_GROUP %}#0000FF{% endif %};">{{ to_recipient.NAME }}</a>
-						{% endif %}&nbsp;
-						{% endfor %}
-						{% endif %}
-						{% if S_BCC_RECIPIENT %}<br /><strong>{{ lang('BCC') }}{{ lang('COLON') }}</strong>
-						{% for bcc_recipient in loops.bcc_recipient %}
-						{% if bcc_recipient.NAME_FULL %}{{ bcc_recipient.NAME_FULL }}
-						{% else %}<a href="{{ bcc_recipient.U_VIEW }}" style="color:{% if bcc_recipient.COLOUR %}{{ bcc_recipient.COLOUR }}{% elseif bcc_recipient.IS_GROUP %}#0000FF{% endif %};">{{ bcc_recipient.NAME }}</a>
-						{% endif %}&nbsp;
-						{% endfor %}
-						{% endif %}
+						{% if S_TO_RECIPIENT %}<br /><strong>{{ lang('TO') }}{{ lang('COLON') }}</strong> {% for to_recipient in loops.to_recipient %}{% if to_recipient.NAME_FULL %}{{ to_recipient.NAME_FULL }}{% else %}<a href="{{ to_recipient.U_VIEW }}"{% if to_recipient.COLOUR %} style="color:{{ to_recipient.COLOUR }};"{% endif %}><strong>{{ to_recipient.NAME }}</strong></a>{% endif %}&nbsp;{% endfor %}{% endif %}
+						{% if S_BCC_RECIPIENT %}<br /><strong>{{ lang('BCC') }}{{ lang('COLON') }}</strong> {% for bcc_recipient in loops.bcc_recipient %}{% if bcc_recipient.NAME_FULL %}{{ bcc_recipient.NAME_FULL }}{% else %}<a href="{{ bcc_recipient.U_VIEW }}"{% if bcc_recipient.COLOUR %} style="color:{{ bcc_recipient.COLOUR }};"{% endif %}><strong>{{ bcc_recipient.NAME }}</strong></a>{% endif %}&nbsp;{% endfor %}{% endif %}
 					</p>
+
 					<div class="content">{{ MESSAGE }}</div>
 
 					{% if S_HAS_ATTACHMENTS %}
