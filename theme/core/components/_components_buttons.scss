@@ -1,0 +1,71 @@
+/* stylelint-disable selector-no-qualifying-type */
+
+//
+// Button Colours
+//---------------------------------------------------------------------------
+.button {
+  border-color: $col-button-border;
+  box-shadow: 0 0 0 1px $col-button-box-shadow inset;
+  color: $col-button-text;
+
+  &:hover,
+  &:focus {
+    background-image: -webkit-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
+    background-image: -o-linear-gradient($col-button-background 0%, $col-button-background-light 100%);
+    background-image: linear-gradient($col-button-background 0%, $col-button-background-light 100%);
+    border-color: $col-button-border-hover;
+    text-shadow: 1px 1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow, -1px -1px 0 $col-button-text-shadow-hover;
+    color: $col-button-text;
+  }
+}
+
+.button .icon,
+.button-secondary {
+  color: $col-button-icon;
+}
+
+a.button1,
+input.button1, // form
+a.button2,
+input.button2 { // form-bold
+  background-color: $col-button-background-light;
+  background-image: linear-gradient(to bottom, $col-button-background 0%, $col-button-background-light 100%);
+  border-color: $col-button-form-border;
+  color: $col-button-form-text;
+}
+
+a.button1:hover,
+input.button1:hover, // form
+a.button2:hover,
+input.button2:hover { // form-bold
+  text-shadow: none;
+  background-color: $col-button-background;
+  background-image: linear-gradient(to bottom, $col-button-background-light 0%, $col-button-background 100%);
+  border-color: $col-button-form-border-hover;
+  color: $col-button-form-text-hover;
+}
+
+input.button1:focus, // form
+input.button2:focus { // form-bold
+  text-shadow: none;
+  border-color: $col-button-form-input-border-focus;
+  color: $col-button-form-input-text-focus;
+}
+
+.button-secondary:focus,
+.button-secondary:hover,
+.button:focus .icon,
+.button:hover .icon {
+  color: $col-button-icon-hover;
+}
+
+.button-search:hover,
+.button-search-end:hover {
+  border-color: $col-button-border;
+}
+
+.caret { border-color: $gray-400; }
+.contact-icons a { border-color: $gray-300; }
+.contact-icons a:hover { background-color: $gray-200; }
+
+/* stylelint-enable selector-no-qualifying-type */

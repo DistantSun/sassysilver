@@ -25,7 +25,7 @@
 //  2.1  Mapping all colour maps of scheme files
 //       Add your declaration here
 $colour-maps: (
-  default:   $default,
+  default:   $default,    // Do NOT remove the default map!!
   prosilver: $prosilver,
   red:       $red,
   green:     $green,

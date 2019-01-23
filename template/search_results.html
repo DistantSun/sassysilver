@@ -108,7 +108,7 @@
 
 							{% if not S_IS_BOT %}
 								<div class="responsive-show" style="display: none;">
-									{{ lang('LAST_POST') }} {{ lang('POST_BY_AUTHOR') }} {{ searchresults.LAST_POST_AUTHOR_FULL }} &laquo; <a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">{{ searchresults.LAST_POST_TIME }}</a>
+									{{ lang('LAST_POST') }} {{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_last_post_author_username_prepend %}{{ searchresults.LAST_POST_AUTHOR_FULL }}{% EVENT search_results_last_post_author_username_append %} &laquo; <a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">{{ searchresults.LAST_POST_TIME }}</a>
 									<br />{{ lang('POSTED') }} {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
 								</div>
 							{% if searchresults.TOPIC_REPLIES %}<span class="responsive-show left-box" style="display: none;">{{ lang('REPLIES') }}{{ lang('COLON') }} <strong>{{ searchresults.TOPIC_REPLIES }}</strong></span>{% endif %}
@@ -117,7 +117,7 @@
 							<div class="responsive-hide left-box">
 								{% if searchresults.S_HAS_POLL %}<i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>{% endif %}
 								{% if searchresults.ATTACH_ICON_IMG %}<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>{% endif %}
-								{{ lang('POST_BY_AUTHOR') }} {{ searchresults.TOPIC_AUTHOR_FULL }} &raquo; {{ searchresults.FIRST_POST_TIME }} &raquo; {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
+								{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_topic_author_username_prepend %}{{ searchresults.TOPIC_AUTHOR_FULL }}{% EVENT search_results_topic_author_username_append %} &raquo; {{ searchresults.FIRST_POST_TIME }} &raquo; {{ lang('IN') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a>
 							</div>
 
 							{% if searchresults.pagination|length %}
@@ -142,7 +142,7 @@
 					<dd class="posts">{{ searchresults.TOPIC_REPLIES }} <dfn>{{ lang('REPLIES') }}</dfn></dd>
 					<dd class="views">{{ searchresults.TOPIC_VIEWS }} <dfn>{{ lang('VIEWS') }}</dfn></dd>
 					<dd class="lastpost">
-						<span><dfn>{{ lang('LAST_POST') }} </dfn>{{ lang('POST_BY_AUTHOR') }} {{ searchresults.LAST_POST_AUTHOR_FULL }}
+						<span><dfn>{{ lang('LAST_POST') }} </dfn>{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_last_post_author_username_prepend %}{{ searchresults.LAST_POST_AUTHOR_FULL }}{% EVENT search_results_last_post_author_username_append %}
 							{% if not S_IS_BOT %}
 								<a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">
 									<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{{ VIEW_LATEST_POST }}</span>
@@ -183,7 +183,7 @@
 			<div class="pprofile-container">
 				<dl class="postprofile">
 					{% EVENT search_results_postprofile_before %}
-					<dt class="author">{{ lang('POST_BY_AUTHOR') }} {{ searchresults.POST_AUTHOR_FULL }}</dt>
+					<dt class="author">{{ lang('POST_BY_AUTHOR') }} {% EVENT search_results_post_author_username_prepend %}{{ searchresults.POST_AUTHOR_FULL }}{% EVENT search_results_post_author_username_append %}</dt>
 					<dd class="search-result-date">{{ searchresults.POST_DATE }}</dd>
 					<dd>{{ lang('FORUM') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_FORUM }}">{{ searchresults.FORUM_TITLE }}</a></dd>
 					<dd>{{ lang('TOPIC') }}{{ lang('COLON') }} <a href="{{ searchresults.U_VIEW_TOPIC }}">{{ searchresults.TOPIC_TITLE }}</a></dd>
@@ -197,6 +197,7 @@
 				<div class="postbody">
 					<h3><a href="{{ searchresults.U_VIEW_POST }}">{{ searchresults.POST_SUBJECT }}</a></h3>
 					<div class="content">{{ searchresults.MESSAGE }}</div>
+					{% EVENT search_results_content_after %}
 				</div>
 			</div>
 		</div>
