@@ -2,7 +2,7 @@
 
 #### 0.5.2 ()
 - Style updated to phpBB 3.2.5
-- Simplified ""
+- Dropped support for Arty's SASS Compiler Extension (he announced his withdrawel from style development to concentrate on other projects).
 
 #### 0.5.1 (22.11.2019) - Release skipped
 - Style updated to phpBB 3.2.4

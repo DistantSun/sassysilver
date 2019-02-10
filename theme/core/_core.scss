@@ -1,0 +1,43 @@
+//  phpBB3 Style Sheet
+//  ----------------------------------------------------------------
+//  Style name:        SassySilver
+//  Based on style:    prosilver (the default phpBB 3.2.x style)
+//  Original author:   Tom Beddard ( http://www.subblue.com/ )
+//  Modified by:       Melmac
+//  ----------------------------------------------------------------
+
+//  1.  Helpers
+@import 'helpers/helpers';
+
+//  2.  Functions
+@import 'functions/functions';
+
+//  3.  Mixins
+@import 'mixins/mixins';
+
+//  4.  Global variables
+@import 'variables/named_colours';
+
+
+//  5.  Manage colour schemes
+//  --------------------------------------------------------------
+//  5.1.  Import default colour scheme - DO NOT DELETE!
+@import 'schemes/default';
+
+//  5.2  Import custom colour schemes
+//  NOTE: Please add/remove import rules for your custom scheme stylesheets
+//        via the stylesheet imported in this step.
+@import '../custom/colour_schemes/custom_col_schemes';
+
+
+//  5.3.  Import configuration files
+@import 'configuration/scheme_configuration';
+@import 'inherited/assign_scheme_colours';
+
+
+//  6.  components
+//  --------------------------------------------------------------
+@import 'components/components';
+
+//  7.  Modules
+@import 'modules/modules';

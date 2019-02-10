@@ -8,21 +8,15 @@
 
 
 //  1. Import stylesheets "inherited" from prosilver
-@import 'core/inherited/prosilver';
-
-//  1.b Resetting selectors/expressions used differently in SassySilver
-@import 'core/inherited/transform';
-
+@import 'core/inherited/inherit_prosilver';
 
 //  2. Process configuration stylesheets
-@import 'custom_files/custom_configuration';
+@import 'custom/custom_configuration';
 @import 'core/configuration/core_configuration';
 
-
-//  3.  Load framework
-@import 'framework';
-
+//  3.  Load core/framework
+@import 'core/core';
 
 //  4.  Process style specific stylesheets
 @import 'sassysilver';
-@import 'custom_files/custom';
+@import 'custom/custom';
